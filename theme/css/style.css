@@ -1,0 +1,126 @@
+html{
+    -webkit-font-smoothing: antialised;
+    margin:0;
+}
+
+body{
+    background-color: rgb(255,255,255);
+    margin:0; 
+}
+
+h1{
+    font-family:'Lato', 'Helvetica', 'Sans-serif';
+    font-weight: 400;
+}
+
+h2{
+    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-size:3vw;
+    font-weight: 400; 
+    line-height: 50%;
+}
+h4{
+    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-weight: 400;
+}
+
+p {
+    font-family: georgia, "Times New Roman";
+    font-size: 4vw;  
+    color: rgb(155,155,155); 
+} 
+
+a { 
+    text-decoration: none;
+    color: rgba(100,100,100,0.7);
+}
+
+a:hover {  
+    color: rgba(100,100,100,1.0);
+} 
+
+.topstuff{
+    width: 100%; 
+}
+
+.splash {
+    width: 50%; 
+    position: absolute;
+    margin-top: -30%;
+}
+
+#content-wrapper{
+    width:90%;
+    max-width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%; 
+    border-radius: 15px;
+}
+
+#content{
+    padding-left:1.5vw;
+    padding-right:1.5vw;
+}
+
+#content p{
+    font-size:2vw;
+    font-family:'Lato', 'Helvetica', 'sans-serif';
+    font-weight:300;
+}
+
+#content ul{
+    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-size: 0.8em;
+    opacity: 0.3;
+}
+
+#content a{
+    border-bottom:0.2vw dotted;
+}
+
+#content a:hover{
+    border-bottom:0.2vw solid;
+}
+
+
+#navbubbles{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed; 
+    width: 100%;
+    padding-bottom: 2vw;
+    padding-left: 0px; 
+}
+  
+#navbubbles li{
+    display: table-cell;
+    text-align: center;
+    font-family: 'Lato', "Sans-Serif";
+    font-size: 4vw; 
+    font-weight: 300;
+    color:#ffffff;;
+} 
+
+.navreact a{
+    
+   color:#A8A8A8;
+  -o-transition:.5s color; 
+  -ms-transition:.5s color;
+  -moz-transition:.5s color;
+  -webkit-transition:.5s color;
+   transition: .5s color; 
+}
+
+.navreact a:hover{
+    color: #51504f;  
+}
+
+.copyright {
+    margin-top:5%; 
+    margin-bottom:10%;
+    text-align: center;
+    font-family: helvetica, "Sans-Serif"; 
+    font-size: 14px;
+    opacity: 0.4;
+}
