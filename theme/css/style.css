@@ -91,13 +91,14 @@ a:hover {
     width: 100%;
     padding-bottom: 2vw;
     padding-left: 0px; 
+    margin-top: 0px;
 }
   
 #navbubbles li{
     display: table-cell;
     text-align: center;
     font-family: 'Lato', "Sans-Serif";
-    font-size: 4vw; 
+    font-size: 2.5vw; 
     font-weight: 300;
     color:#ffffff;;
 } 
