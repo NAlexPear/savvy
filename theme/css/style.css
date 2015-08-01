@@ -85,7 +85,9 @@ hr{
 #content a:hover{
     border-bottom:0.2vw solid;
 }
-
+#menubar{
+    background-color: #00C5DA;
+}
 
 #navbubbles{
     list-style-type:none;
