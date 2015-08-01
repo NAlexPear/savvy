@@ -167,6 +167,17 @@ hr{
     color: #fff;
 }
 
+.slide{
+  display: none;
+  position: absolute;
+  top:200;
+  left:20;
+  width: 80%;
+}
+.active-slide{
+  display:block;
+}
+
 .navreact a{
    color:#fff;
   -o-transition:.5s color;
