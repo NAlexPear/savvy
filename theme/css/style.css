@@ -47,6 +47,11 @@ ul{
     margin-bottom: 0px;
 }
 
+hr{
+    width:80%;
+    opacity: 0.8;
+}
+
 #content-wrapper{
     width:90%;
     max-width: 1200px;
