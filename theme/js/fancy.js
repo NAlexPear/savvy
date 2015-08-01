@@ -13,6 +13,9 @@ $(document).ready(function() {
             }
         }
     });
+});
+
+$(document).ready(function(){
     // Sticky Menu Below
     $('#menubar').stickThis();
 });

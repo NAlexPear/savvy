@@ -10,21 +10,21 @@ body{
 
 h1{
     font-family:'Quicksand', 'Helvetica', 'Sans-serif';
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
 }
 
 h2{
     font-family: 'Quicksand', 'Helvetica', 'sans-serif';
     font-size:3vw;
-    font-weight: 400; 
+    font-weight: 700; 
     line-height: 50%;
     color: #fff;
 
 }
 h4{
     font-family: 'Quicksand', 'Helvetica', 'sans-serif';
-    font-weight: 400;
+    font-weight: 700;
     color: #fff;
 }
 
@@ -69,7 +69,7 @@ hr{
 #content p{
     font-size:2vw;
     font-family:'Quicksand', 'Helvetica', 'sans-serif';
-    font-weight:300;
+    font-weight:400;
 }
 
 #content ul{
@@ -104,7 +104,7 @@ hr{
     text-align: center;
     font-family: 'Quicksand', "Sans-Serif";
     font-size: 2.5vw; 
-    font-weight: 300;
+    font-weight: 400;
 } 
 
 .navreact a{
