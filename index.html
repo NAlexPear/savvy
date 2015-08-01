@@ -27,13 +27,7 @@
     <!--JQuery.min.js linkage-->
     <script type='text/javascript' src='theme/js/jquery.min.js'></script>
 
-    <!--picturefill HTML5 shiv for older browsers-->
-    <script type='text/javascript'>
-      document.createElement('picture');
-    </script>
-
     <!--async plugins here-->
-    <script type='text/javascript' src='theme/js/picturefill.min.js'async></script>
     <script type="text/javascript" src="theme/js/stickit.min.js" async></script>
     <script type="text/javascript" src="theme/js/queryloader.min.js" async></script>
 
@@ -92,9 +86,10 @@
     </div>
     <div id="backdrop">
         <img
-        srcset="theme/images/headerShort.png 2560w, theme/images/headerMobile.png 640w"
-        sizes="100%"
+        src="theme/images/headerShort.png"
+        width="100%" height=auto
         alt="Welcome to Savvy Coders"></img>
+    </div>
     </div>
     <div id="page-wrap">
         <div id="content-wrapper">
