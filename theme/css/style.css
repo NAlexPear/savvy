@@ -77,13 +77,6 @@ hr{
     font-weight:400;
 }
 
-#content ul{
-    font-family: 'Quicksand', 'Helvetica', sans-serif;
-    font-size: 5vmin;
-    padding-left: 0px;
-    color: #fff;
-}
-
 #content a{
     border-bottom:0.2vw dotted;
 }
@@ -94,6 +87,16 @@ hr{
 
 #howworks{
     opacity:0;
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#howworks ul{
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-size: 5vmin;
+    padding-left: 0px;
+    color: #fff;
 }
 
 #whatlearn{
@@ -122,6 +125,7 @@ hr{
     font-weight: 400;
 }
 
+
 #infobubbles{
     list-style-type:none;
     display:table;
@@ -138,22 +142,29 @@ hr{
   height: 15vw;
   width:15vw;
 }
-
-/*INFODIV SOON TO BE DEPRECATED (don't forget to remove)*/
-.infodiv{
-    height: 15vw;
-    width: 15vw;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50%;
-    display: block;
+.curricula-slider{
+  max-width: 900px;
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.infodiv.material{
-    height: 12vw;
-    width: 12vw;
-    background-color: #fff;
-    color: #07c4dd;
+.curricula-slider h2{
+  color: #07c4dd;
+}
+.curricula-slider h3{
+  text-align: center;
+  font-size:3vw;
+  font-family:'Quicksand', 'Helvetica', sans-serif;
+  font-weight:400;
+  color: #ffffff;
+}
+
+.curricula-slider ul{
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-size: 2vw;
+    padding-left: 0px;
+    color: #fff;
 }
 
 .navreact a{
