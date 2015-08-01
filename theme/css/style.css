@@ -135,6 +135,8 @@ hr{
 }
 
 .infodiv.material{
+    height: 12vw;
+    width: 12vw;
     background-color: #fff;
     color: #07c4dd;
 }
