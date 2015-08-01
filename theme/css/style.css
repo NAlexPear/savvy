@@ -5,7 +5,7 @@ html{
 }
 
 body{
-    margin:0; 
+    margin:0;
 }
 
 h1{
@@ -19,7 +19,7 @@ h1{
 h2{
     font-family: 'Kreon', serif;
     font-size:3vw;
-    font-weight: 700; 
+    font-weight: 700;
     line-height: 50%;
     color:#fff ;
     text-align: center;
@@ -34,17 +34,17 @@ h4{
 
 p {
     font-family: 'Kreon', serif;
-    font-size: 2vw;  
-    color: #fff; 
+    font-size: 2vw;
+    color: #fff;
     /*opacity: 0;*/
-} 
+}
 
-a { 
+a {
     text-decoration: none;
     color: rgba(100,100,100,0.7);
 }
 
-a:hover {  
+a:hover {
     color: rgba(100,100,100,1.0);
 }
 
@@ -62,7 +62,7 @@ hr{
     max-width: 1200px;
     margin-left:auto;
     margin-right:auto;
-    margin-top: 5%; 
+    margin-top: 5%;
     border-radius: 15px;
 }
 
@@ -79,7 +79,7 @@ hr{
 
 #content ul{
     font-family: 'Quicksand', 'Helvetica', sans-serif;
-    font-size: 5vh;
+    font-size: 5vmin;
     padding-left: 0px;
     color: #fff;
 }
@@ -107,34 +107,34 @@ hr{
 #navbubbles{
     list-style-type:none;
     display:table;
-    table-layout:fixed; 
+    table-layout:fixed;
     width: 100%;
     padding-bottom: 1vw;
-    padding-left: 0px; 
+    padding-left: 0px;
     margin-top: 0px;
 }
-  
+
 #navbubbles li{
     display: table-cell;
     text-align: center;
     font-family: 'Quicksand', "Sans-Serif";
-    font-size: 2.5vw; 
+    font-size: 2.5vw;
     font-weight: 400;
-} 
+}
 
 #infobubbles{
     list-style-type:none;
-    display:table; 
-    table-layout:fixed; 
+    display:table;
+    table-layout:fixed;
     width: 100%;
 }
-  
+
 #infobubbles li{
     display: table-cell;
     text-align: center;
 }
 
-.infodiv{ 
+.infodiv{
     height: 15vw;
     width: 15vw;
     margin-left: auto;
@@ -152,22 +152,22 @@ hr{
 
 .navreact a{
    color:#fff;
-  -o-transition:.5s color; 
+  -o-transition:.5s color;
   -ms-transition:.5s color;
   -moz-transition:.5s color;
   -webkit-transition:.5s color;
-   transition: .5s color; 
+   transition: .5s color;
 }
 
 .navreact a:hover{
-    color:#2B2B2B;  
+    color:#2B2B2B;
 }
 
 .copyright {
-    margin-top:5%; 
+    margin-top:5%;
     margin-bottom:10%;
     text-align: center;
-    font-family: helvetica, "Sans-Serif"; 
+    font-family: helvetica, "Sans-Serif";
     font-size: 14px;
     opacity: 0.6;
     color: #fff;
