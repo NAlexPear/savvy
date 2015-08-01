@@ -9,17 +9,19 @@ body{
 }
 
 h1{
-    font-family:'Quicksand', 'Helvetica', 'Sans-serif';
+    font-family:'Kreon', serif;
     font-weight: 700;
-    color: #fff;
+    color: #07c4dd;
+    text-align: center;
 }
 
 h2{
-    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
+    font-family: 'Kreon', serif;
     font-size:3vw;
     font-weight: 700; 
     line-height: 50%;
-    color: #fff;
+    color:#fff ;
+    text-align: center;
 
 }
 h4{
