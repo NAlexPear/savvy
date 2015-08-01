@@ -10,9 +10,10 @@ body{
 
 h1{
     font-family:'Kreon', serif;
+    font-size: 4vw;
     font-weight: 700;
     color: #07c4dd;
-    text-align: center;
+    text-align: center;;
 }
 
 h2{
@@ -22,6 +23,7 @@ h2{
     line-height: 50%;
     color:#fff ;
     text-align: center;
+    opacity: 0
 
 }
 h4{
