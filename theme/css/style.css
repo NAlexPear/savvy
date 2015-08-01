@@ -27,15 +27,16 @@ h2{
 
 }
 h4{
-    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
     font-weight: 700;
     color: #fff;
 }
 
 p {
-    font-family: georgia, "Times New Roman";
-    font-size: 4vw;  
+    font-family: 'Kreon', serif;
+    font-size: 2vw;  
     color: #fff; 
+    opacity: 0;
 } 
 
 a { 
@@ -72,14 +73,15 @@ hr{
 
 #content p{
     font-size:2vw;
-    font-family:'Quicksand', 'Helvetica', 'sans-serif';
+    font-family:'Quicksand', 'Helvetica', sans-serif;
     font-weight:400;
 }
 
 #content ul{
-    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
-    font-size: 0.8em;
-    opacity: 0.3;
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-size: 5vw;
+    padding-left: 0px;
+    color: #fff;
 }
 
 #content a{
@@ -111,8 +113,27 @@ hr{
     font-weight: 400;
 } 
 
+#infobubbles{
+    list-style-type:none;
+    display:table; 
+    table-layout:fixed; 
+    width: 100%;
+}
+  
+#infobubbles li{
+    display: table-cell;
+    text-align: center;
+}
+.infodiv{ 
+    height: 15vw;
+    width: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    background-color: #07c4dd;
+}
+
 .navreact a{
-    
    color:#fff;
   -o-transition:.5s color; 
   -ms-transition:.5s color;
