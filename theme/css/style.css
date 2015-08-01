@@ -41,16 +41,10 @@ a {
 
 a:hover {  
     color: rgba(100,100,100,1.0);
-} 
-
-.topstuff{
-    width: 100%; 
 }
 
-.splash {
-    width: 50%; 
-    position: absolute;
-    margin-top: -30%;
+ul{
+    margin-bottom: 0px;
 }
 
 #content-wrapper{
