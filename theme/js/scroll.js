@@ -1,4 +1,3 @@
-// JQuery Wrapper
 $(document).ready(function() {
     // Scrolling Function Below
     $('a[href*=#]:not([href=#])').click(function() {
@@ -13,11 +12,6 @@ $(document).ready(function() {
             }
         }
     });
-});
-
-$(document).ready(function(){
-    // Sticky Menu Below
-    $('#menubar').stickThis();
 });
 
 
