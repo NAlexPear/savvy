@@ -1,16 +1,17 @@
 html{
     -webkit-font-smoothing: antialised;
+    background-color: #2B2B2B;
     margin:0;
 }
 
 body{
-    background-color: rgb(255,255,255);
     margin:0; 
 }
 
 h1{
     font-family:'Lato', 'Helvetica', 'Sans-serif';
     font-weight: 400;
+    color: #fff;
 }
 
 h2{
@@ -18,16 +19,19 @@ h2{
     font-size:3vw;
     font-weight: 400; 
     line-height: 50%;
+    color: #fff;
+
 }
 h4{
     font-family: 'Lato', 'Helvetica', 'sans-serif';
     font-weight: 400;
+    color: #fff;
 }
 
 p {
     font-family: georgia, "Times New Roman";
     font-size: 4vw;  
-    color: rgb(155,155,155); 
+    color: #fff; 
 } 
 
 a { 
@@ -104,7 +108,7 @@ a:hover {
 
 .navreact a{
     
-   color:#A8A8A8;
+   color:#fff;
   -o-transition:.5s color; 
   -ms-transition:.5s color;
   -moz-transition:.5s color;
@@ -113,7 +117,7 @@ a:hover {
 }
 
 .navreact a:hover{
-    color: #51504f;  
+    color:#2B2B2B;  
 }
 
 .copyright {
@@ -122,5 +126,7 @@ a:hover {
     text-align: center;
     font-family: helvetica, "Sans-Serif"; 
     font-size: 14px;
-    opacity: 0.4;
+    opacity: 0.6;
+    color: #fff;
+
 }
