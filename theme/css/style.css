@@ -124,6 +124,7 @@ hr{
     display: table-cell;
     text-align: center;
 }
+
 .infodiv{ 
     height: 15vw;
     width: 15vw;
@@ -131,6 +132,11 @@ hr{
     margin-right: auto;
     border-radius: 50%;
     background-color: #07c4dd;
+}
+
+.infodiv.material{
+    background-color: #fff;
+    color: #07c4dd;
 }
 
 .navreact a{
