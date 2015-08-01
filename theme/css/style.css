@@ -9,13 +9,13 @@ body{
 }
 
 h1{
-    font-family:'Lato', 'Helvetica', 'Sans-serif';
+    font-family:'Quicksand', 'Helvetica', 'Sans-serif';
     font-weight: 400;
     color: #fff;
 }
 
 h2{
-    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
     font-size:3vw;
     font-weight: 400; 
     line-height: 50%;
@@ -23,7 +23,7 @@ h2{
 
 }
 h4{
-    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
     font-weight: 400;
     color: #fff;
 }
@@ -68,12 +68,12 @@ hr{
 
 #content p{
     font-size:2vw;
-    font-family:'Lato', 'Helvetica', 'sans-serif';
+    font-family:'Quicksand', 'Helvetica', 'sans-serif';
     font-weight:300;
 }
 
 #content ul{
-    font-family: 'Lato', 'Helvetica', 'sans-serif';
+    font-family: 'Quicksand', 'Helvetica', 'sans-serif';
     font-size: 0.8em;
     opacity: 0.3;
 }
@@ -102,7 +102,7 @@ hr{
 #navbubbles li{
     display: table-cell;
     text-align: center;
-    font-family: 'Lato', "Sans-Serif";
+    font-family: 'Quicksand', "Sans-Serif";
     font-size: 2.5vw; 
     font-weight: 300;
 } 
