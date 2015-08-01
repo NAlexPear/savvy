@@ -134,13 +134,19 @@ hr{
     text-align: center;
 }
 
+#infobubbles img{
+  height: 15vw;
+  width:15vw;
+}
+
+/*INFODIV SOON TO BE DEPRECATED (don't forget to remove)*/
 .infodiv{
     height: 15vw;
     width: 15vw;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-    background-color: #07c4dd;
+    display: block;
 }
 
 .infodiv.material{
