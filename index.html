@@ -27,7 +27,13 @@
     <!--JQuery.min.js linkage-->
     <script type='text/javascript' src='theme/js/jquery.min.js'></script>
 
-    <!--non-async scripts here-->
+    <!--picturefill HTML5 shiv for older browsers-->
+    <script type='text/javascript'>
+      document.createElement('picture');
+    </script>
+
+    <!--async plugins here-->
+    <script type='text/javascript' src='theme/js/picturefill.min.js' async></script>
     <script type="text/javascript" src="theme/js/stickit.min.js" async></script>
     <script type="text/javascript" src="theme/js/queryloader.min.js" async></script>
 
