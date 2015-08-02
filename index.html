@@ -27,21 +27,20 @@
     <!--JQuery.min.js linkage-->
     <script type='text/javascript' src='theme/js/jquery.min.js'></script>
 
-    <!--async plugins here-->
-    <script type="text/javascript" src="theme/js/stickit.min.js" async></script>
+    <!--non-async scripts here-->
+    <script type="text/javascript" src="theme/js/stickit.min.js"></script>
     <script type="text/javascript" src="theme/js/queryloader.min.js"></script>
 
 
-    <!--async scripts below--->
+    <!--async scripts below-->
     <script type="text/javascript" src="theme/js/bgloader.js" async></script>
     <script type="text/javascript" src="theme/js/wordfades.js" async></script>
     <script type="text/javascript" src="theme/js/menustick.js" async></script>
     <script type="text/javascript" src="theme/js/scroll.js" async></script>
-    <script type="text/javascript" src="theme/js/buttonpop.js" async></script>
 
 
 </head>
- 
+
 <body>
     <div id="menubar">
         <ul id="navbubbles">
@@ -86,11 +85,7 @@
         </ul>
     </div>
     <div id="backdrop">
-        <img
-        src="theme/images/headerShort.png"
-        width="100%" height=auto
-        alt="Welcome to Savvy Coders"></img>
-    </div>
+        <img src="theme/images/headerShort.png" width="100%" height="auto" alt="Welcome to Savvy Coders"></img>
     </div>
     <div id="page-wrap">
         <div id="content-wrapper">
@@ -108,9 +103,9 @@
                         Because knowing how to code isn't just a neat thing to know; it's an essential skill for the 21st century. With Savvy Coders,
                         you can learn the basics in just <b>1 month</b>. Here's how:</p>
                         <ul id="infobubbles">
-                            <li><img src="theme/images/bubbles/infobubbles5.png" alt="5">days/week</li>
-                            <li><img src="theme/images/bubbles/infobubbles4.png" alt="4">    weeks</li>
-                            <li><img src="theme/images/bubbles/infobubbles3.png" alt="3">hours/day</li>
+                            <li id="5"><div class="infodiv">5</div>days/week</li>
+                            <li id="4"><div class="infodiv">4</div>weeks</li>
+                            <li id="3"><div class="infodiv">3</div>hours/day</li>
                         </ul>
                         <br>
                     </div>
@@ -118,71 +113,14 @@
                         <p>All lead by one of our in-person instructors in a small, focused classroom setting.
                         Every session focuses on what you need to know (and nothing you don't).
                         <b>Click the buttons below to see what you'll learn:</b></p>
-                        <br>
                         <ul id="infobubbles">
-                            <li id="week1"><img src="theme/images/bubbles/matbubbles1.png" alt="Week 1"></li>
-                            <li id="week2"><img src="theme/images/bubbles/matbubbles2.png" alt="Week 2"></li>
-                            <li id="week3"><img src="theme/images/bubbles/matbubbles3.png" alt="Week 3"></li>
-                            <li id="week4"><img src="theme/images/bubbles/matbubbles4.png" alt="Week 4"></li>
+                            <li id="week1"><div class="infodiv material">week<br><span style="font-size: 8vh;">1</span></div></li>
+                            <li id="week2"><div class="infodiv material">week<br><span style="font-size: 8vh;">2</span></div></li>
+                            <li id="week3"><div class="infodiv material">week<br><span style="font-size: 8vh;">3</span></div></li>
+                            <li id="week4"><div class="infodiv material">week<br><span style="font-size: 8vh;">4</span></div></li>
                         </ul>
                         <br>
-                      </div>
-                      <div class="curricula-slider">
-                        <div class="slide active-slide" id="week1-slide">
-                          <h2>Fundamentals of Computing, HTML, CSS, and JS</h2>
-                          <h3>Build your first website in 7 days with lessons on:</h3>
-                          <ul>
-                            <li>using the terminal</li>
-                            <li>basic markdown</li>
-                            <li>interacting with the DOM</li>
-                            <li>HTML tags and stucture</li>
-                            <li>CSS styling</li>
-                            <li>version control with git and GitHub</li>
-                            <li>basic JavaScript fundamentals</li>
-                          </ul>
-                        </div>
-                        <div class="slide" id="week2-slide">
-                          <h2>Functional JavaScript</h2>
-                          <h3>Learn about the key principles of programming with the language of the Web.
-                          Lesson modules include:</h3>
-                          <ul>
-                            <li>library usage with underscore.js</li>
-                            <li>advanced variable and function use</li>
-                            <li>JavaScript/browser interactions through the DOM</li>
-                            <li>adding web interactivity with JQuery</li>
-                            <li>implementing video and audio through HTML5</li>
-                            <li>introductory design principles for the web</li>
-                            <li>software design and testing</li>
-                          </ul>
-                        </div>
-                        <div class="slide" id="week3-slide">
-                          <h2>Object-Oriented JavaScript</h2>
-                          <h3>Use JavaScript to delve-deeper into the industry standard of code
-                          design through Objects while building your portfolio. Look for lessons on:</h3>
-                          <ul>
-                            <li>Object creation and manipulation</li>
-                            <li>extending Objects through inheritance</li>
-                            <li>using Objects in software</li>
-                            <li>mastering Chrome Developer Tools</li>
-                            <li>building a fully-functional website for your portfolio</li>
-                          </ul>
-                        </div>
-                        <div class="slide" id="week4-slide">
-                          <h2>Advanced Implementations and APIs</h2>
-                          <h3>Build your applications for larger-scale deployment and connect to
-                          other parts of the Web through APIs. The finals lessons in this module include:</h3>
-                          <ul>
-                            <li>adding geo-location functionality with Google Maps API</li>
-                            <li>implementing secure payment processing with Stripe</li>
-                            <li>building your own APIs</li>
-                            <li>deploying applications on a large scale</li>
-                            <li>using backend-as-a-service</li>
-                            <li>learning how to continue learning and extending these concepts!</li>
-                          </ul>
-                        </div>
-                        <br>
                     </div>
-                    <hr>
                     <div id="pricing"></div>
                 </div>
                 <div id="application"></div>
