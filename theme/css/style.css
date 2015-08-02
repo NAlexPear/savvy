@@ -139,9 +139,10 @@ hr{
 }
 
 #infobubbles img{
-  height: 15vw;
+  height:15vw;
   width:15vw;
 }
+
 .curricula-slider{
   max-width: 900px;
   width: 80vw;
@@ -181,6 +182,11 @@ hr{
 #week1{
   cursor: pointer;
 }
+
+#week1 img{
+  width: 14vmin;
+  height: 14vmin;
+}
 #week1-slide{
   opacity: 0;
 }
@@ -188,13 +194,25 @@ hr{
   opacity: 0.6;
   cursor: pointer;
 }
+#week2 img{
+  width: 14vmin;
+  height: 14vmin;
+}
 #week3{
   opacity: 0.6;
   cursor: pointer;
 }
+#week3 img{
+  width: 14vmin;
+  height: 14vmin;
+}
 #week4{
   opacity: 0.6;
   cursor: pointer;
+}
+#week4 img{
+  width: 14vmin;
+  height: 14vmin;
 }
 
 .navreact a{
