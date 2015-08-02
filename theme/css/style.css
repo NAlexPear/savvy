@@ -144,6 +144,8 @@ hr{
 }
 .downbutton{
   width: 70%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .downbutton img{
   width: 12vw;
