@@ -142,6 +142,26 @@ hr{
   height:15vw;
   width:15vw;
 }
+.downbutton{
+  width: 70%;
+}
+.downbutton img{
+  width: 12vw;
+  height: auto;
+}
+
+.downbutton a{
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.downbutton a:hover{
+  opacity: 1;
+}
+
+.downbutton a:active{
+  opacity: 1;
+}
 
 .curricula-slider{
   max-width: 900px;
