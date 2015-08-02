@@ -143,12 +143,12 @@ hr{
   width:15vw;
 }
 .downbutton{
-  width: 70%;
+  width: 18%;
   margin-left:auto;
   margin-right:auto;
 }
 .downbutton img{
-  width: 12vw;
+  width: 100%;
   height: auto;
 }
 
