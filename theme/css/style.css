@@ -212,6 +212,8 @@ hr{
 }
 
 #week1 img{
+  max-width: 200px;
+  max-height: 200px;
   width: 14vmax;
   height: 14vmax;
 }
@@ -223,6 +225,8 @@ hr{
   cursor: pointer;
 }
 #week2 img{
+  max-width: 200px;
+  max-height: 200px;
   width: 14vmax;
   height: 14vmax;
 }
@@ -231,6 +235,8 @@ hr{
   cursor: pointer;
 }
 #week3 img{
+  max-width: 200px;
+  max-height: 200px;
   width: 14vmax;
   height: 14vmax;
 }
@@ -239,6 +245,8 @@ hr{
   cursor: pointer;
 }
 #week4 img{
+  max-width: 200px;
+  max-height: 200px;
   width: 14vmax;
   height: 14vmax;
 }
