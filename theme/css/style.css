@@ -101,6 +101,13 @@ hr{
 
 #whatlearn{
     opacity:0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#whatlearn ul{
+  padding-left: 0px;
 }
 
 #menubar{
@@ -195,7 +202,6 @@ hr{
   display: none;
   position: absolute;
   top:200;
-  left:20;
   width: 80%;
 }
 .active-slide{
@@ -206,8 +212,8 @@ hr{
 }
 
 #week1 img{
-  width: 14vmin;
-  height: 14vmin;
+  width: 14vmax;
+  height: 14vmax;
 }
 #week1-slide{
   opacity: 0;
@@ -217,24 +223,24 @@ hr{
   cursor: pointer;
 }
 #week2 img{
-  width: 14vmin;
-  height: 14vmin;
+  width: 14vmax;
+  height: 14vmax;
 }
 #week3{
   opacity: 0.6;
   cursor: pointer;
 }
 #week3 img{
-  width: 14vmin;
-  height: 14vmin;
+  width: 14vmax;
+  height: 14vmax;
 }
 #week4{
   opacity: 0.6;
   cursor: pointer;
 }
 #week4 img{
-  width: 14vmin;
-  height: 14vmin;
+  width: 14vmax;
+  height: 14vmax;
 }
 
 .navreact a{
