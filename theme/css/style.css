@@ -174,7 +174,7 @@ hr{
 
 .curricula-slider{
   max-width: 900px;
-  width: 80vw;
+  width: 80%;
   height: 35vw;
   margin-left: auto;
   margin-right: auto;
@@ -202,10 +202,12 @@ hr{
   display: none;
   position: absolute;
   top:200;
-  width: 80%;
 }
 .active-slide{
   display:block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 #week1{
   cursor: pointer;
