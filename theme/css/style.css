@@ -117,6 +117,19 @@ hr{
   color: #fff;
 }
 
+#application ul{
+      font-family: 'Quicksand', 'Helvetica', sans-serif;
+      font-size: 2vw;
+      padding-left: 0px;
+      color: #fff;
+}
+
+#faq img{
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #menubar{
     background-color: #07c4dd;
 }
@@ -157,8 +170,8 @@ hr{
   width:15vw;
 }
 
-#unemployed img{ 
-  height: 50%;  
+#unemployed img{
+  height: 50%;
 }
 .downbutton{
   width: 18%;
