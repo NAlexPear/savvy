@@ -139,6 +139,20 @@ hr{
   vertical-align: middle;
 }
 
+#contact-form{
+  padding: 4vw;
+-webkit-column-count: 2; /* Chrome, Safari, Opera */
+-moz-column-count: 2; /* Firefox */
+column-count: 2;
+}
+
+#contact-form a{
+  border-bottom: none;
+}
+#contact-form a:hover{
+  border-bottom: none;
+}
+
 #menubar{
     background-color: #07c4dd;
 }
