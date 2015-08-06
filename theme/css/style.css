@@ -181,6 +181,7 @@ hr{
 }
 
 .curricula-slider h2{
+  line-height: 110%;
   color: #07c4dd;
 }
 .curricula-slider h3{
@@ -200,12 +201,9 @@ hr{
 
 .slide{
   display: none;
-  position: absolute;
-  top:200;
-}
+} 
 .active-slide{
   display:block;
-  width: 70%;
   margin-left: auto;
   margin-right: auto;
 }
