@@ -110,6 +110,16 @@ hr{
   padding-left: 0px;
 }
 
+#pricing ul{
+  font-family: 'Quicksand', 'Helvetica', sans-serif;
+  font-size: 3vmin;
+  padding-left: 0px;
+  color: #fff;
+}
+
+#unemployed img{
+}
+
 #menubar{
     background-color: #07c4dd;
 }
@@ -167,7 +177,6 @@ hr{
 .downbutton a:hover{
   opacity: 1;
 }
-
 .downbutton a:active{
   opacity: 1;
 }
@@ -201,7 +210,7 @@ hr{
 
 .slide{
   display: none;
-} 
+}
 .active-slide{
   display:block;
   margin-left: auto;
