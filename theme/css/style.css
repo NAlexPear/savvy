@@ -124,10 +124,19 @@ hr{
       color: #fff;
 }
 
-#faq img{
-  width: 30%;
+#logo2{
+  font-family: 'Kreon', serif;
+  font-size: 7vw;
+  color: #07c4dd;
+  vertical-align: middle;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+#logo2 img{
+  width: 30%;
+  vertical-align: middle;
 }
 
 #menubar{
