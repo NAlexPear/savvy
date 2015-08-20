@@ -23,13 +23,19 @@ h2{
     line-height: 50%;
     color:#fff ;
     text-align: center;
-    opacity: 0
 
+}
+h3{
+  font-family: 'Quicksand', 'Helvetica', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 2.75vh;
 }
 h4{
     font-family: 'Quicksand', 'Helvetica', sans-serif;
-    font-weight: 700;
+    font-weight: 300;
     color: #fff;
+    font-size: 2vh;
 }
 
 p {
@@ -83,6 +89,28 @@ hr{
 
 #content a:hover{
     border-bottom:0.2vw solid;
+}
+#applybutton{
+  background-color: #07c4dd;
+  padding: 3px;
+  width:30%;
+  max-width: 300px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+#applybutton a{
+  opacity: 0.6;
+}
+
+#applybutton a:hover{
+  opacity: 0.9;
+}
+
+#applybutton a:active{
+  opacity:1;
 }
 
 #howworks{
