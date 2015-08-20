@@ -93,11 +93,8 @@ hr{
 #applybutton{
   background-color: #07c4dd;
   padding: 3px;
-  width:30%;
   max-width: 300px;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 10px;
 }
 
@@ -225,9 +222,13 @@ hr{
   height: 50%;
 }
 .downbutton{
-  width: 18%;
-  margin-left:auto;
-  margin-right:auto;
+}
+.downbutton.up{
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .downbutton img{
   width: 100%;
