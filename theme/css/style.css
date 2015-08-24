@@ -220,7 +220,10 @@ hr{
   height:15vw;
   width:15vw;
 }
-
+#infobubbles .downbutton img{
+  width: 10vmax;
+  height:auto;
+}
 #unemployed img{
   height: 50%;
 }
@@ -233,20 +236,21 @@ hr{
   margin-right: auto;
 }
 .nav-arrows{
-  width: 60%;
+  width: 30%;
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .nav-arrows li:last-child p{
-  margin-left: -35%;
+  /*margin-left: -35%;*/
 }
 .downbutton{
-  margin-left: -35%;
+  /*margin-left: -40%;*/
 }
 .downbutton.up{
   margin-left: 0%;
+  /*margin-right: -10%*/
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
