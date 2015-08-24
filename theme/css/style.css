@@ -96,6 +96,8 @@ hr{
   padding: 0.1vmin;
   height: auto;
   border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #applybutton a{
