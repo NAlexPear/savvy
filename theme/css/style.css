@@ -222,6 +222,7 @@ hr{
   height: 50%;
 }
 .downbutton{
+  height: 30%;
 }
 .downbutton.up{
   -webkit-transform: rotate(180deg);
@@ -232,7 +233,7 @@ hr{
 }
 .downbutton img{
   width: 100%;
-  height: auto;
+  height: 30%;
 }
 
 .downbutton a{
