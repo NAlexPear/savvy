@@ -92,8 +92,8 @@ hr{
 }
 #applybutton{
   background-color: #07c4dd;
-  padding: 3px;
   max-width: 300px;
+  padding: 0.1vmin;
   height: auto;
   border-radius: 10px;
 }
@@ -211,7 +211,7 @@ hr{
 #infobubbles li{
     display: table-cell;
     text-align: center;
-    vertical-align: middle;  
+    vertical-align: middle;
 }
 
 #infobubbles img{
