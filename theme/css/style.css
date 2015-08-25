@@ -137,7 +137,11 @@ hr{
   padding-left: 0px;
 }
 
-#pricing ul{
+#students-copy{
+  opacity: 0;
+}
+
+#students-copy ul{
   font-family: 'Quicksand', 'Helvetica', sans-serif;
   font-size: 3vmin;
   padding-left: 0px;

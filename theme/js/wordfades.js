@@ -20,13 +20,13 @@ $(function() {
         //repeat for "how it works" section
         $('#howworks').each( function(i){
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var top_of_object = $(this).offset().top;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
+            if( bottom_of_window > top_of_object ){
 
-                $(this).animate({'opacity':'1'},1800);
+                $(this).animate({'opacity':'1'},800);
 
             }
 
@@ -34,11 +34,11 @@ $(function() {
          //repeat for "what do you learn" section
         $('#whatlearn').each( function(i){
 
-            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var top_of_object = $(this).offset().top;
             var bottom_of_window = $(window).scrollTop() + $(window).height();
 
             /* If the object is completely visible in the window, fade it it */
-            if( bottom_of_window > bottom_of_object ){
+            if( bottom_of_window > top_of_object ){
 
                 $(this).animate({'opacity':'1'},800);
 
@@ -48,17 +48,31 @@ $(function() {
         //repeat for "curricula slides" section
        $('.slide').each( function(i){
 
-           var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+           var top_of_object = $(this).offset().top;
            var bottom_of_window = $(window).scrollTop() + $(window).height();
 
            /* If the object is completely visible in the window, fade it it */
-           if( bottom_of_window > bottom_of_object ){
+           if( bottom_of_window > top_of_object ){
 
                $(this).animate({'opacity':'1'},800);
 
            }
 
        });
+       //repeat for "students" section
+      $('#students-copy').each( function(i){
+
+          var top_of_object = $(this).offset().top;
+          var bottom_of_window = $(window).scrollTop() + $(window).height();
+
+          /* If the object is completely visible in the window, fade it it */
+          if( bottom_of_window > top_of_object ){
+
+              $(this).animate({'opacity':'1'},800);
+
+          }
+
+      });
 
 
     });
