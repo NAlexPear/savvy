@@ -380,3 +380,26 @@ hr{
     color: #fff;
 
 }
+
+/*FAQ-specific styling*/
+#faq-list{
+  list-style: none;
+}
+
+#faq-list h3{
+  font-size: 3vmax;
+  color: #fff;
+}
+
+#faq-list h3:hover{
+  color: #07c4dd;
+  cursor: pointer;
+}
+
+.response{
+  display: none;
+}
+
+.active-response{
+  display: block;
+}
