@@ -37,18 +37,36 @@
     <!--async plugins here-->
     <script type="text/javascript" src="theme/js/stickit.min.js" async></script>
     <script type="text/javascript" src="theme/js/queryloader.min.js"></script>
+    <script type="text/javascript" src="theme/js/enquire.min.js"></script>
 
 
     <!--async scripts below-->
     <script type="text/javascript" src="theme/js/bgloader.js" async></script>
     <script type="text/javascript" src="theme/js/wordfades.js" async></script>
-    <script type="text/javascript" src="theme/js/menustick.js" async></script>
     <script type="text/javascript" src="theme/js/scroll.js" async></script>
     <script type="text/javascript" src="theme/js/buttonpop.js" async></script>
     <script type="text/javascript" src="theme/js/typeform.js" async></script>
     <script type="text/javascript" src="theme/js/wufoo.js" async></script>
-    <script tyle="text/javascript" src="theme/js/browserup.js" async></script>
-    <script type="text/javascript" src="theme/js/mmenu.js"></script>
+    <script type="text/javascript" src="theme/js/browserup.js" async></script>
+    <script type="text/javascript" src="theme/js/responsive.js" async></script>
+    
+    <!--Enquire.js responsive javascript call-->
+    <script type="text/javascript">
+
+      // This loads JS files in the head element
+          function loadJS(url)
+          {
+              // adding the script tag to the head
+             var head = document.getElementsByTagName('head')[0];
+             var script = document.createElement('script');
+             script.type = 'text/javascript';
+             script.src = url;
+      
+             // fire the loading
+             head.appendChild(script);
+          }
+
+</script>
 
     <!-- Google analytics -->
     <script tyle="text/javascript" src="theme/js/tags.js"></script>

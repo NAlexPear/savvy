@@ -64,7 +64,7 @@ hr{
 }
 
 #menu-icon{
-  display: hidden;
+  display: none;
 }
 
 #content-wrapper{
