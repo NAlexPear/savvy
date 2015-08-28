@@ -23,7 +23,7 @@ $(function(){
     oldAns.removeClass('active-response');
     newAns.addClass('active-response');
   });
-  $('#q5)').click(function(){
+  $('#q5').click(function(){
     var oldAns = $('.active-response');
     var newAns = $('#faq5');
     oldAns.removeClass('active-response');
