@@ -1,0 +1,55 @@
+html{
+    -webkit-font-smoothing: antialised;
+    background-color: #2B2B2B;
+    margin:0;
+}
+
+body{
+    margin:0;
+}
+
+h1{
+    font-family:'Kreon', serif;
+    font-size: 4vw;
+    font-weight: 700;
+    color: #07c4dd;
+    text-align: center;;
+}
+
+h2{
+    font-family: 'Kreon', serif;
+    font-size:3vw;
+    font-weight: 700;
+    line-height: 50%;
+    color:#fff ;
+    text-align: center;
+
+}
+h3{
+  font-family: 'Quicksand', 'Helvetica', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 2.75vh;
+}
+h4{
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 2vh;
+}
+
+p {
+    font-family: 'Kreon', serif;
+    font-size: 2vw;
+    color: #fff;
+    /*opacity: 0;*/
+}
+
+a {
+    text-decoration: none;
+    color:#07c4dd;
+}
+
+a:hover {
+    color:#07c4dd;
+}
