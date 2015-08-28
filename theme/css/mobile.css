@@ -53,3 +53,16 @@ a {
 a:hover {
     color:#07c4dd;
 }
+
+#menu-icon{
+    display: block;
+    position: absolute;
+    margin-left: 5vh;
+    margin-top: 3vh;
+    z-index: 0;
+}
+
+#menubar {
+    position: absolute;
+    left: -800px;
+}
