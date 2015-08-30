@@ -63,6 +63,10 @@ hr{
     opacity: 0.8;
 }
 
+#menu-icon{
+  display: none;
+}
+
 #content-wrapper{
     width:90%;
     max-width: 1200px;
