@@ -54,9 +54,24 @@ a:hover {
     color:#07c4dd;
 }
 
+#content{
+    padding-left:1.5vw;
+    padding-right:1.5vw;
+}
+
+#content p{
+    font-size:2vw;
+    font-family:'Quicksand', 'Helvetica', sans-serif;
+    font-weight:400;
+}
+
+#content a{
+    border-bottom:0.2vw dotted;
+}
+
 #menu-icon{
     display: block;
-    position: absolute;
+    position: fixed;
     margin-left: 5vh;
     margin-top: 3vh;
     z-index: 0;
@@ -65,4 +80,18 @@ a:hover {
 #menubar {
     position: absolute;
     left: -800px;
+}
+
+#applybutton{
+  background-color: #07c4dd;
+  max-width: 300px;
+  padding: 0.1vmin;
+  height: auto;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.downbutton{
+  display: none;
 }
