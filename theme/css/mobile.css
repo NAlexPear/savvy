@@ -32,13 +32,13 @@ h3{
   font-family: 'Quicksand', 'Helvetica', sans-serif;
   font-weight: 300;
   color: #fff;
-  font-size: 2.75vh;
+  font-size: 2.75vw;
 }
 h4{
     font-family: 'Quicksand', 'Helvetica', sans-serif;
     font-weight: 300;
     color: #fff;
-    font-size: 2vh;
+    font-size: 2vw;
 }
 
 p {
@@ -69,9 +69,9 @@ a:hover {
 }
 
 #content p{
-    font-size:2vw;
+    font-size:3.35vw;
     font-family:'Quicksand', 'Helvetica', sans-serif;
-    font-weight:400;
+    font-weight:100;
 }
 
 #content a{
@@ -128,7 +128,7 @@ a:hover {
 
 #mission p{
   font-weight: 100;
-  font-size: 5vw;
+  font-size: 4vw;
 }
 
 #mission-mobile{
@@ -186,6 +186,142 @@ a:hover {
   color: #07c4dd;
 }
 
+#infobubbles{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed;
+    width: 100%;
+    padding-left: 0px;
+}
+
+#infobubbles li{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#infobubbles img{
+  height:15vmin;
+  width:15vmin;
+}
+
+.curricula-slider{
+  max-width: 900px;
+  width: 80%;
+  height: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+.curricula-slider h2{
+  line-height: 110%;
+  color: #07c4dd;
+  -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+
+.curricula-slider h3{
+  -webkit-column-span: all; /* Chrome, Safari, Opera */
+    column-span: all;
+}
+
+.curricula-slider ul{
+    font-family: 'Quicksand', 'Helvetica', sans-serif;
+    font-size: 3vw;
+    padding-left: 0px;
+    color: #07c4dd;
+}
+
+.curricula-slider li {
+  padding-top: 0px;
+  padding-bottom: 5px;
+}
+
+.slide{
+  display: none;
+}
+.active-slide{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#week1{
+  cursor: pointer;
+}
+#week1-slide{
+  opacity: 0;
+}
+#week2{
+  opacity: 0.6;
+  cursor: pointer;
+}
+#week3{
+  opacity: 0.6;
+  cursor: pointer;
+}
+#week4{
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#application ul{
+      font-family: 'Quicksand', 'Helvetica', sans-serif;
+      font-size: 3.35vw;
+      padding-left: 0px;
+      color: #fff;
+}
+
+#logo2{
+  font-family: 'Kreon', serif;
+  font-size: 7vmin;
+  color: #07c4dd;
+  vertical-align: middle;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#logo2 img{
+  width: 30%;
+  vertical-align: middle;
+}
+
+.copyright {
+    margin-top:5%;
+    margin-bottom:10%;
+    text-align: center;
+    font-family: helvetica, "Sans-Serif";
+    font-size: 14px;
+    opacity: 0.6;
+    color: #fff;
+
+}
+
 .nav-arrows{
   display: none;
+}
+/*FAQ-specific styling*/
+#faq-list{
+  list-style: none;
+}
+
+#faq-list h3{
+  font-size: 3vmax;
+  color: #fff;
+}
+
+#faq-list h3:hover{
+  color: #07c4dd;
+  cursor: pointer;
+}
+
+.response{
+  display: none;
+}
+
+.active-response{
+  display: block;
 }
