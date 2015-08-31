@@ -1,7 +1,11 @@
 $(function(){
-    $('#menu-icon').click(function(){
-        $('#menubar').slideToggle()
-        $('body').animate({left:'300px'},600);
-        $('#menu-icon').addClass('menu-active');
+    $('.menu-icon').click(function(){
+        $('body').animate({left:'200px'});
+        $('#menubar').animate({left:'0px'});
     });
 });
+
+// function(){
+//     $('body').animate({left:'0px'});
+//     $('#menubar').animate({left:'-800px'});
+// });
