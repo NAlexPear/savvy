@@ -5,7 +5,7 @@ $(function(){
         $('#menubar').removeClass('expanded').animate({left:'-800px'});
     } else {
         $('body').animate({left:'200px'});
-        $('#menubar').addClass('expanded').animate({left:'0px'});
+        $('#menubar').addClass('expanded').animate({left:'-25px'});
       }
     });
 });

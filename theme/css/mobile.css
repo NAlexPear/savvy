@@ -83,17 +83,48 @@ a:hover {
     margin-left: 3vw;
     margin-top: 3vh;
     z-index: 0;
-    opacity: 0.7;
+  }
+.savvy-logo-text{
+  font-family: 'Kreon', serif;
+  font-size: 30px;
 }
-
-.clicked{
-  opacity: 1;
-}
-
-#menubar{
+#menubar {
     position: fixed;
     z-index: 1;
     left: -800px;
+    width: 200px;
+    height: 100%;
+    background-color:#8e8e8e;
+}
+#navbubbles{
+    list-style-type:none;
+}
+
+#navbubbles li{
+    font-family: 'Quicksand', "Sans-Serif";
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    border-bottom: 1px solid #51504f;
+    width: 150px;
+}
+
+#navbubbles li:first-child{
+  border: none;
+}
+
+#navbubbles li:nth-child(2){
+  border:none;
+}
+
+
+.navreact a{
+   color:#fff;
+  -o-transition:.5s color;
+  -ms-transition:.5s color;
+  -moz-transition:.5s color;
+  -webkit-transition:.5s color;
+   transition: .5s color;
 }
 
 #cta {

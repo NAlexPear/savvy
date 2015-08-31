@@ -361,7 +361,10 @@ hr{
   width: 14vmax;
   height: 14vmax;
 }
-
+.savvy-logo-text{
+  font-family: 'Kreon', serif;
+  font-size: 3vw;
+}
 .navreact a{
    color:#fff;
   -o-transition:.5s color;
