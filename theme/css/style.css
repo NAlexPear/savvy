@@ -67,6 +67,12 @@ hr{
   display: none;
 }
 
+#menubar{
+  z-index: 1;
+  position: fixed;
+  background-color: #07c4dd;
+}
+
 #content-wrapper{
     width:90%;
     max-width: 1200px;
@@ -186,10 +192,6 @@ hr{
 }
 #contact-form a:hover{
   border-bottom: none;
-}
-
-#menubar{
-    background-color: #07c4dd;
 }
 
 #navbubbles{
