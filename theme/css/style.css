@@ -300,13 +300,6 @@ hr{
   height:15vmin;
   width:15vmin;
 }
-#infobubbles .downbutton img{
-  width: 10vmax;
-  height:auto;
-}
-#unemployed img{
-  height: 50%;
-}
 
 #cta{
   width: 80%;
@@ -314,44 +307,6 @@ hr{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-.nav-arrows{
-  width: 30%;
-  min-width: 200px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav-arrows li:last-child p{
-  /*margin-left: -35%;*/
-}
-.downbutton{
-  /*margin-left: -40%;*/
-}
-.downbutton.up{
-  margin-left: 0%;
-  /*margin-right: -10%*/
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-.downbutton img{
-  width: 100%;
-  height: 10px;
-}
-
-.downbutton a{
-  text-decoration: none;
-  opacity: 0.6;
-}
-
-.downbutton a:hover{
-  opacity: 1;
-}
-.downbutton a:active{
-  opacity: 1;
 }
 
 .curricula-slider{
