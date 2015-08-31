@@ -302,6 +302,7 @@
 	content: "\e65b";
 }
 .ti-arrow-circle-up:before {
+	font-size: 10vmin;
 	content: "\e65c";
 }
 .ti-arrow-circle-right:before {

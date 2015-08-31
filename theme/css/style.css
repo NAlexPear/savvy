@@ -101,12 +101,12 @@ hr{
 }
 
 #cta {
-  width: 100%;
+  width: 100%; 
 }
 
 #mission p{
   font-weight: 100;
-  font-size: 4vw;
+  font-size: 4vmin;
 }
 
 #mission-mobile{
@@ -140,26 +140,58 @@ hr{
     padding-top: 8px;
 }
 
-#icon-bar li:first-child{
-}
-
 #icon-bar li:first-child a{
   color: #ffffff;
+  -o-transition:.5s color;
+  -ms-transition:.5s color;
+  -moz-transition:.5s color;
+  -webkit-transition:.5s color;
+   transition: .5s color;
 }
 
-#icon-bar li:nth-child(2){
+#icon-bar li:first-child a:hover{
+  color: #07c4dd;
 }
 
 #icon-bar li:nth-child(2) a{
   color: #ffffff;
+  -o-transition:.5s color;
+  -ms-transition:.5s color;
+  -moz-transition:.5s color;
+  -webkit-transition:.5s color;
+   transition: .5s color;
 }
 
-#icon-bar li:nth-child(3){
-}
-
-#icon-bar li:nth-child(3) p{
+#icon-bar li:nth-child(2) a:hover{
   color: #07c4dd;
 }
+
+#icon-bar li:nth-child(3) a{
+  color: #ffffff;
+  -o-transition:.5s color;
+  -ms-transition:.5s color;
+  -moz-transition:.5s color;
+  -webkit-transition:.5s color;
+   transition: .5s color;
+}
+
+#icon-bar li:nth-child(3) a:hover{
+  color: #07c4dd;
+}
+
+#icon-bar li:nth-child(4) a{
+  opacity: 0.6;
+  -o-transition:.3s opacity;
+  -ms-transition:.3s opacity;
+  -moz-transition:.3s opacity;
+  -webkit-transition:.3s opacity;
+   transition: .3s opacity;
+}
+#icon-bar li:nth-child(4) a:hover{
+  opacity: 1;
+}
+
+
 #howworks{
     opacity:0;
     width:90%;
@@ -247,7 +279,7 @@ hr{
     text-align: center;
     font-family: 'Quicksand', "Sans-Serif";
     font-size: 2.5vw;
-    font-weight: 400;
+    font-weight: 400; 
 }
 
 
@@ -265,8 +297,8 @@ hr{
 }
 
 #infobubbles img{
-  height:15vw;
-  width:15vw;
+  height:15vmin;
+  width:15vmin;
 }
 #infobubbles .downbutton img{
   width: 10vmax;
@@ -277,7 +309,7 @@ hr{
 }
 
 #cta{
-  width: 40%;
+  width: 80%;
   min-width: 200px;
   text-align: center;
   margin-left: auto;
