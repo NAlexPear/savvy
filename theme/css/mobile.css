@@ -83,9 +83,14 @@ a:hover {
     margin-left: 3vw;
     margin-top: 3vh;
     z-index: 0;
+    opacity: 0.7;
 }
 
-#menubar {
+.clicked{
+  opacity: 1;
+}
+
+#menubar{
     position: fixed;
     z-index: 1;
     left: -800px;
