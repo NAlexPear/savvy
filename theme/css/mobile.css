@@ -163,7 +163,6 @@ a:hover {
 }
 
 #icon-bar li:first-child{
-  background-color: #07c4dd;
 }
 
 #icon-bar li:first-child a{
@@ -171,7 +170,6 @@ a:hover {
 }
 
 #icon-bar li:nth-child(2){
-  background-color: #8e8e8e;
 }
 
 #icon-bar li:nth-child(2) a{
@@ -179,13 +177,14 @@ a:hover {
 }
 
 #icon-bar li:nth-child(3){
-  background-color: #ffffff;
 }
 
 #icon-bar li:nth-child(3) p{
   color: #07c4dd;
 }
-
+#learnbutton span a {
+  opacity: 0.7;
+}
 #infobubbles{
     list-style-type:none;
     display:table;

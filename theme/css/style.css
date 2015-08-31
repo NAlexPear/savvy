@@ -99,28 +99,67 @@ hr{
 #content a:hover{
     border-bottom:0.2vw solid;
 }
-#applybutton{
-  background-color: #07c4dd;
-  max-width: 300px;
-  padding: 0.1vmin;
-  height: auto;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+
+#cta {
+  width: 100%;
 }
 
-#applybutton a{
-  opacity: 0.6;
+#mission p{
+  font-weight: 100;
+  font-size: 4vw;
 }
 
-#applybutton a:hover{
-  opacity: 0.9;
+#mission-mobile{
+  display: none;
+}
+#mission-desktop{
+  display: block;
 }
 
-#applybutton a:active{
-  opacity:1;
+#icon-bar{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed;
+    width: 100%;
+    padding-left: 0px;
+    margin-top: 0px;
 }
 
+#icon-bar a{
+  text-decoration: none;
+  border-bottom: none;
+}
+
+#icon-bar a:hover{
+  border-bottom: none;
+}
+
+#icon-bar li{
+    display: table-cell;
+    text-align: center;
+    padding-top: 8px;
+}
+
+#icon-bar li:first-child{
+}
+
+#icon-bar li:first-child a{
+  color: #ffffff;
+}
+
+#icon-bar li:nth-child(2){
+}
+
+#icon-bar li:nth-child(2) a{
+  color: #ffffff;
+}
+
+#icon-bar li:nth-child(3){
+}
+
+#icon-bar li:nth-child(3) p{
+  color: #07c4dd;
+}
 #howworks{
     opacity:0;
     width:90%;
