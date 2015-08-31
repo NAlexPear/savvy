@@ -138,6 +138,15 @@ a:hover {
   display: none;
 }
 
+#cta p{
+  font-size: 3vw;
+  text-indent: 0;
+}
+
+#cta a {
+  border-bottom: none;
+}
+
 #icon-bar{
     list-style-type:none;
     display:table;
@@ -150,6 +159,7 @@ a:hover {
 #icon-bar li{
     display: table-cell;
     text-align: center;
+    padding-top: 8px;
 }
 
 #icon-bar li:first-child{
@@ -170,6 +180,10 @@ a:hover {
 
 #icon-bar li:nth-child(3){
   background-color: #ffffff;
+}
+
+#icon-bar li:nth-child(3) p{
+  color: #07c4dd;
 }
 
 .nav-arrows{
