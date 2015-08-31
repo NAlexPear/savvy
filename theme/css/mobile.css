@@ -10,7 +10,7 @@ body{
 
 h1{
     font-family:'Kreon', serif;
-    font-size: 4vw;
+    font-size: 7vw;
     font-weight: 700;
     color: #07c4dd;
     text-align: center;;
@@ -18,7 +18,7 @@ h1{
 
 h2{
     font-family: 'Kreon', serif;
-    font-size:3vw;
+    font-size:5vw;
     font-weight: 700;
     line-height: 50%;
     color:#fff ;
@@ -42,7 +42,7 @@ p {
     font-family: 'Kreon', serif;
     font-size: 2vw;
     color: #fff;
-    /*opacity: 0;*/
+    text-indent: 5vmin;
 }
 
 a {
@@ -52,6 +52,12 @@ a {
 
 a:hover {
     color:#07c4dd;
+}
+#content-wrapper{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 5%;
 }
 
 #content{
@@ -82,14 +88,56 @@ a:hover {
     left: -800px;
 }
 
-#applybutton{
+#cta {
+}
+
+#mission p{
+  font-weight: 100;
+  font-size: 5vw;
+}
+
+#mission-mobile{
+  display: block;
+}
+#mission-desktop{
+  display: none;
+}
+
+#icon-bar{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed;
+    width: 100%;
+    padding-left: 0px;
+    margin-top: 0px;
+}
+
+#icon-bar li{
+    display: table-cell;
+    text-align: center;
+}
+
+#icon-bar li:first-child{
   background-color: #07c4dd;
-  max-width: 300px;
-  padding: 0.1vmin;
-  height: auto;
-  border-radius: 10px;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+#icon-bar li:first-child a{
+  color: #ffffff;
+}
+
+#icon-bar li:nth-child(2){
+  background-color: #8e8e8e;
+}
+
+#icon-bar li:nth-child(2) a{
+  color: #ffffff;
+}
+
+#icon-bar li:nth-child(3){
+  background-color: #ffffff;
+}
+
+#applybutton{
 }
 
 .nav-arrows{
