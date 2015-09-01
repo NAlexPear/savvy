@@ -78,9 +78,9 @@ a {
 .menu-icon{
     display: block;
     position: fixed;
-    margin-left: 3vw;
-    margin-top: 3vh;
-    z-index: 0;
+    margin-left: 3vmin;
+    margin-top: 3vmin;
+    z-index: 1;
   }
 .savvy-logo-text{
   font-family: 'Kreon', serif;
