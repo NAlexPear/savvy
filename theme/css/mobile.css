@@ -53,9 +53,6 @@ a {
     color:#07c4dd;
 }
 
-a:hover {
-    color:#07c4dd;
-}
 #content-wrapper{
     width:90%;
     margin-left:auto;
@@ -123,9 +120,6 @@ a:hover {
    color:#fff;
 }
 
-#cta {
-}
-
 #mission p{
   font-weight: 100;
   font-size: 4vw;
@@ -155,28 +149,21 @@ a:hover {
     padding-left: 0px;
     margin-top: 0px;
 }
-
+#icon-bar p{
+  text-indent: 0px;
+}
 #icon-bar li{
     display: table-cell;
     text-align: center;
     padding-top: 8px;
 }
 
-#icon-bar li:first-child{
-}
-
 #icon-bar li:first-child a{
   color: #ffffff;
 }
 
-#icon-bar li:nth-child(2){
-}
-
 #icon-bar li:nth-child(2) a{
   color: #ffffff;
-}
-
-#icon-bar li:nth-child(3){
 }
 
 #icon-bar li:nth-child(3) p{
@@ -247,23 +234,17 @@ a:hover {
   margin-left: auto;
   margin-right: auto;
 }
-#week1{
-  cursor: pointer;
-}
 #week1-slide{
   opacity: 0;
 }
 #week2{
   opacity: 0.6;
-  cursor: pointer;
 }
 #week3{
   opacity: 0.6;
-  cursor: pointer;
 }
 #week4{
   opacity: 0.6;
-  cursor: pointer;
 }
 
 #application ul{
@@ -288,6 +269,63 @@ a:hover {
   vertical-align: middle;
 }
 
+/*Footer Styles below*/
+
+footer{
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  -ms-column-count: 3;
+  column-count: 3;
+}
+
+#address{
+  -webkit-column-break-before: always; /* Chrome, Safari, Opera */
+  -moz-column-break-before: always; /* Firefox */
+  -ms-column-break-before: always;
+  break-before: always;
+  opacity: 0.8;
+}
+
+footer p{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2vmin;
+  line-height: 100%;
+  margin: 3px;
+}
+
+footer ul{
+  list-style-type: none;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 3.15vmin;
+  margin-top: 0px;
+}
+
+footer li{
+  padding-bottom: 5px;
+}
+
+footer ul a{
+  color: #8d8d8d;
+}
+
+.social{
+  width: 90%;
+  min-width:200px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-column-span: all; /* Chrome, Safari, Opera */
+  -moz-column-span: all; /* Firefox */
+  -ms-column-span: all;
+  column-span: all;
+  opacity: 0.6;
+}
+.social #icon-bar li:last-child p{
+  opacity: 1;
+  color: #ffffff;
+}
 .copyright {
     margin-top:5%;
     margin-bottom:10%;
@@ -296,7 +334,9 @@ a:hover {
     font-size: 14px;
     opacity: 0.6;
     color: #fff;
-
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    -moz-column-span: all; /* Firefox */
+    column-span: all;
 }
 
 .nav-arrows{
@@ -310,11 +350,6 @@ a:hover {
 #faq-list h3{
   font-size: 3vmax;
   color: #fff;
-}
-
-#faq-list h3:hover{
-  color: #07c4dd;
-  cursor: pointer;
 }
 
 .response{
