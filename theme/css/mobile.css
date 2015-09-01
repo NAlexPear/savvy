@@ -352,6 +352,10 @@ footer ul a{
   color: #fff;
 }
 
+#faq-list h3:active {
+  color: #07c4dd;
+}
+
 .response{
   display: none;
 }
