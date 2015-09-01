@@ -922,6 +922,7 @@
 	content: "\e729";
 }
 .ti-twitter:before {
+	font-size: 7vmin;
 	content: "\e72a";
 }
 .ti-time:before {
@@ -979,6 +980,7 @@
 	content: "\e73c";
 }
 .ti-instagram:before {
+	font-size: 7vmin;
 	content: "\e73d";
 }
 .ti-google:before {
@@ -991,6 +993,7 @@
 	content: "\e740";
 }
 .ti-facebook:before {
+	font-size: 7vmin;
 	content: "\e741";
 }
 .ti-dropbox:before {
