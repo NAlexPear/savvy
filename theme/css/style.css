@@ -101,7 +101,7 @@ hr{
 }
 
 #cta {
-  width: 100%; 
+  width: 100%;
 }
 
 #mission p{
@@ -279,7 +279,7 @@ hr{
     text-align: center;
     font-family: 'Quicksand', "Sans-Serif";
     font-size: 2.5vw;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 
@@ -403,6 +403,21 @@ hr{
     color:#2B2B2B;
 }
 
+footer{
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+}
+
+footer ul{
+  list-style-type: none;
+}
+.social{
+  width: 60%;
+  -webkit-column-span: all; /* Chrome, Safari, Opera */
+  -moz-column-span: all; /* Firefox */
+  column-span: all;
+}
 .copyright {
     margin-top:5%;
     margin-bottom:10%;
@@ -411,7 +426,9 @@ hr{
     font-size: 14px;
     opacity: 0.6;
     color: #fff;
-
+    -webkit-column-span: all; /* Chrome, Safari, Opera */
+    -moz-column-span: all; /* Firefox */
+    column-span: all;
 }
 
 /*FAQ-specific styling*/
