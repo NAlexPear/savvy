@@ -282,13 +282,13 @@ body {
   height: 130px;
   width: 100%;
   vertical-align: middle;
-  text-align: right;
+  text-align: center;
 }
 
 #slide-header img{
   width: 30%;
   position: fixed;
-  left: -150px;
+  left: -230px;
   top: -60px;
 }
 
@@ -301,4 +301,8 @@ body {
   left: -500px;
   background-color: #07c4dd;
   z-index: -1;
+}
+
+.list-content li span{
+  font-style: normal;
 }
