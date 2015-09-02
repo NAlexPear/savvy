@@ -93,7 +93,10 @@ body {
   margin: 0 0 0 1em; }
 
 .reveal ol {
-  list-style-type: decimal; }
+  list-style-type: decimal;
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+}
 
 .reveal ul {
   list-style-type: none; }
@@ -146,11 +149,13 @@ body {
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
 
 .reveal code {
-  font-family: monospace; }
+  font-family: monospace;
+  font-size: 1.3em;
+}
 
 .reveal pre code {
   display: block;
-  padding: 5px;
+  padding: 15px;
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
