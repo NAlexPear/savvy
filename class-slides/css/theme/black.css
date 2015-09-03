@@ -400,3 +400,18 @@ body {
   margin-left: -150px;
 }
 
+#contact {
+  list-style-type: none;
+  font-family: 'Kreon', serif;
+  margin-left: -20px;
+}
+
+#contact h3 {
+  font-size: 30px;
+}
+
+#contact h4 {
+  font-size: 30px;
+}
+
+
