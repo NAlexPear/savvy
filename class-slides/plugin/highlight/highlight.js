@@ -11,7 +11,7 @@
 				element.innerHTML = element.innerHTML.trim();
 			}
 
-			// Now escape html unless prevented by author
+			// No escape html unless prevented by author
 			if( ! element.hasAttribute( 'data-noescape' )) {
 				element.innerHTML = element.innerHTML.replace(/</g,"&lt;").replace(/>/g,"&gt;");
 			}

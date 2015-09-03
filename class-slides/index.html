@@ -193,42 +193,42 @@
 				
 				<section>
 					<section>
-					<div id="slide-header">
-						<img src="../theme/images/icons/SavvyFavicon.png">
-						<h1>What is 'programming'?</h1>
-						<span></span>
-					</div>
-					<ul class="list-content">
-						<li>
-							<h3>"verbs" : </h3><h4>JavaScript = functions</h4>
-							<pre><code data-trim class="javascript">2 + 3</code></pre>
-							<br>
-							<pre><code data-trim class="javascript">
-								console.log("Here's a string!");
-							</code></pre>
-							<br>
-							<pre><code data-trim class="javascript">
-		var doThis = function(){
-		thing to do
-		};
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>What is 'programming'?</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>"verbs" : </h3><h4>JavaScript = functions</h4>
+								<pre><code data-trim class="javascript">2 + 3</code></pre>
+								<br>
+								<pre><code data-trim class="javascript">
+									console.log("Here's a string!");
 								</code></pre>
-							<br>
-						</li>
+								<br>
+								<pre><code data-trim class="javascript">
+								var doThis = function(){
+								thing to do
+								};
+									</code></pre>
+								<br>
+							</li>
 						</ul>
-						</section>
-						<section>
-							<ul>
-								<li>
-									<h3>Where is programming used? </h3>
-									<br>
-									<h4>@ every "level" of computing!</h4>
-									<p>Hardware/Architecture (10001100110)</p>
-									<p>between Hardware and OS</p>
-									<p>within an OS (through terminals, consoles)</p>
-									<p>on top of an OS (through programs, VMs)</p>
-									<p>within programs (like browsers!)</p>
-								</li>
-							</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								<h3>Where is programming used? </h3>
+								<br>
+								<h4>@ every "level" of computing!</h4>
+								<p>Hardware/Architecture (10001100110)</p>
+								<p>between Hardware and OS</p>
+								<p>within an OS (through terminals, consoles)</p>
+								<p>on top of an OS (through programs, VMs)</p>
+								<p>within programs (like browsers!)</p>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<section>
@@ -285,9 +285,17 @@
 								<h3>HTML: </h3><h4>"Hyper-Text Markup Language"</h4>
 							</li>
 							<li>
+								<p>Hyper-Text = links, Markup = attributes/style</p>
+								<br>
+							</li>
+							<li>
 								<h3>DOM: </h3><h4>"Document-Object Model"</h4>
 							</li>
+							<li>
+								<p>Document structure</p>
+							</li>
 						</ul>
+						<p></p>
 					</section>
 					<section>
 						<div class="dom">
@@ -332,6 +340,240 @@
   &lt;/body&gt;
 &lt;/html&gt;
 						</code></pre>
+						</div>
+					</section>
+				</section>
+				
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>Quick Breather! (5 minutes)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Anything need to be reviewed?</h3>
+							<br>
+						</li>
+						<li>
+							<br>
+							<ol>
+								<li>Ask your neighbor (or Alex) questions you have</li>
+								<li>Tell your neighbor how much you love HTML/CSS</li>
+								<li>Get hyped for JavaScript!</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1 style="text-align: right;">We get to program! (finally)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<br>
+							<h3>...let's go to Chrome (and the developer console: CTRL + SHIFT + J)</h3>
+							<br>
+						</li>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>JavaScript Building Blocks</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Data Types: </h3><h4>3 used in calculator.js</h4>
+								<p>- number</p>
+								<p>- string ("hello world")</p>
+								<p>- boolean (TRUE/FALSE)</p>
+								<br>
+							</li>
+							<li>
+								<h3>Operators part 1: </h3><h4>assignment</h4>
+								<p>- for variables: =, +=, -=, *=, /=, %=</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Operators part 2: </h3><h4>data-type specific</h4>
+								<p>- numbers: +, -, *, /, %, ++, --</p>
+								<p>- strings: +, +=</p>
+								<p>- boolean: ===, !==, >, <, >=, <=, &&, ||</p>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>JavaScript Building Blocks 2</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Functions: </h3><h4>like variables for blocks of code</i></h4>
+							<p>- totally customizeable (within rules)</p>
+							<p>- save functions as a var (variable)</p>
+							<p>- call functions instead of repeating code</p>
+						</li>
+						<li>
+							<pre><code data-trim class="javascript">
+var doSomething = function(parameters){
+stuff to do;
+};
+
+doSomething(parameters);
+								</code></pre>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>JQuery: </h3><h4>extends JS's built-in functions</h4>
+								<p>- linked in &lt;head&gt; of document</p>
+								<p>- makes "Events" easier to implement</p>
+								<p>- integrates with JavaScript</p>
+								<br>
+								<pre><code data-trim class="javascript">
+										$('html or css selectors').doSomething();
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var calc = function(){ };
+
+$(document).ready(function(){
+	$('#button').click(function(){
+		calc();
+	});
+});
+							</code></pre>
+						</div>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator 2</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Back to JavaScript: </h3><h4>building calc();</h4>
+								<p>- gather user input: prompt();</p>
+								<p>- build functions for each operation</p>
+								<span style="color:#c42205;font-family:monospace;opacity:1;display: inline;">return </span><p style="display:inline;">answers from each function</p>
+								<br>
+							</li>
+							<li>
+								<br>
+								<pre><code data-trim class="javascript">
+var calc = function(){
+	var input1 = //something;
+	var input2 = //something;
+};
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var calc = function(){
+	//Store user inputs
+	var input1 = prompt("Here's a prompt");
+	var input2 = prompt("Prompts take strings as a parameter");
+	
+	//Build math operations
+	var add = function(num1, num2){
+		return num1+num2;
+	};
+};
+							</code></pre>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator 3</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Program Design: </h3><h4>user interaction</h4>
+								<p>- gather user input with prompt();</p>
+								<p>- how do we want the user to interact with calculator operations?</p>
+								<p>- how do we customize user experience?</p>
+								<p>- what data types and operators can we (programmers) use?</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var operation = prompt("What would you like to do?");
+
+if(operation === something){
+	alert(some function);
+} else if (something else) {
+	alert(some other function);
+};
+							</code></pre>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Breaking our Calculator</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Designing for Dumb: </h3><h4>how can users break calculator.js?</h4>
+								<p>- what if users don't know what numbers are?</p>
+								<p>- what if users don't know what operations are valid or supported?</p>
+								<p>- how can we communicate errors to users?</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var num1 = parseInt(input1, 0);
+
+if(isNaN(num1) === true || isNaN(num2) === true){
+	//tell the user something is wrong
+} else {
+	//carry on
+};
+							</code></pre>
 						</div>
 					</section>
 				</section>

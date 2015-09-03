@@ -389,3 +389,14 @@ body {
   line-height: 1.4;
 }
 
+.example code{
+  line-height: 1.3;
+  font-size: 40px;
+}
+
+.example pre > code {
+  width: 130%;
+  max-height: 800px;
+  margin-left: -150px;
+}
+
