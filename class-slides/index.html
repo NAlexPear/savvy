@@ -285,6 +285,17 @@ var doThis = function(){
 							</li>
 						</ul>
 					</ul>
+					<aside class="notes">
+						For today:
+						<ol>
+							<li>
+								only users->browsers
+							</li>
+							<li>
+								only static content (even with Javascript)
+							</li>
+						</ol>
+					</aside>
 				</section>
 			<!--SLIDE 9-->
 				<section>
@@ -309,7 +320,15 @@ var doThis = function(){
 								<p>Document structure</p>
 							</li>
 						</ul>
-						<p></p>
+						<aside class="notes">
+							<ul>
+								<li>HTML set up (DOM):</li>
+								<li>HTML = fancy text</li>
+								<li>Browser contains rules for fancy HTML</li>
+								<li>Extra-Textual info = “Markup”</li>
+								<li>Markup = TAGS</li>
+							</ul>
+						</aside>
 					</section>
 					<section>
 						<div class="dom">
@@ -355,6 +374,21 @@ var doThis = function(){
 &lt;/html&gt;
 						</code></pre>
 						</div>
+						<aside class="notes">
+						<ol>
+							<li> go over differences between meta tags, content tags, and DOM tags</li>
+							<li>(EXPLAIN DOM DIAGRAM FROM THE OUTSIDE IN) + what you might find in each section.</li>
+						</ol>
+						Some things to try out:
+						<ol>
+							<li>remind folks about title tag</li>
+							<li>comment out stylesheet</li>
+							<li>add calculator.js in the head</li>
+							<li>mess with img tags</li>
+							<li>mess with anchor tags</li>
+							<li>look at button-div</li>
+						</ol>
+					</aside>
 					</section>
 				</section>
 			<!--SLIDE 10-->
@@ -393,6 +427,12 @@ var doThis = function(){
 							<br>
 						</li>
 					</ul>
+					<aside class="notes">
+						We’re going to try out some of the simple concepts in the Javascript Console that comes packaged with Google Chrome. Everybody should open up the console with “control + shift + j”. This is how we’ll begin telling the browser what to do!
+						<br>Try typing in some simple math (addition, multiplication, division). Notice how the browser responds to our commands, rather than simply outputting text. Also, note how we can cause errors pretty easily when we screw something up!
+						<br>The nice thing about computers (and programming) is that they do exactly what you tell them to do. The frustrating thing about programming is that computers do exactly what you tell them to do. If there’s a bug, it’s your fault!
+						<br>To transition: Test for 2+2 vs “2”+”2”
+					</aside>
 				</section>
 			<!--SLIDE 12-->
 				<section>
@@ -415,6 +455,15 @@ var doThis = function(){
 								<p>- for variables: =, +=, -=, *=, /=, %=</p>
 							</li>
 						</ul>
+						<aside class="notes">
+							We can do things to and with these data types by using operators. Operators allow us to manipulate data of certain types or allow us to extract information about those types. It’s how we make the sentences of programming. Most of the time, operators work best when you’ve saved the data you’re using in a variable. 
+							<br>Variables allow you to save data values (or functions, which we’ll see later), name them, and then bring them up later for use. You’ll be using a lot of variables as you start programming. Let’s make your first couple with some assignment operators. The most important one (=) simply assigns a value to a variable. Let’s try some of these:
+							<ol>
+								<li>var myName = “Alex”;</li>
+								<li>var myAge = 26;</li>
+								<li>console.log(“Hi, my name is “ + myName + “ and I am “ + myAge + “ years old.”);</li>
+							</ol>
+						</aside>
 					</section>
 					<section>
 						<ul class="list-content">
@@ -425,6 +474,23 @@ var doThis = function(){
 								<p>- boolean: ===, !==, >, <, >=, <=, &&, ||</p>
 							</li>
 						</ul>
+						<aside class="notes">
+							<ol>
+								<li>console.log(myAge++);</li>
+								<li>console.log(myAge);</li>
+								<li>console.log(++myAge);</li>
+								<li>myAge+=2</li>
+								<li>var greeting = "Hello, my name is";</li>
+								<li>console.log(greeting + “ “ + myName);</li>
+								<li>var ageCheck = function(){if(myAge === 26){
+									console.log(“hooray!”);
+									} else { console.log(“you done goofed”);};
+								</li>
+								<li>ageCheck();</li>
+								<li>myAge += 3;</li>
+								<li>ageCheck();</li>
+							</ol>
+						</aside>
 					</section>
 				</section>
 			<!--SLIDE 13-->
@@ -452,6 +518,9 @@ doSomething(parameters);
 							<br>
 						</li>
 					</ul>
+					<aside class="notes">
+						Go through ageCheck example with booleans!
+					</aside>
 				</section>
 			<!--SLIDE 14-->
 				<section>
