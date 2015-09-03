@@ -179,7 +179,7 @@
 				<section>
 					<div id="slide-header">
 						<img src="../theme/images/icons/SavvyFavicon.png">
-						<h1>Exercise 1: am I programming?</h1>
+						<h1 style="text-align: right;">Exercise 1: am I programming?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
@@ -229,6 +229,111 @@
 									<p>within programs (like browsers!)</p>
 								</li>
 							</ul>
+					</section>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>What is 'the Web'?</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>The Web: </h3><h4>a series of connections to data</h4>
+							<p>Users > browsers > the Internet > servers</p>
+							<p>communicating through HTTP & HTTPS, etc.</p>
+						</li>
+						<ul id="diagram">
+							<li>
+								<img src="images/hitman-user.png">
+								users
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/window-icon-hi.png">
+								browser
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/cloud.png">
+								internet
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/servers.png">
+								servers
+							</li>
+						</ul>
+					</ul>
+				</section>
+				
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Dissecting the document</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>HTML: </h3><h4>"Hyper-Text Markup Language"</h4>
+							</li>
+							<li>
+								<h3>DOM: </h3><h4>"Document-Object Model"</h4>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="dom">
+							<div id="document-wrapper">
+								<h4>document</h4>
+								<div id="html-wrapper">
+									<h4>html</h4>
+									<div id="head-wrapper">
+										<h4>head</h4>
+										<p>METADATA</p>
+									</div>
+									<div id="body-wrapper">
+										<h4>body</h4>
+										<div class="div-wrapper">
+											<h4>div</h4>
+											<p>VISIBLE</p>
+										</div>
+										<div class="div-wrapper">
+											<h4>div</h4>
+											<p>STUFF</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="dom-html">
+						<pre><code data-trim class="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;link rel="stylesheet"&gt;
+	&lt;script&gt;&lt;/script&gt;
+   &lt;/head&gt;
+  &lt;body&gt;
+	&lt;div&gt;
+	  &lt;h1&gt;&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+	  &lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+						</div>
+					</section>
 				</section>
 				
 

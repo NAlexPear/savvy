@@ -311,3 +311,81 @@ body {
 .list-content li span{
   font-style: normal;
 }
+
+.list-content #diagram{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed;
+    width: 120%;
+    padding-left: 0px;
+    margin-left: -120px;
+    margin-top: 0px;
+}
+
+
+.list-content #diagram li{
+    display: table-cell;
+    text-align: center;
+    padding: 0px;
+}
+
+.list-content .arrow {
+  vertical-align: middle;
+}
+
+.dom{
+  text-align: left;
+  width: 50%;
+  float: left;
+}
+.dom h4{
+  font-size: 30px;
+}
+.dom p{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.dom div{
+  padding-left: 10px;
+  margin: 8px;
+  border: 5px solid;
+}
+
+.dom #document-wrapper{
+  border-color: #c42205;
+  margin-top: -20px;
+  margin-left: -200px;
+}
+
+.dom #html-wrapper{
+  border-color: #07c4dd;
+}
+
+.dom #head-wrapper{
+  border-color: #ed9d3b;
+}
+
+.dom #body-wrapper{
+  border-color: #8add16;
+}
+
+.dom .div-wrapper{
+  border-color: #cd0adb;
+}
+
+#dom-html{
+  position:absolute;
+  width: 80%;
+  margin-left: 450px;
+}
+
+#dom-html pre > code {
+  max-height: 800px;
+}
+
+#dom-html code{
+  line-height: 1.4;
+}
+
