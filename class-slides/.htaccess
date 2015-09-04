@@ -1,4 +1,0 @@
-AuthType Basic  
-AuthName "restricted area"  
-AuthUserFile /fs6b/savvycoders/class-slides/.htpasswd  
-require valid-user
