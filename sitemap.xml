@@ -8,12 +8,17 @@
 
 <url>
   <loc>http://savvycoders.com/</loc>
-  <lastmod>2015-08-24T20:20:25+00:00</lastmod>
+  <lastmod>2015-09-03T22:49:28+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>http://savvycoders.com/pricing/</loc>
+  <lastmod>2015-09-01T23:15:08+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>http://savvycoders.com/faq/</loc>
-  <lastmod>2015-08-04T16:41:05+00:00</lastmod>
+  <lastmod>2015-09-01T23:15:03+00:00</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>
