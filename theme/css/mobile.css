@@ -215,8 +215,10 @@ a {
 }
 
 .curricula-slider ul{
+    list-style: none;
     font-family: 'Quicksand', 'Helvetica', sans-serif;
     font-size: 3vw;
+    margin-top: 0px;
     padding-left: 0px;
     color: #07c4dd;
 }
