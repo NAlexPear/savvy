@@ -194,7 +194,7 @@ a {
 .curricula-slider{
   max-width: 900px;
   width: 80%;
-  height: 50vw;
+  height: 50vmax;
   margin-left: auto;
   margin-right: auto;
   -webkit-column-count: 2; /* Chrome, Safari, Opera */
