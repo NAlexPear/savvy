@@ -1,0 +1,417 @@
+/**
+ * Modified "black" theme for reveal.js. Theme set to Savvy Coders colors and fonts.
+ */
+section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
+  color: #222; }
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #2B2B2B;
+  background-color: #2B2B2B; }
+
+.reveal {
+  font-family: 'Quicksand', Helvetica, sans-serif;
+  font-size: 38px;
+  font-weight: normal;
+  color: #ffffff; }
+
+::selection {
+  color: #fff;
+  background: #bee4fd;
+  text-shadow: none; }
+
+.reveal .slides > section, .reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; }
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-family: 'Kreon', serif;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: normal;
+  text-shadow: none;
+  word-wrap: break-word; }
+
+.reveal h1 {
+  font-size: 1.8em;}
+
+.reveal h2 {
+  font-size: 1.6em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 100;
+}
+
+.reveal h3 {
+  font-size: 1.3em;
+  color: #07c4dd;
+  }
+
+.reveal h4 {
+  font-size: 1.3em;
+  
+}
+
+.reveal h3, h4{
+  display: inline;
+}
+
+.reveal h1 {
+  text-shadow: none; }
+
+/*********************************************
+ * OTHER
+ *********************************************/
+.reveal p {
+  opacity: 0.4;
+  font-style: italic;
+  font-weight: 100;
+  margin: 20px 0;
+  line-height: 1;
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img, .reveal video, .reveal iframe {
+  max-width: 95%;
+  max-height: 95%; }
+
+.reveal strong, .reveal b {
+  font-weight: bold; }
+
+.reveal em {
+  font-style: italic; }
+
+.reveal ol, .reveal dl, .reveal ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0 0 0 1em; }
+
+.reveal ol {
+  list-style-type: decimal;
+  font-family: 'Kreon', serif;
+  font-weight: 600;
+}
+
+.reveal ul {
+  list-style-type: none; }
+
+.reveal ul ul {
+  list-style-type: square; }
+
+.reveal ul ul ul {
+  list-style-type: circle; }
+
+.reveal ul ul, .reveal ul ol, .reveal ol ol, .reveal ol ul {
+  display: block;
+  margin-left: 40px; }
+
+.reveal dt {
+  font-weight: bold; }
+
+.reveal dd {
+  margin-left: 40px; }
+
+.reveal q, .reveal blockquote {
+  quotes: none; }
+
+.reveal blockquote {
+  display: block;
+  position: relative;
+  width: 70%;
+  margin: 20px auto;
+  padding: 5px;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+
+.reveal blockquote p:first-child, .reveal blockquote p:last-child {
+  display: inline-block; }
+
+.reveal q {
+  font-style: italic; }
+
+.reveal pre {
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 0.55em;
+  font-family: monospace;
+  line-height: 1.2em;
+  word-wrap: break-word;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3); }
+
+.reveal code {
+  font-family: monospace;
+  font-size: 1.3em;
+}
+
+.reveal pre code {
+  display: block;
+  padding: 15px;
+  overflow: auto;
+  max-height: 400px;
+  word-wrap: normal;
+  background: #3F3F3F;
+  color: #DCDCDC; }
+
+.reveal table {
+  margin: auto;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.reveal table th {
+  font-weight: bold; }
+
+.reveal table th, .reveal table td {
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 0.5em;
+  border-bottom: 1px solid; }
+
+.reveal table th[align="center"], .reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"], .reveal table td[align="right"] {
+  text-align: right; }
+
+.reveal table tr:last-child td {
+  border-bottom: none; }
+
+.reveal sup {
+  vertical-align: super; }
+
+.reveal sub {
+  vertical-align: sub; }
+
+.reveal small {
+  display: inline-block;
+  font-size: 0.6em;
+  line-height: 1.2em;
+  vertical-align: top; }
+
+.reveal small * {
+  vertical-align: top; }
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a {
+  color: #42affa;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  transition: color 0.15s ease; }
+
+.reveal a:hover {
+  color: #8dcffc;
+  text-shadow: none;
+  border: none; }
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #068ee9; }
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px; }
+
+.reveal a img {
+  -webkit-transition: all 0.15s linear;
+  -moz-transition: all 0.15s linear;
+  transition: all 0.15s linear; }
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #42affa;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left, .reveal .controls div.navigate-left.enabled {
+  border-right-color: #42affa; }
+
+.reveal .controls div.navigate-right, .reveal .controls div.navigate-right.enabled {
+  border-left-color: #42affa; }
+
+.reveal .controls div.navigate-up, .reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #42affa; }
+
+.reveal .controls div.navigate-down, .reveal .controls div.navigate-down.enabled {
+  border-top-color: #42affa; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #8dcffc; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #8dcffc; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #8dcffc; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #8dcffc; }
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2); }
+
+.reveal .progress span {
+  background: #42affa;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #42affa; }
+
+/*Presentation-specific styling*/
+
+#slide-header{
+  margin-top: 40px;
+  padding-bottom: 60px;
+  height: 130px;
+  width: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#slide-header img{
+  width: 30%;
+  position: fixed;
+  left: -230px;
+  top: -60px;
+}
+
+#slide-header span{
+  width: 1000vw;
+  height: 100px;
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: -500px;
+  background-color: #07c4dd;
+  z-index: -1;
+}
+
+.list-content li span{
+  font-style: normal;
+}
+
+.list-content #diagram{
+    list-style-type:none;
+    display:table;
+    table-layout:fixed;
+    width: 120%;
+    padding-left: 0px;
+    margin-left: -120px;
+    margin-top: 0px;
+}
+
+
+.list-content #diagram li{
+    display: table-cell;
+    text-align: center;
+    padding: 0px;
+}
+
+.list-content .arrow {
+  vertical-align: middle;
+}
+
+.dom{
+  text-align: left;
+  width: 50%;
+  float: left;
+}
+.dom h4{
+  font-size: 30px;
+}
+.dom p{
+  text-align: center;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+.dom div{
+  padding-left: 10px;
+  margin: 8px;
+  border: 5px solid;
+}
+
+.dom #document-wrapper{
+  border-color: #c42205;
+  margin-top: -20px;
+  margin-left: -200px;
+}
+
+.dom #html-wrapper{
+  border-color: #07c4dd;
+}
+
+.dom #head-wrapper{
+  border-color: #ed9d3b;
+}
+
+.dom #body-wrapper{
+  border-color: #8add16;
+}
+
+.dom .div-wrapper{
+  border-color: #cd0adb;
+}
+
+#dom-html{
+  position:absolute;
+  width: 80%;
+  margin-left: 450px;
+}
+
+#dom-html pre > code {
+  max-height: 800px;
+}
+
+#dom-html code{
+  line-height: 1.4;
+}
+
+.example code{
+  line-height: 1.3;
+  font-size: 40px;
+}
+
+.example pre > code {
+  width: 130%;
+  max-height: 800px;
+  margin-left: -150px;
+}
+
+#contact {
+  list-style-type: none;
+  font-family: 'Kreon', serif;
+  margin-left: -20px;
+}
+
+#contact h3 {
+  font-size: 30px;
+}
+
+#contact h4 {
+  font-size: 30px;
+}
+
+

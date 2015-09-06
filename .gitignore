@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 .htaccess
+=======
+compress-static.pl
+*.gz
+>>>>>>> 47b4b9055e195de6acc6e22417b8498d598ba606

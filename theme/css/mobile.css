@@ -80,7 +80,7 @@ a {
     position: fixed;
     margin-left: 3vmin;
     margin-top: 3vmin;
-    z-index: 1;
+    z-index: 10;
   }
 .savvy-logo-text{
   font-family: 'Kreon', serif;
