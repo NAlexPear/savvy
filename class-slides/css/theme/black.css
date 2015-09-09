@@ -55,7 +55,7 @@ body {
 
 .reveal h4 {
   font-size: 1.3em;
-  
+
 }
 
 .reveal h3, h4{
@@ -311,6 +311,10 @@ body {
 .list-content li span{
   font-style: normal;
 }
+.list-content li code{
+  font-style: normal;
+  color: #ffffff;
+}
 
 .list-content #diagram{
     list-style-type:none;
@@ -413,5 +417,3 @@ body {
 #contact h4 {
   font-size: 30px;
 }
-
-

@@ -144,8 +144,609 @@
 					</ul>
 				</section>
 			<!-- SLIDE 5 -->
-			</div>
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Started from the bottom...</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<ul id="diagram">
+								<li>
+									<img src="../../../images/hitman-user.png">
+									users
+								</li>
+								<li class="arrow">
+									<img src="../../../images/arrow.png">
+								</li>
+								<li>
+									<img src="../../../images/window-icon-hi.png">
+									browser
+								</li>
+								<li class="arrow">
+									<img src="../../../images/arrow.png">
+								</li>
+								<li>
+									<img src="../../../images/cloud.png">
+									internet
+								</li>
+								<li class="arrow">
+									<img src="../../../images/arrow.png">
+								</li>
+								<li>
+									<img src="../../../images/servers.png">
+									servers
+								</li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>What is a "computer"?: </h3><h4>!Magic</h4>
+								<p>memory (hard drive, RAM, ROM) +</p>
+								<p>adding machine (logic gates, switches) +</p>
+								<p>clock (billions of times/second, "GHz")</p>
+								<br>
+							</li>
+							<li>
+								<h3>Would you like to know more?: </h3><h4>http://simplecpu.com</h4>
+								<p>optional after-class assignment</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>How do we interact with a computer?: </h3><br><h4>the Operating System</h4>
+								<p>handles human inputs</p>
+								<p>manages outputs</p>
+								<p>reads/writes resources</p>
+								<p>manages applications</p>
+								<br>
+							</li>
+							<li>
+								<h3>But how do WE interact with a computer?</h3>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h4>CLIs/GUIs</h4></li>
+							<li><img src="../../../images/cli.gif" alt="the Command-line-interface"><br></li>
+							<li>
+								<h3><h4>Resources</h4>
+								<p>http://linuxcommand.org/lc3_learning_the_shell.php</p>
+								<p>Codecademy-Learning the Command Line</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<quote>
+								"When I was a child, I used a computer by looking at the pictures.
+								When I grew up, I learned to read and write."
+						</quote>
+						<p>-William Shotts, Jr.</p>
+						<br>
+						<p><i>"Learning the Shell"</i></p>
+						<p><i>Linux Command.org</i></p>
+					</section>
+				</section>
+			<!-- SLIDE 6 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>File Structures</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>How is data stored?: </h3><h4>!Magic</h4></li>
+							<li><p>(Bits and bytes in memory)</p></li>
+							<br>
+						</ul>
+						<img src="../../../images/memory.gif" alt="memory"/>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><img src="../../../images/fs.png" alt="file structure"/></li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>The File System: </h3><h4>navigation 101</h4>
+								<p>human-facing analogy</p>
+								<p>"roots" and "branches" in "trees"</p>
+								<p>"files" and "folders"</p>
+								<p>"parents" and "children" and "siblings"</p>
+								<br>
+							</li>
+							<li>
+								<h3>This is super important!</h3>
+								<p>(think of the DOM...)</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<img src="../../../images/finder.png" alt="Mac Finder"/>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 7 -->
+				<section>
+					<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>...and now we here (@ the CLI)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li><h3>Linux: </h3><h4>sh, bash, terminal</h4>
+							<p>most distros have a terminal emulator</p>
+							<p>sh = "shell" program</p>
+							<p>bash = Bourne Again SHell</p>
+							<pre><code data-trim class="powershell">
+[me@linuxbox me]$ ls
+Desktop     Xrootenv.0    linuxcmd
+GNUstep     bin           nedit.rpm
+GUILG00.GZ  hitni123.jpg  nsmail
+							</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Mac: </h3><h4> Mac Terminal</h4>
+							<p>Mac = UNIX-based (like LINUX, sort of)</p>
+							<p>Applications > Utilities > Terminal</p>
+						</li>
+						<li>
+							<img src="../../../images/macterminal.png" alt="Mac terminal" />
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Windows: </h3><h4>umm....</h4>
+							<p>Command Prompt (default)</p>
+							<p>PowerShell (adds lots of linux-like shell functions)</p>
+							<p>Cygwin (Linux-like environment for Windows)</p>
+							<p>cmder (command prompt + some bash cmds)</p>
+							<br>
+						</li>
+						<li>
+							<li><h3>Recommended: </h3><h4>PowerShell</h4>
+								<p>https://www.microsoft.com/en-us/download/details.aspx?id=34595</p>
+								<p>...or a quick Google</p>
+							</li>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 8 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 1: CLIs and you</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Get a terminal running</h4>
+							<p>See previous slides!</p>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Navigate to your desktop in a GUI</h4>
+							<p>Mac: Finder</p>
+							<p>Windows: File Explorer</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Repeat step 2 in a CLI</h4>
+							<p>Notice the terminal's location</p>
+							<p>list file structure = <code>ls</code></p>
+							<p>print working directory = <code>pwd</code></p>
+							<p>change directory = <code>cd</code></p>
+							<p>move up a level = <code>cd ..</code></p>
+							<p>move to sub-directory 'dir' = <code>cd dir</code></p>
+							<p>move to sub-sub-directory 'sub' = <br><code>cd dir/sub</code></p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 4: </h3><h4>Create a new folder</h4>
+							<p>We need a new folder for Savvy Coder stuff</p>
+							<p>make directory 'SavvyCoders' = <br><code>mkdir SavvyCoders</code></p>
+							<p>navigate into the directory</p>
+						</li>
+					</ul>
+				</section>
+				<section data-background="../../../images/shell_1.png">
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 5: </h3><h4>Install Atom</h4>
+							<p>Yet another IDE... </p>
+							<p>https://atom.io</p>
+							<p>install and fire it up!</p>
+							<br>
+						</li>
+						<li>
+							<h3>Step 6: </h3><h4>Your first .txt file</h4>
+							<p>Open the SavvyCoders directory w/Atom</p>
+							<p>Create a new file</p>
+							<p>name the file 'haiku.txt'</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 7: </h3><h4>Write a short haiku</h4>
+							<p>Don't forget about 5-7-5 structure.</p>
+							<br>
+						</li>
+						<li>
+							<quote>
+								Haikus are easy,<br>
+								But endings are difficult.<br>
+								Refrigerator.
+							</quote>
+						</li>
+						<li>...and save it!</li>
+					</ul>
+				</section><section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 8: </h3><h4>Confirm your work</h4>
+							<p>Use your CLI to see if haiku.txt is in SavvyCoders</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 9 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 2: Best Friends 4ever</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Create a new text file!</h4>
+							<p>repeat steps from last exercise</p>
+							<p>name the file 'interview.txt'</p>
+							<p>save in SavvyCoders</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 2: </h3><h4>Interview a classmate</h4>
+							<p>What's their story?</p>
+							<p>What's their programming background?</p>
+							<p>Why do they want to learn to code?</p>
+							<p>What are their goals?</p>
+							<p>What are their hobbies?</p>
+							<p>Why are their favorite websites?</p>
+							<br>
+						</li>
+						<li><h3>Step 3: </h3><h4>Present your new friend</h4></li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 10 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Quick Breather! (5 minutes)</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Feeling good?</h3><br>
+						<h4>(ask Alex any questions)</h4>
+						<br>
+					</li>
+					<li>
+						<br>
+						<ol>
+							<li>Introduce your new best friend to a neighbor</li>
+							<li>Prepare yourself for the challenges ahead</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+			<!-- SLIDE 11 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 3: Rich Text</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Open a Rich Text Editor</h4>
+							<p>Word, OpenOffice, LibreOffice, textEdit</p>
+							<br>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Create an .rtf file</h4>
+							<p>New Document > Save As > 'interview.rtf'</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Copy text from 'interview.txt'</h4>
+							<p>Nothing fancy: CTRL + C, CTRL + V</p>
+							<br>
+						</li>
+						<li>
+							<h3>Step 4: </h3><h4>Enrich the Text</h4>
+							<p>Use the GUI to add styling to your text</p>
+							<p>Add a picture!</p>
+							<p>Add a link!</p>
+							<br>
+						</li>
+						<li>
+							<h3>Step 5: </h3><h4>Open in Atom?</h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 12 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Mark Up with Markdown</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Better Formatting: </h3><h4>Markdown</h4>
+							<p>.rtf doesn't work for programmers</p>
+							<p>We might use markdown instead!</p>
+						</li>
+						<li>
+							<img src="../../../images/markdown_1.png" alt="Markdown Styles 1" />
+						</li>
+					</ul>
+				</section>
+				<section>
+					<img src="../../../images/markdown_2.png" alt="Markdown Style 2" />
+				</section>
+			</section>
+			<!-- SLIDE 13 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 4: Marky Markdown</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Copy > Paste</h4>
+							<p>Make a new file 'interview.md'</p>
+							<p>Save the file in SavvyCoders!</p>
+							<p>Copy text from interview.txt</p>
+							<p>Don't use text from the .rtf!</p>
+							<p>Preview your file using CTRL + SHIFT + P</p>
+							<p>Set encoding language with CTRL + SHIFT + L</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 2: </h3><h4>Add some markdown style!</h4><br>
+							<h4>Headers</h4>
+							<p><i>italics</i></p>
+							<p><b>bold</b></p>
+							<p>
+								<ol>
+									<li>Make an...</li>
+									<li>...ordered...</li>
+									<li>...list.</li>
+								</ol>
+							</p>
+							<p>
+								<ul>
+									<li>Make an...</li>
+									<li>...UN-ordered...</li>
+									<li>...list.</li>
+								</ul>
+							</p>
+							<p>horizontal rules</p>
+							<p>links (local and net-based)</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Share it!</h4><br>
+							<p>https://gist.github.com</p>
+							<br>
+						</li>
+						<li><h3>share it on Slack channel 'general'</h3></li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 14 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Quick Breather! (5 minutes)</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<br>
+						<ol>
+							<li>Keep sharing those gists!</li>
+							<li>Make sure your files are organized in SavvyCoders</li>
+							<li>Stretch, eat, be merry</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+			<!-- SLIDE 15 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Challenge 1: Pitch Sheet</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>What:</h3><h4> an online "watering-hole"</h4>
+							<br>
+						</li>
+						<li>
+							<h3>Who:</h3><h4> you</h4>
+							<p>...and just you</p>
+							<br>
+						</li>
+						<li>
+							<h3>For whom:</h3><h4> a niche community</h4>
+							<p>Which one? Up to you</p>
+							<p>Example: turtleneck afficianados</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>When:</h3><h4> for the next month</h4>
+							<p>...starting right now</p>
+							<br>
+						</li>
+						<li>
+							<h3>Why:</h3><h4> for your portfolio!</h4>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>To-Do:</h3><h4>(next 30 minutes)</h4>
+							<p>five(ish) minutes per item!</p>
+							<br>
+						</li>
+						<ol>
+							<li>Think of some group ideas</li>
+							<li>Think of your users (and their "stories")</li>
+							<li>Get feedback from your compatriots</li>
+							<li>Give feedback to your compatriots</li>
+							<li>Prepare a 30-second pitch for the class</li>
+							<li>Create a one-page "pitch sheet" w/Markdown</li>
+						</ol>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 16 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>HTML and the DOM</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>HTML: </h3><h4>"Hyper-Text Markup Language"</h4>
+						</li>
+						<li>
+							<p>Hyper-Text = links, Markup = attributes/style</p>
+							<br>
+						</li>
+						<li>
+							<h3>DOM: </h3><h4>"Document-Object Model"</h4>
+						</li>
+						<li>
+							<p>Document structure</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div class="dom">
+						<div id="document-wrapper">
+							<h4>document</h4>
+							<div id="html-wrapper">
+								<h4>html</h4>
+								<div id="head-wrapper">
+									<h4>head</h4>
+									<p>METADATA</p>
+								</div>
+								<div id="body-wrapper">
+									<h4>body</h4>
+									<div class="div-wrapper">
+										<h4>div</h4>
+										<p>VISIBLE</p>
+									</div>
+									<div class="div-wrapper">
+										<h4>div</h4>
+										<p>STUFF</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="dom-html">
+					<pre><code data-trim class="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title of My Page&lt;/title&gt;
+&lt;link rel="stylesheet"&gt;
+&lt;script&gt;&lt;/script&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+	&lt;h1&gt;Here's some big text&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;p&gt;Here's some content text&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</div>
+				</section>
+				<section>
+					<h3>Once again: </h3><h4>the Document Object Model</h4>
+					<br>
+					<img src="../../../images/dom.png" alt="Document Object Model" />
+				</section>
+			</section>
+			<!-- SLIDE 17 -->
 		</div>
+	</div>
 
 		<script src="../../../lib/js/head.min.js"></script>
 		<script src="../../../js/reveal.js"></script>
