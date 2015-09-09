@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /class-slides
+Disallow: /student-resources
