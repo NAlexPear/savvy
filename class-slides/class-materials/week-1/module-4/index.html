@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Savvy Coders | Week 1 : Module 1</title>
+		<title>Savvy Coders | Week 1 : Module 4</title>
 
 		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
 		<meta name="author" content="the Savvy Coder Team">
@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
-		
+
 		<!--Google Fonts-->
 	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
@@ -32,35 +32,142 @@
 	<body>
 
 		<div class="reveal">
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
+			<!-- INTRO SLIDE -->
 				<section data-background="../../../../theme/images/headerShort.png">
-					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 4</h2>
 				</section>
+			<!-- SLIDE 1 -->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from last time?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
+							<h3>CSS: </h3><h4>lots of new tricks</h4>
+							<p>stylesheets</p>
+							<p>specificity</p>
+							<p>selectors</p>
 						</li>
 						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
+							<h3>DOM: </h3><h4>new HTML layouts!</h4>
+							<p>block vs. inline elements</p>
+							<p>divs and spans</p>
 						</li>
 					</ul>
 				</section>
-					
-			</div>
+			<!-- SLIDE 2 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Forms and Input</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Gathering input: </h3><h4>the form tag</h4><br><br>
+								<pre><code class="html">
+&lt;form&gt;
+  &lt;input type=&quot;text&quot;&gt;
+  &lt;input type=&quot;password&quot;&gt;
+  &lt;input type=&quot;email&quot;&gt;
+  &lt;input type=&quot;submit&quot;&gt;
+&lt;/form&gt;
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Another example: </h3><h4>/example-form.html</h4>
+								<p>...let's go there now!</p>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 3 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 1: Style the form</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Create a new form: </h3><h4>/example-form.html</h4>
+							<p>-take a look at what's displayed in the browser</p>
+							<p>-add line breaks between elements</p>
+							<p>-add labels to every element</p>
+							<br>
+							<br>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Go to Chrome Dev Tools: </h3>CTRL + SHIFT + I</li>
+						<li>
+							<p>-click the "preserve log" button</p>
+							<p>-submit your form</p>
+							<p>-click on the POST request to view network traffic</p>
+							<p>-check out <b>form data</b></p>
+						</li>
+					</ul>
+				</section>
+				<section><img src="../../../images/network_tab.png" alt="form output"></section>
+			</section>
+			<!-- SLIDE 4 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Exercise 1: A Boxy Garden</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<img src="../../../images/borders.png" alt="CSS box model" />
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Recreate the previous page: </h3><h4>/example-box-model.html</h4>
+								<p>-<a href="/example-box-model.html">link to boxes example</a></p>
+								<p>-create your own file called <code>boxy-cottage.html</code></p>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 11 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Assignments and Resources</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Assignments: </h3><h4>Go through resources below</h4>
+						<br>
+					</li>
+					<li>
+						<h3>Resources: </h3><h4>bonus learning!</h4>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Sending_and_retrieving_form_data">Sending Form Data reference</a></p>
+						<p><a href="https://www.youtube.com/watch?v=7_LPdttKXPc">How does the internet work?</a></p>
+					</li>
+				</ul>
+			</section>
 
 		</div>
+	</div>
 
 		<script src="../../../lib/js/head.min.js"></script>
 		<script src="../../../js/reveal.js"></script>

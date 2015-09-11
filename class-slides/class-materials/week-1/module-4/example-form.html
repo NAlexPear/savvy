@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form 2.0</title>
+  </head>
+  <body>
+    <!--
+  The action attribute defines where on the server the form data should be sent
+  The method attribute specifies the HTTP method (GET or POST)
+-->
+    <form action="form-responses/new" method="post">
+      <input type="text" name="firstname" value="default" size="100" autofocus>
+      <input type="password" name="pswd">
+      <input type="email" name="userEmail" placeholder="hello@site.com">
+
+      <input type="radio" name="weird" value="code-blue" checked><span>pick this!</span>
+      <input type="radio" name="weird" value="code-red" checked><span>or pick this!</span>
+
+      <input type="checkbox" name="optin" value="trusting" checked>You agree to everything
+      <input type="checkbox" name="optout" value="skeptical" disabled>Wait, what?
+
+      <select name="car">
+        <optgroup label="Swedish Cars">
+          <option value="boring">Volvo</option>
+          <option value="cool">Honda</option>
+        </optgroup>
+      </select>
+
+      <textarea name="user_message" rows="8" cols="40"></textarea>
+      <input type="submit">
+    </form>
+    <!--
+  HERE IS THE BODY OF THE 'POST' NETWORK REQUEST GENERATED UPON 'SUBMIT'
+  firstname=user+numero+uno&pswd=secretstuff&userEmail=me%40site.com&weird=code-blue&optin=sucker&car=boring&userMessage=what+about++++spaces%3F%0D%0Aand%0D%0A+++indentation%3F
+-->
+  </body>
+</html>
