@@ -69,7 +69,7 @@
 					</div>
 					<ul class="list-content">
 						<li><h3>Boolean: </h3><h4>TRUE/FALSE</h4></li>
-						<p>===, !=, >, <, >=, <=, &&, ||</p>
+						<p>===, !=, >, <, >=, <=</p>
 					</ul>
 				</section>
 				<section>
@@ -142,6 +142,153 @@
 					</ol>
 				</section>
 			</section>
+			<!-- SLIDE 6 -->
+			<section>
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Boolean Logic</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li><h3>More Boolean: </h3><h4>still TRUE/FALSE</h4></li>
+					<p>!, &&, ||, ternary operators</p>
+				</ul>
+			</section>
+			<section>
+				<ul class="list-content">
+					<li>
+						<h3>Try out some logic:</h3><h4> ./logic/logic.js</h4>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<ul class="list-content">
+					<li>
+						<h3>Exercise 7: </h3><h4>Pseudocode and logic</h4>
+						<br><br>
+					</li>
+				</ul>
+					<pre><code class="javascript example">
+// If asked on a date, I'll be excited to go if
+// they are both financially stable and not a jerk
+
+// Additionally, if I have less than three dates this week or don't have weekend
+// plans, I'll still go, but not be as enthusiastic
+
+// Otherwise I'll politely turn them down
+
+
+if (financial_status === "stable"  && personality !== 'jerk') {
+console.log("Absolutely, I'm free on Sunday!")
+} else if ( dates_this_week < 3 || !weekend_plans ) {
+console.log('meh, why not...')
+} else {
+console.log("Oh, so nice of you to think of me, but my friend is in town and...")
+}
+					</code></pre>
+			</section>
+			<section>
+				<ul class="list-content">
+					<li>
+						<h3>Exercise 7 part 2: </h3><h4>Pseudocode and logic</h4>
+						<br><br>
+					</li>
+					<li>
+						<p>Create the following variables in a script tag:</p>
+						<ol>
+							<li>name</li>
+							<li>age</li>
+							<li>gender</li>
+							<li>is_member</li>
+							<li>thirsty</li>
+							<li>drink_of_choice</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<ul class="list-content">
+					<li>
+						<h3>Exercise 7 part 3: </h3><h4>Pseudocode and logic</h4>
+						<br><br>
+					</li>
+					<li>
+						<p>Compose a paragraph in div with id=greeting according to the following rules:</p>
+						<ol>
+							<li>Write out a pseudocode solution in comments</li>
+							<li>If someone is under 21 OR not a member, deny access</li>
+							<li>Otherwise, greet by name + Mr. or Mrs.</li>
+							<li>If they ask for Coors Light, kick them out</li>
+							<li>If they ask for any other drink, tell them "yes" (name) "one" (drink_name) "coming right up!"</li>
+						</ol>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<!-- SLIDE 7 -->
+		<section>
+		<section>
+			<div id="slide-header">
+				<img src="../../../../theme/images/icons/SavvyFavicon.png">
+				<h1>More Boolean Logic</h1>
+				<span></span>
+			</div>
+			<ul class="list-content">
+				<li><h3>Default Operator: </h3><h4>w/Logical "or"</h4></li>
+				<p>provides a fallback in case a value is undefined</p>
+				<br>
+			</ul>
+			<pre><code class="javascript">
+var greeting = "Hello there, " + (prompt("What's your name?") || "anonymous")
+			</code></pre>
+		</section>
+		<section>
+			<ul class="list-content">
+				<li>
+					<h3>Guard Operator:</h3><h4> w/Logical "and"</h4>
+				</li>
+				<p>only reveals second value if first is truthy</p>
+				<br>
+			</ul>
+			<pre><code class="javascript">
+var secret_code = admin && "The password is 'cheese'"
+			</code></pre>
+		</section>
+		<section>
+			<ul class="list-content">
+				<li>
+					<h3>Ternary Operator: </h3><h4>Shorthand Control Flow!</h4>
+					<p>conditional ? value_if_true : value_if_false</p>
+					<br>
+				</li>
+			</ul>
+				<pre><code class="javascript example">
+var response = user_input ? "Response Received" : "Empty string, please type in a value"
+
+document.querySelector('#message').textContent = (name === 'Bob') ?
+  "Damnit Bob, I've told you " + (++number_of_rejections) + " times..."
+  : "Oh hello, " + name + ". Welcome!"
+				</code></pre>
+		</section>
+		<section>
+			<ul class="list-content">
+				<li>
+					<h3>Exercise 8: </h3><h4>Choose your own adventure game!</h4>
+					<br><br>
+				</li>
+				<li>
+					<ol>
+						<li>Use multiple prompts</li>
+						<li>Use multiple possible branches</li>
+						<li>Write a story into the HTML document</li>
+						<li>Base story on user inputs</li>
+						<li>include &&, ||, and ternary operators</li>
+					</ol>
+				</li>
+			</ul>
+		</section>
+	</section>
 			<!-- SLIDE 9 -->
 			<section>
 				<div id="slide-header">
@@ -152,14 +299,12 @@
 				<ul class="list-content">
 					<li>
 						<h3>Assignments: </h3><h4>Push your exercises to divshot</h4>
-						<p>-make sure exercises and challenges are well-organized.</p>
-						<p>-try spending the whole day using just CLI</p>
+						<p>-make sure all of your scripts work!</p>
+						<p>-push a page to divshot just for your conditional js exercises</p>
 						<br>
 					</li>
 					<li>
-						<h3>Resources: </h3><h4>Frameworks</h4>
-						<p><a href="http://cli.learncodethehardway.org/book/">Learn CLI the Hard Way</a></p>
-						<p><a href="http://getbootstrap.com/css/">Bootstrap</a></p>
+						<h3>Resources: </h3><h4>Included online</h4>
 					</li>
 				</ul>
 			</section>
