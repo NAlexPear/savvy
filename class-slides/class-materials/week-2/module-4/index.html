@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Savvy Coders | Week 1 : Module 1</title>
+		<title>Savvy Coders | Week 2 : Module 4</title>
 
 		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
 		<meta name="author" content="the Savvy Coder Team">
@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
-		
+
 		<!--Google Fonts-->
 	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
@@ -35,29 +35,255 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background="../../../../theme/images/headerShort.png">
-					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 2: Module 4</h2>
 				</section>
+				<!-- SLIDE 1 -->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from last time?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
+							<h3>Loops: </h3><h4>"while"</h4><br><br>
 						</li>
 						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
+							<h3>Math: </h3><h4>a new Object</h4>
+							<p>.random()</p>
+							<p>.floor()</p>
+							<p>.ceil()</p>
+							<p>.parseInt</p>
 						</li>
 					</ul>
 				</section>
-					
+				<!-- SLIDE 2 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>jQuery</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Take a look: </h3><br>
+							<h4>https://code.jquery.com/jquery-2.1.1.js</h4></li><br>
+							<li><p>Open up the file and skim over it.</p></li>
+							<br>
+							<br>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Try it out: </h3><h4>in a new HTML doc</h4>
+								<br><br>
+							</li>
+						</ul>
+						<pre><code class="html example">
+&lt;script src="https://code.jquery.com/jquery-2.1.1.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $('body').text('hello?')
+&lt;/script&gt;
+						</code></pre>
+					</section>
+				</section>
+				<!-- SLIDE 3 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>jQuery 2</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li><h3>$( ): </h3><h4>jQuery's selector</h4></li><br>
+						<li><p>$ stores an Object with jQuery's functionality.</p></li>
+						<li><p>Test if jQuery is included on the page, by typing $ into the console.</p></li>
+						<li><p>$() is a function that takes a string as input</p></li>
+						<li><p>...and returns matching elements with superpowers!</p></li>
+					</ul>
+				</section>
+				<!-- SLIDE 4 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Diving into the jQuery docs</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Take a look: </h3><h4>http://oscarotero.com/jquery/</h4></li><br>
+							<li><p>Then create a new HTML doc and try out:</p></li>
+						</ul>
+						<pre><code class="javascript example">
+$('body').css('background-color', 'red')
+$('img').attr('src','http://i.imgur.com/nWGCwiE.gif')
+
+$('h1').text('hello')
+$('#notification').html('&lt;div class="alert"&gt;Hold on! &lt;b&gt;an error&lt;/b&gt; has occured!&lt;/p&gt;')
+$('.container').append("&lt;p&gt;What's the difference between &lt;i&gt;.append()&lt;/i&gt; and .html()?&lt;/p&gt;")
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 1: </h3><h4>./jquery/jquery-selecting.html</h4>
+								<br><br>
+							</li>
+							<ol>
+								<li>Include the jQuery library in the linked file.</li>
+								<li>Write expressions using jQuery to...</li>
+								<ul>
+									<li>...target all h1 elements and make font-color=blue</li>
+									<li>...target body element and turns its background red</li>
+									<li>...target elements with the id "everything" and increases its font-size</li>
+									<li>...target all elements with class "holder" and add black border</li>
+									<li>...target all li elements in ul elements and bold them</li>
+									<li>...target p elements that follow h1 elements and make them green</li>
+								</ul>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 1 part 2: </h3><h4>...even more selecting</h4>
+								<br><br>
+							</li>
+							<ol>
+								<ul>
+									<li>...target element with id="secret" and make display=none</li>
+									<li>...and then change "secret" back to display=block</li>
+									<li>...target elements with id="change-me" and changes the text to a new sentence</li>
+									<li>...that appends new text to the end of the sentence in "change-me"</li>
+									<li>...that replaces "change-me" content with two new paragraph tags and content</li>
+									<li>...that appends a new paragraph to "change-me"</li>
+								</ul>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 1 part 3: </h3><h4>...it never ends</h4>
+								<br><br>
+							</li>
+							<ol>
+								<ul>
+									<li>...target all 'li' elements and changes their text to new sentences</li>
+									<li>...target all 'li' elements and appends new text to each one</li>
+									<li>...target the element with id="everything" and append an ordered
+										list with three list elements inside</li>
+								</ul>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 2: </h3><h4>Theme Changer</h4>
+								<br><br>
+							</li>
+							<ol>
+								<li>Create a web page that displays different themes according to user input..</li>
+								<li>Keep asking until they enter a valid input (hint: end while loops manually with 'break' keyword)</li>
+								<li>Use jQuery to change the css of various elements on the page to use at least three shades of that color.</li>
+								<li>Use jQuery to display a message letting the user know what theme has been applied to the page</li>
+								<li>Have at least three color scheme presets.</li>
+								<li>Place different images on the page for each theme.</li>
+								<li>EXTRA CREDIT: Allow the user to enter in a hex value and programmatically create lighter and darker colors.</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!-- SLIDE 5 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>jQuery Effects</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<br><br>
+						<li><h3>Try out : </h3><h4>./jquery/jquery-effects</h4></li>
+						<br><br><br><br><br>
+					</ul>
+				</section>
+				<!-- SLIDE 6 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Creating HTML w/jQuery</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Try the following: </h3><h4>...one line at a time!</h4></li>
+						</ul>
+						<pre><code class="javascript example">
+var new_div = $('&lt;div class="important"&gt;Got a new div coming in here!&lt;/div&gt;')
+
+// can we see the new div on the page yet?
+new_div.css('color','red').attr('id','primary').text("Hi, I'm new here")
+
+// is it on the page yet?
+$('body').append(new_div)
+
+// how about now?
+
+// what's this do?
+new_div.fadeOut(2000).delay(1000).fadeIn().slideUp(4000)
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 3: </h3><h4>Constructing an HTML doc</h4><br><br>
+							</li>
+							<ol>
+								<li>Start with an empty HTML document with jQuery included.</li>
+								<li>Place a second 'script' tag on the page to contain your JavaScript</li>
+								<li>Use jQuery to create a new div with an id of 'container' and append it to the body.</li>
+								<li>Use jQuery to create a new img tag and place it inside the container</li>
+									<li>Give the img a src = a funny picture's URL</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 3 Part 2: </h3><h4>Constructing++</h4><br><br>
+							</li>
+							<ol>
+								<li>Use jQuery to change the image to be really small</li>
+								<li>...Now make it really big.</li>
+								<li>Now add a few more images and some text captions and use various jQuery effects to make them dance around!</li>
+								<li>Use Math.random( ) and position:fixed to randomize the placement of the various HTML elements on your page. Every time you hit refresh, your page should rearrange itself. window.innerHeight and window.innerWidth might come in handy.</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!-- SLIDE 7 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Assignments and Resources</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Assignments: </h3><h4>Push jQuery page to divshot</h4>
+							<p>-share the url on slack!</p>
+							<p>-compare and contrast wacky jQuery-ness</p>
+							<br>
+						</li>
+						<li>
+							<h3>Resources: </h3><h4>More jQuery</h4>
+							<p><a href="http://learn.jquery.com/effects/">jQuery Effects</a></p>
+							<p><a href="http://learn.jquery.com/jquery-ui/getting-started/">jQuery UI</a></p>
+						</li>
+					</ul>
+				</section>
 			</div>
 
 		</div>

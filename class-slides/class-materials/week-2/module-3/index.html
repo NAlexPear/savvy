@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Savvy Coders | Week 1 : Module 1</title>
+		<title>Savvy Coders | Week 2 : Module 3</title>
 
 		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
 		<meta name="author" content="the Savvy Coder Team">
@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
-		
+
 		<!--Google Fonts-->
 	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
@@ -35,29 +35,379 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background="../../../../theme/images/headerShort.png">
-					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 2: Module 3</h2>
 				</section>
+				<!-- SLIDE 1 -->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from last time?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
+							<h3>Conditionals: </h3><h4>if/else</h4>
+							<p>...and else ifs</p>
+							<br>
 						</li>
 						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
+							<h3>Booleans: </h3><h4>true/false</h4>
+							<p>===, !=, >, <, >=, <=</p>
+							<p>&&, ||</p>
+							<p>ternary operators</p>
 						</li>
 					</ul>
 				</section>
-					
+				<!-- SLIDE 2 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Getting Loopy</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Loops part 1: </h3><h4>"while"</h4><br><br>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+	var n = 0
+
+	console.log("I am called the Count... because I really love to count!")
+
+	while (n < 10) {
+	  console.log(n, "ha-ha-ha")
+	  n++
+	}
+
+	console.log('fin!')
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 1: </h3><h4>hello while</h4><br><br>
+							</li>
+							<li>
+								<p>Write a while loop that counts from 0 -> 50</p>
+								<p>...BY TWOS</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 2: </h3><h4>while + HTML</h4>
+								<p>Write a super-quick HTML doc that displays the following:</p>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+var n = 100, song = ''
+
+while ( n >= 0 ) {
+  if ( n !== 0 ) {
+    song = song + ' ' + n + " bottles of beer on the wall! chug, chug, chug"
+  } else {
+    song+= " no bottles of beer! stumble, stumble, stumble..."
+  }
+  n--
+}
+
+document.querySelector('#lyrics').textContent = song
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 2 part 2: </h3><h4>making it pretty</h4>
+								<p>Now change your code to this:</p>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+var n = 100, song = '<ul class=lyrics>'
+
+while ( n >= 0 ) {
+  if ( n !== 0 ) {
+    song = song + '<li>' + n + " bottle" + (n === 1 ? '' : 's')
+    + " of beer on the wall! chug, chug, chug</li>"
+  } else {
+    song+= "<li>no bottles of beer! stumble, stumble, stumble...</li>"
+  }
+  n--
+}
+song += "</ul>"
+
+document.querySelector('#lyrics').innerHTML = song						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 3: </h3><h4>Fencepost Loop</h4><br><br>
+							</li>
+							<ol>
+								<li>Create a variable "n" and assign it an integer</li>
+								<li>Code a "while" loop that builds one string</li>
+								<li>Build the string with number 1 through "n"</li>
+								<li>Separate numbers by commas</li>
+								<li>Make sure that the string DOESN'T end with a comma</li>
+								<li>Use .textContent to place that string into a div with an id=target (use HTML doc Exercise 2)</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 3 part 2: </h3><h4>Fencepost Loop++</h4><br><br>
+							</li>
+							<ol>
+								<li>Change your code to create a string of paragraph tags</li>
+								<li>Numbers should be placed in the paragraph tags</li>
+								<li>Numbers should be divided by horizontal rules</li>
+								<li>Horizontal rules should only be BETWEEN numbers</li>
+								<li>Place numbers on page with .innerHTML</li>
+								<li>Style odd and even numbers differently with "odd" and "even" classes</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 4 preface: </h3><h4>What does this do?</h4><br><br>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+var n = 1, sum = 0
+
+while ( n <= 10 ) {
+  sum = sum + n
+  n++
+}
+
+// Why n - 1 ?
+console.log("The sum of the numbers 1 through " + (n - 1) + " is " + sum)
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 4: </h3><h4>Cumulative Sum</h4><br><br>
+							</li>
+							<ol>
+								<li>Write a while loop that computes the product of multiplying the first 'n' positive integers</li>
+								<li>product = 1 * 2 * 3 * ... * n.</li>
+								<li>Use .innerHTML to place a formatted piece of text into the HTML document that explains what n was and what the product of the numbers computed to.</li>
+								<li>Give the tags different classes and ids that match pre-written CSS with some styling to make it a bit prettier.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 5: </h3><h4>Refactoring</h4>
+								<p>Refactor the code below!</p>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+var n = 0
+
+while ( n <= 20 ) {
+  if ( n !== 13 && n % 2 === 0 ) {
+    console.log("I like the number " + n + ", a nice even number.")
+  } else if ( n !== 13 && n % 2 !== 0 ) {
+    console.log("I like the number " + n + ", odd is okay too!")
+  } else {
+    console.log("la-la-la, nothing to say here")
+  }
+  n++
+}
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 6: </h3><h4>FizzBuzz</h4><br><br>
+							</li>
+							<ol>
+								<li>Write a program that console.logs numbers 1 to 100</li>
+								<li>For numbers that are multiples of three print "Fizz" instead of that number</li>
+								<li>For the multiples of five print "Buzz" instead</li>
+								<li>For numbers which are multiples of both three and five print "FizzBuzz"</li>
+								<li>Instead of console.logging construct a long string and use textContent to place it in a div</li>
+								<li>Put each number in a div tag. Give 'fizz', 'buzz', and 'fizzbuzz' different classes and styles.</li>
+								<li>Use .innerHTML to place it all on the page after looping completes</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 7 preface: </h3><h4>What does this do?</h4><br><br>
+							</li>
+							<pre><code class="javascript example">
+var i = 0, j, n = 5
+
+while ( i < n ) {
+  j = 0 // What happens if we remove this line?
+  while ( j < n ) {
+    console.log("i is", i, "and j is", j)
+    j++
+  }
+  i++
+}
+							</code></pre>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 7: </h3><h4>Number Party</h4><br><br>
+							</li>
+							<ol>
+								<li>"n" numbers are coming to a party</li>
+								<li>Introduce all numbers as they arrive</li>
+								<li>Output should look like this for n=5:</li><br>
+							</ol>
+						</ul>
+						<pre><code class="unix example">
+"welcome 1"
+"welcome 2, meet 1"
+"welcome 3, meet 1 and 2"
+"welcome 4, meet 1, 2 and 3"
+"welcome 5, meet 1, 2, 3 and 4"
+						</code></pre>
+					</section>
+				</section>
+				<!-- SLIDE 3 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>The "Math" Object</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Objects: </h3><h4>like Math</h4>
+								<p>...have 'properties' (pieces of information)</p>
+								<p>...and 'methods' (functions stored as properties)</p><br>
+							</li>
+							<li>
+								<h3>Math: </h3><h4>a built-in Object</h4>
+								<p>...has properties and methods related to Mathematics</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Try it out: </h3><h4>./math/math.js</h4>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 8: </h3><h4>Pick a number</h4><br><br>
+							</li>
+							<li>
+								<p>Write code that asks a user to enter an integer greater than 0.
+								Here's something to get you started: </p>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+var input
+
+while( !(input = prompt('write something...')) ){
+  console.log("you didn't write anything")
+}
+
+console.log("yay, you did it! you wrote: " + input)
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 9: </h3><h4>Rock, Paper, Scissors</h4>
+								<p>Write a text-based Rock, Paper, Scissors game!</p><br>
+							</li>
+							<ol>
+								<li>Ask for input until the user enters either "R", "P", or "S" (for rock, paper, or scissors)</li>
+								<li>Use Math.random( ) to choose a play for the computer</li>
+								<li>Tell the user what the outcome was</li>
+								<li>Ask the user if they'd like to play again</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 10: </h3><h4>Guess a number</h4><br><br>
+							</li>
+							<ol>
+								<li>Prompt the user for an input to determine what the highest integer 'n' should be.</li>
+								<li>Use parseInt(n) to convert from string to number.</li>
+								<li>As long as the result is NaN, ask them again.</li>
+								<li>Generate a random number between 1 and n.</li>
+								<li>Ask the user to guess the number. Tell them if their guess is too high or too low.</li>
+								<li>Loop until they guess correctly.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 10 part 2: </h3><h4>Guess a number++</h4><br><br>
+							</li>
+							<ol>
+								<li>Use .innerHTML to show them something fun as a reward for guessing correctly.</li>
+								<li>Show them what number was the correct number in the end.</li>
+								<li>Use a counter to let them know how many guesses it took them to get the right number.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 11: </h3><h4>Interest Rate Calculator</h4><br><br>
+							</li>
+							<ol>
+								<li>
+								Ask the user for three pieces of information:
+									<ul>
+										<li>a starting balance</li>
+										<li>a target balance</li>
+										<li>an interest rate (where 0.05 = 5%)</li>
+									</ul>
+								</li>
+								<li>Use a while loop to calculate the number of investment periods
+									 required for the starting balance to have grown
+									  larger than the target balance.</li>
+								<li>Set the .textContent of a div with id=output to explain the answer to the user:
+									 "To grow an initial investment of $1000 to $2000 at 4.5% will require..."</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!-- SLIDE 4 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Assignments and Resources</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Assignments: </h3><h4>Share some code!</h4>
+							<p>-share a challenging or fulfilling piece of code on Slack #general</p>
+							<p>-Tell everyone why!</p>
+							<br>
+						</li>
+						<li>
+							<h3>Resources: </h3><h4>Included online</h4>
+						</li>
+					</ul>
+				</section>
 			</div>
 
 		</div>
