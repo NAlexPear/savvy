@@ -118,6 +118,7 @@
 							<h3>Things to include: </h3><h4>specific requirements</h4>
 							<p>-use color names, RGB values, and hex values</p>
 							<p>-include at least 20 HTML elements</p>
+							<p>-nest some elements at least 3 deep</p>
 							<p>-include external links</p>
 							<p>-include at least one animated .gif</p>
 							<p>-add some secret comments!</p>
@@ -144,10 +145,18 @@
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Back to Atom: </h3><h4>/style1.html</h4>
-							<p><a href="/style1.html">link to our example file</a></p>
+							<h3>Back to Atom: </h3><h4>./exercises/style1.html</h4>
+							<p><a href="/exercises/style1.html">link to our example file</a></p>
 						</li>
 					</ul>
+					<aside class="notes">
+						<ol>
+							<li>Styles applied to parent elements effect their children (nested) elements, unless that style is overwritten.</li>
+							<li>We can put a lot of styles on a single HTML element, but it gets messy.</li>
+							<li>We can apply the same style to every tag of a particular type (all paragraphs should be green), but we have to reapply it on each element.</li>
+							How can we improve the situation?
+						</ol>
+					</aside>
 				</section>
 			<!-- SLIDE 5 -->
 			<section>
@@ -158,10 +167,19 @@
 				</div>
 				<ul class="list-content">
 					<li>
-						<h3>Back to Atom: </h3><h4>/style1-ref.html</h4>
-						<p><a href="/style1-ref.html">link to our example file</a></p>
+						<h3>Back to Atom: </h3><h4>./exercises/style1-ref.html</h4>
+						<p><a href="/exercises/style1-ref.html">link to our example file</a></p>
 					</li>
 				</ul>
+				<aside class="notes">
+					<ol>
+						<li>CSS rules can be applied to an HTML page by placing them inside a style element inside the head element of the page.</li>
+						<li>We begin with a selector to indicate which elements the rules apply to. Then, inside of curly braces, we indicate how the elements should be styled. Declarations are split into two parts (a property and a value), are separated by a colon, and end with a semicolon.</li>
+						<li>Every HTML element can carry an id attribute to uniquely identify it. No two elements on the same page may have the same value for their id attributes. </li>
+						<li>Every HTML element can also carry one or more class names in a class attribute to identify several elements as being different from the other elements on the page.</li>
+						<li>Now we have seperated presentation from content. We can easily read the content of our HTML document without it being cluttered up with styles. By sharing styles we also save ourselves a lot of typing as we create larger and larger HTML documents.</li>
+					</ol>
+				</aside>
 			</section>
 			<!-- SLIDE 6 -->
 			<section>
@@ -189,8 +207,8 @@
 					</div>
 					<ul class="list-content">
 						<li><h3>Connecting content: </h3><h4>anchors, iframes, audio</h4>
-							<p>on to /example-media.html</p>
-							<p><a href="/example-media.html">here's the link</a></p>
+							<p>on to ./exercises/example-media.html</p>
+							<p><a href="/exercises/example-media.html">here's the link</a></p>
 						</li>
 					</ul>
 				</section>
@@ -206,8 +224,8 @@
 						<li>
 							<h3>Back to your community page: </h3><h4>add media!</h4>
 							<p>-add a contact email to your website</p>
-							<p>-embed a relevant YouTube video</p>
-							<p>-embed a Google Map to your future location</p>
+							<p>-embed a relevant YouTube video (<a href="https://support.google.com/youtube/answer/171780?hl=en">tutorial</a>)</p>
+							<p>-embed a Google Map to your future location (<a href="https://support.google.com/maps/answer/3544418?hl=en">tutorial</a>)</p>
 							<p>-add CSS styling (in a style tag) across the page!</p>
 						</li>
 					</ul>
@@ -221,6 +239,9 @@
 							<p>-style specific <code>div</code>s with classes and ids</p>
 						</li>
 					</ul>
+					<aside class="notes">
+						Try embedding a few of your other favorite web sites. If it doesn't show up, switch to the Console section of the Chrome Developer Tools [CMD + OPT + I] and look for an error message: "Refused to display"
+					</aside>
 				</section>
 			</section>
 			<!-- SLIDE 9 -->
