@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Savvy Coders | Week 1 : Module 1</title>
+		<title>Savvy Coders | Week 3 : Module 3</title>
 
 		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
 		<meta name="author" content="the Savvy Coder Team">
@@ -19,7 +19,7 @@
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
-		
+
 		<!--Google Fonts-->
 	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
 	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
@@ -35,29 +35,203 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background="../../../../theme/images/headerShort.png">
-					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 3: Module 3</h2>
 				</section>
+				<!--SLIDE 1-->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from last time?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
-						</li>
-						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
+							<h3>Events: </h3><h4>"you can't handle the event!"</h4>
+							<p>-JavaScript handlers</p>
+							<p>-jQuery handlers</p>
+							<br>
+							<br>
+							<br>
 						</li>
 					</ul>
 				</section>
-					
+				<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Arrays</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>A new data type!: </h3><h4>...sort of</h4><br><br>
+								Arrays = a collection of data stored in sequential memory addresses<br><br>
+								<span class='fragment'>Strings = a collection of letters stored in sequential memory addresses.</span>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 1: </h3><h4>implementing event-handler1.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Make event-handler1.js work inside a script tag in an HTML document</li>
+								<li>Define a function <code>beeper</code></li>
+								<li>Create a button on the page</li>
+								<li>Every time the user clicks a button, add an HTML element to the bottom of the page with the word "beep"</li>
+								<li>Also change the body's background color each time a user clicks the button (see hint at ./hint.js)</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Event Handlers and jQuery</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>jQuery events: </h3><h4>./events/event-handler2.js</h4>
+								<p>Pull up the example code above!</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 2: </h3><h4>implementing event-handler2.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Make event-handler2.js work inside a script tag in an HTML document</li>
+								<li>Create a div with the text "show me the money". If the user clicks on it, show them the money!</li>
+								<li>Create a div with the text "show me the Oprah". If the user clicks on it, show them the Oprah!</li>
+								<li>Make it so that when a user clicks on one item to show it, all the others hide first if they are already shown</li>
+								<li>When a user clicks on an item that is already shown, hide it instead</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 3: </h3><h4>./events/event-handler3.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Make event-handler3.js work inside a script tag in an HTML document</li>
+								<li>Make sure there is a target element on the page and that it has a non-zero height and width</li>
+								<li>Define CSS rules for the 'highlighted' class</li>
+								<li>Make sure everything is wired up correctly and works as you would expect</li>
+								<li>Place an image on the page that disappears when you place your mouse over a particular div with id=magic.</li>
+								<li>How many different ways can you think of to accomplish that task?</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 4: </h3><h4>./events/event-handler4.js</h4>
+								<p>How can we inspect the event object in the console? What properties and methods does it have?</p>
+							</li>
+							<ol>
+								<li>Create a small position: fixed <img> that follows the cursor around the screen</li>
+								<li>Figure out how to hide the cursor with CSS</li>
+								<li>Make the image follow the mouse only if the mouse button is pressed</li>
+							</ol>
+						</ul>
+						<aside class="notes">
+							Do click events and mouseover events get arguments passed into each invocation of their event handler functions as well? Do they have the same properties?
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 5: </h3><h4>./events/event-handler5.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Make event-handler5.js work in an HTML document w/at least one div</li>
+								<li>Create an HTML document with at least 5 paragraphs</li>
+								<li>Give each paragraph a unique id attribute</li>
+								<li>Create a div with id=output at the top of the page</li>
+								<li>Create a click handler that shows the id attribute of the last paragraph that was clicked on in the output div</li>
+								<li>When you click on another div, clear the special styling of any perviously clicked-on divs</li>
+								<li>Is this easier to do by styling directly with .css( ) or by adding and removing a class name? Try both ways</li>
+							</ol>
+						</ul>
+						<aside class="notes">
+							In addition to the arguments keyword, each function invocation also has access to the calling context via the this keyword. Event handlers are called in the context of the element that received the event.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 6: </h3><h4>./events/event-handler6.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Guess what event-handler6.js does. How would you test your theory?</li>
+								<li>Place event-handler6.js in a fresh HTML doc</li>
+								<li>Create the correct HTML elements referenced by the click handler</li>
+								<li>When a user types a color into the input and presses the go button, change the background color of the page to that color</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 7: </h3><h4>./events/event-handler7.js</h4><br><br>
+							</li>
+							<ol>
+								<li>Use event-handler7.js in a fresh HTML doc</li>
+								<li>Create a keylogger that concatenates every letter the user types to a string called "nsa_surveillance"</li>
+								<li>Show the user everything they've typed in a div with id=output</li>
+								<li>Create your own version of <a href="http://play.typeracer.com/">TypeRacer</a></li>
+							</ol>
+						</ul>
+						<aside class="notes">
+							<ol>
+								<li>What's the difference between the event's keyCode property and the actual letter?</li>
+								<li>What's the difference between putting the keypress handler on the input and on the body?</li>
+								<li>If the keypress handler is placed on the body and we type into the input, does the event handler run? Why is this?</li>
+							</ol>
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Exercise 8: </h3><h4>time to .focus( )!</h4><br><br>
+							</li>
+							<ol>
+								<li>What does jQuery event handler .focus( ) do?</li>
+								<li>What does jQuery event handler .blur( ) do?</li>
+								<li>^figure this out by going to the jQuery documentation</li>
+								<li><a href="http://oscarotero.com/jquery/">Link to jQuery Cheat Sheet</a></li>
+								<li>Use these event handlers productively in your own application (either fresh or Community).</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!--SLIDE 4-->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Assignments and Resources</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Assignments: </h3><h4>Share your solutions</h4>
+							<p>that was a lot of exercises... chat up the best solutions on Slack</p>
+							<br>
+						</li>
+						<li>
+							<h3>Resources: </h3><h4>Just for Fun</h4>
+							<p><a href="http://typeracer.com">TypeRacer</a></p>
+						</li>
+					</ul>
+				</section>
 			</div>
 
 		</div>
