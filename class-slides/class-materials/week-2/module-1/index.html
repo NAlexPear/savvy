@@ -63,23 +63,14 @@
 								<br>
 							</li>
 						</ul>
-					</section>
-					<section>
-						<ul class="list-content">
-							<li>
-								<h3>Divshot CLI: </h3><h4>using npm</h4><br><br>
-								<ol>
-									<li>Download/Install <a href="https://nodejs.org/en/">node.js</a></li>
-									<li>Execute the following:
-								</ol>
-							</li>
-							<li><pre><code class="bash">
-npm install -g divshot-cli
-divshot login
-cd ./myProjectFolder
-divshot init
-divshot push production</code></pre></li>
-						</ul>
+            <aside class="notes">
+              <ul>
+                <li>Drag and drop a folder.</li>
+                <li>Use "atom ." to open cwd.</li>
+                <li>Use "touch" to create a new file.</li>
+                <li>Translate "cal" and "date" to node repl.</li>
+              </ul>
+            </aside>
 					</section>
 					<section>
 						<ul class="list-content">
@@ -114,6 +105,31 @@ rmdir                = remove an empty directory
 							</li>
 						</ul>
 					</section>
+          <section>
+            <ul class="list-content">
+              <li>
+                <h3>Divshot CLI: </h3><h4>using npm</h4><br><br>
+                <ol>
+                  <li>Download/Install <a href="https://nodejs.org/en/">node.js</a></li>
+                  <li>Execute the following:
+                </ol>
+              </li>
+              <li><pre><code class="bash">
+npm install -g divshot-cli
+divshot login
+cd ./myProjectFolder
+divshot init
+divshot push production</code></pre></li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Explain node v npm.</li>
+                <li>Breakdown npm -i -g divshot-cli.</li>
+                <li>Explain init.</li>
+                <li>Compare divshot "push" to git.</li>
+              </ul>
+            </aside>
+          </section>
 				</section>
 			<!-- SLIDE 3 -->
 				<section>
@@ -134,6 +150,8 @@ rmdir                = remove an empty directory
 						<br>
 					</ul>
 					<aside class="notes">
+            Discuss BOM, DOM, and Global JS Objects. <br><br>
+
 						Use the JavaScript console to instruct the browser to show you the DOM. <br><br>
 
 						> window.document <br><br>
@@ -163,6 +181,17 @@ rmdir                = remove an empty directory
 						<p>-don't forget quotes (" " or ' ')</p>
 							<br>
 					</ul>
+          <aside class="notes">
+            <h4>Six Data Types</h4>
+            <ol>
+              <li>String</li>
+              <li>Number</li>
+              <li>Boolean</li>
+              <li>Undefined - A declared var with no value</li>
+              <li>Null - A var w/o a val. May have had a val at some point.</li>
+              <li>Object - Complex</li>
+            </ol>
+          </aside>
 				</section>
 				<section>
 					<ul class="list-content">
@@ -174,7 +203,7 @@ rmdir                = remove an empty directory
 						<li>
 							<h3>Operators part 2: </h3><h4>data-type specific</h4>
 							<p>- numbers: +, -, *, /, %, ++, --</p>
-							<p>- strings: +, +=</p>
+							<p>- strings: +, += (talk about concatenation)</p>
 						</li>
 					</ul>
 					<aside class="notes">
@@ -222,6 +251,13 @@ prompt("What would you like to do?");
 						<li>Try out more JavaScript as you'd like!</li>
 					</ol>
 				</ul>
+        <aside class="notes">
+          <ul>
+            <li>Where to add script tags.</li>
+            <li>Discuss console.log();</li>
+            <li>Introduce variables.</li>
+          </ul>
+        </aside>
 			</section>
 			<!-- SLIDE 6 -->
 			<section>
@@ -233,7 +269,7 @@ prompt("What would you like to do?");
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Using a different REPL: </h3><h4>node.js</h4>
+							<h3>Back to </h3><h4>console ></h4>
 						</li>
 						<br>
 						<br>
@@ -305,6 +341,11 @@ prompt("What would you like to do?");
 > document.querySelector('#nav ol li').textContent
 > document.querySelector('h1, p').textContent = "I'm on the page!"
 							</code></pre>
+          <aside class="notes">
+            <ul>
+              <li>Discuss ways to access DOM nodes.</li>
+            </ul>
+          </aside>
 				</section>
 				<section>
 					<ul class="list-content">
