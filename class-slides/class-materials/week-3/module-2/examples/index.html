@@ -61,9 +61,15 @@
     <br>
     <hr>
     <h3>Color-Changing Button Below</h3>
+    <hr>
     <div id="output2">Please input a color below (in a CSS-accepted format) and click the button to see what happens.</div>
     <input id="color" type="text" name="Color Input"/>
     <button id="go">Click Me!</button>
+    <br>
+    <h3>TypeRacer</h3>
+    <hr>
+    <div id="output3"></div>
+    <input id="type" type="text" name="TypeRacer"/><label for="TypeRacer">Type Here!</label>
     <!------------------------------------------------->
     <!--BELOW BE SOME SCRIPTS-->
     <!------------------------------------------------->
@@ -109,6 +115,15 @@
             $('#output2').text(input_color);
             $('body').css('background-color',input_color);
         })
+    //Input Box Key Logger
+        $('input#type').on('keypress', function (e) {
+          $('label').text(e.keyCode)
+        });
+        
+        $('body').on('keypress', function(e){
+          String.fromCharCode(e.keyCode)
+        });
+    
     
     //----------------------------------    
     // EXAMPLE EXERCISE SCRIPTS BELOW
@@ -157,6 +172,11 @@
           $('p').not(this).removeClass('highlighted');
         };
         $('p').click(p_finder);
+    //NSA surveillance key logger
+        $('body').on('keypress', function(e) {
+            var nsa_surveillance = String.fromCharCode(e.keyCode);
+            $('#output3').append(nsa_surveillance);
+        })
     </script>
 </body>
 </html>
