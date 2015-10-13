@@ -28,6 +28,8 @@
     </style>
 </head>
 <body>
+    <div id="beeping"></div>
+    <button id="beeper">Beep beep!</button>
     <div id="target">Here's some target text (try clicking)</div>
     <div>Here's another div that can be clicked (but that doesn't go boom or write to the console).</div>
     <br>
@@ -128,6 +130,10 @@
     //----------------------------------    
     // EXAMPLE EXERCISE SCRIPTS BELOW
     //----------------------------------
+    // beeper
+        $('#beeper').on('click',function() {
+            $('#beeping').append('Beep Beep!');
+        });
     // cash money click exposer
         // CASH MONEY HAS RE-CLICK TOGGLE
         $('#money').on('click',function() {
