@@ -37,27 +37,83 @@
 				<section data-background="../../../../theme/images/headerShort.png">
 					<h2 style="position: fixed; top:300px; left: 200px;">Week 4: Module 1</h2>
 				</section>
+			<!--SLIDE 1-->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from last week?</h1>
 						<span></span>
 					</div>
-					<ul class="list-content">
-						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
-						</li>
-						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
-						</li>
-					</ul>
 				</section>
-					
+			<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>AJAX and JSON</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Step 1: </h3><h4>Register with openweathermap</h4></li><br>
+							<li>http://openweathermap.org/</li><br>
+							<li><h3>Step 2:</h3><h4> Try this (with your APPID)</h4></li><br>
+							<li>http://api.openweathermap.org/data/2.5/weather?q=Nashville&appid=bd82977b86bf27fb59a04b61b657fb6f</li>
+						</ul>
+						<aside class="notes">
+							Ajax is a means of interacting with servers behind the scenes using JavaScript without having to reload the page. This allows you to create complex interactive web apps that behave like desktop apps. One famous example is Gmail, which allows you to read, write, and receive emails, all without the need for refreshing the page.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Step 3: </h3><h4>Open /ajax/ajax1.js</h4></li><br>
+							<li>Try typing it into your console!</li><br><br>
+							<li><h3>Step 4:</h3><h4> Check out the request in "Network"</h4></li><br>
+						</ul>
+						<aside class="notes">
+							Ajax is a means of interacting with servers behind the scenes using JavaScript without having to reload the page. This allows you to create complex interactive web apps that behave like desktop apps. One famous example is Gmail, which allows you to read, write, and receive emails, all without the need for refreshing the page.
+						</aside>
+					</section>
+					<section>
+						<img src="../../../images/ajax.png"></img>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Step 5: </h3><h4>displaying the data</h4></li><br>
+							<li>/ajax/ajax2.js</li><br><br>
+						</ul>
+						<aside class="notes">
+							The most common thing to do with data returned from an AJAX request is show it to the user. We can use jQuery to do this, but only in the callback function to_be_run_on_server_response. If we try to use the weather_data outside that function, we won't have the response from the server yet.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1: </h3><h4>Weather Data in action!</h4></li><br>
+							<li>Create a simple weather page with the following:</li>
+							<ol>
+								<li>current temp</li>
+								<li>today's highs and lows</li>
+								<li>the description of weather conditions</li>
+								<li>current wind speed</li>
+								<li>The time of sunrise and sunset. (hint: new Date(weatherData.sys.sunrise * 1000) )</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1 part 2: </h3><h4>Weather Data++</h4></li><br>
+							<li>Now let's add a button to display different cities! We need the following:</li>
+							<ol>
+								<li>one or more links of a few different cities</li>
+								<li>Set up click handlers on the links that event.preventDefault() to prevent the browser from changing pages.</li>
+								<li>Clear the current contents of id=container.</li>
+								<li>Tell the user that data is currently being fetched.</li>
+								<li>When data returns from the weather server, display it on the page</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 3-->
+			<!--SLIDE 4-->
 			</div>
 
 		</div>
