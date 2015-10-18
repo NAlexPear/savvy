@@ -50,7 +50,7 @@
 					<section>
 						<div id="slide-header">
 							<img src="../../../../theme/images/icons/SavvyFavicon.png">
-							<h1>AJAX and JSON</h1>
+							<h1>AJAX</h1>
 							<span></span>
 						</div>
 						<ul class="list-content">
@@ -113,6 +113,64 @@
 					</section>
 				</section>
 			<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>JSON</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>JSON =  </h3><h4>"JavaScript Object Notation"</h4></li><br>
+						</ul>
+						<pre><code class="javascript">
+$.ajax({
+  method: 'GET',
+  url: 'http://jsonplaceholder.typicode.com/posts/1',
+  success: function(data) {
+    console.log(data)
+  }
+})
+						</code></pre>
+						<aside class="notes">
+							Now let's try more complex interaction using a RESTful API, which is to say a set of endpoints, available over a network, that serve JSON data in a predictable format based on that resource's name. (e.g. a post with the id of 7 is available at the path /posts/7). Here the server lives at http://jsonplaceholder.typicode.com and the path to the info we want is /posts/1
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2: </h3><h4>working with JSON Placeholder</h4></li><br>
+							<li>http://jsonplaceholder.typicode.com/</li><br><br>
+							<ol>
+								<li>Retrieve the post with id of 1 from the server, in the success callback, display it on the page.</li>
+								<li>Retrieve the post with id of 2 from the server, in the success callback, display it on the page.</li>
+								<li>Abstract the success callback out into a separate function called place_post_on_page.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 2: </h3><h4>JSON Placeholder++</h4></li><br>
+							<ol>
+								<li>Using a for loop, use AJAX calls to fetch posts with ids from 1 to 10 and pass them to your place_post_on_page function to display them on the page. Do they always appear in the same order? Why is this?</li>
+								<li>Now instead, use the /posts endpoint to get all posts and display only their titles on the page. This is often called the "index" view.</li>
+								<li>When a visitor clicks on the title of a post, clear the content area and replace it with the full information for that post, displaying all of its properties. This is often called the "show" view.</li>
+								<li>Allow the user to navigate back to the "index" view from the "show" view.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 3: </h3><h4>JSON Placeholder+=2</h4></li><br>
+							<ol>
+								<li>Network requests are expensive and slow. Refactor your code such that once you've fetched data once, it's cached as a javascript object and accessible immediately when the user moves back and forth between 'show' and 'index' views.</li>
+								<li>When showing an individual post, fetch all '/comments' and append the ones whose 'postId' property matches the post's id.</li>
+								<li>Fetch information about the user who made the post. Display their name and email under the post.</li>
+								<li>Create a simple login form where users can input their email address and password (let's say their password is their zip code, which we can also find on the user objects) such that visitors can see all of their own posts and comments after they log in.</li>
+								<li>Create forms to allow users to create a new post or edit existing posts, pointing the forms to the appropriate RESTful endpoints using $.post()</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
 			<!--SLIDE 4-->
 			</div>
 
