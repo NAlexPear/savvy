@@ -170,6 +170,23 @@ $.ajax({
 							</ol>
 						</ul>
 					</section>
+					<section>
+						<ul class="class-list">
+							<li>
+								<h3>Try the code below: </h3><h4>use products_array from Web Store Hackathon</h4>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+// run these one line at a time in your console.
+
+// the server does this before sending information over the wire
+var products_array_represented_as_json_string = JSON.stringify(products)
+typeof products_array_represented_as_json_string
+
+// $.ajax() converts incoming JSON strings back into arrays, objects and primitive values before passing it into your callback function.
+JSON.parse(products_array_represented_as_json_string)
+						</code></pre>
+					</section>
 				</section>
 			<!--SLIDE 4-->
 			</div>
