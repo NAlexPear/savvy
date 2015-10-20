@@ -270,35 +270,6 @@ times10(32) // 320
 							<li>Take a look at instructions/underscore.md</li>
 						</ul>
 					</section>
-					<section>
-						<ul class="list-content">
-							<li><h3>Exercise 2 part 3: </h3><h4>JSON Placeholder+=2</h4></li><br>
-							<ol>
-								<li>Network requests are expensive and slow. Refactor your code such that once you've fetched data once, it's cached as a javascript object and accessible immediately when the user moves back and forth between 'show' and 'index' views.</li>
-								<li>When showing an individual post, fetch all '/comments' and append the ones whose 'postId' property matches the post's id.</li>
-								<li>Fetch information about the user who made the post. Display their name and email under the post.</li>
-								<li>Create a simple login form where users can input their email address and password (let's say their password is their zip code, which we can also find on the user objects) such that visitors can see all of their own posts and comments after they log in.</li>
-								<li>Create forms to allow users to create a new post or edit existing posts, pointing the forms to the appropriate RESTful endpoints using $.post()</li>
-							</ol>
-						</ul>
-					</section>
-					<section>
-						<ul class="class-list">
-							<li>
-								<h3>Try the code below: </h3><h4>use products_array from Web Store Hackathon</h4>
-							</li>
-						</ul>
-						<pre><code class="javascript example">
-// run these one line at a time in your console.
-
-// the server does this before sending information over the wire
-var products_array_represented_as_json_string = JSON.stringify(products)
-typeof products_array_represented_as_json_string
-
-// $.ajax() converts incoming JSON strings back into arrays, objects and primitive values before passing it into your callback function.
-JSON.parse(products_array_represented_as_json_string)
-						</code></pre>
-					</section>
 				</section>
 			<!--SLIDE 4-->
 			</div>
