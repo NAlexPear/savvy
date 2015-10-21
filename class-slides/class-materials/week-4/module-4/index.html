@@ -202,11 +202,28 @@ get_pictures("baby deer")</code></pre>
 							<li>
 								<h3>Soundcloud: </h3><h4>Another more complex API</h4>
 							</li><br>
-							<li>You'll need to run a localhost process (http:// instead of file://).</li>
+							<li>You'll need to run a localhost process (http:// instead of file://).</li><br>
+							<li>Start with a new index.html document, then head to the command line.</li>
 						</ul>
-						
+						<pre><code class="bash">
+$ npm install http-server -g
+						</code></pre>
 						<aside class="notes">
-							What is the headers property for? (hint)... I pre-registered a Client-ID for us to use, don't abuse it or we'll all get locked out!
+							Back to node! (and the command line)
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Create a new file: </h3><h4>server.js</h4>
+							</li><br>
+							<li>...in the same directory as your index.html file!</li>
+						</ul>
+						<pre><code class="bash">
+$ http-server index.html
+						</code></pre>
+						<aside class="notes">
+							And that's it to get started! No configuration necessary.
 						</aside>
 					</section>
 				</section>
