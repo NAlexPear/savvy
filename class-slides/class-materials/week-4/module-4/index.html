@@ -203,75 +203,91 @@ get_pictures("baby deer")</code></pre>
 								<h3>Soundcloud: </h3><h4>Another more complex API</h4>
 							</li><br>
 							<li>You'll need to run a localhost process (http:// instead of file://).</li><br>
-							<li>Start with a new index.html document, then head to the command line.</li>
+							<li>Copy the examples/* directory (including index.html file), then head to the command line.</li>
 						</ul>
 						<pre><code class="bash">
 $ npm install http-server -g
 						</code></pre>
 						<aside class="notes">
-							Back to node! (and the command line)
+							Copy the entire examples directory to your local machine, then back to node! (and the command line)
 						</aside>
 					</section>
 					<section>
 						<ul class="list-content">
 							<li>
-								<h3>Create a new file: </h3><h4>server.js</h4>
+								<h3>Fire up your server: </h3><h4>http-server</h4>
 							</li><br>
 							<li>...in the same directory as your index.html file!</li>
 						</ul>
 						<pre><code class="bash">
-$ http-server index.html
+$ http-server
 						</code></pre>
 						<aside class="notes">
-							And that's it to get started! No configuration necessary.
-						</aside>
-					</section>
-				</section>
-			<!--SLIDE 4-->
-				<section>
-					<section>
-						<div id="slide-header">
-							<img src="../../../../theme/images/icons/SavvyFavicon.png">
-							<h1>The Factory Pattern</h1>
-							<span></span>
-						</div>
-						<pre><code class="javascript">
-var car_factory = function (type, speed) {
-  var car = {}
-
-  car.position = 0
-  car.type = type
-  car.speed = speed
-
-  car.move = function () {
-    this.position += this.speed
-  }
-
-  return car
-}
-
-var new_toyota = car_factory('Toyota Hilux', 3)
-var new_honda = car_factory('Honda Accord', 5)
-				</code></pre>
-						<aside class="notes">
-							When we use a function to instantiate new objects of a certain type, we call this code structure the Factory pattern
+							And that's it to get started! No configuration necessary. Take a look at the contents of that html file, though.
 						</aside>
 					</section>
 					<section>
 						<ul class="list-content">
-							<li><h3>Exercise 7: </h3><h4>Military Industrial Complex</h4></li><br>
+							<li>
+								<h3>Un-comment code in index.html: </h3><h4>see below</h4>
+							</li><br>
+						</ul>
+						<pre><code class="javascript">
+// Authenticate ourselves to SoundCloud
+SC.initialize({ client_id: "d29ad0142b2cd0a47ad2e561334c8e0f"})
+
+// Play the first track that matches the query 'bob marley'
+SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+  SC.oEmbed(tracks[0].uri, {auto_play: true}, document.body)
+})
+
+// List all tracks
+SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+ tracks.forEach(function(t){ $('body').append($('
+').text(t.artwork_url + t.title + t.uri))})
+})
+						</code></pre>
+						<aside class="notes">
+							And that's it to get started! No configuration necessary. Take a look at the contents of that html file, though.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 4: </h3><h4>Music Mayhem</h4></li><br>
 							<ol>
-								<li>Create a warrior factory that takes arguments of a name and a weapon.</li>
-								<li>It should return a warrior with those properties as well as...</li>
-								<li>Each warrior should have an attack method that references the name and weapon</li>
-								<li>nd also an adventure method that calls the attack method multiple times among other things</li>
+								<li>Allow the user to input a search term, then click a button to play the first matching track.</li>
+								<li>List all other matching tracks below the SoundCloud Embed</li>
+								<li>When the User clicks on one of the listed tracks, play it!</li>
 							</ol>
 						</ul>
 					</section>
 					<section>
 						<ul class="list-content">
-							<li><h3>Exercise 8: </h3><h4>Car Factory</h4></li><br>
-							<li>Refactor the car_factory (from 2 slides ago) function into a single expression (i.e. create a new object, add all its properties and return it in one fell swoop).</li>
+							<li>
+								<h3>JSONP: </h3><h4>JSON with Padding</h4>
+							</li><br>
+							<li>https://en.wikipedia.org/w/api.php?action=opensearch&search=Ontario,%20CA&format=json&callback=function_to_run_when_server_responds</li><br><br>
+							<li>^try this in a browser</li>
+						</ul>
+						<aside class="notes">
+							What does this do? What data type would this code give you?
+						</aside>
+					</section>
+					<section>
+						<pre><code class="javascript">
+var function_to_run_when_server_responds = function(){
+    console.log(arguments)
+  }
+
+$("head").append($("&lrt;script&grt;").attr("src", "http://en.wikipedia.org/w/api.php?action=opensearch&search=Ontario,%20CA&format=json&callback=function_to_run_when_server_responds"))
+						</code></pre>
+						<br>
+						<ul class="list-content">
+							<li><h3>Exercise 5: </h3><h4>JSONP-diddy</h4></li><br>
+							<ol>
+								<li>Create a page that allows the user to type in a search query and query Wikipedia.</li>
+								<li>Show a running collection of summaries of Wikipedia queries and links to the full pages</li>
+							</ol>
 						</ul>
 					</section>
 				</section>
