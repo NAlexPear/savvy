@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Savvy Coders | Week 1 : Module 1</title>
+		<title>Savvy Coders | Week 4 : Module 4</title>
 
 		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
 		<meta name="author" content="the Savvy Coder Team">
@@ -35,29 +35,229 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section data-background="../../../../theme/images/headerShort.png">
-					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 4: Module 4</h2>
 				</section>
+			<!--SLIDE 1-->
 				<section>
 					<div id="slide-header">
 						<img src="../../../../theme/images/icons/SavvyFavicon.png">
-						<h1>Welcome to class!</h1>
+						<h1>Questions from yesterday?</h1>
 						<span></span>
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Stand up</h4>
-							<p>...and move around a bit</p>
+							<h3>OOP: </h3><h4>Object-Oriented Fun</h4>
 						</li>
-						<li>
-							<h3>Step 2: </h3><h4>Make friends</h4>
-							<p>Introduce yourself to someone</p>
-							<p>Ask about class goals, favorite superhero</p>
-							<p>Introduce your new friend to someone else</p>
-							<p>Repeat ad nauseam (or until we say so)</p>
-						</li>
+						<li>'this'</li>
+						<li>method scope</li>
+						<li>decorator pattern</li>
+						<li>factory pattern</li>
 					</ul>
 				</section>
-					
+			<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Simple MVC</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>Remember this?</li>
+						</ul>
+						<pre><code class="javascript example">
+$.get( 'http://jsonplaceholder.typicode.com/posts/1', function(weather_data){
+  console.log(weather_data)
+})
+						</code></pre>
+						<ul class="list-content">
+							<li>And this?</li>
+						</ul>
+						<pre><code class="javascript example">
+var thing = {
+    property: 'value',
+    method: function () {
+      console.log("i've got a " + this.property + "!")
+    }
+  }
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="javascript">
+var posts = []
+
+var post = {
+  url: 'http://jsonplaceholder.typicode.com/posts/',
+  $el: $('<div class="post">').appendTo($('body')),
+  initialize: function(id){
+    this.$el.attr('id', id)
+    this.url += id
+    var thisPost = this // wtf? http://stackoverflow.com/questions/4886632/what-does-var-that-this-mean-in-javascript
+    $.get( this.url, function(data){
+       console.log(this) // window
+       thisPost.attributes = data
+       thisPost.render()
+     })
+     posts.push(this)
+  },
+  render: function(){
+    this.$el.append([
+      $('<div>').addClass('title').text(this.attributes.title),
+      $('<div>').addClass('body').text(this.attributes.body)
+    ])
+  }
+}
+
+post.initialize(1)
+						</code></pre>
+						<aside class="notes">
+							Think through how this works... try and make it work, break it again, and so on.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1: </h3><h4>Commenting MVC</h4></li><br><br>
+							<li>Create a new .js document and paste in the code from the last slide. Then comment every line explaining what that line does. Share it as a gist through slack when you make some progress!</li><br>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2: </h3><h4>The Postman Cometh</h4></li><br>
+							<ol>
+								<li>Create a post_factory function that takes the id number of the post as an argument.</li>
+								<li>Inside the post_factory, use the above code to fetch a post with that id and render it.</li>
+								<li>Where should the posts array live? Inside post_factory or in the global scope? If in doubt, try creating a couple of posts with both ways. In only one of them should you be able to have multiple post objects referenced in the posts array when you're done.</li>
+								<li>When a car moves, adjust its position by adding its speed.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 2: </h3><h4>The Postman Continuith</h4></li><br>
+							<ol>
+								<li>Create a for loop that fetches and rendes posts 75 - 90 by calling post_factory.</li>
+								<li>Add a method highlight to each post object that adds a property this.active = true to the post object and also toggles a pre-defined class on that post's this.$el property</li>
+								<li>When active, that class should give the post a yellow background and red text color</li>
+								<li>Try calling post.highlight() manually on a few post objects from the posts array.</li>
+								<li>Reference the favorite_food inside the eat method.</li>
+								<li>Reload the page, and iterate over the posts array, highlighting every third post.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 Extra Credit: </h3><h4>The Postman Continuith</h4></li><br><br>
+							<li>If you have extra time, check out extra-credit/ec.md for some extra homework!</li>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>More APIs!</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Imgur: </h3><h4>new API, same song/dance</h4>
+							</li>
+						</ul>
+						<pre><code class="javascript">
+var get_pictures = function (searchTerm) {
+  $.ajax({
+    url: "https://api.imgur.com/3/gallery/search?q="+ encodeURI(searchTerm),
+    headers: { "Authorization": "Client-ID e3776adbe9c5fb9" },
+    success: function(response){
+      console.log(response)
+    }
+  })
+}
+
+get_pictures("baby deer")</code></pre>
+						<aside class="notes">
+							What is the headers property for? (hint)... I pre-registered a Client-ID for us to use, don't abuse it or we'll all get locked out!
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 3: </h3><h4>Picture Factory</h4></li><br>
+							<ol>
+								<li>Create an HTML page such that a user can enter a search term into an input field.</li>
+								<li>When the user clicks the submit button, call get_pictures with the search term as an argument.</li>
+								<li>Create a picture_factory similar to the post_factory.</li>
+								<li>When the ajax call returns, iterate over the response data & pass each picture's url & title to picture_factory</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 3 Extra Credit: </h3><h4>Picture Factory</h4></li><br>
+							<li>If you have extra time, check out extra-credit/ec2.md for some extra homework!</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Soundcloud: </h3><h4>Another more complex API</h4>
+							</li><br>
+							<li>You'll need to run a localhost process (http:// instead of file://).</li>
+						</ul>
+						
+						<aside class="notes">
+							What is the headers property for? (hint)... I pre-registered a Client-ID for us to use, don't abuse it or we'll all get locked out!
+						</aside>
+					</section>
+				</section>
+			<!--SLIDE 4-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>The Factory Pattern</h1>
+							<span></span>
+						</div>
+						<pre><code class="javascript">
+var car_factory = function (type, speed) {
+  var car = {}
+
+  car.position = 0
+  car.type = type
+  car.speed = speed
+
+  car.move = function () {
+    this.position += this.speed
+  }
+
+  return car
+}
+
+var new_toyota = car_factory('Toyota Hilux', 3)
+var new_honda = car_factory('Honda Accord', 5)
+				</code></pre>
+						<aside class="notes">
+							When we use a function to instantiate new objects of a certain type, we call this code structure the Factory pattern
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 7: </h3><h4>Military Industrial Complex</h4></li><br>
+							<ol>
+								<li>Create a warrior factory that takes arguments of a name and a weapon.</li>
+								<li>It should return a warrior with those properties as well as...</li>
+								<li>Each warrior should have an attack method that references the name and weapon</li>
+								<li>nd also an adventure method that calls the attack method multiple times among other things</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 8: </h3><h4>Car Factory</h4></li><br>
+							<li>Refactor the car_factory (from 2 slides ago) function into a single expression (i.e. create a new object, add all its properties and return it in one fell swoop).</li>
+						</ul>
+					</section>
+				</section>
 			</div>
 
 		</div>
