@@ -84,7 +84,7 @@ var thing = {
 var posts = []
 var post = {
   url: 'http://jsonplaceholder.typicode.com/posts/',
-  $el: $('&lrt;div class="post"&grt;').appendTo($('body')),
+  $el: $(&lrt;div class="post"&grt;).appendTo($('body')),
   initialize: function(id){
     this.$el.attr('id', id)
     this.url += id
@@ -98,8 +98,8 @@ var post = {
   },
   render: function(){
     this.$el.append([
-      $('&lrt;div&grt;').addClass('title').text(this.attributes.title),
-      $('&lrt;div&grt;').addClass('body').text(this.attributes.body)
+      $(&lrt;div&grt;).addClass('title').text(this.attributes.title),
+      $(&lrt;div&grt;).addClass('body').text(this.attributes.body)
     ])
   }
 }
