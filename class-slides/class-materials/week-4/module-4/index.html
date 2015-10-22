@@ -70,9 +70,6 @@ $.get( 'http://jsonplaceholder.typicode.com/posts/1', function(weather_data){
   console.log(weather_data)
 })
 						</code></pre>
-						<ul class="list-content">
-							<li>And this?</li>
-						</ul>
 						<pre><code class="javascript example">
 var thing = {
     property: 'value',
@@ -85,10 +82,9 @@ var thing = {
 					<section>
 						<pre><code class="javascript">
 var posts = []
-
 var post = {
   url: 'http://jsonplaceholder.typicode.com/posts/',
-  $el: $('<div class="post">').appendTo($('body')),
+  $el: $('&lrt;div class="post"&grt;').appendTo($('body')),
   initialize: function(id){
     this.$el.attr('id', id)
     this.url += id
@@ -102,8 +98,8 @@ var post = {
   },
   render: function(){
     this.$el.append([
-      $('<div>').addClass('title').text(this.attributes.title),
-      $('<div>').addClass('body').text(this.attributes.body)
+      $('&lrt;div&grt;').addClass('title').text(this.attributes.title),
+      $('&lrt;div&grt;').addClass('body').text(this.attributes.body)
     ])
   }
 }
