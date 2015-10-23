@@ -60,8 +60,9 @@ Making money from freelancing can be rewarding work, but also means there's no c
 1. Find a designer! You don't want to mess with anything but code to begin with
 2. Start with personal contacts to build a portfolio, but get PAID
 3. In fact, google 'F--K you, pay me!' (it's on YouTube) about freelancing.
-4. Set up a consistent workflow
-5. Make sure you contract is clear and concise (here's [Alex's template](https://gist.github.com/NAlexPear/0f9d6b9d813463b80bc1))
+4. Set up a consistent workflow (see Alex's)
+5. Make sure your contract is clear and concise (here's [Alex's template](https://gist.github.com/NAlexPear/0f9d6b9d813463b80bc1))
+6. 
 
 
 ## Resume
