@@ -11,18 +11,18 @@
     <script type="text/javascript" src="https://connect.soundcloud.com/sdk.js"></script>
     <script type="text/javascript">
     
-        // // Authenticate ourselves to SoundCloud
-        // SC.initialize({ client_id: "d29ad0142b2cd0a47ad2e561334c8e0f"});
+        // Authenticate ourselves to SoundCloud
+        SC.initialize({ client_id: "d29ad0142b2cd0a47ad2e561334c8e0f"});
         
-        // // Play the first track that matches the query 'bob marley'
-        // SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
-        //   SC.oEmbed(tracks[0].uri, {auto_play: true}, document.body)
-        // });
+        // Play the first track that matches the query 'bob marley'
+        SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+          SC.oEmbed(tracks[0].uri, {auto_play: true}, document.body)
+        });
         
-        // // List all tracks
-        // SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
-        //  tracks.forEach(function(t){ $('body').append($('').text(t.artwork_url + t.title + t.uri))})
-        // });
+        // List all tracks
+        SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+         tracks.forEach(function(t){ $('body').append($('').text(t.artwork_url + t.title + t.uri))})
+        });
     </script>
 </body>
 </html>

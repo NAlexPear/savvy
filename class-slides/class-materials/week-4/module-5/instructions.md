@@ -53,6 +53,17 @@ Our job is to put our best foot forward and engage with the hiring process in go
     
 ---
 
+## Freelancing
+
+Making money from freelancing can be rewarding work, but also means there's no comfort of 'salary'. For you guys' skill level:
+
+1. Find a designer! You don't want to mess with anything but code to begin with
+2. Start with personal contacts to build a portfolio, but get PAID
+3. In fact, google 'F--K you, pay me!' (it's on YouTube) about freelancing.
+4. Set up a consistent workflow
+5. Make sure you contract is clear and concise (here's [Alex's template](https://gist.github.com/NAlexPear/0f9d6b9d813463b80bc1))
+
+
 ## Resume
 
 Unless you're applying to larger, more traditional companies, it's an afterthought. Do this as quickly as possible and move on:
