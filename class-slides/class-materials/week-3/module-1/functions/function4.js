@@ -1,5 +1,6 @@
-var value_logger = function (value) {
+var value_logger = function (value, value2) {
   console.log(value)
+  console.log(value2);
 }
 
 value_logger("Howdy ho, neighborino!")
