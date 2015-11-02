@@ -62,7 +62,6 @@ Making money from freelancing can be rewarding work, but also means there's no c
 3. In fact, google 'F--K you, pay me!' (it's on YouTube) about freelancing.
 4. Set up a consistent workflow (see Alex's)
 5. Make sure your contract is clear and concise (here's [Alex's template](https://gist.github.com/NAlexPear/0f9d6b9d813463b80bc1))
-6. 
 
 
 ## Resume
