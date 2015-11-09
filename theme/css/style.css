@@ -116,31 +116,32 @@ hr{
   display: block;
 }
 
-#icon-bar{
+ul.icon-bar{
     list-style-type:none;
     display:table;
     table-layout:fixed;
     width: 100%;
     padding-left: 0px;
     margin-top: 0px;
+    font-size: 7vmin;
 }
 
-#icon-bar a{
+#content ul.icon-bar a{
   text-decoration: none;
   border-bottom: none;
 }
 
-#icon-bar a:hover{
+#content ul.icon-bar a:hover{
   border-bottom: none;
 }
 
-#icon-bar li{
+ul.icon-bar li{
     display: table-cell;
     text-align: center;
     padding-top: 8px;
 }
 
-#icon-bar li:first-child a{
+ul.icon-bar li:first-child a{
   color: #ffffff;
   -o-transition:.5s color;
   -ms-transition:.5s color;
@@ -149,11 +150,11 @@ hr{
    transition: .5s color;
 }
 
-#icon-bar li:first-child a:hover{
+ul.icon-bar li:first-child a:hover{
   color: #07c4dd;
 }
 
-#icon-bar li:nth-child(2) a{
+ul.icon-bar li:nth-child(2) a{
   color: #ffffff;
   -o-transition:.5s color;
   -ms-transition:.5s color;
@@ -162,11 +163,11 @@ hr{
    transition: .5s color;
 }
 
-#icon-bar li:nth-child(2) a:hover{
+ul.icon-bar li:nth-child(2) a:hover{
   color: #07c4dd;
 }
 
-#icon-bar li:nth-child(3) a{
+ul.icon-bar li:nth-child(3) a{
   color: #ffffff;
   -o-transition:.5s color;
   -ms-transition:.5s color;
@@ -175,11 +176,11 @@ hr{
    transition: .5s color;
 }
 
-#icon-bar li:nth-child(3) a:hover{
+ul.icon-bar li:nth-child(3) a:hover{
   color: #07c4dd;
 }
 
-#icon-bar li:nth-child(4) a{
+ul.icon-bar li:nth-child(4) a{
   opacity: 0.6;
   -o-transition:.3s opacity;
   -ms-transition:.3s opacity;
@@ -187,7 +188,7 @@ hr{
   -webkit-transition:.3s opacity;
    transition: .3s opacity;
 }
-#icon-bar li:nth-child(4) a:hover{
+ul.icon-bar li:nth-child(4) a:hover{
   opacity: 1;
 }
 

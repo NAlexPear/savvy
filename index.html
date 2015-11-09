@@ -32,7 +32,7 @@
     <link rel="shortlink" href="http://savvycoders.com">
 
     <!--icon/font links Below-->
-    <link href="theme/css/themify-icons.css" rel="stylesheet">
+    <link href="bower_components/themify-icons/themify-icons.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Kreon:400,700|Quicksand:400,300,700' rel='stylesheet' type='text/css'>
 
 </head>
@@ -119,7 +119,7 @@
                   through 1-month evening classes. Join us today!</p>
                 <br>
                 <div id="cta">
-                  <ul id="icon-bar">
+                  <ul class="icon-bar">
                     <li id="applybutton">
                           <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank">
                             <span class="ti-announcement"></span>
@@ -165,7 +165,7 @@
                 <p>Through in-person classes led by experienced instructors, you'll learn how to build
                 a portfolio of web-based projects. Keep scrolling to find out what you'll learn!</p>
                 <br>
-                <ul id="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
+                <ul class="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
                   <li  id="meetbutton">
                       <a href="#top">
                         <span class="ti-arrow-circle-up"></span>
@@ -253,7 +253,7 @@
                 <br>
             </div>
             <div style="height: 15vmin;"></div>
-            <ul id="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
+            <ul class="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
               <li  id="meetbutton">
                   <a href="#top">
                     <span class="ti-arrow-circle-up"></span>
@@ -292,7 +292,7 @@
             <br>
             </div>
             <br>
-            <ul id="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
+            <ul class="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
               <li  id="meetbutton">
                   <a href="#top">
                     <span class="ti-arrow-circle-up"></span>
@@ -321,7 +321,7 @@
             <span style="color:#fff;"><b>savvy</b></span>coders
           </div>
         </div>
-        <ul id="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
+        <ul class="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
               <li  id="meetbutton">
                   <a href="#top">
                     <span class="ti-arrow-circle-up"></span>
@@ -347,7 +347,7 @@
             </div>
           </div>
         </div>
-        <ul id="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
+        <ul class="icon-bar" style="width: 50%; margin-left: auto; margin-right: auto;">
           <li  id="meetbutton">
             <a href="#top">
               <span class="ti-arrow-circle-up"></span>
@@ -360,10 +360,77 @@
     </div>
   </div>
 
+  <footer>
+    <ul>
+      <li>
+        <a href="#headjump">Home</a>
+      </li>
+      <li>
+        <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank">Sign Up</a>
+      </li>
+      <li>
+        <a href=" https://www.eventbrite.com/e/crash-course-in-coding-for-the-curious-tickets-19322449968">Attend an Intro Session</a>
+      </li>
+      <li>
+        <a href="http://www.meetup.com/savvycoders/">Join our Meetup</a>
+      </li>
+      <li>
+        <a href="#jump2">How it Works</a>
+      </li>
+      <li>
+        <a href="#jump3">What you'll learn</a>
+      </li>
+      <li>
+        <a href="/pricing">Pricing</a>
+      </li>
+      <li>
+        <a href="/faq">FAQ</a>
+      </li>
+      <li>
+        <a href="/join-the-team">Join the Team</a>
+      </li>
+      <li>
+        <a href="#jump6">Contact us</a>
+      </li>
+    </ul>
+    <div id="address">
+      <p>All classes are held at</p>
+      <p><a href="http://www.refinerynashville.com/">the Refinery Nashville</a></p>
+      <p>438 HOUSTON ST</p>
+      <p>SUITE 263</p>
+      <p>NASHVILLE, TN 37203</p>
+    </div>
+    <br>
+    <div class="social">
+      <br>
+      <ul class="icon-bar">
+        <li>
+          <a href="http://twitter.com/savvycoders">
+            <span class="ti-twitter"></span>
+            <p>twitter</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://facebook.com/savvycoders">
+            <span class="ti-facebook"></span>
+            <p>facebook</p>
+          </a>
+        </li>
+        <li>
+          <a href="http://linkedin.com/in/savvycoders">
+            <span class="ti-linkedin"></span>
+            <p>linkedin</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">©2015 Savvy Technologies, LLC.</div>
+  </footer>
   <!--JQuery.min.js linkage-->
-  <script type='text/javascript' src='theme/js/jquery.min.js'></script>
+  <script type='text/javascript' src='bower_components/jquery/dist/jquery.min.js'></script>
 
   <!--async scripts below-->
+  <script type="text/javascript" src="bower_components/picturefill/dist/picturefill.min.js" async></script>
   <script type="text/javascript" src="theme/js/wordfades.js" async></script>
   <script type="text/javascript" src="theme/js/buttonpop.js" async></script>
   <script type="text/javascript" src="theme/js/typeform.js" async></script>
@@ -375,70 +442,4 @@
   <!-- Google analytics -->
   <script tyle="text/javascript" src="theme/js/tags.js" async></script>
 </body>
-<footer>
-  <ul>
-    <li>
-      <a href="#headjump">Home</a>
-    </li>
-    <li>
-      <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank">Sign Up</a>
-    </li>
-    <li>
-      <a href=" https://www.eventbrite.com/e/crash-course-in-coding-for-the-curious-tickets-19322449968">Attend an Intro Session</a>
-    </li>
-    <li>
-      <a href="http://www.meetup.com/savvycoders/">Join our Meetup</a>
-    </li>
-    <li>
-      <a href="#jump2">How it Works</a>
-    </li>
-    <li>
-      <a href="#jump3">What you'll learn</a>
-    </li>
-    <li>
-      <a href="/pricing">Pricing</a>
-    </li>
-    <li>
-      <a href="/faq">FAQ</a>
-    </li>
-    <li>
-      <a href="/join-the-team">Join the Team</a>
-    </li>
-    <li>
-      <a href="#jump6">Contact us</a>
-    </li>
-  </ul>
-  <div id="address">
-    <p>All classes are held at</p>
-    <p><a href="http://www.refinerynashville.com/">the Refinery Nashville</a></p>
-    <p>438 HOUSTON ST</p>
-    <p>SUITE 263</p>
-    <p>NASHVILLE, TN 37203</p>
-  </div>
-  <br>
-  <div class="social">
-    <br>
-    <ul id="icon-bar">
-      <li>
-        <a href="http://twitter.com/savvycoders">
-          <span class="ti-twitter"></span>
-          <p>twitter</p>
-        </a>
-      </li>
-      <li>
-        <a href="http://facebook.com/savvycoders">
-          <span class="ti-facebook"></span>
-          <p>facebook</p>
-        </a>
-      </li>
-      <li>
-        <a href="http://instagram.com/savvycoders">
-          <span class="ti-instagram"></span>
-          <p>instagram</p>
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div class="copyright">©2015 Savvy Technologies, LLC.</div>
-</footer>
 </html>
