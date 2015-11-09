@@ -1,0 +1,31 @@
+{
+  "name": "savvycoders",
+  "homepage": "https://savvycoders.com",
+  "authors": [
+    "Alex Pearson <alex@alexpear.com>"
+  ],
+  "description": "Savvy Coders's website and teaching materials",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "programming",
+    "javascript",
+    "instruction"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "picturefill": "~3.0.1"
+  },
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "themify-icons": "~0.1.0"
+  }
+}
