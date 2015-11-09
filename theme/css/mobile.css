@@ -151,7 +151,7 @@ a {
   border-bottom: none;
 }
 
-ul.icon-bar{
+#content ul.icon-bar{
     list-style-type:none;
     display:table;
     table-layout:fixed;
@@ -159,24 +159,24 @@ ul.icon-bar{
     padding-left: 0px;
     margin-top: 0px;
 }
-ul.icon-bar p{
+#content ul.icon-bar p{
   text-indent: 0px;
 }
-ul.icon-bar li{
+#content ul.icon-bar li{
     display: table-cell;
     text-align: center;
     padding-top: 8px;
 }
 
-ul.icon-bar li:first-child a{
+#content ul.icon-bar li:first-child a{
   color: #ffffff;
 }
 
-ul.icon-bar li:nth-child(2) a{
+#content ul.icon-bar li:nth-child(2) a{
   color: #ffffff;
 }
 
-ul.icon-bar li:nth-child(3) p{
+#content ul.icon-bar li:nth-child(3) p{
   color: #07c4dd;
 }
 #learnbutton span a {
@@ -334,7 +334,7 @@ footer ul a{
   column-span: all;
   opacity: 0.6;
 }
-.social ul.icon-bar li:last-child p{
+.social #content ul.icon-bar li:last-child p{
   opacity: 1;
   color: #ffffff;
 }
@@ -374,4 +374,26 @@ footer ul a{
 
 .active-response{
   display: block;
+}
+
+/*iframe video player style*/
+.video_frames{
+  display: block;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+}
+iframe{
+  position: relative;
+  margin-left: auto;
+  margin-right:auto;
+}
+
+
+/*basic reponsive toggle classes*/
+.mobile-only{
+  display: block;
+}
+.desktop-only{
+  display: none;
 }
