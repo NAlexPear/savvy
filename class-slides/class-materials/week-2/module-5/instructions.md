@@ -74,7 +74,7 @@ The following lists the core web development skills that you should feel comfort
 
 ## Step 4: Deploy & Promote
 
-1. Deploy your code to Divshot using your command line tools
+1. Deploy your code to Firebase
 2. Post a link on Slack
 3. Send it to your friends and family members so they can be proud of you
 4. Social media?
