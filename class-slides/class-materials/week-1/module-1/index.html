@@ -69,7 +69,7 @@
 						<ul class="list-content">
 							<li>
 								<h3>The Schedule: </h3><h4>60 hours of <strike>work</strike> <b>FUN</b></h4>
-								<p>...plus homework</p>
+								<p>...plus lots and lots of extra content</p>
 								<br>
 							</li>
 							<li>
@@ -88,7 +88,7 @@
 							</li>
 							<li>
 								<h3>Weeks: </h3><h4>4</h4>
-								<p>September 28th-October 23rd</p>
+								<p>November 16th-December 15th (or 16th)</p>
 								<br>
 							</li>
 							<li>
@@ -135,7 +135,7 @@
 						</li>
 						<li>
 							<h3>Personal Help: </h3><h4>Email us!</h4>
-							<p>INSTRUCTORS: alex@alexpear.com, jessicahillart@gmail.com, justin.seiter@gmail.com</p>
+							<p>INSTRUCTORS: alex@savvycoders.com, katyerussell@gmail.com</p>
 							<p>ADMIN: info@savvycoders.com</p>
 						</li>
 					</ul>
@@ -189,7 +189,6 @@
 							</li>
 							<li>
 								<h3>Would you like to know more?: </h3><h4>http://simplecpu.com</h4>
-								<p>optional after-class assignment</p>
 							</li>
 						</ul>
 					</section>
@@ -313,9 +312,8 @@ GUILG00.GZ  hitni123.jpg  nsmail
 							<br>
 						</li>
 						<li>
-							<li><h3>Recommended: </h3><h4>PowerShell</h4>
-								<p>https://www.microsoft.com/en-us/download/details.aspx?id=34595</p>
-								<p>...or a quick Google</p>
+							<li><h3>Recommended: </h3><h4>PowerShell + git bash</h4><br>
+								<a href="https://technet.microsoft.com/en-us/library/hh847837.aspx">Click here to see if you need to download PowerShell</a>
 							</li>
 						</li>
 					</ul>
@@ -331,9 +329,10 @@ GUILG00.GZ  hitni123.jpg  nsmail
 					</div>
 					<ul class="list-content">
 						<li>
-							<h3>Step 1: </h3><h4>Get a terminal running</h4>
-							<p>See previous slides!</p>
-						</li>
+							<h3>Step 1: </h3><h4>Install git CLI</h4>
+							<p><a href="https://git-scm.com/downloads">https://git-scm.com/</a></p>
+							<p>(includes git bash for Windows)</p>
+						</li><br>
 						<li>
 							<h3>Step 2: </h3><h4>Navigate to your desktop in a GUI</h4>
 							<p>Mac: Finder</p>
@@ -760,6 +759,12 @@ GUILG00.GZ  hitni123.jpg  nsmail
 					<li>
 						<h3>Let's go to Atom again!</h3>
 						<p>...and start hacking things onto it</p>
+						<ol>
+							<li>atom-terminal</li>
+							<li>emmet</li>
+							<li>open-in-browser</li>
+							<li>script</li>
+						</ol>
 					</li>
 			</section>
 			<!-- SLIDE 19 -->
@@ -846,11 +851,11 @@ GUILG00.GZ  hitni123.jpg  nsmail
 						<div>
 							<h3>Here's some big text</h3>
 							<br>
-							<img src="http://petlifepro.com/wp-content/uploads/2014/08/playful-kitten-6683.jpg" alt="look at the kitten!" width="50%"/>
+							<img src="https://my.vetmatrixbase.com/clients/12679/images/cats-animals-grass-kittens--800x960.jpg" alt="look at the kitten!" width="30%"/>
 						</div>
 						<div>
 							<p>
-								Here's some <a href="http://petlifepro.com/wp-content/uploads/2014/08/playful-kitten-6683.jpg" alt="look at the kitten!">content</a> for you.
+								Here's some <a href="http://www.critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg" alt="look at the kitten!">content</a> for you.
 							</p>
 						</div>
 					</div>
@@ -922,20 +927,52 @@ GUILG00.GZ  hitni123.jpg  nsmail
 					<section>
 						<ul class="list-content">
 							<li>
-								<h3>Deploy your site:</h3><h4> Divshot.com</h4>
-								<p>for easy CLI deployment</p>
+								<h3>Deploy your site:</h3><h4> Firebase</h4>
+								<p>for easy CLI deployment of web applications</p>
 								<br>
 							</li>
 							<ol>
-								<li>Sign up for divshot static hosting (hangar)</li>
-								<li>Select files you'd like to upload (CTRL + click)</li>
-								<li>Right-click, "Compress files" (or "zip files")</li>
-								<li>Create an "app" in Divshot</li>
-								<li>Scroll down to the production environment and click "upload"</li>
-								<li>File upload menu > select your zipped file (*.zip)</li>
-								<li>Push the file online, then share your URL on Slack!</li>
-								<li>In remaining time: check out classmates' source code</li>
+								<li>Install <a href="https://nodejs.org/en/">node.js</a></li>
+								<li>Sign up for Firebase (<a href="https://www.firebase.com/">firebase.com</a>)</li>
+								<li>Use npm to install firebase globally</li>
 							</ol>
+						</ul>
+						<pre><code class="shell">
+/c/SavvyCoders/community-page
+
+$ npm install -g firebase-tools
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<ol>
+								<li>Authenticate your firebase CLI/initialize your project</li>
+							</ol>
+							<pre><code class="shell">
+$ firebase login
+$ firebase init
+							</code></pre>
+							<li>Check out /html/firebase.json</li>
+							<pre><code class="json">
+{
+  "firebase": "module-1-example-app",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
+							</code></pre>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Deploy your new site:</h3><h4> CLI only</h4></li>
+							<pre><code class="shell">
+$ firebase deploy
+$ firebase open
+							</code></pre>
 						</ul>
 					</section>
 				</section>
