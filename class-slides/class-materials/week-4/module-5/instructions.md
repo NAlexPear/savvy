@@ -43,14 +43,14 @@ Our job is to put our best foot forward and engage with the hiring process in go
 
 ## Portfolio
 
-1. Create a personal site that features an impressive splash page and 30 seconds of scannable content that would convince a hiring manager that you're potentially a good hire. You can build your own and host it on divshot or skip it and set up an about.me profile. 
+1. Create a personal site that features an impressive splash page and 30 seconds of scan-able content that would convince a hiring manager that you're potentially a good hire. You can build your own and host it on firebase or skip it and set up an about.me profile. 
 2. Include the following on your site:
     + One marquee project, link to source code on GitHub and live deployed version.
     + An *About Me* section featuring a smiling picture and a short paragraph that makes you seem like a competent and enjoyable co-worker.
     + Potentially two programming-related blog posts discussing anything technical.
     + Links to your GitHub and LinkedIn profiles
     + A note that says: "I'm currently on the job market" and a way for employers to get in touch.
-    
+
 ---
 
 ## Freelancing
@@ -74,7 +74,7 @@ Unless you're applying to larger, more traditional companies, it's an afterthoug
 4. Add Projects as the first section, above your non-technical experience. Bullet pointed list:
     + One sentence description of what the app is and what technologies were used (HTML, CSS, JavaScript, jQuery, and any other 3rd party libraries)
     + Link to GitHub repositories and live deployed versions
-    
+
 ---
 
 ## Cover Letter
@@ -137,7 +137,7 @@ The key metric is job applications per hour. Set daily goals, track your progres
     + CraigsList
     + Dice.com
     + and more...
-    
+
 2. Spend ~1 minute per company assessing potential fit. Of every 3-4 you look at, you should probably find one worth applying to.
 3. Spend ~5 minutes customizing the first two sentences of your cover letter, assembling materials, and hitting send
 
