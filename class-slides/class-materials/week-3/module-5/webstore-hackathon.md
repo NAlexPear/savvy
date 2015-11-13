@@ -9,7 +9,7 @@ $ git commit -m "add music pages"
 $ git push origin master
 ```
 
-Share the site hosted live on Divshot as well as a link to your GitHub repository.
+Share the site hosted live on firebase as well as a link to your GitHub repository.
 
 1. To start, create an HTML document. Include jQuery and Bootstrap (or another css framework) if you'd like.
 2. Set up your HTML document such that there is a header, a nav bar, a content area, and a footer.
@@ -47,7 +47,7 @@ $('#content').append($('<div id=book1>').html( $('<div class=name>').text(book1.
 19. Now refactor your code such that you have only a single object called `products` with keys `books` and `albums` whose values are arrays of `book` and `album` objects, respectively. Make sure your nav bar switching still works.
 20. Refactor the nav bar to use a dropdown menu instead of links. Use the `.change()` event listener and observe the selected value to know what products to display.
 21. Refactor your code such that you construct the dropdown menu from a `for-in` loop through the properties of `product`. See if you can remove all hardcoded references to the words "books" and "albums" from your code. You will know you are successful if you can add a third category like electronics to the `products` object and not have to change a single line of code to have your page still work.
-22. Add a search box. Show only products whose names or features include that word. 
+22. Add a search box. Show only products whose names or features include that word.
 
 Hint:
 ```javascript
