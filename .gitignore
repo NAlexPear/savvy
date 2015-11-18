@@ -1,3 +1,4 @@
 compress-static.pl
 *.gz
 firebase.*
+.sass-cache
