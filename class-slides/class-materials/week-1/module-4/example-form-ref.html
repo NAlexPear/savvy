@@ -130,12 +130,17 @@
         <br>
       </div>
       <div id="submit-form">
-        <input type="submit" value="SUBMIT">
+        <input id="submit-button" type="submit" value="SUBMIT">
       </div>
     </form>
-    <!--
-      HERE IS THE BODY OF THE 'POST' NETWORK REQUEST GENERATED UPON 'SUBMIT'
-      firstname=user+numero+uno&pswd=secretstuff&userEmail=me%40site.com&weird=code-blue&optin=sucker&car=boring&userMessage=what+about++++spaces%3F%0D%0Aand%0D%0A+++indentation%3F
-    -->
+    
+    <!--QUICK SCRIPT TO KEEP FORM SUBMISSION FROM REFRESHING THE PAGE-->
+    <script type="text/javascript">
+      // document.getElementById('submit-button').addEventListener('click', function(event){
+      //   event.preventDefault();
+      //   console.log('Hey, you just clicked the SUBMIT button :D!');
+      // });
+    </script>
+    
   </body>
 </html>
