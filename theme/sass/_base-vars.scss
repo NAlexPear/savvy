@@ -1,0 +1,40 @@
+// COLOR VARS
+$bg : #2B2B2B;
+$bgl: #8e8e8e;
+$accent: #07c4dd;
+$hl: #ffffff;
+
+// FONTS
+$tfont: 'Kreon', serif;
+$bfont: 'Quicksand', sans-serif;
+
+//mobile-desktop display-switch classes
+#mission-mobile{
+  display: none;
+}
+#mission-desktop{
+  display: block;
+}
+.mobile-only{
+  display: none;
+}
+.desktop-only{
+  display: block;
+}
+
+//useful mixins
+@mixin ctrans($s){
+    -o-transition:$s color;
+  -ms-transition:$s color;
+  -moz-transition:$s color;
+  -webkit-transition:$s color;
+   transition:$s color;
+}
+
+@mixin otrans($s){
+    -o-transition:$s opacity;
+  -ms-transition:$s opacity;
+  -moz-transition:$s opacity;
+  -webkit-transition:$s opacity;
+   transition: $s opacity;
+}

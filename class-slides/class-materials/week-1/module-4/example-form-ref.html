@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form 2.0</title>
+    <style>
+      html{
+        box-sizing: border-box;
+      }
+      form {
+        width: 90%;
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      form h2,h3{
+        font-family: 'Georgia', serif;
+        color: #498db2;
+        margin-top: 0;
+      }
+      input {
+        max-width: 960px;
+        margin: 0.25em;
+        padding: 0.25em;
+      }
+      input[type=text], input[type=password], input[type=email]{
+        border-radius: 10px;
+      }
+      input[type=radio]{
+        margin-bottom: 1em;
+      }
+      input[type=checkbox]:checked{
+        box-shadow: 0px 0px 10px #498db2;
+      }
+      input[type=submit]{
+        width: 200px;
+        padding: 1em;
+        font-weight: 700;
+        background-color: #dadada;
+        border:2px solid #adadad;
+        border-radius: 10px;
+        color: #498db2;
+        cursor: pointer;
+        opacity: 0.8;
+      }
+      input[type=submit]:hover{
+        opacity: 1;
+        box-shadow: 0px 0px 20px #b6dbef;
+      }
+      textarea{
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 100;
+        opacity: 0.5;
+      }
+      span {
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 400;
+      }
+      label {
+        font-family: 'Helvetica', sans-serif;
+        font-weight: 400;
+      }
+      label span {
+        display: inline-block;
+        width: 100px;
+        color: #adadad;
+      }
+      .selections {
+        margin: 1em 0;
+        padding: 0.5em;
+        background-color: #dadada;
+      }
+      .final>*{
+        vertical-align: middle;
+      }
+      .final>select{
+        padding-right: 50px;
+        margin-right: 50px;
+      }
+      #submit-form{
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      The action attribute defines where on the server the form data should be sent
+      The method attribute specifies the HTTP method (GET or POST)
+    -->
+    <form action="http://formspree.io/alex@savvycoders.com" method="post">
+      <!-- How do we know what this input means??? -->
+      <label><h2>Create an Account</h2>
+        <label for="firstname"><span>NAME:</span></label>
+        <input type="text" name="firstname" placeholder="type your first name here!" autofocus>
+        <br>
+        <label for="pswd"><span>PASSWORD: </span></label>
+        <input type="password" name="pswd" placeholder="password"> 
+        <br>
+        <label for="userEmail"><span>EMAIL: </span></label>
+        <input type="email" name="userEmail" placeholder="hello@site.com">
+      </label>
+      <br>
+      <div class="selections">
+        <label><h3>Select Some Stuff</h3>
+          <input type="radio" name="weird" value="code-blue" checked><span>pick this!</span>
+          <input type="radio" name="weird" value="code-red"><span>or pick this!</span>
+          <br>
+          <label>
+            <input type="checkbox" name="hobbies" value="fishing" checked>Fishing
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="sketching">Sketching
+          </label>
+          <label>
+            <input type="checkbox" name="hobbies" value="destiny" disabled>Destiny
+          </label>
+        </label>
+      </div>
+      <br>
+      <div class="final">
+        <label for="car"><h3>Pick a Car</h3></label>
+        <select name="car">
+          <optgroup label="Swedish Cars">
+            <option value="boring">Volvo</option>
+            <option value="cool">Honda</option>
+          </optgroup>
+        </select>
+        <textarea name="user_message" rows="8" cols="40" placeholder="Any more comments? Write them here"></textarea>
+        <br>
+      </div>
+      <div id="submit-form">
+        <input id="submit-button" type="submit" value="SUBMIT">
+      </div>
+    </form>
+    
+    <!--QUICK SCRIPT TO KEEP FORM SUBMISSION FROM REFRESHING THE PAGE-->
+    <script type="text/javascript">
+      // document.getElementById('submit-button').addEventListener('click', function(event){
+      //   event.preventDefault();
+      //   console.log('Hey, you just clicked the SUBMIT button :D!');
+      // });
+    </script>
+    
+  </body>
+</html>
