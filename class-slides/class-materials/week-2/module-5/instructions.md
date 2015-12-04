@@ -20,9 +20,34 @@ git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR EMAIL ADDRESS"
 ```
 
-2. Go to [GitHub](https://github.com/) and sign in or sign up for an account.
-3. Create a new repository on GitHub by clicking the new repository menu, upper-right.
-4. Follow the instructions presented in the new repository.
+2. Make sure that your [GitHub](https://github.com/) account is up-and-running.
+3. Fork the boilerplate code for your team to your own account (ask your instructor for links).
+4. Clone your forked copy of your team's codebase to your own machine from the **Terminal**. An example:
+```
+git clone https://github.com/NAlexPear/savvy.git
+
+```
+5. Add your name to the end of `<div #copyright>` at the bottom of the boilerplate page;
+6. Stage, commit, and push your changes to your repository on GitHub with the following commands:
+```
+git add -A
+git commit -m "Commit Message"
+git push origin master
+```
+7. Create a pull request to the ORIGINAL repository (managed by your instructor) through GitHub.
+8. Make sure that your pull request describes the changes that you made in the last update!
+9. While your instructor merges all changes, set up the ORIGINAL (not forked copy) repository as a remote with the following commands:
+```
+git remote add mothership [url of original repo]
+git remote -v 
+```
+10. Once all changes have been merged by your instructor, fetch the new version of the codebase from the ORIGINAL repo (not your personal fork), update your local files, and update your personal fork of the original repo using the following commands:
+```
+git fetch --all
+git reset --hard mothership/master
+git push -f origin master
+```
+11. And there you have it! It's now time to work on the next feature! (And please keep your changes MODULAR).
 
 >If you'd like to know more about the philosophy behind version control, check out The Git Parable
 

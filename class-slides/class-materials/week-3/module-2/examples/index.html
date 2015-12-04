@@ -19,12 +19,9 @@
         #active{
             border: 2px solid #07c4dd;
         }
-        .exposed{
-            
-        }
-        .doge{
-            position: fixed;
-        }
+        /*.doge{*/
+        /*    position: fixed;*/
+        /*}*/
     </style>
 </head>
 <body>
@@ -45,7 +42,7 @@
     <br>
     <img id="operaface" src="http://parade.com/wp-content/uploads/2014/05/05-11-14-oprah-ftr.jpg" width="20%"></img>
     <br>
-    <img class="doge" src="http://www.netanimations.net/Moving-picture-puppy-dog-walking-animated-gif.gif"></img>
+    <!--<img class="doge" src="http://www.netanimations.net/Moving-picture-puppy-dog-walking-animated-gif.gif"></img>-->
     <div id="magic">Try hovering over this div to see what happens.</div>
     <img id="marge" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Hamilton.gif" alt="Margaret Hamilton.gif">
     <br>
@@ -72,6 +69,9 @@
     <hr>
     <div id="output3"></div>
     <input id="type" type="text" name="TypeRacer"/><label for="TypeRacer">Type Here!</label>
+    <br>
+    <h3>NSA SURVEILLANCE</h3>
+    <div id="output4"></div>
     <!------------------------------------------------->
     <!--BELOW BE SOME SCRIPTS-->
     <!------------------------------------------------->
@@ -97,9 +97,9 @@
           $('#target').removeClass('highlighted')
         });
     // mouse tracker
-        var mouse_tracker = function(event){
-          console.log(event.pageX, event.pageY, !!event.which);
-        };
+        // var mouse_tracker = function(event){
+        //   console.log(event.pageX, event.pageY, !!event.which);
+        // };
         
         // $('body').on('mousemove', mouse_tracker);
         
@@ -109,7 +109,7 @@
           $(this).attr('id', 'active');
         }
         
-        $('div').click(el_finder)
+        $('div').click(el_finder);
     
     //Output color-changer
         $('button#go').on('click', function(){
@@ -119,11 +119,9 @@
         })
     //Input Box Key Logger
         $('input#type').on('keypress', function (e) {
-          $('label').text(e.keyCode)
-        });
-        
-        $('body').on('keypress', function(e){
-          String.fromCharCode(e.keyCode)
+          $('label').text(e.keyCode);
+          var typeracer_output = String.fromCharCode(e.keyCode);
+          $('#output3').append(typeracer_output);
         });
     
     
@@ -164,12 +162,12 @@
           $('#marge').show();
         });
     // silly mousey
-        $(document).on('mousemove', function(event){
-            $('.doge').css({
-                left: event.pageX + 20,
-                top: event.pageY
-            });
-        });
+        // $(document).on('mousemove', function(event){
+        //     $('.doge').css({
+        //         left: event.pageX + 20,
+        //         top: event.pageY
+        //     });
+        // });
     // paragraph selector script
         var p_finder = function(event){
             var id_val = $(this).attr('id');
@@ -178,11 +176,13 @@
           $('p').not(this).removeClass('highlighted');
         };
         $('p').click(p_finder);
+    //TypeRacer output
+    
     //NSA surveillance key logger
         $('body').on('keypress', function(e) {
             var nsa_surveillance = String.fromCharCode(e.keyCode);
-            $('#output3').append(nsa_surveillance);
-        })
+            $('#output4').append(nsa_surveillance);
+        });
     </script>
 </body>
 </html>
