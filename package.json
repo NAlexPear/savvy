@@ -1,0 +1,22 @@
+{
+  "name": "savvycoders",
+  "version": "2.0.0",
+  "description": "Savvy Coders' website and class materials",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NAlexPear/savvy.git"
+  },
+  "author": "Alex Pearson",
+  "license": "ISC",
+  "private": "true",
+  "homepage": "https://savvycoders.com",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "jquery": "^2.1.4",
+    "picturefill": "^3.0.1"
+  }
+}
