@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Savvy Coders | Week 4 : Module 4</title>
+
+		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
+		<meta name="author" content="the Savvy Coder Team">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../../css/reveal.css">
+		<link rel="stylesheet" href="../../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
+		
+		<!--Google Fonts-->
+	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="../../../../theme/images/headerShort.png">
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 4: Module 4</h2>
+				</section>
+			<!--SLIDE 1-->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Questions from yesterday?</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>OOP: </h3><h4>Object-Oriented Fun</h4>
+						</li>
+						<li>'this'</li>
+						<li>method scope</li>
+						<li>decorator pattern</li>
+						<li>factory pattern</li>
+					</ul>
+				</section>
+			<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Simple MVC</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>Remember this?</li>
+						</ul>
+						<pre><code class="javascript example">
+$.get( 'http://jsonplaceholder.typicode.com/posts/1', function(weather_data){
+  console.log(weather_data)
+})
+						</code></pre>
+						<pre><code class="javascript example">
+var thing = {
+    property: 'value',
+    method: function () {
+      console.log("i've got a " + this.property + "!")
+    }
+  }
+						</code></pre>
+					</section>
+					<section>
+						<pre><code class="javascript">
+var posts = []
+var post = {
+  url: 'http://jsonplaceholder.typicode.com/posts/',
+  $el: $(&lrt;div class="post"&grt;).appendTo($('body')),
+  initialize: function(id){
+    this.$el.attr('id', id)
+    this.url += id
+    var thisPost = this // wtf? http://stackoverflow.com/questions/4886632/what-does-var-that-this-mean-in-javascript
+    $.get( this.url, function(data){
+       console.log(this) // window
+       thisPost.attributes = data
+       thisPost.render()
+     })
+     posts.push(this)
+  },
+  render: function(){
+    this.$el.append([
+      $(&lrt;div&grt;).addClass('title').text(this.attributes.title),
+      $(&lrt;div&grt;).addClass('body').text(this.attributes.body)
+    ])
+  }
+}
+
+post.initialize(1)
+						</code></pre>
+						<aside class="notes">
+							Think through how this works... try and make it work, break it again, and so on.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1: </h3><h4>Commenting MVC</h4></li><br><br>
+							<li>Create a new .js document and paste in the code from the last slide. Then comment every line explaining what that line does. Share it as a gist through slack when you make some progress!</li><br>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2: </h3><h4>The Postman Cometh</h4></li><br>
+							<ol>
+								<li>Create a post_factory function that takes the id number of the post as an argument.</li>
+								<li>Inside the post_factory, use the above code to fetch a post with that id and render it.</li>
+								<li>Where should the posts array live? Inside post_factory or in the global scope? If in doubt, try creating a couple of posts with both ways. In only one of them should you be able to have multiple post objects referenced in the posts array when you're done.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 2: </h3><h4>The Postman Continuith</h4></li><br>
+							<ol>
+								<li>Create a for loop that fetches and rendes posts 75 - 90 by calling post_factory.</li>
+								<li>Add a method highlight to each post object that adds a property this.active = true to the post object and also toggles a pre-defined class on that post's this.$el property</li>
+								<li>When active, that class should give the post a yellow background and red text color</li>
+								<li>Try calling post.highlight() manually on a few post objects from the posts array.</li>
+								<li>Reference the favorite_food inside the eat method.</li>
+								<li>Reload the page, and iterate over the posts array, highlighting every third post.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 Extra Credit: </h3><h4>The Postman Continuith</h4></li><br><br>
+							<li>If you have extra time, check out extra-credit/ec.md for some extra homework!</li>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>More APIs!</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Imgur: </h3><h4>new API, same song/dance</h4>
+							</li>
+						</ul>
+						<pre><code class="javascript">
+var get_pictures = function (searchTerm) {
+  $.ajax({
+    url: "https://api.imgur.com/3/gallery/search?q="+ encodeURI(searchTerm),
+    headers: { "Authorization": "Client-ID e3776adbe9c5fb9" },
+    success: function(response){
+      console.log(response)
+    }
+  })
+}
+
+get_pictures("baby deer")</code></pre>
+						<aside class="notes">
+							What is the headers property for? (hint)... I pre-registered a Client-ID for us to use, don't abuse it or we'll all get locked out!
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 3: </h3><h4>Picture Factory</h4></li><br>
+							<ol>
+								<li>Create an HTML page such that a user can enter a search term into an input field.</li>
+								<li>When the user clicks the submit button, call get_pictures with the search term as an argument.</li>
+								<li>Create a picture_factory similar to the post_factory.</li>
+								<li>When the ajax call returns, iterate over the response data & pass each picture's url & title to picture_factory</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 3 Extra Credit: </h3><h4>Picture Factory</h4></li><br>
+							<li>If you have extra time, check out extra-credit/ec2.md for some extra homework!</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Soundcloud: </h3><h4>Another more complex API</h4>
+							</li><br>
+							<li>You'll need to run a localhost process (http:// instead of file://).</li><br>
+							<li>Copy the examples/* directory (including index.html file), then head to the command line.</li>
+						</ul>
+						<pre><code class="bash">
+$ npm install http-server -g
+						</code></pre>
+						<aside class="notes">
+							Copy the entire examples directory to your local machine, then back to node! (and the command line)
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Fire up your server: </h3><h4>http-server</h4>
+							</li><br>
+							<li>...in the same directory as your index.html file!</li>
+						</ul>
+						<pre><code class="bash">
+$ http-server
+						</code></pre>
+						<aside class="notes">
+							And that's it to get started! No configuration necessary. Take a look at the contents of that html file, though.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Un-comment code in index.html: </h3><h4>see below</h4>
+							</li><br>
+						</ul>
+						<pre><code class="javascript">
+// Authenticate ourselves to SoundCloud
+SC.initialize({ client_id: "d29ad0142b2cd0a47ad2e561334c8e0f"})
+
+// Play the first track that matches the query 'bob marley'
+SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+  SC.oEmbed(tracks[0].uri, {auto_play: true}, document.body)
+})
+
+// List all tracks
+SC.get('/tracks', { q: 'bob marley'}, function(tracks) {
+ tracks.forEach(function(t){ $('body').append($('
+').text(t.artwork_url + t.title + t.uri))})
+})
+						</code></pre>
+						<aside class="notes">
+							And that's it to get started! No configuration necessary. Take a look at the contents of that html file, though.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 4: </h3><h4>Music Mayhem</h4></li><br>
+							<ol>
+								<li>Allow the user to input a search term, then click a button to play the first matching track.</li>
+								<li>List all other matching tracks below the SoundCloud Embed</li>
+								<li>When the User clicks on one of the listed tracks, play it!</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>JSONP: </h3><h4>JSON with Padding</h4>
+							</li><br>
+							<li>https://en.wikipedia.org/w/api.php?action=opensearch&search=Ontario,%20CA&format=json&callback=function_to_run_when_server_responds</li><br><br>
+							<li>^try this in a browser</li>
+						</ul>
+						<aside class="notes">
+							What does this do? What data type would this code give you?
+						</aside>
+					</section>
+					<section>
+						<pre><code class="javascript">
+var function_to_run_when_server_responds = function(){
+    console.log(arguments)
+  }
+
+$("head").append($("&lrt;script&grt;").attr("src", "http://en.wikipedia.org/w/api.php?action=opensearch&search=Ontario,%20CA&format=json&callback=function_to_run_when_server_responds"))
+						</code></pre>
+						<br>
+						<ul class="list-content">
+							<li><h3>Exercise 5: </h3><h4>JSONP-diddy</h4></li><br>
+							<ol>
+								<li>Create a page that allows the user to type in a search query and query Wikipedia.</li>
+								<li>Show a running collection of summaries of Wikipedia queries and links to the full pages</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

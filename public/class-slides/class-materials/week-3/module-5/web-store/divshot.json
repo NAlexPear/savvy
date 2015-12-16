@@ -1,0 +1,6 @@
+{
+  "name": "savvy-coders-web-store-101615",
+  "root": "./",
+  "clean_urls": true,
+  "error_page": "error.html"
+}

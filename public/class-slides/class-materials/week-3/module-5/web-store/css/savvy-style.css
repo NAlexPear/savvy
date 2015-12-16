@@ -1,0 +1,69 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.jumbotron {
+  text-align: center;
+}
+.jumbotron h1{
+  font-family: 'Kreon',Georgia,serif;
+}
+.jumbotron .tagline{
+  font-size: 8vw;
+  font-family: 'Kristi', cursive;
+}
+
+#book1_img {
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+}
+
+#book2_img {
+  width: 350px;
+  height: 250px;
+  margin: 10px;
+}
+
+#book1_details {
+  position: absolute;
+  margin-left: 300px;
+}
+
+#book2_details {
+  position: absolute;
+  margin-left: 300px;
+}
+
+table, td, tr {
+  max-width: 450px;
+  padding: 5px;
+}
+
+footer{
+  display:block;
+}
+footer ul{
+  list-style-type: none;
+}
+footer p{
+  text-align: center;
+  color: #5b5757;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.jumbotron h1{
+  font-family: 'Kreon',Georgia,serif;
+}
+
+.jumbotron .tagline{
+  font-size: 8vw;
+  font-family: 'Kristi', cursive;
+>>>>>>> eorstrom-master

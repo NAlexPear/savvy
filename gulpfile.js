@@ -25,6 +25,12 @@
             .pipe(gulp.dest('public/theme/images'));
     });
     
+    //Porters of critical content (class-slides directory)
+    gulp.task('class-port',function() {
+      gulp.src('src/class-slides/**/*')
+        .pipe(gulp.dest('public/class-slides'));
+    });
+    
     //image minifier (no CSS, HTML, or JS)
     // gulp.task('image-min', function () {
     //     gulp.src(['theme/images/**/*.jpg','theme/images/**/*.png'])
@@ -37,12 +43,12 @@
     // });
     
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
-    gulp.task('async',['font-port','other-image-port'],function(){
-      return gulp.src('index.html')
+    gulp.task('async',['font-port','other-image-port', 'class-port'],function(){
+      return gulp.src(['index.html','src/**/*.html','!src/class-slides'])
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
-        .pipe(gulp.dest('public'));
+        .pipe(gulp.dest('./public'));
     });
     
     //Sitemap generator for SEO and search engine ease-of-use (XML format)
