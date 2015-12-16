@@ -14,17 +14,16 @@
     var useref = require('gulp-useref');
     var gulpif = require('gulp-if');
     var sitemap = require('gulp-sitemap');
-    var postcss = require('gulp-postcss');
-    var sourcemaps = require('gulp-sourcemaps');
-    var autoprefixer = require('autoprefixer');
+    var autoprefixer = require('gulp-autoprefixer');
     
     //css auto-prefixer for compatibility (pre-build)
     gulp.task('autoprefixer', function(){
-      gulp.src('theme/css/*.css')
-        .pipe(sourcemaps.init())
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
-        .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('theme/css/'));
+      return gulp.src('./theme/css/*.css')
+        .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade:'false'
+          }))
+        .pipe(gulp.dest('./theme/css/'));
     });
     
     //Porters of non-critical content
