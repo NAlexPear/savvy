@@ -39,7 +39,8 @@
             var sunset = new Date(weather_data.sys.sunset*1000);
             var weather_arr = weather_data.weather;
             var weather_obj = weather_arr[0];
-          $('#output_temp').text(weather_data.main.temp);
+            var temp = Math.floor(weather_data.main.temp * (9/5) - 459.67);
+          $('#output_temp').text(temp);
           $('#output_highs').text(weather_data.main.temp_max);
           $('#output_lows').text(weather_data.main.temp_min);
           $('#output_desc').text(weather_obj.description);
