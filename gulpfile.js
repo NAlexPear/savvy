@@ -15,7 +15,9 @@
     var gulpif = require('gulp-if');
     var sitemap = require('gulp-sitemap');
     var autoprefixer = require('gulp-autoprefixer');
+    var exec = require('child_process').exec;
     
+  //PRE-BUILD UTITLITIES (outside of ./public)
     //css auto-prefixer for compatibility (pre-build)
     gulp.task('autoprefixer', function(){
       return gulp.src('./theme/css/*.css')
@@ -26,6 +28,18 @@
         .pipe(gulp.dest('./theme/css/'));
     });
     
+    //jekyll builder (through executables)
+    gulp.task('jekyll', function (){
+      exec('jekyll build', function(err, stdout, stderr) {
+        if(err){
+          console.log(stderr);
+        } else {
+          console.log(stdout);
+        }
+      });
+    });
+    
+  //PRE-DEPLOYMENT BUILD TASKS (in ./public)
     //Porters of content outside of _site directory
     gulp.task('font-port', function(){
       gulp.src(['theme/fonts/**/*'])
@@ -54,7 +68,7 @@
     });
     
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
-    gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
+    gulp.task('async',['jekyll', 'font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
       return gulp.src(['_site/index.html','_site/src/**/*.html','!_site/src/class-slides'])
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
