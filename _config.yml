@@ -1,0 +1,14 @@
+# Site settings
+title: Savvy Coders | Nashville's Intro to Web Development
+email: info@savvycoders.com
+description: > # this means to ignore newlines until "baseurl:"
+  Learn to Code with HTML, CSS, and JavaScript in Nashville, TN
+baseurl: ""
+url: "https://savvycoders.com" # the base hostname & protocol for your site
+exclude: ["node_modules","theme","public","gulpfile.js", "package.json","README.md"]
+include: [".htaccess"]
+twitter_username: SavvyCoders
+github_username:  NAlexPear
+
+# Build settings
+markdown: kramdown

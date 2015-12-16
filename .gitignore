@@ -1,5 +1,9 @@
-compress-static.pl
-*.gz
 firebase.*
-.sass-cache
 .divshot-cache
+divshot.*
+
+.sass-cache
+
+_site
+.jekyll-metadata
+
