@@ -14,7 +14,7 @@
     "url": "https://github.com/NAlexPear/savvy.git"
   },
   "author": "Alex Pearson",
-  "license": "ISC",
+  "license": "MIT",
   "private": "true",
   "homepage": "https://savvycoders.com",
   "devDependencies": {
@@ -25,6 +25,7 @@
     "gulp-imagemin": "^2.4.0",
     "gulp-minify-css": "^1.2.2",
     "gulp-minify-html": "^1.0.4",
+    "gulp-sitemap": "^2.2.0",
     "gulp-uglify": "^1.5.1",
     "gulp-usemin": "^0.3.16",
     "gulp-useref": "^3.0.3",

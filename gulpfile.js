@@ -13,6 +13,7 @@
     var critical = require('critical');
     var useref = require('gulp-useref');
     var gulpif = require('gulp-if');
+    var sitemap = require('gulp-sitemap');
     
     //Porters of non-critical content
     gulp.task('font-port', function(){
