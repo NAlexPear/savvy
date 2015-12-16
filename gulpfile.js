@@ -45,8 +45,17 @@
         .pipe(gulp.dest('public'));
     });
     
+    //Sitemap generator for SEO and search engine ease-of-use (XML format)
+    gulp.task('sitemapper',['async'],function() {
+        return gulp.src('public/**/*.html')
+          .pipe(sitemap({
+            siteUrl: 'https://savvycoders.com'
+          }))
+          .pipe(gulp.dest('./public'));
+    });
+    
     //CSS inliner post-CSS and JS minification, pre-HTML minification and gzipping
-    gulp.task('css-inline',['async'], function(){
+    gulp.task('css-inline',['sitemapper'], function(){
       return critical.generateInline({
         base:'public/',
         src:'index.html',
