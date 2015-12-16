@@ -28,7 +28,7 @@
         .pipe(gulp.dest('./theme/css/'));
     });
     
-    //jekyll builder (through executables)
+    //jekyll builder (through shell environment)
     gulp.task('jekyll', function (){
       exec('jekyll build', function(err, stdout, stderr) {
         if(err){
@@ -70,7 +70,7 @@
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
     gulp.task('async',['jekyll', 'font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
       return gulp.src(['_site/index.html','_site/src/**/*.html','!_site/src/class-slides'])
-        .pipe(useref())
+        .pipe(useref({searchPath:'.'}))
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('./public'));
