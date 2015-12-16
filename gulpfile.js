@@ -44,15 +44,15 @@
     });
     
     //image minifier (no CSS, HTML, or JS)
-    // gulp.task('image-min', function () {
-    //     gulp.src(['theme/images/**/*.jpg','theme/images/**/*.png'])
-    //         .pipe(imagemin({
-    //           optimizationLevel: 7,
-    //           progressive:true,
-    //           use: [pngquant()]
-    //         }))
-    //         .pipe(gulp.dest('public/theme/images'));
-    // });
+    gulp.task('image-min', function () {
+        gulp.src(['theme/images/**/*.jpg','theme/images/**/*.png'])
+            .pipe(imagemin({
+              optimizationLevel: 7,
+              progressive:true,
+              use: [pngquant()]
+            }))
+            .pipe(gulp.dest('public/theme/images'));
+    });
     
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
     gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
