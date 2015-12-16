@@ -26,7 +26,7 @@
         .pipe(gulp.dest('./theme/css/'));
     });
     
-    //Porters of non-critical content
+    //Porters of content outside of _site directory
     gulp.task('font-port', function(){
       gulp.src(['theme/fonts/**/*'])
         .pipe(gulp.dest('public/theme/fonts'));
@@ -36,9 +36,9 @@
             .pipe(gulp.dest('public/theme/images'));
     });
     
-    //Porters of critical content (class-slides directory)
+    //Porters of unmodified _site content (class-slides directory)
     gulp.task('class-port',function() {
-      gulp.src('src/class-slides/**/*')
+      gulp.src('_site/src/class-slides/**/*')
         .pipe(gulp.dest('public/class-slides'));
     });
     
@@ -55,7 +55,7 @@
     
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
     gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
-      return gulp.src(['index.html','src/**/*.html','!src/class-slides'])
+      return gulp.src(['_site/index.html','_site/src/**/*.html','!_site/src/class-slides'])
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
@@ -99,7 +99,7 @@
     });
     
     //build deployment task using SFTP
-    gulp.task('deply',function() {
-        
+    gulp.task('deploy',function() {
+        //exec child-process to start SFTP from command line
     });
 }());
