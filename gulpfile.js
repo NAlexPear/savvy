@@ -86,7 +86,7 @@
     gulp.task('cruncher', ['css-inline'], function() {
        gulp.src('public/index.html')
         .pipe(usemin({
-            assetsDir: '',
+            assetsDir: '.',
             html: [minifyHtml({empty:true})]
         }))
         .pipe(gulp.dest('public'));
