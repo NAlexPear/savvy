@@ -14,6 +14,18 @@
     var useref = require('gulp-useref');
     var gulpif = require('gulp-if');
     var sitemap = require('gulp-sitemap');
+    var postcss = require('gulp-postcss');
+    var sourcemaps = require('gulp-sourcemaps');
+    var autoprefixer = require('autoprefixer');
+    
+    //css auto-prefixer for compatibility (pre-build)
+    gulp.task('autoprefixer', function(){
+      gulp.src('theme/css/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions'] }) ]))
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('theme/css/'));
+    });
     
     //Porters of non-critical content
     gulp.task('font-port', function(){
@@ -43,7 +55,7 @@
     // });
     
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
-    gulp.task('async',['font-port','other-image-port', 'class-port'],function(){
+    gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
       return gulp.src(['index.html','src/**/*.html','!src/class-slides'])
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
@@ -85,5 +97,10 @@
     gulp.task('default',['cruncher'],function () {
       gulp.src(['public/**/*','!public/**/*.gz','!public/**/*.md','!public/**/*.txt', '!public/**/*.json','!public/**/*.xml', '!public/theme/images/**/*'])
         .pipe(gzip()).pipe(gulp.dest('public'));
+    });
+    
+    //build deployment task using SFTP
+    gulp.task('deply',function() {
+        
     });
 }());
