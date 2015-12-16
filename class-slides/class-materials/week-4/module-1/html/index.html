@@ -33,30 +33,37 @@
     <div id="index_view"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
+    //abstracted function to be run as a callback after successful server response (weather data)
         var to_be_run_on_server_response = function(weather_data){
             var sunrise = new Date(weather_data.sys.sunrise*1000);
             var sunset = new Date(weather_data.sys.sunset*1000);
             var weather_arr = weather_data.weather;
             var weather_obj = weather_arr[0];
-          $('#output_temp').text(weather_data.main.temp);
+            var temp = Math.floor(weather_data.main.temp * (9/5) - 459.67);
+          $('#output_temp').text(temp);
           $('#output_highs').text(weather_data.main.temp_max);
           $('#output_lows').text(weather_data.main.temp_min);
           $('#output_desc').text(weather_obj.description);
           $('#output_sunrise').text(sunrise);
           $('#output_sunset').text(sunset);
         };
-        
+    
+    //abstracted function to be run as a callback after successful server respons (JSON Placeholder)
         var json_on_server_response = function(json_data){
             $('#json_placeholder').append($('<br><div id=json'+json_data.id+'><br>').text(json_data.body));
             $('#json'+json_data.id).prepend($('<br><div class=json_title>').text(json_data.title));
             $('#json'+json_data.id).prepend($('<br><div class=json_id>').text(json_data.id));
-        }
+        };
+        
+    //placeholder text while data is being fetched
         var fetch = 'fetching data';
         
+    //example use of event.preventDefault() on a link (as opposed to buttons)
         $('#refresh').on('click',function() {
             event.preventDefault();
         });
-        
+    
+    //place data by city by ID. Can we refactor this code?
         $('#nashville').on('click',function(){
             event.preventDefault();
           $('#output_temp').text(fetch);
@@ -65,7 +72,7 @@
           $('#output_desc').text(fetch);
           $('#output_sunrise').text(fetch);
           $('#output_sunset').text(fetch);
-            $.get('http://api.openweathermap.org/data/2.5/weather?q=Nashville&appid=bd82977b86bf27fb59a04b61b657fb6f').success(to_be_run_on_server_response);    
+            $.get('http://api.openweathermap.org/data/2.5/weather?q=Nashville&appid=8940e272346dc1c7ca592d3e29539351').success(to_be_run_on_server_response);    
         });
         
         $('#austin').on('click', function() {
@@ -76,7 +83,7 @@
           $('#output_desc').text(fetch);
           $('#output_sunrise').text(fetch);
           $('#output_sunset').text(fetch);
-           $.get('http://api.openweathermap.org/data/2.5/weather?q=Austin&appid=bd82977b86bf27fb59a04b61b657fb6f').success(to_be_run_on_server_response);
+           $.get('http://api.openweathermap.org/data/2.5/weather?q=Austin&appid=8940e272346dc1c7ca592d3e29539351').success(to_be_run_on_server_response);
         });
         
         $('#davenport').on('click', function() {
@@ -87,7 +94,7 @@
           $('#output_desc').text(fetch);
           $('#output_sunrise').text(fetch);
           $('#output_sunset').text(fetch);
-            $.get('http://api.openweathermap.org/data/2.5/weather?q=Davenport&appid=bd82977b86bf27fb59a04b61b657fb6f').success(to_be_run_on_server_response);
+            $.get('http://api.openweathermap.org/data/2.5/weather?q=Davenport&appid=8940e272346dc1c7ca592d3e29539351').success(to_be_run_on_server_response);
         });
         var place_posts_on_page = function(max_post){
             for(var i=1;i<=max_post;i++){
