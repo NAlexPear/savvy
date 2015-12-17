@@ -14,6 +14,7 @@ build () {
 watch () {
   sass --watch theme/sass/:theme/css &
   jekyll build --watch &
+  gulp serve
 }
 
 unwatch () {

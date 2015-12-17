@@ -15,6 +15,7 @@
     var gulpif = require('gulp-if');
     var sitemap = require('gulp-sitemap');
     var autoprefixer = require('gulp-autoprefixer');
+    var sync = require('browser-sync').create();
 
   //PRE-BUILD UTITLITIES (outside of ./public)
     //css auto-prefixer for compatibility (pre-build)
@@ -25,6 +26,18 @@
           cascade:'false'
           }))
         .pipe(gulp.dest('./theme/css/'));
+    });
+
+  //PRE-DEPLOYMENT WATCH TASKS
+    //browserSync server
+    gulp.task('serve',['async'],function(){
+      sync.init({
+        server:{
+          baseDir: "./public"
+        }
+      });
+      gulp.watch('_site/**/*.html', ['async']);
+      gulp.watch('_site/**/*.html').on('change', sync.reload);
     });
 
   //PRE-DEPLOYMENT BUILD TASKS (in ./public)
