@@ -51,7 +51,7 @@
             .pipe(gulp.dest('public/theme/images'));
     });
 
-    //Porters of unmodified _site content (class-slides directory)
+    //Porters of unmodified _site content (class-slides and post directories)
     gulp.task('class-port',function() {
       gulp.src('_site/src/class-slides/**/*')
         .pipe(gulp.dest('public/class-slides'));
@@ -70,7 +70,7 @@
 
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
     gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
-      return gulp.src(['_site/index.html','_site/src/**/*.html','!_site/src/class-slides'])
+      return gulp.src(['_site/**/*.html','!_site/src/class-slides'])
         .pipe(useref({searchPath:'.'}))
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
