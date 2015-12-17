@@ -2,10 +2,20 @@
 
 [ ! -d node_modules ] && echo "Installing dependencies: " && npm install
 
-#To make this function usable from the CLI, be sure to run build.sh
+#To make these function usable from the CLI, be sure to run build.sh
 # with the `source` modifier (e.g. `souce ./build.sh`)
 
 build () {
   jekyll build
   gulp $*
+}
+
+#Be mindful of directory structure for this command
+watch () {
+  sass --watch theme/sass/:theme/css &
+  jekyll build --watch &
+}
+
+unwatch () {
+  kill $(jobs -p)
 }
