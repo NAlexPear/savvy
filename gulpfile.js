@@ -30,7 +30,7 @@
   //PRE-DEPLOYMENT BUILD TASKS (in ./public)
     //Porters of content outside of _site directory
     gulp.task('font-port', function(){
-      gulp.src(['theme/fonts/**/*'])
+      gulp.src(['theme/fonts/themify-icons/fonts/**/*'])
         .pipe(gulp.dest('public/theme/fonts'));
     });
     gulp.task('other-image-port', function () {

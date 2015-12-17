@@ -107,47 +107,27 @@ hr {
     padding-top: 8px; }
     .icon-bar li:nth-child(1) a {
       color: #ffffff;
-      -o-transition: 0.5s color;
-      -ms-transition: 0.5s color;
-      -moz-transition: 0.5s color;
-      -webkit-transition: 0.5s color;
       transition: 0.5s color; }
       .icon-bar li:nth-child(1) a:hover {
         color: #07c4dd; }
     .icon-bar li:nth-child(2) a {
       color: #ffffff;
-      -o-transition: 0.5s color;
-      -ms-transition: 0.5s color;
-      -moz-transition: 0.5s color;
-      -webkit-transition: 0.5s color;
       transition: 0.5s color; }
       .icon-bar li:nth-child(2) a:hover {
         color: #07c4dd; }
     .icon-bar li:nth-child(3) a {
       color: #ffffff;
-      -o-transition: 0.5s color;
-      -ms-transition: 0.5s color;
-      -moz-transition: 0.5s color;
-      -webkit-transition: 0.5s color;
       transition: 0.5s color; }
       .icon-bar li:nth-child(3) a:hover {
         color: #07c4dd; }
     .icon-bar li:nth-child(4) a {
       opacity: 0.6;
-      -o-transition: 0.3s opacity;
-      -ms-transition: 0.3s opacity;
-      -moz-transition: 0.3s opacity;
-      -webkit-transition: 0.3s opacity;
       transition: 0.3s opacity; }
       .icon-bar li:nth-child(4) a:hover {
         opacity: 1; }
 
 .navreact a {
   color: #ffffff;
-  -o-transition: 0.5s color;
-  -ms-transition: 0.5s color;
-  -moz-transition: 0.5s color;
-  -webkit-transition: 0.5s color;
   transition: 0.5s color; }
   .navreact a:hover {
     color: #2B2B2B; }
@@ -343,7 +323,8 @@ hr {
   -moz-column-break-before: always;
   /* Firefox */
   -ms-column-break-before: always;
-  break-before: always;
+  page-break-before: always;
+       break-before: always;
   opacity: 0.8; }
 
 footer {
@@ -368,10 +349,6 @@ footer {
     margin-top: 0px; }
     footer ul a {
       color: #8d8d8d;
-      -o-transition: 0.3s color;
-      -ms-transition: 0.3s color;
-      -moz-transition: 0.3s color;
-      -webkit-transition: 0.3s color;
       transition: 0.3s color; }
       footer ul a:hover {
         color: #ffffff; }
@@ -532,5 +509,3 @@ iframe {
 
   .desktop-only {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */

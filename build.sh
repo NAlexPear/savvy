@@ -10,7 +10,7 @@ build () {
   gulp $*
 }
 
-#Be mindful of directory structure for this command
+#Be mindful of SASS and CSS directory structure for this function
 watch () {
   sass --watch theme/sass/:theme/css &
   jekyll build --watch &
