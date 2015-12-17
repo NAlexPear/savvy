@@ -2,8 +2,8 @@ firebase.*
 .divshot-cache
 divshot.*
 
+node_modules
 .sass-cache
 
 _site
 .jekyll-metadata
-

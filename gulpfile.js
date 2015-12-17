@@ -1,6 +1,6 @@
 (function(){
     "use strict";
-    
+
     //set up requires for gulp tasks
     var gulp = require("gulp");
     var usemin = require('gulp-usemin');
@@ -15,8 +15,7 @@
     var gulpif = require('gulp-if');
     var sitemap = require('gulp-sitemap');
     var autoprefixer = require('gulp-autoprefixer');
-    var exec = require('child_process').exec;
-    
+
   //PRE-BUILD UTITLITIES (outside of ./public)
     //css auto-prefixer for compatibility (pre-build)
     gulp.task('autoprefixer', function(){
@@ -27,18 +26,7 @@
           }))
         .pipe(gulp.dest('./theme/css/'));
     });
-    
-    //jekyll builder (through shell environment)
-    gulp.task('jekyll', function (){
-      exec('jekyll build', function(err, stdout, stderr) {
-        if(err){
-          console.log(stderr);
-        } else {
-          console.log(stdout);
-        }
-      });
-    });
-    
+
   //PRE-DEPLOYMENT BUILD TASKS (in ./public)
     //Porters of content outside of _site directory
     gulp.task('font-port', function(){
@@ -49,13 +37,13 @@
         gulp.src(['theme/images/**/*.svg','theme/images/**/*.ico'])
             .pipe(gulp.dest('public/theme/images'));
     });
-    
+
     //Porters of unmodified _site content (class-slides directory)
     gulp.task('class-port',function() {
       gulp.src('_site/src/class-slides/**/*')
         .pipe(gulp.dest('public/class-slides'));
     });
-    
+
     //image minifier (no CSS, HTML, or JS)
     gulp.task('image-min', function () {
         gulp.src(['theme/images/**/*.jpg','theme/images/**/*.png'])
@@ -66,16 +54,16 @@
             }))
             .pipe(gulp.dest('public/theme/images'));
     });
-    
+
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
-    gulp.task('async',['jekyll', 'font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
+    gulp.task('async',['font-port','other-image-port', 'class-port', 'autoprefixer'],function(){
       return gulp.src(['_site/index.html','_site/src/**/*.html','!_site/src/class-slides'])
         .pipe(useref({searchPath:'.'}))
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(gulp.dest('./public'));
     });
-    
+
     //Sitemap generator for SEO and search engine ease-of-use (XML format)
     gulp.task('sitemapper',['async'],function() {
         return gulp.src('public/**/*.html')
@@ -84,7 +72,7 @@
           }))
           .pipe(gulp.dest('./public'));
     });
-    
+
     //CSS inliner post-CSS and JS minification, pre-HTML minification and gzipping
     gulp.task('css-inline',['sitemapper'], function(){
       return critical.generateInline({
@@ -95,7 +83,7 @@
         height: 900
       });
     });
-    
+
     //HTML minifier (run after ports, image-minification, and critical CSS inlining)
     gulp.task('cruncher', ['css-inline'], function() {
        gulp.src('public/index.html')
@@ -105,13 +93,13 @@
         }))
         .pipe(gulp.dest('public'));
     });
-    
+
     //default task (gzips final files)
     gulp.task('default',['cruncher'],function () {
       gulp.src(['public/**/*','!public/**/*.gz','!public/**/*.md','!public/**/*.txt', '!public/**/*.json','!public/**/*.xml', '!public/theme/images/**/*'])
         .pipe(gzip()).pipe(gulp.dest('public'));
     });
-    
+
     //build deployment task using SFTP
     gulp.task('deploy',function() {
         //exec child-process to start SFTP from command line
