@@ -21,20 +21,3 @@ $bfont: 'Quicksand', sans-serif;
 .desktop-only{
   display: block;
 }
-
-//useful mixins
-@mixin ctrans($s){
-    -o-transition:$s color;
-  -ms-transition:$s color;
-  -moz-transition:$s color;
-  -webkit-transition:$s color;
-   transition:$s color;
-}
-
-@mixin otrans($s){
-    -o-transition:$s opacity;
-  -ms-transition:$s opacity;
-  -moz-transition:$s opacity;
-  -webkit-transition:$s opacity;
-   transition: $s opacity;
-}

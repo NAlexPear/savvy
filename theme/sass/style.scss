@@ -1,4 +1,6 @@
 @import 'base-vars';
+@import 'mixins';
+@import 'components';
 
 //baseline element styles
 
@@ -39,7 +41,7 @@ h4{
     font-size: 2vh;
 }
 
-p { 
+p {
     font-family: $tfont;
     font-size: 2vw;
     color: $hl;
@@ -60,7 +62,6 @@ hr{
 }
 
 // menubar and navigation styles
-
 .menu-icon{
   display: none;
 }
