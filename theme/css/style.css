@@ -393,9 +393,6 @@ footer {
 .response {
   display: none; }
 
-.active-response {
-  display: block; }
-
 /*iframe video player style*/
 .video_frames {
   display: block;
