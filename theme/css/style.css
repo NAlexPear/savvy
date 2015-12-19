@@ -69,16 +69,75 @@ hr {
   background-color: #07c4dd;
   width: 100%;
   margin-top: 0px; }
-  #menubar .navbubbles {
+  #menubar ul.navbubbles {
+    z-index: 2;
     list-style-type: none;
-    max-width: 960px;
-    margin: 0 auto; }
-    #menubar .navbubbles li {
+    max-width: 1080px;
+    min-width: 960px;
+    height: 3.5em;
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center; }
+    #menubar ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
-      font-size: 2vw;
-      font-weight: 400;
-      padding-left: 1em; }
+      font-size: 1.5em;
+      font-weight: 400; }
+      #menubar ul.navbubbles > li a {
+        color: #ffffff;
+        transition: 0.3s color; }
+        #menubar ul.navbubbles > li a:hover {
+          color: #2B2B2B;
+          transition: 0.3s color; }
 
+@media screen and (max-width: 640px) {
+  .menu-icon {
+    display: block;
+    position: fixed;
+    margin-left: 3vmin;
+    margin-top: 3vmin;
+    z-index: 10; }
+
+  .savvy-logo-text {
+    font-size: 30px; }
+
+  #menubar {
+    position: fixed;
+    z-index: 1;
+    left: -250px;
+    width: 200px;
+    height: 100%;
+    background-color: #8e8e8e;
+    padding-right: 25px; }
+
+  .navbubbles {
+    display: block;
+    width: auto;
+    padding-left: 8vw;
+    margin: 0; }
+    .navbubbles li {
+      display: block;
+      font-size: 20px;
+      padding: 5px;
+      margin-top: 10px;
+      border-bottom: 2px solid #848484;
+      width: 150px; }
+      .navbubbles li:first-child {
+        border: none; }
+      .navbubbles li:nth-child(2) {
+        border: none; } }
 .icon-bar {
   list-style-type: none;
   display: table;
@@ -422,42 +481,6 @@ iframe {
 
   #logo_image {
     top: 10px; }
-
-  .menu-icon {
-    display: block;
-    position: fixed;
-    margin-left: 3vmin;
-    margin-top: 3vmin;
-    z-index: 10; }
-
-  .savvy-logo-text {
-    font-size: 30px; }
-
-  #menubar {
-    position: fixed;
-    z-index: 1;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #8e8e8e;
-    padding-right: 25px; }
-
-  #navbubbles {
-    display: block;
-    width: auto;
-    padding-left: 8vw;
-    margin: 0; }
-    #navbubbles li {
-      display: block;
-      font-size: 20px;
-      padding: 5px;
-      margin-top: 10px;
-      border-bottom: 2px solid #848484;
-      width: 150px; }
-      #navbubbles li:first-child {
-        border: none; }
-      #navbubbles li:nth-child(2) {
-        border: none; }
 
   #mission-mobile {
     display: block; }
