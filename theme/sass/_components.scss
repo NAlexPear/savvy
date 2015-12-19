@@ -23,6 +23,8 @@
       align-items: center;
       align-content: center;
 
+      padding-right: 1em;
+
       &>li{
         font-family: $bfont;
         font-weight: 400;
@@ -69,6 +71,42 @@
       justify-content: center;
 
       cursor: pointer;
+      &>div{
+        position: relative;
+
+        span::before{
+          transition: transform 0.3s;
+          display: inline-block
+        }
+
+        &.turnt{
+          span::before{
+            transition: transform 0.3s;
+            transform: rotate(90deg);
+          }
+        }
+      }
+      .dropdown{
+        z-index: 1;
+        list-style-type: none;
+        opacity: 0;
+        position: absolute;
+        top: -500px;
+        right: 0;
+        background-color: $bgl;
+
+        li{
+          text-align: left;
+          font-size: 0.75em;
+        }
+
+        &.mobile-only{
+          top: 32px;
+          right: -100px;
+          width: 100px;
+          height: 100vh;
+        }
+      }
     }
   }
 }
