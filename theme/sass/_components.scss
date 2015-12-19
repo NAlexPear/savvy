@@ -1,11 +1,5 @@
 //navigation bar system
 @mixin navigation {
-  .menu-icon{
-    display: none;
-    color: $hl;
-    font-size: 40px;
-  }
-
   #menubar{
     z-index: 1;
     position: fixed;
@@ -28,7 +22,11 @@
 
       &>li{
         font-family: $bfont;
-        font-size: 1.5em;
+        $fs: 1.5em;
+        @media screen and (max-width: 640px) {
+          font-size: $fs*0.85;
+        }
+        font-size: $fs;
         font-weight: 400;
         a{
           color: $hl;
@@ -38,8 +36,17 @@
             transition: 0.3s color;
           }
         }
+        .savvy-logo-text{
+          font-family: $tfont;
+          $fs: 1.25em;
+          @media screen and (max-width: 640px) {
+            font-size: $fs*0.85;
+          }
+          font-size: $fs;
+        }
       }
     }
   }
+}
 
 //splash/landing component

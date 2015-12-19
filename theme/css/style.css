@@ -58,11 +58,6 @@ hr {
   width: 80%;
   opacity: 0.8; }
 
-.menu-icon {
-  display: none;
-  color: #ffffff;
-  font-size: 40px; }
-
 #menubar {
   z-index: 1;
   position: fixed;
@@ -76,58 +71,41 @@ hr {
     min-width: 960px;
     height: 3.5em;
     margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-content: center; }
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+            align-content: center; }
     #menubar ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
       font-size: 1.5em;
       font-weight: 400; }
+      @media screen and (max-width: 640px) {
+        #menubar ul.navbubbles > li {
+          font-size: 1.275em; } }
       #menubar ul.navbubbles > li a {
         color: #ffffff;
         transition: 0.3s color; }
         #menubar ul.navbubbles > li a:hover {
           color: #2B2B2B;
           transition: 0.3s color; }
+      #menubar ul.navbubbles > li .savvy-logo-text {
+        font-family: "Kreon", serif;
+        font-size: 1.25em; }
+        @media screen and (max-width: 640px) {
+          #menubar ul.navbubbles > li .savvy-logo-text {
+            font-size: 0.75em; } }
 
-@media screen and (max-width: 640px) {
-  .menu-icon {
-    display: block;
-    position: fixed;
-    margin-left: 3vmin;
-    margin-top: 3vmin;
-    z-index: 10; }
-
-  .savvy-logo-text {
-    font-size: 30px; }
-
-  #menubar {
-    position: fixed;
-    z-index: 1;
-    left: -250px;
-    width: 200px;
-    height: 100%;
-    background-color: #8e8e8e;
-    padding-right: 25px; }
-
-  .navbubbles {
-    display: block;
-    width: auto;
-    padding-left: 8vw;
-    margin: 0; }
-    .navbubbles li {
-      display: block;
-      font-size: 20px;
-      padding: 5px;
-      margin-top: 10px;
-      border-bottom: 2px solid #848484;
-      width: 150px; }
-      .navbubbles li:first-child {
-        border: none; }
-      .navbubbles li:nth-child(2) {
-        border: none; } }
 .icon-bar {
   list-style-type: none;
   display: table;
@@ -358,7 +336,8 @@ hr {
   -moz-column-break-before: always;
   /* Firefox */
   -ms-column-break-before: always;
-  break-before: always;
+  page-break-before: always;
+       break-before: always;
   opacity: 0.8; }
 
 footer {
@@ -504,5 +483,3 @@ iframe {
 
   .desktop-only {
     display: none; } }
-
-/*# sourceMappingURL=style.css.map */
