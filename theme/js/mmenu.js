@@ -1,4 +1,21 @@
 $(function(){
+//HELPERS
+  //populate drop-down with overflowing list-items, to be called when window is resized
+  //overflow takes ids of list items (from menu, in theory) as parameter
+  var overflow = function (li) {
+    var target = $('#'+ li);
+    var rt = ($(window).width() - (target.offset().left + target.outerWidth()));
+    console.log(rt);
+    if(rt < 0){
+      //add list item to menu
+      $('.dropdown').append(target);
+      console.log('added ' + target.attr('id'));
+    } else {
+      // $('.navbubbles').append(target);
+      console.log('removed ' + target.attr('id'));
+    }
+  };
+
   //set up function to change MORE to LESS on different events
   var more_less = function () {
     //include arrow-turning function
@@ -18,14 +35,14 @@ $(function(){
     var $target = $('.overflow>div');
     if($target.hasClass('turnt')){
       $target.removeClass('turnt');
-      console.log('now we aint');
     } else {
       $target.addClass('turnt');
-      console.log('we turnt!');
     }
   };
 
+//EVENTS
   //only let the 'more' option appear when the window is less than 1000px wide
+  //also start calling overflow() on list items
   if($(window).width() < 1000 && $('.overflow').hasClass('hidden')){
     //remove 'hidden' class
     $('.overflow').removeClass('hidden');
@@ -70,5 +87,17 @@ $(function(){
           }
         });
       }
+    //window resize event
+    $(window).resize(function(){
+      console.log('window is being resized');
+      var li = $('.navbubbles>li');
+      //test out the .each() method
+      li.each(function(i){
+        if(i > 1){
+          console.log($(this).attr('id'));
+          overflow($(this).attr('id'));
+        }
+      });
+    });
   }
 });
