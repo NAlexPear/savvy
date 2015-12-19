@@ -62,47 +62,7 @@ hr{
 }
 
 // menubar and navigation styles
-.menu-icon{
-  display: none;
-}
-
-#menubar{
-  z-index: 1;
-  position: fixed;
-  background-color: $accent;
-}
-
-#navbubbles{
-    list-style-type:none;
-    display:table;
-    table-layout:fixed;
-    width: 100%;
-    padding-bottom: 1vw;
-    padding-left: 0px;
-    margin-top: 0px;
-    li{
-        display: table-cell;
-        text-align: center;
-        font-family: $bfont;
-        font-size: 2vw;
-        font-weight: 400;
-        padding-left:1em;
-    }
-    .about-sub{
-      display:none;
-      background-color: $accent;
-      li{
-          font-size: 1.5rem;
-          color: $hl;
-          display:list-item;
-          text-align:left;
-          padding-left: 0em;
-          &:hover{
-              color: $bg;
-          }
-        }
-    }
-}
+@include navigation;
 
 // icon bar (across page) styles
 

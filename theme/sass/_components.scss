@@ -1,0 +1,29 @@
+//navigation bar system
+@mixin navigation {
+  .menu-icon{
+    display: none;
+    color: $hl;
+    font-size: 40px;
+  }
+
+  #menubar{
+    z-index: 1;
+    position: fixed;
+    background-color: $accent;
+    width: 100%;
+    margin-top: 0px;
+    .navbubbles{
+        list-style-type:none;
+        max-width: 960px;
+        margin: 0 auto;
+        li{
+            font-family: $bfont;
+            font-size: 2vw;
+            font-weight: 400;
+            padding-left:1em;
+        }
+    }
+  }
+}
+
+//splash/landing component

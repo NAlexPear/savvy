@@ -59,39 +59,25 @@ hr {
   opacity: 0.8; }
 
 .menu-icon {
-  display: none; }
+  display: none;
+  color: #ffffff;
+  font-size: 40px; }
 
 #menubar {
   z-index: 1;
   position: fixed;
-  background-color: #07c4dd; }
-
-#navbubbles {
-  list-style-type: none;
-  display: table;
-  table-layout: fixed;
+  background-color: #07c4dd;
   width: 100%;
-  padding-bottom: 1vw;
-  padding-left: 0px;
   margin-top: 0px; }
-  #navbubbles li {
-    display: table-cell;
-    text-align: center;
-    font-family: "Quicksand", sans-serif;
-    font-size: 2vw;
-    font-weight: 400;
-    padding-left: 1em; }
-  #navbubbles .about-sub {
-    display: none;
-    background-color: #07c4dd; }
-    #navbubbles .about-sub li {
-      font-size: 1.5rem;
-      color: #ffffff;
-      display: list-item;
-      text-align: left;
-      padding-left: 0em; }
-      #navbubbles .about-sub li:hover {
-        color: #2B2B2B; }
+  #menubar .navbubbles {
+    list-style-type: none;
+    max-width: 960px;
+    margin: 0 auto; }
+    #menubar .navbubbles li {
+      font-family: "Quicksand", sans-serif;
+      font-size: 2vw;
+      font-weight: 400;
+      padding-left: 1em; }
 
 .icon-bar {
   list-style-type: none;
