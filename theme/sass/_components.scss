@@ -6,12 +6,15 @@
     background-color: $accent;
     width: 100%;
     margin-top: 0px;
+
+    $height: 3.5em;
+    height: $height;
     ul.navbubbles{
       z-index: 2;
       list-style-type:none;
       max-width: 1080px;
       min-width: 960px;
-      height: 3.5em;
+      height: $height;
       margin: 0 auto;
 
       display: flex;
@@ -22,12 +25,12 @@
 
       &>li{
         font-family: $bfont;
+        font-weight: 400;
         $fs: 1.5em;
         @media screen and (max-width: 640px) {
           font-size: $fs*0.85;
         }
         font-size: $fs;
-        font-weight: 400;
         a{
           color: $hl;
           transition: 0.3s color;
@@ -45,6 +48,27 @@
           font-size: $fs;
         }
       }
+    }
+    div.overflow{
+      box-sizing: border-box;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding:0.3em 0.75em 0;
+
+      font-family: $bfont;
+      font-weight: 400;
+      font-size: 1.5em;
+      color: $hl;
+
+      height:$height*0.6;
+      background-color: $accent;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      cursor: pointer;
     }
   }
 }
