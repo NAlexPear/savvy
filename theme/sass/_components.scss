@@ -41,47 +41,5 @@
       }
     }
   }
-  @media screen and (max-width: 640px) {
-    .menu-icon{
-        display: block;
-        position: fixed;
-        margin-left: 3vmin;
-        margin-top: 3vmin;
-        z-index: 10;
-      }
-      .savvy-logo-text{
-      font-size: 30px;
-    }
-    #menubar{
-        position: fixed;
-        z-index: 1;
-        left: -250px;
-        width: 200px;
-        height: 100%;
-        background-color:$bgl;
-        padding-right: 25px;
-    }
-    .navbubbles{
-        display:block;
-        width: auto;
-        padding-left: 8vw;
-        margin: 0;
-        li{
-            display: block;
-            font-size: 20px;
-            padding: 5px;
-            margin-top: 10px;
-            border-bottom: 2px solid #848484;
-            width: 150px;
-            &:first-child{
-                border:none;
-            }
-            &:nth-child(2){
-                border:none;
-            }
-        }
-    }
-  }
-}
 
 //splash/landing component
