@@ -1,18 +1,54 @@
 $(function(){
 //HELPERS
+  //'once' helper
+  function once(fn, context){
+    var result;
+
+    return function () {
+      if(fn){
+        result = fn.apply(context || this, arguments);
+        fn = null
+      }
+      return result;
+    };
+  }
+  //run through the list of menu items
+  var list_runner = function (parent) {
+    //set list items for use in overflow
+    var li = $(parent+'>li');
+
+    //nuclear 'empty' option to keep repetition bugs out... WIP
+    //definitely still buggy
+    $('.dropdown').empty();
+
+    //run all of the variables through the test in overflow()
+    li.each(function(i){
+      if(i > 1){
+        console.log($(this).offset().left);
+        console.log($(this).attr('id'));
+        overflow($(this).attr('id'));
+      }
+    });
+  }
   //populate drop-down with overflowing list-items, to be called when window is resized
   //overflow takes ids of list items (from menu, in theory) as parameter
   var overflow = function (li) {
+
+    //set up target variables
     var target = $('#'+ li);
-    var rt = ($(window).width() - (target.offset().left + target.outerWidth()));
-    console.log(rt);
-    if(rt < 0){
+    var more = $('.overflow');
+
+    //set up conditional actions for menu items
+    if(target.hasClass('listed')){
+      //remove target from overflow list
+        $('.dropdown').remove('.dropdown>li#'+li);
+        target.removeClass('listed')
+        console.log('removed ' + target.attr('id'));
+    } else if (target.offset().left > more.offset().left && ( target.hasClass('listed') === false )) {
       //add list item to menu
-      $('.dropdown').append(target);
+      target.clone().appendTo('.dropdown');
+      target.addClass('listed');
       console.log('added ' + target.attr('id'));
-    } else {
-      // $('.navbubbles').append(target);
-      console.log('removed ' + target.attr('id'));
     }
   };
 
@@ -90,14 +126,7 @@ $(function(){
     //window resize event
     $(window).resize(function(){
       console.log('window is being resized');
-      var li = $('.navbubbles>li');
-      //test out the .each() method
-      li.each(function(i){
-        if(i > 1){
-          console.log($(this).attr('id'));
-          overflow($(this).attr('id'));
-        }
-      });
+      list_runner('.navbubbles');
     });
   }
 });
