@@ -8,6 +8,11 @@ $hl: #ffffff;
 $tfont: 'Kreon', serif;
 $bfont: 'Quicksand', sans-serif;
 
+//baseline toggle classes (sorry for the important banger...)
+.hidden{
+  display: none!important;
+}
+
 //mobile-desktop display-switch classes
 #mission-mobile{
   display: none;
@@ -15,26 +20,20 @@ $bfont: 'Quicksand', sans-serif;
 #mission-desktop{
   display: block;
 }
-.mobile-only{
-  display: none;
-}
-.desktop-only{
-  display: block;
-}
 
-//useful mixins
-@mixin ctrans($s){
-    -o-transition:$s color;
-  -ms-transition:$s color;
-  -moz-transition:$s color;
-  -webkit-transition:$s color;
-   transition:$s color;
+@media screen and (max-width: 640px) {
+  .mobile-only{
+    display: block;
+  }
+  .desktop-only{
+    display: none;
+  }
 }
-
-@mixin otrans($s){
-    -o-transition:$s opacity;
-  -ms-transition:$s opacity;
-  -moz-transition:$s opacity;
-  -webkit-transition:$s opacity;
-   transition: $s opacity;
+@media screen and (min-width: 641px) {
+  .mobile-only{
+    display: none;
+  }
+  .desktop-only{
+    display: block;
+  }
 }

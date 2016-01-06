@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Savvy Coders | Week 4 : Module 1</title>
+
+		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
+		<meta name="author" content="the Savvy Coder Team">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../../css/reveal.css">
+		<link rel="stylesheet" href="../../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
+		
+		<!--Google Fonts-->
+	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="../../../../theme/images/headerShort.png">
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 4: Module 1</h2>
+				</section>
+			<!--SLIDE 1-->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Questions from last week?</h1>
+						<span></span>
+					</div>
+				</section>
+			<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>AJAX</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Step 1: </h3><h4>Register with openweathermap</h4></li><br>
+							<li>http://openweathermap.org/</li><br>
+							<li><h3>Step 2:</h3><h4> Try this (with your APPID)</h4></li><br>
+							<li>http://api.openweathermap.org/data/2.5/weather?q=Nashville&appid=bd82977b86bf27fb59a04b61b657fb6f</li>
+						</ul>
+						<aside class="notes">
+							Ajax is a means of interacting with servers behind the scenes using JavaScript without having to reload the page. This allows you to create complex interactive web apps that behave like desktop apps. One famous example is Gmail, which allows you to read, write, and receive emails, all without the need for refreshing the page.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Step 3: </h3><h4>Open /ajax/ajax1.js</h4></li><br>
+							<li>Try typing it into your console!</li><br><br>
+							<li><h3>Step 4:</h3><h4> Check out the request in "Network"</h4></li><br>
+						</ul>
+						<aside class="notes">
+							Ajax is a means of interacting with servers behind the scenes using JavaScript without having to reload the page. This allows you to create complex interactive web apps that behave like desktop apps. One famous example is Gmail, which allows you to read, write, and receive emails, all without the need for refreshing the page.
+						</aside>
+					</section>
+					<section>
+						<img src="../../../images/ajax.png"></img>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Step 5: </h3><h4>displaying the data</h4></li><br>
+							<li>/ajax/ajax2.js</li><br><br>
+						</ul>
+						<aside class="notes">
+							The most common thing to do with data returned from an AJAX request is show it to the user. We can use jQuery to do this, but only in the callback function to_be_run_on_server_response. If we try to use the weather_data outside that function, we won't have the response from the server yet.
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1: </h3><h4>Weather Data in action!</h4></li><br>
+							<li>Create a simple weather page with the following:</li>
+							<ol>
+								<li>current temp</li>
+								<li>today's highs and lows</li>
+								<li>the description of weather conditions</li>
+								<li>current wind speed</li>
+								<li>The time of sunrise and sunset. (hint: new Date(weatherData.sys.sunrise * 1000) )</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 1 part 2: </h3><h4>Weather Data++</h4></li><br>
+							<li>Now let's add a button to display different cities! We need the following:</li>
+							<ol>
+								<li>one or more links of a few different cities</li>
+								<li>Set up click handlers on the links that event.preventDefault() to prevent the browser from changing pages.</li>
+								<li>Clear the current contents of id=container.</li>
+								<li>Tell the user that data is currently being fetched.</li>
+								<li>When data returns from the weather server, display it on the page</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>JSON</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>JSON =  </h3><h4>"JavaScript Object Notation"</h4></li><br>
+						</ul>
+						<pre><code class="javascript">
+$.ajax({
+  method: 'GET',
+  url: 'http://jsonplaceholder.typicode.com/posts/1',
+  success: function(data) {
+    console.log(data)
+  }
+})
+						</code></pre>
+						<aside class="notes">
+							Now let's try more complex interaction using a RESTful API, which is to say a set of endpoints, available over a network, that serve JSON data in a predictable format based on that resource's name. (e.g. a post with the id of 7 is available at the path /posts/7). Here the server lives at http://jsonplaceholder.typicode.com and the path to the info we want is /posts/1
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2: </h3><h4>working with JSON Placeholder</h4></li><br>
+							<li>http://jsonplaceholder.typicode.com/</li><br><br>
+							<ol>
+								<li>Retrieve the post with id of 1 from the server, in the success callback, display it on the page.</li>
+								<li>Retrieve the post with id of 2 from the server, in the success callback, display it on the page.</li>
+								<li>Abstract the success callback out into a separate function called place_post_on_page.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 2: </h3><h4>JSON Placeholder++</h4></li><br>
+							<ol>
+								<li>Using a for loop, use AJAX calls to fetch posts with ids from 1 to 10 and pass them to your place_post_on_page function to display them on the page. Do they always appear in the same order? Why is this?</li>
+								<li>Now instead, use the /posts endpoint to get all posts and display only their titles on the page. This is often called the "index" view.</li>
+								<li>When a visitor clicks on the title of a post, clear the content area and replace it with the full information for that post, displaying all of its properties. This is often called the "show" view.</li>
+								<li>Allow the user to navigate back to the "index" view from the "show" view.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 2 part 3: </h3><h4>JSON Placeholder+=2</h4></li><br>
+							<ol>
+								<li>Network requests are expensive and slow. Refactor your code such that once you've fetched data once, it's cached as a javascript object and accessible immediately when the user moves back and forth between 'show' and 'index' views.</li>
+								<li>When showing an individual post, fetch all '/comments' and append the ones whose 'postId' property matches the post's id.</li>
+								<li>Fetch information about the user who made the post. Display their name and email under the post.</li>
+								<li>Create a simple login form where users can input their email address and password (let's say their password is their zip code, which we can also find on the user objects) such that visitors can see all of their own posts and comments after they log in.</li>
+								<li>Create forms to allow users to create a new post or edit existing posts, pointing the forms to the appropriate RESTful endpoints using $.post()</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="class-list">
+							<li>
+								<h3>Try the code below: </h3><h4>use products_array from Web Store Hackathon</h4>
+							</li>
+						</ul>
+						<pre><code class="javascript example">
+// run these one line at a time in your console.
+
+// the server does this before sending information over the wire
+var products_array_represented_as_json_string = JSON.stringify(products)
+typeof products_array_represented_as_json_string
+
+// $.ajax() converts incoming JSON strings back into arrays, objects and primitive values before passing it into your callback function.
+JSON.parse(products_array_represented_as_json_string)
+						</code></pre>
+					</section>
+				</section>
+			<!--SLIDE 4-->
+			</div>
+
+		</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

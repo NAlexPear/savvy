@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Event Handler Page</title>
+    <style>
+        .highlighted{
+            background-color: yellow;
+        }
+        #cash{
+            display:none;
+        }
+        #oface{
+            display:none;
+        }
+        #operaface{
+            display:none;
+        }
+        #active{
+            border: 2px solid #07c4dd;
+        }
+        /*.doge{*/
+        /*    position: fixed;*/
+        /*}*/
+    </style>
+</head>
+<body>
+    <div id="beeping"></div>
+    <button id="beeper">Beep beep!</button>
+    <div id="target">Here's some target text (try clicking)</div>
+    <div>Here's another div that can be clicked (but that doesn't go boom or write to the console).</div>
+    <br>
+    <div id="money">Show me the money!</div>
+    <br>
+    <img id="cash" width="20%" src="http://dreamatico.com/data_images/money/money-4.jpg"></img>
+    <br>
+    <div id="oprah">Show me the Oprah!</div>
+    <br>
+    <img id="oface" src="http://parade.com/wp-content/uploads/2014/05/05-11-14-oprah-ftr.jpg" width="20%"></img>
+    <br>
+    <div id="opera">Show me the Opera!</div>
+    <br>
+    <img id="operaface" src="http://parade.com/wp-content/uploads/2014/05/05-11-14-oprah-ftr.jpg" width="20%"></img>
+    <br>
+    <!--<img class="doge" src="http://www.netanimations.net/Moving-picture-puppy-dog-walking-animated-gif.gif"></img>-->
+    <div id="magic">Try hovering over this div to see what happens.</div>
+    <img id="marge" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Hamilton.gif" alt="Margaret Hamilton.gif">
+    <br>
+    <hr>
+    <div id="output">
+        
+    </div>
+    <h3>Paragraphs Below!</h3>
+    <hr>
+    <p id="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, vel, ipsum voluptate quidem ipsam qui earum omnis temporibus officia autem. Aspernatur error sint consequatur dolores neque at quod rem laboriosam.</p>
+    <p id="second">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, nemo, deleniti nihil soluta officia in sunt porro libero. Aliquam, voluptatibus, nam aliquid alias et blanditiis eum nihil architecto quasi hic.</p>
+    <p id="third">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, animi magni soluta expedita atque cupiditate esse. Vel, sunt ratione delectus dignissimos saepe quidem tempora illum id eos nihil. At, illo.</p>
+    <p id="fourth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dolorem, nulla, et, perferendis omnis reiciendis enim nobis soluta eaque dignissimos natus perspiciatis ex dolore velit itaque hic quos voluptatum quasi.</p>
+    <p id="fifth">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, magnam, mollitia, explicabo deleniti fuga pariatur earum cupiditate veritatis ratione alias provident rem accusantium voluptatibus dolor nihil reprehenderit obcaecati quod. Sequi.</p>
+    <br>
+    <hr>
+    <h3>Color-Changing Button Below</h3>
+    <hr>
+    <div id="output2">Please input a color below (in a CSS-accepted format) and click the button to see what happens.</div>
+    <input id="color" type="text" name="Color Input"/>
+    <button id="go">Click Me!</button>
+    <br>
+    <h3>TypeRacer</h3>
+    <hr>
+    <div id="output3"></div>
+    <input id="type" type="text" name="TypeRacer"/><label for="TypeRacer">Type Here!</label>
+    <br>
+    <h3>NSA SURVEILLANCE</h3>
+    <div id="output4"></div>
+    <!------------------------------------------------->
+    <!--BELOW BE SOME SCRIPTS-->
+    <!------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+    // console logging for #target id only
+        document.querySelector('#target').addEventListener('click', function() {
+          console.log('heeeeey');
+        });
+    // console logging for all divs
+        $('div').on('click', function(){
+          console.log('A div has been clicked!');
+        });
+    // text changer for #target id
+        $('#target').click(function(){
+          $('#target').show().css('color', 'red').text('boom goes the dynamite!');
+        });
+    // #target mouseover highlighting
+        $('#target').on('mouseover', function(){
+          $('#target').addClass('highlighted')
+        });
+        $('#target').on('mouseleave', function(){
+          $('#target').removeClass('highlighted')
+        });
+    // mouse tracker
+        // var mouse_tracker = function(event){
+        //   console.log(event.pageX, event.pageY, !!event.which);
+        // };
+        
+        // $('body').on('mousemove', mouse_tracker);
+        
+    //element finder!
+        var el_finder = function(event){
+          console.log("calling el_finder for:", this)
+          $(this).attr('id', 'active');
+        }
+        
+        $('div').click(el_finder);
+    
+    //Output color-changer
+        $('button#go').on('click', function(){
+            var input_color = $('input#color').val();
+            $('#output2').text(input_color);
+            $('body').css('background-color',input_color);
+        })
+    //Input Box Key Logger
+        $('input#type').on('keypress', function (e) {
+          $('label').text(e.keyCode);
+          var typeracer_output = String.fromCharCode(e.keyCode);
+          $('#output3').append(typeracer_output);
+        });
+    
+    
+    //----------------------------------    
+    // EXAMPLE EXERCISE SCRIPTS BELOW
+    //----------------------------------
+    // beeper
+        $('#beeper').on('click',function() {
+            $('#beeping').append('Beep Beep!');
+        });
+    // cash money click exposer
+        // CASH MONEY HAS RE-CLICK TOGGLE
+        $('#money').on('click',function() {
+            if ($('#cash').hasClass('exposed')){
+                $('#cash').hide().removeClass('exposed');
+            }
+            else{
+            $('#cash').show().addClass('exposed');
+            $('#oface').hide();
+            $('#operaface').hide();}
+        });
+        // THE REST DO NOT
+        $('#oprah').on('click',function() {
+            $('#oface').show();
+            $('#cash').hide();
+            $('#operaface').hide();
+        });
+        $('#opera').on('click',function() {
+            $('#operaface').show();
+            $('#cash').hide();
+            $('#oface').hide();
+        });
+    // #magic image hider
+        $('#magic').on('mouseover', function(){
+          $('#marge').hide();
+        });
+        $('#magic').on('mouseleave', function(){
+          $('#marge').show();
+        });
+    // silly mousey
+        // $(document).on('mousemove', function(event){
+        //     $('.doge').css({
+        //         left: event.pageX + 20,
+        //         top: event.pageY
+        //     });
+        // });
+    // paragraph selector script
+        var p_finder = function(event){
+            var id_val = $(this).attr('id');
+          $('#output').text(id_val);
+          $(this).addClass('highlighted');
+          $('p').not(this).removeClass('highlighted');
+        };
+        $('p').click(p_finder);
+    //TypeRacer output
+    
+    //NSA surveillance key logger
+        $('body').on('keypress', function(e) {
+            var nsa_surveillance = String.fromCharCode(e.keyCode);
+            $('#output4').append(nsa_surveillance);
+        });
+    </script>
+</body>
+</html>

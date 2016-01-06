@@ -1,0 +1,26 @@
+{% if page.title == 'FAQ' %}
+  <!--build:js /theme/js/faq/site.js async-->
+  <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/picturefill/dist/picturefill.min.js" async></script>
+  <script type="text/javascript" src="theme/js/wordfades.js" async></script>
+  <script type="text/javascript" src="theme/js/buttonpop.js" async></script>
+  <script type="text/javascript" src="theme/js/typeform.js" async></script>
+  <script type="text/javascript" src="theme/js/wufoo.js" async></script>
+  <script type="text/javascript" src="theme/js/browserup.js" async></script>
+  <script type="text/javascript" src="theme/js/mmenu.js" async></script>
+  <script type="text/javascript" src="theme/js/scroll.js" async></script>
+  <script type="text/javascript" src="theme/js/faqmenu.js"></script>
+  <!--endbuild-->
+{% elsif page.title != 'FAQ' %}
+  <!--build:js /theme/js/site.js async-->
+  <script type='text/javascript' src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="node_modules/picturefill/dist/picturefill.min.js" async></script>
+  <script type="text/javascript" src="theme/js/wordfades.js" async></script>
+  <script type="text/javascript" src="theme/js/buttonpop.js" async></script>
+  <script type="text/javascript" src="theme/js/typeform.js" async></script>
+  <script type="text/javascript" src="theme/js/wufoo.js" async></script>
+  <script type="text/javascript" src="theme/js/browserup.js" async></script>
+  <script type="text/javascript" src="theme/js/mmenu.js" async></script>
+  <script type="text/javascript" src="theme/js/scroll.js" async></script>
+  <!--endbuild-->
+  {% endif %}

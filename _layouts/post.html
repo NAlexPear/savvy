@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+  {% include nav.html %}
+
+  <!-- post-specific splash to go here? -->
+
+  {% include sidebar.html %}
+
+  {{ content }}
+
+  <div id="disqus_thread"></div>
+
+  {% include footer.html %}
+  {% include scripts.html %}
+  {% include disqus.html %}
+</body>
+</html>

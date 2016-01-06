@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Savvy Coders | Week 1 : Module 2</title>
+
+		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
+		<meta name="author" content="the Savvy Coder Team">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../../css/reveal.css">
+		<link rel="stylesheet" href="../../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
+
+		<!--Google Fonts-->
+	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+			<!-- INTRO SLIDE -->
+				<section data-background="../../../../theme/images/headerShort.png">
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 2</h2>
+				</section>
+			<!-- SLIDE 1 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>You've got that James Dean...</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Style: </h3><h4>making text fancy</h4>
+							<p>...like Taylor Swift</p>
+						</li>
+						<li>
+							<h3>How we style: </h3><h4>3 methods</h4>
+							<p>Style attribute (BAD)</p>
+							<p>Style tag (meh...)</p>
+							<p>Stylesheets (Yay!)</p>
+						</li>
+					</ul>
+				</section>
+			<!-- SLIDE 2 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Your first style attributes</h1>
+						<span></span>
+					</div>
+					<div class="example">
+						<pre>
+							<code data-trim class="html">
+&lt;body style=&quot;background-color:lightgrey&quot;&gt;
+&lt;h1 style=&quot;color:blue&quot;&gt;This is a heading&lt;/h1&gt;
+&lt;h1 style=&quot;color:#AA22FF&quot;&gt;Also a heading&lt;/h1&gt;
+&lt;h1 style=&quot;color:rgb(0,255,255)&quot;&gt;Moar!!&lt;/h1&gt;
+&lt;p style=&quot;color:red;background-color:green&quot;&gt;This is a paragraph.&lt;/p&gt;
+&lt;img src=&quot;https://i.imgur.com/81qyN1y.jpg&quot; style=&quot;height:100px;width:100px&quot;&gt;
+							</code>
+						</pre>
+					</div>
+					<aside class="notes">
+						<ol>
+					    <li>The value of the HTML attribute named <code>style</code> styles HTML elements</li>
+					    <li>The styles are described using a language called CSS. Here are the rules of CSS:</li>
+						    <ol>
+						      <li>CSS rules are key-value pairs (similar to HTML attributes)</li>
+						      <li>The key represent the property to be changed (like 'color' or 'background-color')</li>
+						      <li>The value represents what it should be changed to ('blue' or 'red')</li>
+						      <li>The key and value are separated by a colon</li>
+						      <li>Each key-value pair is separated  with a semi-colon</li>
+						    </ol>
+				      <li>Colors can be described by name, as eight digit <a href="//simple.wikipedia.org/wiki/Base_(mathematics)" class="popup">hex (base 16) values</a> between <code>0</code> (black) and <code>F</code> (white), or as Red Green Blue triplets from <code>0</code> to <code>255</code></li>
+				      <li>We can use the following css colors for our <code>background-color</code> and <code>color</code> attributes:</li>
+				    </ol>
+					</aside>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Web Colors: </h3><h4>./reference/css_colors.jpg</h4>
+							<p>check out this table!</p>
+						</li>
+						<li>
+							<h3>Color Pickers: </h3><h4>another method...</h4>
+							<p>http://www.colorpicker.com/</p>
+							<p>ColorZilla extension (see end of slides)</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 3 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 1 (20 minutes)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Create a webpage: </h3><h4>your sweet vacation</h4>
+							<p>-recount a vacation (real or imagined) via HTML</p>
+							<p>-make this page GAUDY and COLORFUL</p>
+							<p>-bonus points to most atrocious abuse of color</p>
+							<p>-describe some adventures</p>
+							<p>-include pop-culture references and photos</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Things to include: </h3><h4>specific requirements</h4>
+							<p>-use color names, RGB values, and hex values</p>
+							<p>-include at least 20 HTML elements</p>
+							<p>-nest some elements at least 3 deep</p>
+							<p>-include external links</p>
+							<p>-include at least one animated .gif</p>
+							<p>-add some secret comments!</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Deploy: </h3><h4>push your site to firebase!</h4>
+							<p>-don't forget to name your file <code>index.html</code></p>
+							<p>-post the url to Slack!</p>
+							<p>-check out some of your compatriots' code</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 4 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>More style attributes</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Back to Atom: </h3><h4>./exercises/style1.html</h4>
+							<p><a href="exercises/style1.html">link to our example file</a></p>
+						</li>
+					</ul>
+					<aside class="notes">
+						<ol>
+							<li>Styles applied to parent elements effect their children (nested) elements, unless that style is overwritten.</li>
+							<li>We can put a lot of styles on a single HTML element, but it gets messy.</li>
+							<li>We can apply the same style to every tag of a particular type (all paragraphs should be green), but we have to reapply it on each element.</li>
+							How can we improve the situation?
+						</ol>
+					</aside>
+				</section>
+			<!-- SLIDE 5 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>The style tag!</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Back to Atom: </h3><h4>./exercises/style1-ref.html</h4>
+						<p><a href="exercises/style1-ref.html">link to our example file</a></p>
+					</li>
+				</ul>
+				<aside class="notes">
+					<ol>
+						<li>CSS rules can be applied to an HTML page by placing them inside a style element inside the head element of the page.</li>
+						<li>We begin with a selector to indicate which elements the rules apply to. Then, inside of curly braces, we indicate how the elements should be styled. Declarations are split into two parts (a property and a value), are separated by a colon, and end with a semicolon.</li>
+						<li>Every HTML element can carry an id attribute to uniquely identify it. No two elements on the same page may have the same value for their id attributes. </li>
+						<li>Every HTML element can also carry one or more class names in a class attribute to identify several elements as being different from the other elements on the page.</li>
+						<li>Now we have seperated presentation from content. We can easily read the content of our HTML document without it being cluttered up with styles. By sharing styles we also save ourselves a lot of typing as we create larger and larger HTML documents.</li>
+					</ol>
+				</aside>
+			</section>
+			<!-- SLIDE 6 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Exercise 2 (30 minutes)</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Cleaning up your vacay: </h3><h4>CSS refactoring</h4>
+						<p>-clean up your vacation site</p>
+						<p>-be sure to use classes and ids!</p>
+						<p>-how efficient can you make your code?</p>
+						<p>-deploy (again) to firebase</p>
+					</li>
+				</ul>
+			</section>
+			<!-- SLIDE 7 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Getting Hyper-er</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li><h3>Connecting content: </h3><h4>anchors, iframes, audio</h4>
+							<p>on to ./exercises/example-media.html</p>
+							<p><a href="exercises/example-media.html">here's the link</a></p>
+						</li>
+					</ul>
+				</section>
+			<!-- SLIDE 8 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Challenge 1: Community 2.0</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Back to your community page: </h3><h4>add media!</h4>
+							<p>-add a contact email to your website</p>
+							<p>-embed a relevant YouTube video (<a href="https://support.google.com/youtube/answer/171780?hl=en">tutorial</a>)</p>
+							<p>-embed a Google Map to your future location (<a href="https://support.google.com/maps/answer/3544418?hl=en">tutorial</a>)</p>
+							<p>-add CSS styling (in a style tag) across the page!</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Add more style: </h3><h4>backgrounds!</h4>
+							<p>-add a background image to <code>body</code></p>
+							<p>-add a background image to a sigle <code>div</code></p>
+							<p>-style specific <code>div</code>s with classes and ids</p>
+						</li>
+					</ul>
+					<aside class="notes">
+						Try embedding a few of your other favorite web sites. If it doesn't show up, switch to the Console section of the Chrome Developer Tools [CMD + OPT + I] and look for an error message: "Refused to display"
+					</aside>
+				</section>
+			</section>
+			<!-- SLIDE 9 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Assignments and Resources</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Assignments: </h3><h4>finish today's exercises!</h4>
+						<p>Deploy all pages (vacation, community landing/about pages)</p>
+						<p>And make sure you've posted to Slack</p>
+						<p>Try out a few of the CSS properties below</p>
+					</li>
+					<li>
+						<h3>Resources: </h3><h4>bonus learning!</h4>
+						<p><a href="reference/css_colors.jpg">Hex Color table</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">CSS properties reference</a></p>
+						<p><a href="http://www.colorzilla.com/">ColorZilla Chrome Extension</a></p>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
