@@ -55,15 +55,19 @@
     </nav>
     <hr>
     <div class="container">
+        
+        <!--initial/default greeting-->
         <div id="greeting">
             <h3>Welcome to the Instructor Overview!</h3>
             <p>There are 4 weeks in this course, with 5 modules per week. Each module is equivalent to 3 hours of class/lecture time.</p>
             <p>To see the content for a specific module, please click on a Week and Module above.</p>
         </div>
+        
         <!--individual module content contained below-->
+        <!--WEEK 1-->
         <div id="wk1mod1" class="hidden">
-            <h3>Here's content for the first module!</h3>
-            <p>Look at all the pretty words.</p>
+            <br>
+            <script src="https://gist.github.com/NAlexPear/7ff5892dce25b31c1cd5.js"></script>
         </div>
         <div id="wk1mod2" class="hidden">
             <h3>Here's content for the second module!</h3>
@@ -77,11 +81,79 @@
             <h3>Here's content for the fourth module!</h3>
             <p>Look at all the pretty words.</p>
         </div>
-        <div id="wk1mod4" class="hidden">
+        <div id="wk1mod5" class="hidden">
             <h3>Here's content for the fifth module!</h3>
             <p>Look at all the pretty words.</p>
         </div>
+        
+        <!--WEEK 2-->
+        <div id="wk2mod1" class="hidden">
+            <h3>Here's content for the first module, second week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk2mod2" class="hidden">
+            <h3>Here's content for the second module, second week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk2mod3" class="hidden">
+            <h3>Here's content for the third module, second week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk2mod4" class="hidden">
+            <h3>Here's content for the fourth module, second week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk2mod5" class="hidden">
+            <h3>Here's content for the fifth module, second week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        
+        <!--WEEK 3-->
+        <div id="wk3mod1" class="hidden">
+            <h3>Here's content for the first module, third week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk3mod2" class="hidden">
+            <h3>Here's content for the second module, third week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk3mod3" class="hidden">
+            <h3>Here's content for the third module, third week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk3mod4" class="hidden">
+            <h3>Here's content for the fourth module, third week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk3mod5" class="hidden">
+            <h3>Here's content for the fifth module, third week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        
+        <!--WEEK 4-->
+        <div id="wk4mod1" class="hidden">
+            <h3>Here's content for the first module, fourth week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk4mod2" class="hidden">
+            <h3>Here's content for the second module, fourth week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk4mod3" class="hidden">
+            <h3>Here's content for the third module, fourth week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk4mod4" class="hidden">
+            <h3>Here's content for the fourth module, fourth week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
+        <div id="wk4mod5" class="hidden">
+            <h3>Here's content for the fifth module, fourth week!</h3>
+            <p>Look at all the pretty words.</p>
+        </div>
     </div>
+    
+    <!--SCRIPTS BELOW-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
         
@@ -104,6 +176,7 @@
             if($(id).hasClass('hidden')){
                 $('.container>div').addClass('hidden');
                 $(id).removeClass('hidden');
+                window.location.hash = id;
             }
         });
     </script>
