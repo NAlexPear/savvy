@@ -17,10 +17,7 @@
             color: grey;
             cursor: pointer;
         }
-        
-        nav ul li:hover{
-            color: black;
-        }
+
         #greeting{
             text-align: center;
         }
@@ -55,14 +52,14 @@
     </nav>
     <hr>
     <div class="container">
-        
+
         <!--initial/default greeting-->
         <div id="greeting">
             <h3>Welcome to the Instructor Overview!</h3>
             <p>There are 4 weeks in this course, with 5 modules per week. Each module is equivalent to 3 hours of class/lecture time.</p>
             <p>To see the content for a specific module, please click on a Week and Module above.</p>
         </div>
-        
+
         <!--individual module content contained below-->
         <!--WEEK 1-->
         <div id="wk1mod1" class="hidden">
@@ -70,8 +67,8 @@
             <script src="https://gist.github.com/NAlexPear/7ff5892dce25b31c1cd5.js"></script>
         </div>
         <div id="wk1mod2" class="hidden">
-            <h3>Here's content for the second module!</h3>
-            <p>Look at all the pretty words.</p>
+            <br>
+            <script src="https://gist.github.com/NAlexPear/fe8342e88bfdb8835eab.js"></script>
         </div>
         <div id="wk1mod3" class="hidden">
             <h3>Here's content for the third module!</h3>
@@ -85,7 +82,7 @@
             <h3>Here's content for the fifth module!</h3>
             <p>Look at all the pretty words.</p>
         </div>
-        
+
         <!--WEEK 2-->
         <div id="wk2mod1" class="hidden">
             <h3>Here's content for the first module, second week!</h3>
@@ -107,7 +104,7 @@
             <h3>Here's content for the fifth module, second week!</h3>
             <p>Look at all the pretty words.</p>
         </div>
-        
+
         <!--WEEK 3-->
         <div id="wk3mod1" class="hidden">
             <h3>Here's content for the first module, third week!</h3>
@@ -129,7 +126,7 @@
             <h3>Here's content for the fifth module, third week!</h3>
             <p>Look at all the pretty words.</p>
         </div>
-        
+
         <!--WEEK 4-->
         <div id="wk4mod1" class="hidden">
             <h3>Here's content for the first module, fourth week!</h3>
@@ -152,27 +149,36 @@
             <p>Look at all the pretty words.</p>
         </div>
     </div>
-    
+
     <!--SCRIPTS BELOW-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
-        
+
         var week;
         var module;
-        
+
+        // $('nav ul li').hover(function(){
+        //   $(this).css('color','black');
+        // },function(){
+        //   $(this).css('color','grey');
+        // });
+
         $('nav ul').on('click','li',function(){
-            
+
+            $(this).siblings().css('color','grey');
+            $(this).css('color','black');
+
             var target = $(this).text();
             var targetNumber = target.slice(-1);
-            
+
             if (target.match('Week')){
                 week = targetNumber;
             } else {
                 module = targetNumber;
             }
-            
+
             var id = '#wk' + week + 'mod' + module;
-            
+
             if($(id).hasClass('hidden')){
                 $('.container>div').addClass('hidden');
                 $(id).removeClass('hidden');
