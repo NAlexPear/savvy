@@ -310,7 +310,7 @@ While it's possible to link to HTML documents in your website with any name (as 
   1. Set the page up just like any other HTML document (see the emmet shortcut).
   2. Give the page a `<title>` of `Firstname Lastname | Projects`.
   3. Add an **ordered list** (`<ol>`) of the following projects:
-    + Classroom Showcase
+    + Class Showcase
     + Choose Your Own Adventure
     + Web Store Hack-A-Thon
 4. Now go back to your landing page (`/index.html`), and edit that file to include the following:
