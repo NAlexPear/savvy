@@ -122,7 +122,7 @@ While it's nice to have version control (through `git`) on your local machine, t
   + Make the title relevant to the content
   + Titles should be in all lowercase
   + Titles should be hyphen-separated (instead of space-separated)
-  ![example new repo](../../images/github.png)
+  ![example new repo](../../images/github.PNG)
 2. Next, we need to connect your local commits to this remote repository hosted by GitHub. Let's start with the `exercises` repository. Assume we named its GitHub counterpart `savvy-coders-exercises`. To start, we need to copy the HTTPS address of `savvy-coders-exercises` from GitHub. There should be a button to copy the URL of the remote repo, and it should look something like `https://github.com/YourExampleUsername/savvy-coders-exercises.git`.
 3. We need to tell our local `git` instance to push to `savvy-coders-exercises.git`. To do that, we'll set up the hosted repo as a **remote** with the following command:
 ```shell
@@ -139,3 +139,210 @@ $ git push origin master
 8. Be sure to star your classmates' repositories to keep track of their progress through GitHub!
 
 ---
+
+### Inlline Styles
+
+There are three ways to give HTML content some styles:
+
++ inline styles (the `style` attribute)
++ style tags (`<style` in document `<head>`)
++ stylesheets (external documents linked with `<link>`)
+
+Today, we're going to take a look at inline styles. Inline styles are generally avoided in production websites, but you'll still see them in the wild in old codebases or in some niche applications (like MailChimp templates). To get a feel for inline styles, take a look at the following code:
+
+```html
+  <body style="background-color:lightgrey">
+    <h1 style="color:blue">This is a heading</h1>
+    <h1 style="color:#AA22FF">Also a heading</h1>
+    <h1 style="color:rgb(0,255,255)">Moar!!</h1>
+    <p style="color:red;background-color:green">This is a paragraph.</p>
+    <img src="https://i.imgur.com/81qyN1y.jpg" style="height:100px;width:100px">
+  </body>
+```
+Try writing it out in a new HTML document in your `exercises` directory, then previewing the result in your browser. 
+
+So what have we learned?
+1. The value of the HTML attribute named style styles HTML elements
+2. The styles are described using a language called CSS. Here are the rules of CSS:
+3. CSS rules are key-value pairs (similar to HTML attributes)
+4. The key represent the property to be changed (like 'color' or 'background-color')
+5. The value represents what it should be changed to ('blue' or 'red')
+6. The key and value are seperated by a colon
+7. Each key-value pair is separated with a semi-colon
+8. Colors can be described by name, as eight digit hex (base 16) values between 0 (black) and F (white), or as Red Green Blue triplets from 0 to 255
+9. We can use the following css colors for our background-color and color attributes:
+![css color table](http://reactorprep.herokuapp.com/assets/images/css_colors.jpg)
+
+---
+
+### Portfolio Project 1
+
+Let's create a theme for your Portfolio Project's landing page. 
+
+1. Use the following attributes somewhere on the page:
+  + `background-color`
+  + `color`
+  + `width`
+  + `height`
+2. Make sure that all styles are inlined with the syntax `style=" "`
+3. Stage and commit your changes using `git`.
+4. Push your committed changes to your GitHub account.
+5. To make sure that these changes work in 'production' (e.g. live on the web), deploy your changes using `firebase` as well.
+
+---
+
+Let's try out a few more styles. We won't get to every CSS property today (or in this course), but you can always find an exhaustive and up-to-date list of every property at [this address](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) Try out the following HTML in your browser:
+
+```html
+  <h1 style="font-family:verdana;color:orange;">This is a heading</h1>
+  <p style="color:green;">This <i style="color:orange;font-size:300%">is</i> a paragraph.</p>
+  <p style="color:green;">This <i style="font-size:300%;">is</i> a paragraph.</p>
+  <p style="color:green;font-size:40px;text-align:center;font-family:'Times New Roman';">This is a paragraph.</p>
+```
+What did we learn?
+1. Styles applied to parent elements effect their children (nested) elements, unless that style is overwritten.
+2. We can put a lot of styles on a single HTML element, but it gets messy.
+3. We can apply the same style to every tag of a particular type (all paragraphs should be green), but we have to reapply it on each element.
+
+The last two points are reasons why inlining styles is generally frowned upon. So how do we solve that problem?
+
+---
+
+## The `<style>` tag
+
+So let's begin to refactor the mess above. CSS rules can be applied to an HTML page by placing them inside a `<style>` element inside the `<head>` element of the page.
+
+We begin with a selector to indicate which elements the rules apply to. Then, inside of curly braces, we indicate how the elements should be styled. Declarations are split into two parts (a property and a value), are separated by a colon, and end with a semicolon, like so:
+
+```html
+<html>
+    <head>
+    <style>
+      h1 {
+        font-family: verdana;
+      }
+      p {
+        color: green;
+      }
+      i {
+        font-size: 300%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color:orange;">This is a heading</h1>
+    <p>This <i style="color:orange;">is</i> a paragraph.</p>
+    <p>This <i>is</i> a paragraph.</p>
+    <p style="font-size:300%;text-align:center;font-family:'Times New Roman';">This is by far the most important part of the page!</p>
+  </body>
+</html>
+
+```
+
+Ok, so far, so good. We have styles common to tags of the same type as shared styles. How can we represent all the extra styling on that last `<p>` tag?
+
+Every HTML element can carry an `id` attribute to uniquely identify it. No two elements on the same page may have the same value for their `id` attributes. The css selector to match for an `id` starts with a hash (`#`).
+
+Here's how we might apply extra styling to the important `<p>` tag in this example:
+
+```html
+<html>
+  <head>
+    <style>
+      h1 {
+        font-family: verdana;
+      }
+      p {
+        color: green;
+      }
+      i {
+        font-size: 300%;
+      }
+      #primary {
+        font-size: 300%;
+        text-align: center;
+        font-family: 'Times New Roman';
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color:orange;">This is a heading</h1>
+    <p>This <i style="color:orange;">is</i> a paragraph.</p>
+    <p>This <i>is</i> a paragraph.</p>
+    <p id="primary">This is by far the most important part of the page!</p>
+  </body>
+</html>
+```
+Okay, now what about the two oranged elements?
+
+Every HTML element can also carry one or more `class` names in a `class` attribute to identify several elements as being different from the other elements on the page. The css selector to match for a class starts with a period (`.`). Here's how we might add a class to our example:
+
+```html
+<html>
+  <head>
+    <style>
+      h1 {
+          font-family: verdana;
+      }
+      p {
+        color: green;
+      }
+      .big {
+        font-size: 300%;
+      }
+      #primary {
+        text-align: center;
+        font-family: 'Times New Roman';
+      }
+      .important {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="important">This is a heading</h1>
+    <p>This <i class="important big">is</i> a paragraph.</p>
+    <p>This <i class="big">is</i> a paragraph.</p>
+    <p  id="primary" class="big">This is by far the most important part of the page!</p>
+  </body>
+<html>
+```
+
+Elements can have more than one class, but should only ever have a single id. Why is that?
+
+Now we have separated **presentation** from **content**. We can easily read the content of our HTML document without it being cluttered up with styles. By sharing styles we also save ourselves a lot of typing as we create larger and larger HTML documents.
+
+---
+
+### Portfolio Project 2
+
+**You will be judged** by professional developers for placing styles directly on HTML elements. Let's fix your Portfolio Project to reflect proper CSS design patterns:
+
+1. Purge your landing page's HTML elements of `style=" "` attributes. Move all styling to a `<style>` tag in the `<head>`
+2. Look for (or change your code to create) opportunities to use `id` and `class` attributes.
+3. Stage, commit, push, and deploy your new Portfolio Site
+
+---
+
+## More HTML elements
+
+### Portfolio Project 3
+
+Now it's time to add a few more elements to our Portfolio Project pages. 
+1. Anchor tags (`<a href=""></a>`) have been used already to link to websites using `http` or `https`. They can also be used to automatically draft an email and open it in a browser window for users to send! Try the following:
+    1. On your landing page, add a 'Contact Me' link.
+    2. Inside the `href` attribute, use `mailto:` + your email address instead of `http:` + a website URL. Your new element should look something like `<a href="mailto:your.email@example.com?Subject=Contact%20Form">Contact Me</a>`.
+2.`<iframe>` tags let you display an entire HTML document as part of your page. Try adding a map of your current location using [Google Maps](https://support.google.com/maps/answer/3544418?hl=en).
+3. Stage, Commit, Push and Deploy your new landing page!
+
+---
+
+### Portfolio Project 4
+
+With the time remaining, let's add a Media page to your portfolio project. That means creating a `media` directory with an `index.html` file at the root of the new directory, just like we did with our `projects` page. Once that's set up, run through the following steps:
+1. In your list of navigation links on your landing page, add a link to `media/`.
+2. Inside of `media`, try a few more [HTML5 media elements](http://www.w3schools.com/html/html5_new_elements.asp) (at the bottom of the linked page).
+3. Style your page with a style tag in the head of the document
+4. Stage, commit, push, and deploy your changes!
+
+--- 
