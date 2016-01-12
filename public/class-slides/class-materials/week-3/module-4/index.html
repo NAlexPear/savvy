@@ -260,4 +260,253 @@ var prop = 'year'
 					<section>
 						<ul class="list-content">
 							<li><h3>Pop Quiz: </h3><h4>How are Object properties different from other properties we've seen?</h4></li><br><br>
-							<li>We've seen 'properties' before, and used dot 
+							<li>We've seen 'properties' before, and used dot notation to access them (think about String.length or Array.forEach();).</li><br>
+							<li>What does this tell us about data types in JavaScript?</li>
+						</ul>
+					</section>
+				</section>
+				<!--SLIDE 4-->
+				<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>the 'for-in' loop</h1>
+						<span></span>
+					</div>
+					<pre><code class="javascript example">
+var obj = {
+    greeting: 'howdy',
+    direction: 'down',
+    color: 'red',
+    'spaces-and-dashes can be used': ' but need to have quotes'
+}
+
+for (var key in obj) {
+    console.log(obj[key]) //why don't we need quotes around key??
+    // what would happen if we logged obj.key instead? Why? Test it.
+}
+					</code></pre>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Exercise 5: </h3><h4>looping over cats</h4></li>
+						<ol>
+							<li>Use a for in loop to iterate over your cat, dream_car and dream_life objects. Re-write the loop from scratch each time and use a variable name other than key for each one.</li>
+							<li>Use a for in loop to search obj for the key color and use jQuery to append its value to a special div on your web page.</li>
+							<li>Search obj for the value "down", and append its key into the div.</li>
+							<li>Create a variable target_key and assign it a string "greeting". Use the target_key variable and for in to find the greeting property and append its value into the div.</li>
+						</ol>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Exercise 6: </h3><h4>looping over numbers</h4></li>
+						<pre><code class="javascript">
+var numbers = [2, 4, 5, 37, 0]
+var doubled_numbers = {} // should be { 2: 4, 4: 8, 5: 10, 37: 74, 0: 0 }
+						</code></pre>
+						<li>Take the array numbers and place each value into an empty object where the object's keys are the numbers and the values are double that number.</li>
+					</ul>
+				</section>
+				</section>
+				<!--SLIDE 5-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>String Operations</h1>
+							<span></span>
+						</div>
+						<pre><code class="javascript example">
+var greeting = "Hello and welcome!"
+
+greeting[0] // "H"
+
+!!greeting.match("welcome") // true
+!!greeting.match("goodbye") // false
+
+var words = greeting.split(' ')
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 7: </h3><h4>Famous Objects</h4></li><br><br>
+							<li>Loop through the 'famous' array add only people whose names start with 'a' to your favorites</li>
+						</ul>
+						<pre><code class="javascript example">
+var favorites = []
+
+var famous = ['alex smith', 'amy whinehouse', 'cameron diaz', 'brad pitt',
+    'ashton kutcher', 'mark whalberg', 'morgan freeman', 'mila kunis']
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 7 part 2: </h3><h4>Famouser Objects</h4></li>
+							<ol>
+								<li>Re-type the code from ./exercises/object2.js</li>
+								<li>Loop through the politicos object and add each person's name to the famous array.</li>
+								<li>Loop through the politicos object and add the names of jobs that people with Obama in their name hold to the obama_jobs array.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 7 part 3: </h3><h4>Famousest Objects</h4></li>
+							<ol>
+								<li>Create a new empty object b_named_politicos.</li>
+								<li>Add any politico whose first OR last name starts with a 'b' as a property of the b_named_politicos object with their job title as the key and their name as the value</li>
+								<li>Create a new empty object reverse_politico_lookup.</li>
+								<li>Create a reverse lookup table by iterating over the politicos object and adding each person to the reverse_politico_lookup object with their name as a key and their job title as the value.</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!--SLIDE 6-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>More Array/Object Weirdness</h1>
+							<span></span>
+						</div>
+						<pre><code class="javascript example">
+numbers[0]
+numbers["0"]
+
+doubled_numbers[0]
+doubled_numbers["0"]
+
+typeof 37 // 'number'
+typeof "hello" // 'string'
+typeof undefined // 'undefined'
+typeof function() {} // 'function'
+
+typeof { a: 1 } // 'object'
+typeof [ 1, 2, 3 ] // 'object' (?!?! not useful)
+
+Array.isArray({ a: 1 }) // false
+Array.isArray([ 1, 2, 3 ]) // true
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 8: </h3><h4>Type-tester</h4></li><br><br>
+							<li>Using the below as a starting point, write a function that takes any value and tells you what type it is. Make sure this handles Arrays correctly!</li>
+						</ul>
+						<pre><code class="javascript example">
+var type_tester = function(input) {
+    console.log(input)
+}
+
+type_tester(3)
+type_tester('hello')
+type_tester({})
+type_tester([])
+						</code></pre>
+					</section>
+				</section>
+				<!--SLIDE 7-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Mixing up Objects</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><h3>Object content: </h3><h4>./exercises/object3.js</h4></li>
+							<br>
+							<br>
+							<br>
+							<br>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 9: </h3><h4>Messin' with object3.js</h4></li><br><br>
+							<ol>
+								<li>Load complex_object from object3.js into a script tag in an HTML document.</li>
+								<li>Use jQuery to append complex_object's' string and number properties into a div id=primative_data_types</li>
+								<li>Iterate over each property in complex_object.array and use jQuery to append its value to a div id=array_values. Decide for yourself what to do in the case of objects or functions.</li>
+								<li>Place bob's name and location in their own div.</li>
+								<li>Make the code that logs 'beepity-beep' run.</li>
+								<li>Understand the various aspects of the complex_object.fn method</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 9 part 2: </h3><h4>Messin'++</h4></li><br><br>
+							<ol>
+								<li>Create your own complex object and try placing some of its properties on the page. How complex can you make it?</li>
+								<li>Give your object a property whose value is an array of other objects that themselves each have at least one function and one array property.</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Exercise 10: </h3><h4>./exercises/object4.js</h4></li><br><br>
+							<ol>
+								<li>Iterate over them_dogs and log each dog's name</li>
+								<li>Iterate over them_dogs and add all the toys to a new all_toys array.</li>
+								<li>Write a function that takes an array of dogs and a toy as an input and returns the name of the dog that owns that toy.</li>
+								<li>Using jQuery, place the pictures of each dog on a web page with its name underneath.</li>
+								<li>Create "Dogbook" (which is of course Facebook for dogs) and populate it using object4.js</li>
+							</ol>
+						</ul>
+					</section>
+				</section>
+				<!--SLIDE 8-->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Assignments and Resources</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Assignments: </h3><h4>Share your solutions</h4>
+							<p>...and reflect on how much you've learned!</p>
+							<br>
+						</li>
+						<li>
+							<h3>Resources: </h3><h4>Get ready for Friday</h4>
+							<p><a href="http://savvycoders.com/class-slides/class-materials/week-3/module-5/webstore-hackathon.md">Web Store Hack-a-thon!</a></p>
+						</li>
+					</ul>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
