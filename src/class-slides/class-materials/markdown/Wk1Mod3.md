@@ -40,6 +40,7 @@ L*et's add another page to our growing Portfolio Project! This page will be for 
     |   |-index.html
     |
     |-index.html
+    |-firebase.json (firebase configuration file)
     |-.git (hidden directory)
     |-.gitignore (hidden file)
     ```
@@ -51,11 +52,11 @@ L*et's add another page to our growing Portfolio Project! This page will be for 
 3. Inside the content area, make sure that you've used at least one of each of the following:
     1. A heading (e.g. `<h2>`)
     2. A paragraph tag (`<p>`)
-4. In a `<style>` tag in the head of the document, add some style for default HTML elements (`<body>`, `<div>`, `<h1>`, `<h2>`, `<p>`, and whatever else you've included in your HTML up to this point). 
+4. In a `<style>` tag in the head of the document, add some style for default HTML elements (`<body>`, `<div>`, `<h1>`, `<h2>`, `<p>`, and whatever else you've included in your HTML up to this point).
 5. Give each `<div>` section its own unique `id` (e.g. `navigation`, `header`, etc.), and give each `id` some unique styles in the `<style>` tag. Maybe different `width`s or `background-color`s?
 6. Add some `<span>` tags to some of the important text in your post, and give those `<span>` elements a `class` of `highlight`. Then add some special styles to those elements to make them stand out a bit from the rest of your post.
 7. Stage, commit, push, and deploy your updated site!
- 
+
 ---
 
 ## The CSS Box Model
@@ -77,7 +78,7 @@ Try putting a border around each "boxed" element while you try out a few of the 
     }
     ```
     You can also assign different values to the `padding` on each side of an element with specific properties (e.g. `padding-left`, `padding-right`, etc.) or through the shorthand `padding` property. As an example, the following three `padding` constructs compile to the same appearance:
-    
+
     ```css
     div {
         padding-top: 5px;
@@ -121,7 +122,7 @@ Try putting a border around each "boxed" element while you try out a few of the 
 
 Now let's add some structure and spacing in our blog post! Try out the following:
 
-1. Create a class called `container`, and apply it to every top-level `<div>`. 
+1. Create a class called `container`, and apply it to every top-level `<div>`.
 2. Give `container` the following CSS properties:
 
     ```css
@@ -186,7 +187,7 @@ These rules might seem like overkill right now, but they're extremely useful for
 
 ## Stylesheets
 
-While the `<style>` tag works for individual pages, it doesn't work well for scaling styles. Instead, it's better for each page to reference a single **stylesheet**, containing all of the CSS rules for the page. By keeping all of your CSS rules in an external document, you'll find that it's easier to make changes across a website, maintain separate roles on a dev team, and save yourself from early-onset carpal tunnel because of re-typing. 
+While the `<style>` tag works for individual pages, it doesn't work well for scaling styles. Instead, it's better for each page to reference a single **stylesheet**, containing all of the CSS rules for the page. By keeping all of your CSS rules in an external document, you'll find that it's easier to make changes across a website, maintain separate roles on a dev team, and save yourself from early-onset carpal tunnel because of re-typing.
 
 Let's create a stylesheet for our Portfolio Project that applies to all of our pages!
 
@@ -201,13 +202,11 @@ Let's create a stylesheet for our Portfolio Project that applies to all of our p
     ```html
     <!-- for your landing page -->
     <link type="text/css" rel="stylesheet" href="css/style.css"/>
-    
+
     <!-- for all other pages -->
-    <link type="text/css" rel="stylesheet" href="../css/style.css"/> 
+    <link type="text/css" rel="stylesheet" href="../css/style.css"/>
     ```
     *Do you know why we need different `href` values for our landing page and our media, projects, and blog pages?
 3. At this point, there shouldn't be any difference in the way your pages look or behave, since there's nothing in `style.css`. For now, you should stage, commit, push, and deploy your page to make sure that everything looks the same in the browser.
 4. Now we need to refactor all of the styles across pages. Copy all of the styles from each page into `style.css` page-by-page, starting with your blog page. Make sure you get each page looking like you'd like it. Remember that all CSS properties from here on out are shared between pages! If you need to make changes to your HTML to better organize your styles, that's OK, too.
 5. Once every page is looking good, stage, commit, push, and deploy your changes. And congrats on your pretty new Portfolio site!
-
-
