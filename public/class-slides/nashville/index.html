@@ -1,0 +1,749 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Savvy Coders: Intro Class Presentation</title>
+
+		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
+		<meta name="author" content="the Savvy Coder Team">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!--Google Fonts-->
+	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!--SLIDE 1-->
+			<div class="slides">
+				<section data-background="../theme/images/headerShort.png">
+					<h2 style="position: fixed; top:300px;">introduction to programming</h2>
+				</section>
+			<!--SLIDE 2-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>...what's this all about?</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Who: </h3><h4>Alex Pearson</h4>
+								<p>Curriculum/Tech Guy/Instructor</p>
+							</li><br>
+							<li><h3>What: </h3><h4>an intro to your first website</h4></li><br>
+							<li>Overview of Programming</li>
+							<li>Intro to HTML/CSS</li>
+							<li>Crash Course in JavaScript/JQuery integration</li>
+						</ul>
+					</section>
+					<section>
+							<h3>Why: </h3><h4>to get you excited about programming!</h4>
+							<p>https://savvycoders.com</p>
+					</section>
+				</section>
+			<!--SLIDE 3-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Goals of this Class</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>1: </h3><h4>Learn about software development</h4>
+								<p>What is programming?</p>
+								<p>What does a programmer do?</p>
+								<br>
+							</li>
+							<li>
+								<h3>2: </h3><h4>Learn about "the Web"</h4>
+								<p>What is "the Internet"?</p>
+								<p>How do I make the Web do what I want?</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>3: </h3><h4>Build your first website!</h4>
+					</section>
+				</section>
+			<!--SLIDE 4-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Things needed for class today</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Computer: </h3><h4>Mac, Windows, or Linux</h4>
+								<p>No Chromebooks (sorry)</p>
+								<br>
+							</li>
+							<li>
+								<h3>Wi-Fi: </h3><h4>Connection info below</h4>
+							</li>
+								<br>
+							<li><span>Name: </span>Refinery</li>
+							<li><span>Password: </span>Refinery263</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Brackets: </h3><h4>A free IDE/text editor from Adobe</h4><br>
+								<span>Download link: </span>http://brackets.io
+								<br><br>
+							</li>
+							<li>
+								<h3>Browser: </h3><h4>Chrome only, please</h4><br>
+								Download from Google
+								<br><br>
+							</li>
+							<li>
+								<h3>Template Files .zip: </h3><h4>download online</h4><br>
+								https://github.com/NAlexPear/savvy-intro/tree/class
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Extracted Template Files: </h3><h4>"Extract to..."</h4><br>
+								Don't forget where you extracted those files!
+								<br><br>
+							</li>
+							<li>
+								<h3>Open Project in Brackets: </h3><h4>File > Open Folder</h4><br>
+								Open the top-level folder that you extracted
+								<br><br>
+							</li>
+							<li>
+								<h3>Live Preview: </h3><h4>Set up HTML preview</h4><br>
+								In brackets, display "index.html" and click the lightning bolt (top-right corner sidebar)
+								<br><br>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 5-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>Quick Breather! (5 minutes)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Everything ready to go?</h3>
+							<br>
+						</li>
+						<li>
+							<br>
+							<ol>
+								<li>Introduce yourself to a neighbor</li>
+								<li>Ask them about their laptop/OS</li>
+								<li>Ask them about previous programming experiences</li>
+								<li>Introduce your new friend to someone else</li>
+							</ol>
+						</li>
+						<li>
+							<br>
+							<h4>Any questions? Ask Alex!</h4>
+						</li>
+					</ul>
+				</section>
+			<!--SLIDE 6-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1 style="text-align: right;">Exercise 1: am I programming?</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<br>
+							<h3>...let's go to brackets!</h3>
+							<br>
+						</li>
+					</ul>
+					<aside class="notes">
+						<ol>
+							<li>take a look at index.html</li>
+							<li>in the &lt;title&gt; part of the document, change the title of the webpage to whatever you’d like</li>
+							<li>in the &lt;body&gt;&lt;div class=”header”&gt;&lt;h1&gt;&lt;/h1&gt;&lt;/div&gt;&lt;/body&gt; section, change the intro text to whatever you’d like</li>
+							<li>in the &lt;body&gt;&lt;div class=”header”&gt;&lt;h3&gt;&lt;/h3&gt;&lt;/div&gt;&lt;/body&gt; section, change the “programming is fun” text to whatever you’d like!</li>
+							<li>Notice how the text is instantly updated in the preview file. That’s because the browser is just reading a text document like you or I. </li>
+						</ol>
+						Go through quick "am I programming" test
+						HTML = NOUNS
+						CSS = ADJECTIVES
+						Programming = VERBS
+					</aside>
+				</section>
+			<!--SLIDE 7-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>What is 'programming'?</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>"verbs" : </h3><h4>JavaScript = functions</h4>
+								<pre><code data-trim class="javascript">2 + 3</code></pre>
+								<br>
+								<pre><code data-trim class="javascript">
+console.log("Here's a string!");
+								</code></pre>
+								<br>
+								<pre><code data-trim class="javascript">
+var doThis = function(){
+	thing to do
+};
+									</code></pre>
+								<br>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								<h3>Where is programming used? </h3>
+								<br>
+								<h4>@ every "level" of computing!</h4>
+								<br><br>
+								Hardware/Architecture (10001100110)<br>
+								between Hardware and OS</br>
+								within an OS (through terminals, consoles)<br>
+								on top of an OS (through programs, VMs)<br>
+								within programs (like browsers!)<br>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!--SLIDE 8-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>What is 'the Web'?</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>The Web: </h3><h4>a series of connections to data</h4>
+							<p>Users > browsers > the Internet > servers</p>
+							<p>communicating through HTTP & HTTPS, etc.</p>
+						</li>
+						<ul id="diagram">
+							<li>
+								<img src="images/hitman-user.png">
+								users
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/window-icon-hi.png">
+								browser
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/cloud.png">
+								internet
+							</li>
+							<li class="arrow">
+								<img src="images/arrow.png">
+							</li>
+							<li>
+								<img src="images/servers.png">
+								servers
+							</li>
+						</ul>
+					</ul>
+					<aside class="notes">
+						For today:
+						<ol>
+							<li>
+								only users->browsers
+							</li>
+							<li>
+								only static content (even with Javascript)
+							</li>
+						</ol>
+					</aside>
+				</section>
+			<!--SLIDE 9-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Dissecting the document</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>HTML: </h3><h4>"Hyper-Text Markup Language"</h4>
+							</li>
+							<li>
+								<p>Hyper-Text = links, Markup = attributes/style</p>
+								<br>
+							</li>
+							<li>
+								<h3>DOM: </h3><h4>"Document-Object Model"</h4>
+							</li>
+							<li>
+								<p>Document structure</p>
+							</li>
+						</ul>
+						<aside class="notes">
+							<ul>
+								<li>HTML set up (DOM):</li>
+								<li>HTML = fancy text</li>
+								<li>Browser contains rules for fancy HTML</li>
+								<li>Extra-Textual info = “Markup”</li>
+								<li>Markup = TAGS</li>
+							</ul>
+						</aside>
+					</section>
+					<section>
+						<div class="dom">
+							<div id="document-wrapper">
+								<h4>document</h4>
+								<div id="html-wrapper">
+									<h4>html</h4>
+									<div id="head-wrapper">
+										<h4>head</h4>
+										<p>METADATA</p>
+									</div>
+									<div id="body-wrapper">
+										<h4>body</h4>
+										<div class="div-wrapper">
+											<h4>div</h4>
+											<p>VISIBLE</p>
+										</div>
+										<div class="div-wrapper">
+											<h4>div</h4>
+											<p>STUFF</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="dom-html">
+						<pre><code data-trim class="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+	&lt;title&gt;&lt;/title&gt;
+	&lt;link rel="stylesheet"&gt;
+	&lt;script&gt;&lt;/script&gt;
+   &lt;/head&gt;
+  &lt;body&gt;
+	&lt;div&gt;
+	  &lt;h1&gt;&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div&gt;
+	  &lt;p&gt;&lt;/p&gt;
+	&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+						</code></pre>
+						</div>
+						<aside class="notes">
+						<ol>
+							<li> go over differences between meta tags, content tags, and DOM tags</li>
+							<li>(EXPLAIN DOM DIAGRAM FROM THE OUTSIDE IN) + what you might find in each section.</li>
+						</ol>
+						Some things to try out:
+						<ol>
+							<li>remind folks about title tag</li>
+							<li>comment out stylesheet</li>
+							<li>add calculator.js in the head</li>
+							<li>mess with img tags</li>
+							<li>mess with anchor tags</li>
+							<li>look at button-div</li>
+						</ol>
+					</aside>
+					</section>
+				</section>
+			<!--SLIDE 10-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>Quick Breather! (5 minutes)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Anything need to be reviewed?</h3>
+							<br>
+						</li>
+						<li>
+							<br>
+							<ol>
+								<li>Ask your neighbor (or Alex) questions you have</li>
+								<li>Tell your neighbor how much you love HTML/CSS</li>
+								<li>Get hyped for JavaScript!</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+			<!--SLIDE 11-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1 style="text-align: right;">We get to program! (finally)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<br>
+							<h3>...let's go to Chrome (and the developer console: CTRL + SHIFT + J)</h3>
+							<br>
+						</li>
+					</ul>
+					<aside class="notes">
+						We’re going to try out some of the simple concepts in the Javascript Console that comes packaged with Google Chrome. Everybody should open up the console with “control + shift + j”. This is how we’ll begin telling the browser what to do!
+						<br>Try typing in some simple math (addition, multiplication, division). Notice how the browser responds to our commands, rather than simply outputting text. Also, note how we can cause errors pretty easily when we screw something up!
+						<br>The nice thing about computers (and programming) is that they do exactly what you tell them to do. The frustrating thing about programming is that computers do exactly what you tell them to do. If there’s a bug, it’s your fault!
+						<br>To transition: Test for 2+2 vs “2”+”2”
+					</aside>
+				</section>
+			<!--SLIDE 12-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>JavaScript Building Blocks</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Data Types: </h3><h4>3 used in calculator.js</h4>
+								<p>- number</p>
+								<p>- string ("hello world")</p>
+								<p>- boolean (TRUE/FALSE)</p>
+								<br>
+							</li>
+							<li>
+								<h3>Operators part 1: </h3><h4>assignment</h4>
+								<p>- for variables: =, +=, -=, *=, /=, %=</p>
+							</li>
+						</ul>
+						<aside class="notes">
+							We can do things to and with these data types by using operators. Operators allow us to manipulate data of certain types or allow us to extract information about those types. It’s how we make the sentences of programming. Most of the time, operators work best when you’ve saved the data you’re using in a variable. 
+							<br>Variables allow you to save data values (or functions, which we’ll see later), name them, and then bring them up later for use. You’ll be using a lot of variables as you start programming. Let’s make your first couple with some assignment operators. The most important one (=) simply assigns a value to a variable. Let’s try some of these:
+							<ol>
+								<li>var myName = “Alex”;</li>
+								<li>var myAge = 26;</li>
+								<li>console.log(“Hi, my name is “ + myName + “ and I am “ + myAge + “ years old.”);</li>
+							</ol>
+						</aside>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Operators part 2: </h3><h4>data-type specific</h4>
+								<p>- numbers: +, -, *, /, %, ++, --</p>
+								<p>- strings: +, +=</p>
+								<p>- boolean: ===, !==, >, <, >=, <=, &&, ||</p>
+							</li>
+						</ul>
+						<aside class="notes">
+							<ol>
+								<li>console.log(myAge++);</li>
+								<li>console.log(myAge);</li>
+								<li>console.log(++myAge);</li>
+								<li>myAge+=2</li>
+								<li>var greeting = "Hello, my name is";</li>
+								<li>console.log(greeting + “ “ + myName);</li>
+								<li>var ageCheck = function(){if(myAge === 26){
+									console.log(“hooray!”);
+									} else { console.log(“you done goofed”);};
+								</li>
+								<li>ageCheck();</li>
+								<li>myAge += 3;</li>
+								<li>ageCheck();</li>
+							</ol>
+						</aside>
+					</section>
+				</section>
+			<!--SLIDE 13-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>JavaScript Building Blocks 2</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Functions: </h3><h4>like variables for blocks of code</i></h4>
+							<p>- totally customizeable (within rules)</p>
+							<p>- save functions as a var (variable)</p>
+							<p>- call functions instead of repeating code</p>
+						</li>
+						<li>
+							<pre><code data-trim class="javascript">
+var doSomething = function(parameters){
+stuff to do;
+};
+
+doSomething(parameters);
+								</code></pre>
+							<br>
+						</li>
+					</ul>
+					<aside class="notes">
+						Go through ageCheck example with booleans!
+					</aside>
+				</section>
+			<!--SLIDE 14-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>JQuery: </h3><h4>extends JS's built-in functions</h4>
+								<p>- linked in &lt;head&gt; of document</p>
+								<p>- makes "Events" easier to implement</p>
+								<p>- integrates with JavaScript</p>
+								<br>
+								<pre><code data-trim class="javascript">
+										$('html or css selectors').doSomething();
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var calc = function(){ };
+
+$(document).ready(function(){
+	$('#button').click(function(){
+		calc();
+	});
+});
+							</code></pre>
+						</div>
+					</section>
+				</section>
+			<!--SLIDE 15-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator 2</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Back to JavaScript: </h3><h4>building calc();</h4>
+								<p>- gather user input: prompt();</p>
+								<p>- build functions for each operation</p>
+								<span style="color:#c42205;font-family:monospace;opacity:1;display: inline;">return </span><p style="display:inline;">answers from each function</p>
+								<br>
+							</li>
+							<li>
+								<br>
+								<pre><code data-trim class="javascript">
+var calc = function(){
+	var input1 = //something;
+	var input2 = //something;
+};
+								</code></pre>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var calc = function(){
+	//Store user inputs
+	var input1 = prompt("Here's a prompt");
+	var input2 = prompt("Prompts take strings as a parameter");
+	
+	//Build math operations
+	var add = function(num1, num2){
+		return num1+num2;
+	};
+};
+							</code></pre>
+						</div>
+					</section>
+				</section>
+			<!--SLIDE 16-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Building a Calculator 3</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Program Design: </h3><h4>user interaction</h4>
+								<p>- gather user input with prompt();</p>
+								<p>- how do we want the user to interact with calculator operations?</p>
+								<p>- how do we customize user experience?</p>
+								<p>- what data types and operators can we (programmers) use?</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var operation = prompt("What would you like to do?");
+
+if(operation === something){
+	alert(some function);
+} else if (something else) {
+	alert(some other function);
+};
+							</code></pre>
+						</div>
+					</section>
+				</section>
+			<!--SLIDE 17	-->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../theme/images/icons/SavvyFavicon.png">
+							<h1>Breaking our Calculator</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>Designing for Dumb: </h3><h4>how can users break calculator.js?</h4>
+								<p>- what if users don't know what numbers are?</p>
+								<p>- what if users don't know what operations are valid or supported?</p>
+								<p>- how can we communicate errors to users?</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="example">
+							<pre><code data-trim class="javascript">
+var num1 = parseInt(input1, 0);
+
+if(isNaN(num1) === true || isNaN(num2) === true){
+	//tell the user something is wrong
+} else {
+	//carry on
+};
+							</code></pre>
+						</div>
+					</section>
+				</section>
+			<!--SLIDE 18-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>Calculator v2.0</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Ta dah!</h3>
+							<h4>...but what's next?</h4>
+						</li>
+						<li>
+							<br>
+							<br>
+							<br>
+							<br>
+							<h4>What would you add to </h4><h3>calculator.js </h3><h4>v2.0?</h4>
+						</li>
+					</ul>
+				</section>
+			<!--SLIDE 19-->
+				<section>
+					<div id="slide-header">
+						<img src="../theme/images/icons/SavvyFavicon.png">
+						<h1>Thanks, and see you in class!</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Thanks for coding with me today</h3>
+							<h4>http://savvycoders.com</h4>
+						</li>
+						<li>
+						<br>
+						<li><h3>Next Class: </h3><h4>Starts Jan. 25th!</h4></li>
+						<li>$1799 for 60 hours of instruction</li>
+						</li>
+						<ul id="contact">
+							<li><h3>LinkedIn: </h3><h4>https://www.linkedin.com/in/nalexpearson</h4></li>
+							<li><h3>email: </h3><h4>alex@savvycoders.com, info@savvycoders.com</h4></li>
+							<li><h3>twitter: </h3><h4>@NAlexPear (Alex), @SavvyCoders (Savvy Coders)</h4></li>
+							<li><h3>GitHub: </h3><h4>NAlexPear</h4></li>
+						</ul>
+					</ul>
+				</section>
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
