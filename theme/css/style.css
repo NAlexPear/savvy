@@ -81,21 +81,11 @@ hr {
     min-width: 960px;
     height: 3.5em;
     margin: 0 auto;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-            -webkit-align-content: center;
-            align-content: center;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     padding-right: 1em; }
     #menubar ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
@@ -128,29 +118,18 @@ hr {
     color: #ffffff;
     height: 2.1em;
     background-color: #07c4dd;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer; }
     #menubar div.overflow > div {
       position: relative; }
       #menubar div.overflow > div span::before {
-        transition: -webkit-transform 0.3s;
         transition: transform 0.3s;
-        transition: transform 0.3s, -webkit-transform 0.3s;
         display: inline-block; }
       #menubar div.overflow > div.turnt span::before {
-        transition: -webkit-transform 0.3s;
         transition: transform 0.3s;
-        transition: transform 0.3s, -webkit-transform 0.3s;
-        -webkit-transform: rotate(90deg);
-                transform: rotate(90deg); }
+        transform: rotate(90deg); }
     #menubar div.overflow .dropdown {
       z-index: 1;
       list-style-type: none;
@@ -308,16 +287,16 @@ hr {
     #contact-form a:hover {
       border-bottom: none; }
 
-#infobubbles {
+.infobubbles {
   list-style-type: none;
   display: table;
   table-layout: fixed;
   width: 100%; }
-  #infobubbles li {
+  .infobubbles li {
     display: table-cell;
     text-align: center;
     vertical-align: middle; }
-  #infobubbles img {
+  .infobubbles img {
     height: 15vmin;
     width: 15vmin; }
 
@@ -394,8 +373,7 @@ hr {
   -moz-column-break-before: always;
   /* Firefox */
   -ms-column-break-before: always;
-  page-break-before: always;
-       break-before: always;
+  break-before: always;
   opacity: 0.8; }
 
 footer {
@@ -534,3 +512,5 @@ iframe {
     position: relative;
     margin-left: auto;
     margin-right: auto; } }
+
+/*# sourceMappingURL=style.css.map */
