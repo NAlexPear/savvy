@@ -21,8 +21,18 @@
   //DEVELOPMENT ENVIRONMENT TASKS (for ./build)
     //port in relevant content without any async operations
     gulp.task('dev-port',function(){
-      gulp.src(['_site/blog/','_site/index.html','_site/src/**/*','!_site/src/blog/','theme/'])
-        pipe(gulp.dest('./build'))
+      gulp.src(['_site/index.html','_site/src/**/*','!_site/src/blog','./theme'])
+        .pipe(gulp.dest('build/'));
+      gulp.src('_site/blog/**/*')
+        .pipe(gulp.dest('build/blog/'));
+      gulp.src('theme/**/*')
+        .pipe(gulp.dest('build/theme/'));
+      gulp.src('node_modules/jquery/**/*')
+        .pipe(gulp.dest('build/node_modules/jquery'));
+      gulp.src('node_modules/picturefill/**/*')
+        .pipe(gulp.dest('build/node_modules/picturefill'));
+      gulp.src('theme/fonts/themify-icons/fonts/**/*')
+        .pipe(gulp.dest('build/theme/fonts/'));
     });
 
     //browserSync server

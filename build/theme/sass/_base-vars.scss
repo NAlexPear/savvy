@@ -1,0 +1,39 @@
+// COLOR VARS
+$bg : #2B2B2B;
+$bgl: #8e8e8e;
+$accent: #07c4dd;
+$hl: #ffffff;
+
+// FONTS
+$tfont: 'Kreon', serif;
+$bfont: 'Quicksand', sans-serif;
+
+//baseline toggle classes (sorry for the important banger...)
+.hidden{
+  display: none!important;
+}
+
+//mobile-desktop display-switch classes
+#mission-mobile{
+  display: none;
+}
+#mission-desktop{
+  display: block;
+}
+
+@media screen and (max-width: 640px) {
+  .mobile-only{
+    display: block;
+  }
+  .desktop-only{
+    display: none;
+  }
+}
+@media screen and (min-width: 641px) {
+  .mobile-only{
+    display: none;
+  }
+  .desktop-only{
+    display: block;
+  }
+}
