@@ -17,7 +17,25 @@
     var autoprefixer = require('gulp-autoprefixer');
     var sync = require('browser-sync').create();
 
-  //PRE-BUILD UTITLITIES (outside of ./public)
+
+  //DEVELOPMENT ENVIRONMENT TASKS (for ./build)
+    //port in relevant content without any async operations
+    gulp.task('dev-port',function(){
+      gulp.src(['_site/blog/','_site/index.html','_site/src/**/*','!_site/src/blog/','theme/'])
+        pipe(gulp.dest('./build'))
+    });
+
+    //browserSync server
+    gulp.task('serve', ['dev-port'], function(){
+      sync.init({
+        server:{
+          baseDir: "./build"
+        }
+      });
+      gulp.watch('_site/**/*').on('change', sync.reload);
+    });
+
+  //DEPLOYMENT BUILD TASKS (outside of ./public)
     //css auto-prefixer for compatibility (pre-build)
     gulp.task('autoprefixer', function(){
       return gulp.src('./theme/css/*.css')
@@ -28,19 +46,7 @@
         .pipe(gulp.dest('./theme/css/'));
     });
 
-  //PRE-DEPLOYMENT WATCH TASKS
-    //browserSync server
-    gulp.task('serve',['async'],function(){
-      sync.init({
-        server:{
-          baseDir: "./public"
-        }
-      });
-      gulp.watch('_site/**/*.html', ['async']);
-      gulp.watch('_site/**/*.html').on('change', sync.reload);
-    });
-
-  //PRE-DEPLOYMENT BUILD TASKS (in ./public)
+  //DEPLOYMENT BUILD TASKS (in ./public)
     //Porters of content outside of _site directory
     gulp.task('font-port', function(){
       gulp.src(['theme/fonts/themify-icons/fonts/**/*'])
