@@ -83,6 +83,7 @@ hr {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     align-content: center;
@@ -130,22 +131,6 @@ hr {
       #menubar div.overflow > div.turnt span::before {
         transition: transform 0.3s;
         transform: rotate(90deg); }
-    #menubar div.overflow .dropdown {
-      z-index: 1;
-      list-style-type: none;
-      opacity: 0;
-      position: absolute;
-      top: -500px;
-      right: 0;
-      background-color: #8e8e8e; }
-      #menubar div.overflow .dropdown li {
-        text-align: left;
-        font-size: 0.75em; }
-      #menubar div.overflow .dropdown.mobile-only {
-        top: 32px;
-        right: -100px;
-        width: 100px;
-        height: 100vh; }
 
 .icon-bar {
   list-style-type: none;
