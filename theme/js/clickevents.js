@@ -28,13 +28,6 @@ var Click = function () {
       //toggle dropdown visibility
       drop($dropdown);
     });
-
-    //attach event listener to dropdown menu items
-    $dropdown.children('li').on('click','a', function () {
-      //toggle dropdown visibility
-      console.log($dropdown.attr('class'));
-      drop($dropdown);
-    });
   };
   //scroll to IDs on the page
   obj.scroller = function(){
