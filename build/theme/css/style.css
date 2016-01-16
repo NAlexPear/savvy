@@ -71,30 +71,27 @@ hr {
   z-index: 1;
   position: fixed;
   background-color: #07c4dd;
-  width: 100%;
+  width: 100vw;
   margin-top: 0px;
   height: 3.5em; }
   #menubar ul.navbubbles {
     z-index: 2;
     list-style-type: none;
     max-width: 1080px;
-    min-width: 960px;
     height: 3.5em;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
     padding-right: 1em; }
     #menubar ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
       font-weight: 400;
-      font-size: 1.5em; }
-      @media screen and (max-width: 640px) {
-        #menubar ul.navbubbles > li {
-          font-size: 1.275em; } }
+      font-size: 1.5em;
+      padding: 0.3em; }
       #menubar ul.navbubbles > li a {
         color: #ffffff;
         transition: 0.3s color; }
@@ -131,6 +128,12 @@ hr {
       #menubar div.overflow > div.turnt span::before {
         transition: transform 0.3s;
         transform: rotate(90deg); }
+  #menubar #about {
+    position: relative; }
+    #menubar #about ul.dropdown {
+      list-style-type: none;
+      position: absolute;
+      background-color: #8e8e8e; }
 
 .icon-bar {
   list-style-type: none;

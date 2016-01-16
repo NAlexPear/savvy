@@ -4,7 +4,7 @@
     z-index: 1;
     position: fixed;
     background-color: $accent;
-    width: 100%;
+    width: 100vw;
     margin-top: 0px;
 
     $height: 3.5em;
@@ -13,14 +13,13 @@
       z-index: 2;
       list-style-type:none;
       max-width: 1080px;
-      min-width: 960px;
       height: $height;
       margin: 0 auto;
 
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
       align-content: center;
 
@@ -30,10 +29,8 @@
         font-family: $bfont;
         font-weight: 400;
         $fs: 1.5em;
-        @media screen and (max-width: 640px) {
-          font-size: $fs*0.85;
-        }
         font-size: $fs;
+        padding: $fs/5;
         a{
           color: $hl;
           transition: 0.3s color;
@@ -86,6 +83,15 @@
             transform: rotate(90deg);
           }
         }
+      }
+    }
+    #about {
+      position: relative;
+      ul.dropdown{
+        padding: 0;
+        list-style-type: none;
+        position: absolute;
+        background-color: $bgl;
       }
     }
   }

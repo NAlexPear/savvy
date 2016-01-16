@@ -5,45 +5,34 @@ var Click = function () {
 
   //PRIVATE
   //helpers for Priority Plus menu
-    //set screenwidths at which the more-less button appears
-    var makeVisible = function ($target) {
-      if($(window).width() < 1000 && $target.hasClass('hidden')){
-        $target.removeClass('hidden');
-      }
-    };
-    //rotate arrow using CSS transforms, used in more_less()
-    var arrow = function ($target) {
-      var $newTarget = $target.children('div');
-      if($newTarget.hasClass('turnt')){
-        $newTarget.removeClass('turnt');
-      } else {
-        $newTarget.addClass('turnt');
-      }
-    };
-    //set up function to change MORE to LESS on different events
-    var more_less = function ($target) {
-      //include arrow-turning function
-      arrow($target);
-      //set text changes for MORE-LESS
-      var $newTarget = $target.children('div').children('span.more-less');
-      var text = $newTarget.text();
-      if(text === 'MORE'){
-        $newTarget.text('LESS');
-      } else {
-        $newTarget.text('MORE');
-      }
-    };
-
+  var drop = function ($dropdown) {
+    if ($dropdown.hasClass('hidden')){
+      $dropdown.removeClass('hidden');
+    } else {
+      $dropdown.addClass('hidden');
+    }
+  };
 
   //PUBLIC
   //Priority Plus menu JavaScript
-  obj.priorityMenu = function () {
-    var $target = $('.overflow');
-    //make the more-less button and arrow visible when appropriate
-    makeVisible($target);
-    //attach event listener to click on the more-less button
-    $target.on('click',function(){
-      more_less($target);
+  obj.priorityMenu = function (id) {
+    var $target = $(id);
+    var $dropdown = $target.children('ul.dropdown');
+
+    //attach event listener to a specific anchor tag with a dropdown
+    $target.on('click', 'a', function(){
+      //quick default anchor tag prevention
+      if($target.attr('href') === '#'){
+        event.preventDefault();
+      }
+      //toggle dropdown visibility
+      drop($dropdown);
+    });
+
+    //attach event listener to dropdown menu items
+    $dropdown.on('click','li>a', function () {
+      //toggle dropdown visibility
+      drop($dropdown);
     });
   };
   //scroll to IDs on the page

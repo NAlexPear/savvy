@@ -5,7 +5,7 @@
   Click.scroller();
   Click.slides();
   Click.faq();
-  Click.priorityMenu();
+  Click.priorityMenu('#about');
 
   //scroll events
   $(window).scroll(
