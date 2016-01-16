@@ -8,9 +8,12 @@
   Click.priorityMenu('#about');
 
   //scroll events
-  $(window).scroll(
-    function () {
+    //check for position on page load, too
+    Scroll.fadeIn();
+    //run events when the window is scrolled
+    $(window).scroll(function() {
       Scroll.fadeIn();
     });
+
 
 }(window, document, window.jQuery, Click(), Scroll() ));
