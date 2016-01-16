@@ -30,22 +30,28 @@ var Click = function () {
     });
 
     //attach event listener to dropdown menu items
-    $dropdown.on('click','li>a', function () {
+    $dropdown.children('li').on('click','a', function () {
       //toggle dropdown visibility
+      console.log($dropdown.attr('class'));
       drop($dropdown);
     });
   };
   //scroll to IDs on the page
   obj.scroller = function(){
-      $('a').click(function(){
-          var href = $.attr(this, 'href');
-          $('html, body').animate({
-              scrollTop: $(href).position().top
-          }, 700, function () {
-          window.location.hash = href;
-      });
-          return false;
-      });
+    $('a').click(function(){
+      var href = $.attr(this, 'href');
+      //only run if href points to something other than '#'
+      if (href === '#'){
+        event.preventDefault();
+      } else {
+        $('html, body').animate({
+            scrollTop: $(href).position().top
+        }, 700, function () {
+            window.location.hash = href;
+        });
+      }
+
+    });
   };
   //Week-By-Week Curriculum revealer
   obj.slides = function () {
