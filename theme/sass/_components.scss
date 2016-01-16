@@ -18,8 +18,8 @@
 
       display: flex;
       flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
+      flex-wrap: nowrap;
+      justify-content: space-between;
       align-items: center;
       align-content: center;
 
@@ -89,9 +89,27 @@
       position: relative;
       ul.dropdown{
         padding: 0;
+        margin: 0;
         list-style-type: none;
-        position: absolute;
         background-color: $bgl;
+
+        z-index: -1;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: $height;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+
+        &>li{
+          padding: 0 0.5em;
+        }
       }
     }
   }

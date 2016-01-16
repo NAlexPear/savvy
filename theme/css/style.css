@@ -82,8 +82,8 @@ hr {
     margin: 0 auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: center;
     align-content: center;
     padding-right: 1em; }
@@ -132,9 +132,23 @@ hr {
     position: relative; }
     #menubar #about ul.dropdown {
       padding: 0;
+      margin: 0;
       list-style-type: none;
-      position: absolute;
-      background-color: #8e8e8e; }
+      background-color: #8e8e8e;
+      z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 3.5em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center; }
+      #menubar #about ul.dropdown > li {
+        padding: 0 0.5em; }
 
 .icon-bar {
   list-style-type: none;

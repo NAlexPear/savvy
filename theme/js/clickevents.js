@@ -7,9 +7,15 @@ var Click = function () {
   //helpers for Priority Plus menu
   var drop = function ($dropdown) {
     if ($dropdown.hasClass('hidden')){
-      $dropdown.removeClass('hidden');
+      $dropdown.removeClass('hidden').animate({
+        'top':'2.35em'
+      }, 200);
     } else {
-      $dropdown.addClass('hidden');
+      $dropdown.animate({
+        'top':'0'
+      }, 200, function(){
+        $dropdown.addClass('hidden');
+      });
     }
   };
 
