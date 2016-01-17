@@ -1,6 +1,0 @@
-{
-  "name": "weather-app-savvy-examples",
-  "root": "./",
-  "clean_urls": true,
-  "error_page": "error.html"
-}
