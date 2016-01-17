@@ -14,8 +14,8 @@
     <!-- Google Verification -->
     <meta name="google-site-verification" content="ys-7GxEhydx43F9C1ilhGyAviIwntc8TAab3t-MH7rs" />
 
-    <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="/theme/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="theme/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="theme/images/favicon.ico" type="image/x-icon">
     <title>Savvy Coders | FAQ</title>
 
     <!-- IE Fix for HTML5 Tags -->
@@ -23,10 +23,10 @@
     		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     	<![endif]-->
 
-    <link rel="canonical" href="http://savvycoders.com">
-    <link rel="shortlink" href="http://savvycoders.com">
+    <link rel="canonical" href="https://savvycoders.com">
+    <link rel="shortlink" href="https://savvycoders.com">
 
-    <link rel="stylesheet" href="/theme/css/site.css">
+    <link rel="stylesheet" href="theme/css/site.css">
 
     <!--fonts-->
     <link href='https://fonts.googleapis.com/css?family=Kreon:400,700|Quicksand:400,300,700' rel='stylesheet' type='text/css'>
@@ -41,73 +41,83 @@
 <body>
   <div id="menubar">
     <ul class="navbubbles">
-        <li id="logo">
-          <a href="/#headjump" title="Savvy Coders Homepage" alt="Savvy Coders Nashville">
+        <li id="logo" class="desktop-only">
+          <a href="#headjump" title="Savvy Coders Homepage" alt="Savvy Coders Nashville">
               <div class="savvy-logo-text"><b>savvy</b>coders</div>
           </a>
         </li>
-        <li>
+
+        <li id="spacer" class="desktop-only">
             <br>
         </li>
+
         <li id="about">
-          <a href="/#jump1" title="About Us" alt="About Savvy Coders">
+          <a href="#" title="About Us" alt="About Savvy Coders">
               <div>about us</div>
           </a>
         </li>
-        <li id="classes">
-          <a href="/#jump2" title="Classes" alt="About Savvy Coders' Classes">
-              <div>classes</div>
+
+        <li id="contact">
+          <a href="#jump6" title="Contact Savvy Coders" alt="Contact Us">
+              <div>contact</div>
           </a>
         </li>
-        <li id="students">
-          <a href="/#jump3" title="Students" alt="About our Students">
-              <div>students</div>
-          </a>
-        </li>
+
         <li id="app">
           <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank" title="Apply" alt="Savvy Application">
               <div>apply</div>
           </a>
         </li>
-        <li id="pricing">
-          <a href="/pricing" title="Savvy Coders Prices" alt="Pricing">
-              <div>pricing</div>
-          </a>
-        </li>
-        <li id="contact">
-          <a href="/#jump6" title="Contact Savvy Coders" alt="Contact Us">
-              <div>contact</div>
-          </a>
-        </li> 
-        <li id="faq">
-          <a href="/faq" title="FAQ" alt="FAQ">
-              <div>FAQ</div>
-          </a>
-        </li>
+
     </ul>
-    <div class="overflow hidden">
-      <div>
-        <span class="more-less">MORE</span>
-        <span class="ti ti-angle-right"></span>
-      </div>
-      <ul class="dropdown desktop-only">
-      </ul>
-      <ul class="dropdown mobile-only">
-      </ul>
-    </div>
+</div>
+
+<div id="menudrop" class="dropdown hidden">
+  <ul class="navbubbles">
+    <li id="mission" class="desktop-only">
+      <a href="#jump1" title="Mission" alt="About Savvy Coders' Mission">
+          <div>mission</div>
+      </a>
+    </li>
+    <!-- <li id="team">
+      <a href="/team" title="Instructors" alt="About Savvy Coders' Instructors">
+          <div>instructors</div>
+      </a>
+    </li> -->
+    <li id="classes">
+      <a href="#jump2" title="Classes" alt="About Savvy Coders' Classes">
+          <div>classes</div>
+      </a>
+    </li>
+    <li id="students" class="desktop-only">
+      <a href="#jump3" title="Students" alt="About our Students">
+          <div>students</div>
+      </a>
+    </li>
+    <li id="pricing">
+      <a href="/pricing" title="Savvy Coders Prices" alt="Pricing">
+          <div>pricing</div>
+      </a>
+    </li>
+    <li id="faq">
+      <a href="faq" title="FAQ" alt="FAQ">
+          <div>FAQ</div>
+      </a>
+    </li>
+  </ul>
 </div>
 
   <div id="backdrop">
   <span id="headjump"></span>
   <picture>
-    <source srcset="/theme/images/high_res/headerShort090115_blank.png" media='(min-width:1500px)'>
-    <img src="/theme/images/headerShort090115_blank.png"
+    <source srcset="theme/images/high_res/headerShort090115_blank.png" media='(min-width:1500px)'>
+    <img src="theme/images/headerShort090115_blank.png"
     width="100%" height=auto alt="Welcome to Savvy Coders">
   </picture>
   <div id="logo_image">
     <picture>
-      <source srcset="/theme/images/high_res/savvylogo.png" media='(min-width:640px)'>
-      <img src="/theme/images/savvylogo.png" alt="Savvy Coders Logo"
+      <source srcset="theme/images/high_res/savvylogo.png" media='(min-width:640px)'>
+      <img src="theme/images/savvylogo.png" alt="Savvy Coders Logo"
       width="100%" height="auto">
     </picture>
   </div>
@@ -282,8 +292,7 @@
 </footer>
 
   
-  <script src="/theme/js/faq/site.js" async></script>
-
+<script src="theme/js/site.js" async></script>
 
 </body>
 </html>
