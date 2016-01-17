@@ -82,7 +82,7 @@
     border: 2px solid $hl;
     border-radius: 0.5em;
     background-color: transparent;
-    padding: 0.25em 1em;
+    padding: 0.25em 1em !important;
 
     @media screen and (max-width: 640px){
       margin-right: 0;
@@ -100,7 +100,7 @@
     a {
       color: $hl;
       &:hover{
-        color: $hl;
+        color: $hl !important;
       }
     }
   }
