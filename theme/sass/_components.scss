@@ -80,7 +80,7 @@
   }
   #app {
     border: 2px solid $hl;
-    border-radius: 0.5em;
+    border-radius: $br;
     background-color: transparent;
     padding: 0.25em 1em !important;
 
@@ -94,7 +94,7 @@
     transition: background-color 100ms ease;
 
     &:hover {
-      background-color: #50daed;
+      background-color: $bhl;
       transition: background-color 100ms ease;
     }
     a {
@@ -120,3 +120,105 @@
 }
 
 //splash/landing component
+@mixin splash {
+  #backdrop{
+    position: relative;
+    padding-top: 3.5em;
+  }
+
+  #logo_image{
+    width: 40%;
+    position:absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+//call to action
+@mixin cta {
+  #cta{
+    width: 80%;
+    min-width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #mission {
+    p{
+      font-weight: 100;
+      font-size: 4vmin;
+    }
+  }
+}
+
+#location-picker{
+  text-align: center;
+  box-sizing: border-box;
+
+  ul{
+    @include flexlist;
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: $bfont;
+    font-size: 1.5em;
+    color: $hl;
+  }
+  li{
+    border: 1px solid #656565;
+    background-color: $bg;
+    border-radius: $br;
+    padding: $bp;
+    cursor: pointer;
+    transition: background-color 100ms ease;
+
+    &:nth-child(2){
+
+      $diameter: 10em;
+
+      position: relative;
+      cursor: default;
+      border: 1px solid #656565;
+      border-radius: 50%;
+      height: $diameter;
+      width: $diameter;
+
+      @include flexlist(center);
+
+      &:hover {
+        border: 1px solid #656565;
+        background-color: $bg;
+      }
+
+      &>span{
+        z-index: -1;
+        position: absolute;
+        font-size: 2em;
+        text-align: right;
+        color: $accent;
+        top: $diameter/5;
+        width: $diameter;
+      }
+    }
+    &:hover{
+      border-color: $accent;
+      background-color: $accent;
+      transition: background-color 100ms ease;
+    }
+
+    &.selected{
+      background-color: $accent;
+      border-color: $accent;
+      transition: background-color 100ms ease;
+      &:hover{
+        background-color: $bhl;
+        border-color: $bhl;
+        transition: background-color 100ms ease;
+      }
+    }
+  }
+
+}

@@ -19,6 +19,69 @@
 
   .desktop-only {
     display: block; } }
+#location-picker {
+  text-align: center;
+  box-sizing: border-box; }
+  #location-picker ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5em;
+    color: #ffffff; }
+  #location-picker li {
+    border: 1px solid #656565;
+    background-color: #2B2B2B;
+    border-radius: 0.5em;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    transition: background-color 100ms ease; }
+    #location-picker li:nth-child(2) {
+      position: relative;
+      cursor: default;
+      border: 1px solid #656565;
+      border-radius: 50%;
+      height: 10em;
+      width: 10em;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+      #location-picker li:nth-child(2):hover {
+        border: 1px solid #656565;
+        background-color: #2B2B2B; }
+      #location-picker li:nth-child(2) > span {
+        z-index: -1;
+        position: absolute;
+        font-size: 2em;
+        text-align: right;
+        color: #07c4dd;
+        top: 2em;
+        width: 10em; }
+    #location-picker li:hover {
+      border-color: #07c4dd;
+      background-color: #07c4dd;
+      transition: background-color 100ms ease; }
+    #location-picker li.selected {
+      background-color: #07c4dd;
+      border-color: #07c4dd;
+      transition: background-color 100ms ease; }
+      #location-picker li.selected:hover {
+        background-color: #50daed;
+        border-color: #50daed;
+        transition: background-color 100ms ease; }
+
 body {
   -webkit-font-smoothing: antialised;
   background-color: #2B2B2B;
