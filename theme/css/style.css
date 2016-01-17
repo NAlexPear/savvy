@@ -67,16 +67,18 @@ hr {
   width: 80%;
   opacity: 0.8; }
 
-#menubar {
-  z-index: 1;
+#menubar, #menudrop {
+  box-sizing: border-box;
+  z-index: 2;
   position: fixed;
   background-color: #07c4dd;
   width: 100vw;
-  margin-top: 0px;
+  margin: 0;
+  padding: 0;
   height: 3.5em; }
-  #menubar ul.navbubbles {
-    z-index: 2;
+  #menubar ul.navbubbles, #menudrop ul.navbubbles {
     list-style-type: none;
+    width: 100%;
     max-width: 1080px;
     height: 3.5em;
     margin: 0 auto;
@@ -86,69 +88,57 @@ hr {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    padding-right: 1em; }
-    #menubar ul.navbubbles > li {
+    padding: 0; }
+    #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
       font-weight: 400;
       font-size: 1.5em;
       padding: 0.3em; }
-      #menubar ul.navbubbles > li a {
+      #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a {
         color: #ffffff;
         transition: 0.3s color; }
-        #menubar ul.navbubbles > li a:hover {
+        #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover {
           color: #2B2B2B;
           transition: 0.3s color; }
-      #menubar ul.navbubbles > li .savvy-logo-text {
+      #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text {
         font-family: "Kreon", serif;
         font-size: 1.25em; }
         @media screen and (max-width: 640px) {
-          #menubar ul.navbubbles > li .savvy-logo-text {
+          #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text {
             font-size: 1.0625em; } }
-  #menubar div.overflow {
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    right: 0;
-    padding: 0.3em 0.75em 0;
-    font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-    font-size: 1.5em;
-    color: #ffffff;
-    height: 2.1em;
-    background-color: #07c4dd;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer; }
-    #menubar div.overflow > div {
-      position: relative; }
-      #menubar div.overflow > div span::before {
-        transition: transform 0.3s;
-        display: inline-block; }
-      #menubar div.overflow > div.turnt span::before {
-        transition: transform 0.3s;
-        transform: rotate(90deg); }
-  #menubar #about {
-    position: relative; }
-    #menubar #about ul.dropdown {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      background-color: #8e8e8e;
-      z-index: -1;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 3.5em;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      align-items: center;
-      align-content: center; }
-      #menubar #about ul.dropdown > li {
-        padding: 0 0.5em; }
+
+#spacer {
+  flex-grow: 2; }
+
+#about {
+  margin-right: 0.5em; }
+
+#contact {
+  margin-right: 0.5em; }
+
+#app {
+  border: 2px solid #ffffff;
+  border-radius: 0.5em;
+  background-color: transparent;
+  padding: 0.25em 1em;
+  margin-right: 1.5em;
+  transition: background-color 100ms ease; }
+  #app:hover {
+    background-color: #50daed;
+    transition: background-color 100ms ease; }
+  #app a {
+    color: #ffffff; }
+    #app a:hover {
+      color: #ffffff; }
+
+#menudrop {
+  background-color: #8e8e8e;
+  z-index: 1; }
+  #menudrop ul.navbubbles {
+    padding: 0;
+    justify-content: space-around; }
+    #menudrop ul.navbubbles > li {
+      padding: 0 0.5em; }
 
 .icon-bar {
   list-style-type: none;

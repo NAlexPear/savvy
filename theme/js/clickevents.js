@@ -8,7 +8,7 @@ var Click = function () {
   var drop = function ($dropdown) {
     if ($dropdown.hasClass('hidden')){
       $dropdown.removeClass('hidden').animate({
-        'top':'2.35em'
+        'top':'3.5em'
       }, 200);
     } else {
       $dropdown.animate({
@@ -23,12 +23,20 @@ var Click = function () {
   //Priority Plus menu JavaScript
   obj.priorityMenu = function (id) {
     var $target = $(id);
-    var $dropdown = $target.children('ul.dropdown');
+    var $dropdown = $('#menudrop');
 
     //attach event listener to a specific anchor tag with a dropdown
     $target.on('click', 'a', function(){
       //quick default anchor tag prevention
       if($target.attr('href') === '#'){
+        event.preventDefault();
+      }
+      //toggle dropdown visibility
+      drop($dropdown);
+    });
+    //same event listener for dropdown menu items
+    $dropdown.on('click', 'a', function(){
+      if($dropdown.attr('href') === '#'){
         event.preventDefault();
       }
       //toggle dropdown visibility

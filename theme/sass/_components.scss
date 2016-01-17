@@ -1,17 +1,19 @@
 //navigation bar system
 @mixin navigation {
   #menubar{
-    z-index: 1;
+    box-sizing: border-box;
+    z-index: 2;
     position: fixed;
     background-color: $accent;
     width: 100vw;
-    margin-top: 0px;
-
+    margin: 0;
+    padding: 0;
     $height: 3.5em;
     height: $height;
+
     ul.navbubbles{
-      z-index: 2;
       list-style-type:none;
+      width: 100%;
       max-width: 1080px;
       height: $height;
       margin: 0 auto;
@@ -23,7 +25,7 @@
       align-items: center;
       align-content: center;
 
-      padding-right: 1em;
+      padding: 0;
 
       &>li{
         font-family: $bfont;
@@ -49,67 +51,46 @@
         }
       }
     }
-    div.overflow{
-      box-sizing: border-box;
-      position: fixed;
-      top: 0;
-      right: 0;
-      padding:0.3em 0.75em 0;
+  }
+  #spacer{
+    flex-grow: 2;
+  }
+  #about {
+    margin-right: 0.5em;
+  }
+  #contact{
+    margin-right: 0.5em;
+  }
+  #app {
+    border: 2px solid $hl;
+    border-radius: 0.5em;
+    background-color: transparent;
+    padding: 0.25em 1em;
+    margin-right: 1.5em;
 
-      font-family: $bfont;
-      font-weight: 400;
-      font-size: 1.5em;
+    transition: background-color 100ms ease;
+
+    &:hover {
+      background-color: #50daed;
+      transition: background-color 100ms ease;
+    }
+    a {
       color: $hl;
-
-      height:$height*0.6;
-      background-color: $accent;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      cursor: pointer;
-      &>div{
-        position: relative;
-
-        span::before{
-          transition: transform 0.3s;
-          display: inline-block
-        }
-
-        &.turnt{
-          span::before{
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-          }
-        }
+      &:hover{
+        color: $hl;
       }
     }
-    #about {
-      position: relative;
-      ul.dropdown{
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-        background-color: $bgl;
+  }
+  #menudrop {
+    @extend #menubar;
+    background-color: $bgl;
+    z-index: 1;
 
-        z-index: -1;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: $height;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
-
-        &>li{
-          padding: 0 0.5em;
-        }
+    ul.navbubbles{
+      padding: 0;
+      justify-content: space-around;
+      &>li{
+        padding: 0 0.5em;
       }
     }
   }
