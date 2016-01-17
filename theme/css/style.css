@@ -85,27 +85,41 @@ hr {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
     align-items: center;
     align-content: center;
     padding: 0; }
+    @media screen and (max-width: 640px) {
+      #menubar ul.navbubbles, #menudrop ul.navbubbles {
+        justify-content: space-around; } }
+    @media screen and (min-width: 641px) {
+      #menubar ul.navbubbles, #menudrop ul.navbubbles {
+        justify-content: space-between; } }
     #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
-      font-weight: 400;
-      font-size: 1.5em;
-      padding: 0.3em; }
-      #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a {
-        color: #ffffff;
-        transition: 0.3s color; }
-        #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover {
-          color: #2B2B2B;
-          transition: 0.3s color; }
-      #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text {
-        font-family: "Kreon", serif;
-        font-size: 1.25em; }
-        @media screen and (max-width: 640px) {
+      font-weight: 400; }
+      @media screen and (max-width: 640px) {
+        #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li {
+          font-size: 1.25em;
+          padding: 0.25em; }
+          #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a {
+            color: #ffffff;
+            transition: 0.3s color; }
+            #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover {
+              color: #2B2B2B;
+              transition: 0.3s color; } }
+      @media screen and (min-width: 641px) {
+        #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li {
+          font-size: 1.5em;
+          padding: 0.3em; }
+          #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a {
+            color: #ffffff;
+            transition: 0.3s color; }
+            #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover {
+              color: #2B2B2B;
+              transition: 0.3s color; }
           #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text {
-            font-size: 1.0625em; } }
+            font-family: "Kreon", serif;
+            font-size: 1.25em; } }
 
 #spacer {
   flex-grow: 2; }
@@ -121,8 +135,13 @@ hr {
   border-radius: 0.5em;
   background-color: transparent;
   padding: 0.25em 1em;
-  margin-right: 1.5em;
   transition: background-color 100ms ease; }
+  @media screen and (max-width: 640px) {
+    #app {
+      margin-right: 0; } }
+  @media screen and (min-width: 641px) {
+    #app {
+      margin-right: 1.5em; } }
   #app:hover {
     background-color: #50daed;
     transition: background-color 100ms ease; }
@@ -184,7 +203,7 @@ hr {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5%; }
+  margin-top: 3.5em; }
 
 #content {
   padding-left: 1.5vw;
@@ -204,7 +223,8 @@ hr {
       border-bottom: none; }
 
 #backdrop {
-  position: relative; }
+  position: relative;
+  padding-top: 3.5em; }
 
 #logo_image {
   width: 40%;
@@ -477,7 +497,7 @@ iframe {
     font-weight: 100; }
 
   #logo_image {
-    top: 10px; }
+    top: 3.5em; }
 
   #mission-mobile {
     display: block; }

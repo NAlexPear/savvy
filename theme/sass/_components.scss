@@ -21,7 +21,12 @@
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      justify-content: space-between;
+      @media screen and (max-width: 640px) {
+        justify-content: space-around;
+      }
+      @media screen and (min-width: 641px) {
+        justify-content: space-between;
+      }
       align-items: center;
       align-content: center;
 
@@ -30,24 +35,36 @@
       &>li{
         font-family: $bfont;
         font-weight: 400;
-        $fs: 1.5em;
-        font-size: $fs;
-        padding: $fs/5;
-        a{
-          color: $hl;
-          transition: 0.3s color;
-          &:hover{
-            color: $bg;
+        @media screen and (max-width: 640px){
+          $fs: 1.25em;
+          font-size: $fs;
+          padding: $fs/5;
+          a{
+            color: $hl;
             transition: 0.3s color;
+            &:hover{
+              color: $bg;
+              transition: 0.3s color;
+            }
           }
         }
-        .savvy-logo-text{
-          font-family: $tfont;
-          $fs: 1.25em;
-          @media screen and (max-width: 640px) {
-            font-size: $fs*0.85;
-          }
+        @media screen and (min-width: 641px){
+          $fs: 1.5em;
           font-size: $fs;
+          padding: $fs/5;
+          a{
+            color: $hl;
+            transition: 0.3s color;
+            &:hover{
+              color: $bg;
+              transition: 0.3s color;
+            }
+          }
+          .savvy-logo-text{
+            font-family: $tfont;
+            $fs: 1.25em;
+            font-size: $fs;
+          }
         }
       }
     }
@@ -66,7 +83,13 @@
     border-radius: 0.5em;
     background-color: transparent;
     padding: 0.25em 1em;
-    margin-right: 1.5em;
+
+    @media screen and (max-width: 640px){
+      margin-right: 0;
+    }
+    @media screen and (min-width: 641px) {
+      margin-right: 1.5em;
+    }
 
     transition: background-color 100ms ease;
 
