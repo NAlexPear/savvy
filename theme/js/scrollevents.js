@@ -8,7 +8,8 @@ var Scroll = function () {
     '#howworks',
     '#whatlearn',
     '.slide',
-    '#students-copy'
+    '#students-copy',
+    '#faq'
   ];
 
   //PUBLIC

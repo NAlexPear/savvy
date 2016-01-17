@@ -19,69 +19,6 @@
 
   .desktop-only {
     display: block; } }
-#location-picker {
-  text-align: center;
-  box-sizing: border-box; }
-  #location-picker ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    max-width: 750px;
-    margin: 0 auto;
-    font-family: "Quicksand", sans-serif;
-    font-size: 1.5em;
-    color: #ffffff; }
-  #location-picker li {
-    border: 1px solid #656565;
-    background-color: #2B2B2B;
-    border-radius: 0.5em;
-    padding: 0.25em 1em;
-    cursor: pointer;
-    transition: background-color 100ms ease; }
-    #location-picker li:nth-child(2) {
-      position: relative;
-      cursor: default;
-      border: 1px solid #656565;
-      border-radius: 50%;
-      height: 10em;
-      width: 10em;
-      padding: 0;
-      list-style-type: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: center;
-      align-items: center;
-      align-content: center; }
-      #location-picker li:nth-child(2):hover {
-        border: 1px solid #656565;
-        background-color: #2B2B2B; }
-      #location-picker li:nth-child(2) > span {
-        z-index: -1;
-        position: absolute;
-        font-size: 2em;
-        text-align: right;
-        color: #07c4dd;
-        top: 2em;
-        width: 10em; }
-    #location-picker li:hover {
-      border-color: #07c4dd;
-      background-color: #07c4dd;
-      transition: background-color 100ms ease; }
-    #location-picker li.selected {
-      background-color: #07c4dd;
-      border-color: #07c4dd;
-      transition: background-color 100ms ease; }
-      #location-picker li.selected:hover {
-        background-color: #50daed;
-        border-color: #50daed;
-        transition: background-color 100ms ease; }
-
 body {
   -webkit-font-smoothing: antialised;
   background-color: #2B2B2B;
@@ -128,7 +65,7 @@ ul {
 
 hr {
   width: 80%;
-  opacity: 0.8; }
+  opacity: 0.3; }
 
 #menubar, #menudrop {
   box-sizing: border-box;
@@ -223,37 +160,37 @@ hr {
       padding: 0 0.5em; }
 
 .icon-bar {
+  padding: 0;
   list-style-type: none;
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  padding-left: 0px;
-  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 50%;
+  margin: 0 auto;
   font-size: 10vmin; }
-  .icon-bar li {
-    display: table-cell;
-    text-align: center;
-    padding-top: 8px; }
-    .icon-bar li:nth-child(1) a {
-      color: #ffffff;
-      transition: 0.5s color; }
-      .icon-bar li:nth-child(1) a:hover {
-        color: #07c4dd; }
-    .icon-bar li:nth-child(2) a {
-      color: #ffffff;
-      transition: 0.5s color; }
-      .icon-bar li:nth-child(2) a:hover {
-        color: #07c4dd; }
-    .icon-bar li:nth-child(3) a {
-      color: #ffffff;
-      transition: 0.5s color; }
-      .icon-bar li:nth-child(3) a:hover {
-        color: #07c4dd; }
-    .icon-bar li:nth-child(4) a {
-      opacity: 0.6;
-      transition: 0.3s opacity; }
-      .icon-bar li:nth-child(4) a:hover {
-        opacity: 1; }
+  .icon-bar li:nth-child(1) a {
+    color: #ffffff;
+    transition: 0.5s color; }
+    .icon-bar li:nth-child(1) a:hover {
+      color: #07c4dd; }
+  .icon-bar li:nth-child(2) a {
+    color: #ffffff;
+    transition: 0.5s color; }
+    .icon-bar li:nth-child(2) a:hover {
+      color: #07c4dd; }
+  .icon-bar li:nth-child(3) a {
+    color: #ffffff;
+    transition: 0.5s color; }
+    .icon-bar li:nth-child(3) a:hover {
+      color: #07c4dd; }
+  .icon-bar li:nth-child(4) a {
+    opacity: 0.6;
+    transition: 0.3s opacity; }
+    .icon-bar li:nth-child(4) a:hover {
+      opacity: 1; }
 
 .navreact a {
   color: #ffffff;
@@ -284,6 +221,12 @@ hr {
     #content ul.icon-bar a:hover {
       border-bottom: none; }
 
+.content-section {
+  opacity: 0;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+
 #backdrop {
   position: relative;
   padding-top: 3.5em; }
@@ -308,16 +251,74 @@ hr {
   font-weight: 100;
   font-size: 4vmin; }
 
-#howworks {
-  opacity: 0;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-  #howworks ul {
+#location-picker {
+  text-align: center;
+  box-sizing: border-box; }
+  #location-picker ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    max-width: 750px;
+    margin: 0 auto;
     font-family: "Quicksand", sans-serif;
-    font-size: 5vmin;
-    padding-left: 0px;
+    font-size: 1.5em;
     color: #ffffff; }
+  #location-picker li {
+    border: 1px solid #656565;
+    background-color: #2B2B2B;
+    border-radius: 0.5em;
+    padding: 0.25em 1em;
+    cursor: pointer;
+    transition: background-color 100ms ease; }
+    #location-picker li:nth-child(2) {
+      position: relative;
+      cursor: default;
+      border: 1px solid #656565;
+      border-radius: 50%;
+      height: 10em;
+      width: 10em;
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center; }
+      #location-picker li:nth-child(2):hover {
+        border: 1px solid #656565;
+        background-color: #2B2B2B; }
+      #location-picker li:nth-child(2) > span {
+        z-index: -1;
+        position: absolute;
+        font-size: 2em;
+        text-align: right;
+        color: #07c4dd;
+        top: 2em;
+        width: 10em; }
+    #location-picker li:hover {
+      border-color: #07c4dd;
+      background-color: #07c4dd;
+      transition: background-color 100ms ease; }
+    #location-picker li.selected {
+      background-color: #07c4dd;
+      border-color: #07c4dd;
+      transition: background-color 100ms ease; }
+      #location-picker li.selected:hover {
+        background-color: #50daed;
+        border-color: #50daed;
+        transition: background-color 100ms ease; }
+
+#howworks ul {
+  font-family: "Quicksand", sans-serif;
+  font-size: 5vmin;
+  padding-left: 0px;
+  color: #ffffff; }
 
 #whatlearn {
   opacity: 0;
@@ -363,14 +364,15 @@ hr {
       border-bottom: none; }
 
 .infobubbles {
+  padding: 0;
   list-style-type: none;
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   width: 100%; }
-  .infobubbles li {
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle; }
   .infobubbles img {
     height: 15vmin;
     width: 15vmin; }

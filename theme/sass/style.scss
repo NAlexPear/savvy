@@ -58,26 +58,20 @@ ul{
 
 hr{
     width:80%;
-    opacity: 0.8;
+    opacity: 0.3;
 }
 
 // menubar and navigation styles
 @include navigation;
 
-// icon bar (across page) styles
+// icon bars (across page) styles
 
 .icon-bar{
-    list-style-type:none;
-    display:table;
-    table-layout:fixed;
-    width: 100%;
-    padding-left: 0px;
-    margin-top: 0px;
+    @include flexlist;
+    width: 50%;
+    margin: 0 auto;
     font-size: 10vmin;
-    li{
-        display: table-cell;
-        text-align: center;
-        padding-top: 8px;
+    li {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}){
                 a{
@@ -145,6 +139,13 @@ hr{
     }
 }
 
+.content-section{
+  opacity:0;
+  width:90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 // specific content section styles (in page order)
 //splash page
 @include splash;
@@ -153,19 +154,9 @@ hr{
 @include cta;
 
 //how the program works
-#howworks{
-    opacity:0;
-    width:90%;
-    margin-left: auto;
-    margin-right: auto;
-    ul{
-        font-family: $bfont;
-        font-size: 5vmin;
-        padding-left: 0px;
-        color: $hl;
-    }
-}
+@include how;
 
+//what students will learn
 #whatlearn{
     opacity:0;
     width: 90%;
@@ -224,15 +215,8 @@ hr{
 // Curriculum Slider styles
 
 .infobubbles{
-    list-style-type:none;
-    display:table;
-    table-layout:fixed;
+    @include flexlist;
     width: 100%;
-    li{
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-    }
     img{
       height:15vmin;
       width:15vmin;
