@@ -1,111 +1,119 @@
 //navigation bar system
 @mixin navigation {
   #menubar{
-    z-index: 1;
+    box-sizing: border-box;
+    z-index: 2;
     position: fixed;
     background-color: $accent;
-    width: 100%;
-    margin-top: 0px;
-
+    width: 100vw;
+    margin: 0;
+    padding: 0;
     $height: 3.5em;
     height: $height;
+
     ul.navbubbles{
-      z-index: 2;
       list-style-type:none;
+      width: 100%;
       max-width: 1080px;
-      min-width: 960px;
       height: $height;
       margin: 0 auto;
 
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      flex-wrap: nowrap;
+      @media screen and (max-width: 640px) {
+        justify-content: space-around;
+      }
+      @media screen and (min-width: 641px) {
+        justify-content: space-between;
+      }
       align-items: center;
       align-content: center;
 
-      padding-right: 1em;
+      padding: 0;
 
       &>li{
         font-family: $bfont;
         font-weight: 400;
-        $fs: 1.5em;
-        @media screen and (max-width: 640px) {
-          font-size: $fs*0.85;
-        }
-        font-size: $fs;
-        a{
-          color: $hl;
-          transition: 0.3s color;
-          &:hover{
-            color: $bg;
-            transition: 0.3s color;
-          }
-        }
-        .savvy-logo-text{
-          font-family: $tfont;
+        @media screen and (max-width: 640px){
           $fs: 1.25em;
-          @media screen and (max-width: 640px) {
-            font-size: $fs*0.85;
-          }
           font-size: $fs;
+          padding: $fs/5;
+          a{
+            color: $hl;
+            transition: 0.3s color;
+            &:hover{
+              color: $bg;
+              transition: 0.3s color;
+            }
+          }
+        }
+        @media screen and (min-width: 641px){
+          $fs: 1.5em;
+          font-size: $fs;
+          padding: $fs/5;
+          a{
+            color: $hl;
+            transition: 0.3s color;
+            &:hover{
+              color: $bg;
+              transition: 0.3s color;
+            }
+          }
+          .savvy-logo-text{
+            font-family: $tfont;
+            $fs: 1.25em;
+            font-size: $fs;
+          }
         }
       }
     }
-    div.overflow{
-      box-sizing: border-box;
-      position: fixed;
-      top: 0;
-      right: 0;
-      padding:0.3em 0.75em 0;
+  }
+  #spacer{
+    flex-grow: 2;
+  }
+  #about {
+    margin-right: 0.5em;
+  }
+  #contact{
+    margin-right: 0.5em;
+  }
+  #app {
+    border: 2px solid $hl;
+    border-radius: 0.5em;
+    background-color: transparent;
+    padding: 0.25em 1em;
 
-      font-family: $bfont;
-      font-weight: 400;
-      font-size: 1.5em;
+    @media screen and (max-width: 640px){
+      margin-right: 0;
+    }
+    @media screen and (min-width: 641px) {
+      margin-right: 1.5em;
+    }
+
+    transition: background-color 100ms ease;
+
+    &:hover {
+      background-color: #50daed;
+      transition: background-color 100ms ease;
+    }
+    a {
       color: $hl;
-
-      height:$height*0.6;
-      background-color: $accent;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      cursor: pointer;
-      &>div{
-        position: relative;
-
-        span::before{
-          transition: transform 0.3s;
-          display: inline-block
-        }
-
-        &.turnt{
-          span::before{
-            transition: transform 0.3s;
-            transform: rotate(90deg);
-          }
-        }
+      &:hover{
+        color: $hl;
       }
-      .dropdown{
-        z-index: 1;
-        list-style-type: none;
-        opacity: 0;
-        position: absolute;
-        top: -500px;
-        right: 0;
-        background-color: $bgl;
+    }
+  }
+  #menudrop {
+    @extend #menubar;
+    background-color: $bgl;
+    z-index: 1;
 
-        li{
-          text-align: left;
-          font-size: 0.75em;
-        }
-
-        &.mobile-only{
-          top: 32px;
-          right: -100px;
-          width: 100px;
-          height: 100vh;
-        }
+    ul.navbubbles{
+      padding: 0;
+      justify-content: space-around;
+      &>li{
+        padding: 0 0.5em;
       }
     }
   }

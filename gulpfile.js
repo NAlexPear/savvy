@@ -34,6 +34,8 @@
       gulp.src('theme/fonts/themify-icons/fonts/**/*')
         .pipe(gulp.dest('build/theme/fonts/'));
     });
+    //set up watcher
+    // gulp.task('dev-watch', ['dev-port'], sync.reload);
 
     //browserSync server
     gulp.task('serve', ['dev-port'], function(){
@@ -42,7 +44,7 @@
           baseDir: "./build"
         }
       });
-      gulp.watch('_site/**/*').on('change', sync.reload);
+      // gulp.watch(['_site/**/*', 'theme/css/*', 'theme/js/*'],['dev-watch']);
     });
 
   //DEPLOYMENT BUILD TASKS (outside of ./public)
