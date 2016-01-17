@@ -75,12 +75,12 @@
             <script src="https://gist.github.com/NAlexPear/885cea36a044d4216b7b.js"></script>
         </div>
         <div id="wk1mod4" class="hidden">
-            <h3>Here's content for the fourth module!</h3>
-            <p>Look at all the pretty words.</p>
+            <br>
+            <script src="https://gist.github.com/NAlexPear/68a2d241740838915fc2.js"></script>
         </div>
         <div id="wk1mod5" class="hidden">
-            <h3>Here's content for the fifth module!</h3>
-            <p>Look at all the pretty words.</p>
+            <br>
+            <script src="https://gist.github.com/NAlexPear/73a7d4b289d758ff1831.js"></script>
         </div>
 
         <!--WEEK 2-->
@@ -153,32 +153,38 @@
     <!--SCRIPTS BELOW-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript">
+      (function(window, document, $) {
+        'use strict';
 
-        var week;
-        var module;
+          var week;
+          var module;
 
-        $('nav ul').on('click','li',function(){
+          //menu navigation
+          $('nav ul').on('click','li',function(){
 
-            $(this).siblings().css('color','grey');
-            $(this).css('color','black');
+              $(this).siblings().css('color','grey');
+              $(this).css('color','black');
 
-            var target = $(this).text();
-            var targetNumber = target.slice(-1);
+              var target = $(this).text();
+              var targetNumber = target.slice(-1);
 
-            if (target.match('Week')){
-                week = targetNumber;
-            } else {
-                module = targetNumber;
-            }
+              if (target.match('Week')){
+                  week = targetNumber;
+              } else {
+                  module = targetNumber;
+              }
 
-            var id = '#wk' + week + 'mod' + module;
+              var id = '#wk' + week + 'mod' + module;
 
-            if($(id).hasClass('hidden')){
-                $('.container>div').addClass('hidden');
-                $(id).removeClass('hidden');
-                window.location.hash = id;
-            }
-        });
+              if($(id).hasClass('hidden')){
+                  $('.container>div').addClass('hidden');
+                  $(id).removeClass('hidden');
+                  window.location.hash = id;
+              }
+          });
+
+
+        }(window, document, window.jQuery));
     </script>
-</body>
+  </body>
 </html>
