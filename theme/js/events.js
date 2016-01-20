@@ -1,8 +1,8 @@
 (function(window, document, $, Click, Scroll) {
   'use strict';
-
   //click events
   Click.scroller();
+  Click.cities();
   Click.slides();
   Click.faq();
   Click.priorityMenu('#about');

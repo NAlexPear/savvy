@@ -19,6 +19,12 @@ var Click = function () {
     }
   };
 
+  //helpers for city selectors
+  var linkSwitch = function (links) {
+    //links should be an object of important links
+    
+  };
+
   //PUBLIC
   //Priority Plus menu JavaScript
   obj.priorityMenu = function (id) {
@@ -58,6 +64,17 @@ var Click = function () {
         });
       }
 
+    });
+  };
+  //city selector buttons
+  obj.cities = function () {
+    $('#location-picker').on('click','li',function(){
+      $target = $(this);
+      //sets active/inactive style for buttons on click
+      if($target.hasClass('active') === false){
+        $target.siblings('li').removeClass('active');
+        $target.addClass('active');
+      }
     });
   };
   //Week-By-Week Curriculum revealer

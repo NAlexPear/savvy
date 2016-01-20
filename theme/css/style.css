@@ -253,7 +253,7 @@ hr {
 #location-picker {
   text-align: center;
   box-sizing: border-box;
-  margin: 20px 0; }
+  margin: 50px 0; }
   #location-picker ul {
     padding: 0;
     list-style-type: none;
@@ -266,7 +266,7 @@ hr {
     max-width: 750px;
     margin: 0 auto;
     font-family: "Quicksand", sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
     color: #ffffff; }
   #location-picker li {
     border: 1px solid #656565;
@@ -275,6 +275,12 @@ hr {
     padding: 0.25em 1em;
     cursor: pointer;
     transition: background-color 100ms ease; }
+    #location-picker li.active {
+      border-color: #07c4dd;
+      background-color: #07c4dd; }
+      #location-picker li.active:hover {
+        border-color: #50daed;
+        background-color: #50daed; }
     #location-picker li:hover {
       border-color: #07c4dd;
       background-color: #07c4dd;
