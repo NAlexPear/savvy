@@ -5,8 +5,10 @@ divshot.*
 node_modules
 .sass-cache
 
-_site
-build/
 .jekyll-metadata
 
 .ssh/
+
+_site/
+build/
+public/
