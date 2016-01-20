@@ -157,6 +157,7 @@
   #location-picker{
     text-align: center;
     box-sizing: border-box;
+    margin: 50px 0;
 
     ul{
       @include flexlist;
@@ -174,34 +175,34 @@
       cursor: pointer;
       transition: background-color 100ms ease;
 
-      &:nth-child(2){
-
-        $diameter: 10em;
-
-        position: relative;
-        cursor: default;
-        border: 1px solid #656565;
-        border-radius: 50%;
-        height: $diameter;
-        width: $diameter;
-
-        @include flexlist(center);
-
-        &:hover {
-          border: 1px solid #656565;
-          background-color: $bg;
-        }
-
-        &>span{
-          z-index: -1;
-          position: absolute;
-          font-size: 2em;
-          text-align: right;
-          color: $accent;
-          top: $diameter/5;
-          width: $diameter;
-        }
-      }
+      // &:nth-child(2){
+      //
+      //   $diameter: 10em;
+      //
+      //   position: relative;
+      //   cursor: default;
+      //   border: 1px solid #656565;
+      //   border-radius: 50%;
+      //   height: $diameter;
+      //   width: $diameter;
+      //
+      //   @include flexlist(center);
+      //
+      //   &:hover {
+      //     border: 1px solid #656565;
+      //     background-color: $bg;
+      //   }
+      //
+      //   &>span{
+      //     z-index: -1;
+      //     position: absolute;
+      //     font-size: 2em;
+      //     text-align: right;
+      //     color: $accent;
+      //     top: $diameter/5;
+      //     width: $diameter;
+      //   }
+      // }
       &:hover{
         border-color: $accent;
         background-color: $accent;
