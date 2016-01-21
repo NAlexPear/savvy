@@ -1,8 +1,8 @@
-(function(window, document, $, Click, Scroll) {
+(function(window, document, $, Click, Scroll, Links) {
   'use strict';
   //click events
   Click.scroller();
-  Click.cities();
+  Click.cities(Links);
   Click.slides();
   Click.faq();
   Click.priorityMenu('#about');
@@ -16,4 +16,4 @@
     });
 
 
-}(window, document, window.jQuery, Click(), Scroll() ));
+}(window, document, window.jQuery, Click(), Scroll(), Links() ));

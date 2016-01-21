@@ -20,9 +20,25 @@ var Click = function () {
   };
 
   //helpers for city selectors
-  var linkSwitch = function (links) {
+  var linkSwitch = function (CityLinks) {
     //links should be an object of important links
-    
+    //with keys equal to their CSS selector targets
+    var targets = Object.keys(CityLinks);
+    console.log(targets);
+    //loop over array of target classes, replace the href attr for each element
+    for (var i = 0; i<targets.length; i++){
+      var $el = $('.' + targets[i]);
+      var content = CityLinks[targets[i]];
+
+      $el.each(function(){
+        //for each instance of the function, check whether the href or text content should be changed
+        if(content.match('http')){
+          $el.attr('href', content);
+        } else {
+          $el.text(content);
+        }
+      });
+    }
   };
 
   //PUBLIC
@@ -66,15 +82,24 @@ var Click = function () {
 
     });
   };
-  //city selector buttons
-  obj.cities = function () {
+  //city selector buttons (takes the Links object as an input)
+  obj.cities = function (Links) {
     $('#location-picker').on('click','li',function(){
-      $target = $(this);
+      var $target = $(this);
       //sets active/inactive style for buttons on click
       if($target.hasClass('active') === false){
         $target.siblings('li').removeClass('active');
         $target.addClass('active');
       }
+
+      //sets city variable by reading the text content of the clicked city button
+      var city = $target.text().replace(/[^\w]/gi,"").toLowerCase();
+
+      //grabs data from invoked Link object (built via function)
+      var CityLinks = Links[city];
+
+      //fires linkSwitch() on the object of city links
+      linkSwitch(CityLinks);
     });
   };
   //Week-By-Week Curriculum revealer
