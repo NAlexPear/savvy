@@ -193,6 +193,20 @@ hr {
     .icon-bar li:nth-child(4) a:hover {
       opacity: 1; }
 
+.infobubbles {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  width: 100%; }
+  .infobubbles img {
+    height: 15vmin;
+    width: 15vmin; }
+
 #content-wrapper {
   width: 90%;
   max-width: 1200px;
@@ -298,6 +312,18 @@ hr {
   padding-left: 0px;
   color: #ffffff; }
 
+/*iframe video player style*/
+.video_frames {
+  display: block;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto; }
+
+iframe {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto; }
+
 #whatlearn {
   opacity: 0;
   width: 90%;
@@ -305,55 +331,6 @@ hr {
   margin-right: auto; }
   #whatlearn ul {
     padding-left: 0px; }
-
-#students-copy {
-  opacity: 0; }
-  #students-copy ul {
-    font-family: "Quicksand", sans-serif;
-    font-size: 3vmin;
-    padding-left: 0px;
-    color: #ffffff; }
-
-#application ul {
-  font-family: "Quicksand", sans-serif;
-  font-size: 2vw;
-  padding-left: 0px;
-  color: #ffffff; }
-
-#logo2 {
-  font-family: "Kreon", serif;
-  font-size: 7vw;
-  color: #07c4dd;
-  vertical-align: middle;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-  #logo2 img {
-    width: 30%;
-    vertical-align: middle; }
-
-#contact-form {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-  #contact-form a {
-    border-bottom: none; }
-    #contact-form a:hover {
-      border-bottom: none; }
-
-.infobubbles {
-  padding: 0;
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
-  width: 100%; }
-  .infobubbles img {
-    height: 15vmin;
-    width: 15vmin; }
 
 .curricula-slider {
   max-width: 900px;
@@ -421,6 +398,41 @@ hr {
     max-height: 200px;
     width: 14vmax;
     height: 14vmax; }
+
+#students-copy {
+  opacity: 0; }
+  #students-copy ul {
+    font-family: "Quicksand", sans-serif;
+    font-size: 3vmin;
+    padding-left: 0px;
+    color: #ffffff; }
+
+#application ul {
+  font-family: "Quicksand", sans-serif;
+  font-size: 2vw;
+  padding-left: 0px;
+  color: #ffffff; }
+
+#logo2 {
+  font-family: "Kreon", serif;
+  font-size: 7vw;
+  color: #07c4dd;
+  vertical-align: middle;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  #logo2 img {
+    width: 30%;
+    vertical-align: middle; }
+
+#contact-form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  #contact-form a {
+    border-bottom: none; }
+    #contact-form a:hover {
+      border-bottom: none; }
 
 #address {
   -webkit-column-break-before: always;
@@ -496,25 +508,6 @@ footer {
 
 .response {
   display: none; }
-
-/*iframe video player style*/
-.video_frames {
-  display: block;
-  width: 650px;
-  margin-left: auto;
-  margin-right: auto; }
-
-iframe {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto; }
-
-/*payment form styling*/
-#checkout {
-  max-width: 960px;
-  width: 80vw;
-  margin-left: auto;
-  margin-right: auto; }
 
 @media (max-width: 640px) {
   body {
