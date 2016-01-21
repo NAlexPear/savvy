@@ -518,7 +518,6 @@ iframe {
 
 @media (max-width: 640px) {
   body {
-    position: absolute;
     width: 100%;
     overflow: auto; }
 
