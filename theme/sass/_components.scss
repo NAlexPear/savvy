@@ -139,14 +139,6 @@
 
 //call to action
 @mixin cta {
-  #cta{
-    width: 80%;
-    min-width: 200px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   #mission {
     p{
       font-weight: 100;
@@ -230,9 +222,17 @@
         }
       }
     }
-
   }
-
+  #cta{
+    width: 80%;
+    min-width: 250px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    &>ul.icon-bar li{
+      width: 20%;
+    }
+  }
 }
 
 //how it works

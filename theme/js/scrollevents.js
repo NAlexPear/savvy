@@ -9,7 +9,7 @@ var Scroll = function () {
     '#whatlearn',
     '.slide',
     '#students-copy',
-    '#faq'
+    '#faq-section'
   ];
 
   //PUBLIC
@@ -25,7 +25,7 @@ var Scroll = function () {
       $(sel).each( function(j){
         var top_of_object = $(this).offset().top;
         //fade in each instance of a selector if it's visible in the window
-        if( bottom_of_window > top_of_object){
+        if( bottom_of_window > top_of_object && $(this).css('opacity') !== '1'){
           $(this).animate({
             'opacity':'1'
           }, 800);

@@ -69,13 +69,15 @@ hr{
 .icon-bar{
     @include flexlist;
     margin: 0 auto;
-    font-size: 10vmin;
+    font-size: 4rem;
+    align-items: baseline;
+    text-align: center;
     li {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}){
                 a{
                   color: $hl;
-                  @include ctrans(0.5s);
+                  @include ctrans(0.3s);
                     &:hover{
                       color: $accent;
                     }
@@ -90,16 +92,6 @@ hr{
                   opacity: 1;
                 }
             }
-        }
-    }
-}
-
-.navreact {
-    a{
-      color:$hl;
-      @include ctrans(0.5s);
-       &:hover{
-        color:$bg;
         }
     }
 }
