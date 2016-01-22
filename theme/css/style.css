@@ -95,7 +95,7 @@ hr {
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-line-pack: center;
-        -webkit-align-content: center;
+            -webkit-align-content: center;
             align-content: center;
     padding: 0; }
     @media screen and (max-width: 640px) {
@@ -196,7 +196,7 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-line-pack: center;
-      -webkit-align-content: center;
+          -webkit-align-content: center;
           align-content: center;
   margin: 0 auto;
   font-size: 4rem;
@@ -244,7 +244,7 @@ hr {
       -ms-flex-align: center;
           align-items: center;
   -ms-flex-line-pack: center;
-      -webkit-align-content: center;
+          -webkit-align-content: center;
           align-content: center;
   width: 100%; }
   .infobubbles img {
@@ -320,7 +320,7 @@ hr {
         -ms-flex-align: center;
             align-items: center;
     -ms-flex-line-pack: center;
-        -webkit-align-content: center;
+            -webkit-align-content: center;
             align-content: center;
     max-width: 750px;
     margin: 0 auto;
