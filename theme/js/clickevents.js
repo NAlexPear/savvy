@@ -19,27 +19,6 @@ var Click = function () {
     }
   };
 
-  //helpers for city selectors
-  var linkSwitch = function (CityLinks) {
-    //links should be an object of important links
-    //with keys equal to their CSS selector targets
-    var targets = Object.keys(CityLinks);
-
-    //loop over array of target classes, replace the href attr for each element
-    for (var i = 0; i<targets.length; i++){
-      var $el = $('.' + targets[i]);
-      var content = CityLinks[targets[i]];
-
-      $el.each(function(){
-        //for each instance of the function, check whether the href or text content should be changed
-        if(content.match('http')){
-          $el.attr('href', content);
-        } else {
-          $el.text(content);
-        }
-      });
-    }
-  };
 
   //PUBLIC
   //Priority Plus menu JavaScript
@@ -83,7 +62,7 @@ var Click = function () {
     });
   };
   //city selector buttons (takes the Links object as an input)
-  obj.cities = function (Links) {
+  obj.cities = function (Links, Helpers) {
     $('#location-picker').on('click','li',function(){
       var $target = $(this);
       //sets active/inactive style for buttons on click
@@ -99,7 +78,7 @@ var Click = function () {
       var CityLinks = Links[city];
 
       //fires linkSwitch() on the object of city links
-      linkSwitch(CityLinks);
+      Helpers.linkSwitch(CityLinks);
     });
   };
   //Week-By-Week Curriculum revealer

@@ -24,14 +24,5 @@ var Links = function () {
     city: 'Nashville'
   };
 
-  (function(){
-    $.get('https://www.eventbriteapi.com/v3/events/search/?organizer.id=8391701576&venue.city=Nashville&token=3AVRLNLGQFC43LTG24ID',function (data) {
-      obj.nashville.eventbrite = data.events[0].url;
-    });
-    $.get('https://www.eventbriteapi.com/v3/events/search/?organizer.id=8391701576&venue.city=St.Louis&token=3AVRLNLGQFC43LTG24ID',function(data){
-      obj.stlouis.eventbrite = data.events[0].url;
-    });
-  }());
-
   return obj;
 };

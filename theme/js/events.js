@@ -1,11 +1,12 @@
-(function(window, document, $, Click, Scroll, Links) {
+(function(window, document, $, Helpers, Click, Scroll, Links) {
   'use strict';
-  //on page load
-  // Links.EventbriteUpdate();
+  //page load events
+  Links;
+  Helpers.linkUpdate(Links, 'stlouis');
 
   //click events
   Click.scroller();
-  Click.cities(Links);
+  Click.cities(Links, Helpers);
   Click.slides();
   Click.faq();
   Click.priorityMenu('#about');
@@ -19,4 +20,4 @@
     });
 
 
-}(window, document, window.jQuery, Click(), Scroll(), Links() ));
+}(window, document, window.jQuery, Helpers(), Click(), Scroll(), Links() ));
