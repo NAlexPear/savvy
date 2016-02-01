@@ -1,5 +1,8 @@
 (function(window, document, $, Click, Scroll, Links) {
   'use strict';
+  //on page load
+  Links.EventbriteUpdate();
+  
   //click events
   Click.scroller();
   Click.cities(Links);
