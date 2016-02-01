@@ -24,7 +24,7 @@ var Click = function () {
     //links should be an object of important links
     //with keys equal to their CSS selector targets
     var targets = Object.keys(CityLinks);
-    
+
     //loop over array of target classes, replace the href attr for each element
     for (var i = 0; i<targets.length; i++){
       var $el = $('.' + targets[i]);
