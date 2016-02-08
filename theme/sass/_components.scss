@@ -130,6 +130,9 @@
     width: 40%;
     position:absolute;
     top: 10%;
+    @media (max-width: 640px) {
+      top: 3.5em;
+    }
     left: 0;
     right: 0;
     margin-left: auto;
@@ -141,8 +144,8 @@
 @mixin cta {
   #mission {
     p{
-      font-weight: 100;
       font-size: 4vmin;
+      font-weight: 100;
     }
   }
 
@@ -160,6 +163,7 @@
       color: $hl;
     }
     li{
+      font-size: 6vmin;
       border: 1px solid #656565;
       background-color: $bg;
       border-radius: $br;
@@ -177,34 +181,6 @@
         }
       }
 
-      // &:nth-child(2){
-      //
-      //   $diameter: 10em;
-      //
-      //   position: relative;
-      //   cursor: default;
-      //   border: 1px solid #656565;
-      //   border-radius: 50%;
-      //   height: $diameter;
-      //   width: $diameter;
-      //
-      //   @include flexlist(center);
-      //
-      //   &:hover {
-      //     border: 1px solid #656565;
-      //     background-color: $bg;
-      //   }
-      //
-      //   &>span{
-      //     z-index: -1;
-      //     position: absolute;
-      //     font-size: 2em;
-      //     text-align: right;
-      //     color: $accent;
-      //     top: $diameter/5;
-      //     width: $diameter;
-      //   }
-      // }
       &:hover{
         border-color: $accent;
         background-color: $accent;
@@ -229,6 +205,16 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 640px) {
+      p {
+        font-size: 3vw;
+        text-indent: 0;
+      }
+      a{
+          border-bottom: none;
+      }
+    }
     &>ul.icon-bar li{
       width: 20%;
     }
@@ -250,6 +236,9 @@
   .video_frames{
     display: block;
     width: 650px;
+    @media (max-width: 640px) {
+      width: 300px;
+    }
     margin-left: auto;
     margin-right: auto;
   }
@@ -445,6 +434,9 @@
 
   .social{
     width: 60%;
+    @media (max-width: 640px) {
+      width: 90%;
+    }
     min-width:200px;
     margin-left: auto;
     margin-right: auto;
