@@ -129,7 +129,8 @@ hr{
     padding-left:1.5vw;
     padding-right:1.5vw;
 
-    p{
+    p, li{
+        color: $hl;
         font-size:2vw;
         font-weight:400;
         @media (max-width: 640px) {
