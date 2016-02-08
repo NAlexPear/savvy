@@ -11,16 +11,22 @@ body{
 }
 
 h1{
+  font-size:4vw;
+  @media (max-width: 640px) {
+    font-size: 7vw;
+  }
     font-family:$tfont;
-    font-size:4vw;
     font-weight: 700;
     color: $accent;
     text-align: center;
 }
 
 h2{
-    font-family: $tfont;
     font-size:3vw;
+    @media (max-width: 640px) {
+      font-size: 5vw;
+    }
+    font-family: $tfont;
     font-weight: 700;
     line-height: 50%;
     color:$hl ;
@@ -28,17 +34,23 @@ h2{
 
 }
 h3{
+  font-size: 2.75vh;
+  @media (max-width: 640px) {
+    font-size: 2.75vw;
+  }
   font-family: $bfont;
   font-weight: 300;
   color: $hl;
-  font-size: 2.75vh;
 }
 
 h4{
-    font-family: $bfont;
-    font-weight: 300;
-    color: $hl;
-    font-size: 2vh;
+  font-size: 2vh;
+  @media (max-width: 640px) {
+    font-size: 2vw;
+  }
+  font-family: $bfont;
+  font-weight: 300;
+  color: $hl;
 }
 
 p {
@@ -119,8 +131,12 @@ hr{
 
     p{
         font-size:2vw;
-        font-family:$bfont;
         font-weight:400;
+        @media (max-width: 640px) {
+          font-size: 3.35vw;
+          font-weight: 100;
+        }
+        font-family:$bfont;
     }
     a{
         border-bottom:0.2vw dotted;
@@ -173,64 +189,3 @@ hr{
 
 /*FAQ-specific styling*/
 @include faq;
-
-
-// MOBILE OVERRIDES!!
-
-@media (max-width:640px){
-    body{
-        width:100%;
-        overflow: auto;
-    }
-    h1{
-        font-size: 7vw;
-    }
-    h2{
-        font-size: 5vw;
-    }
-    h3{
-        font-size: 2.75vw;
-    }
-    h4{
-        font-size: 2vw;
-    }
-    #content{
-        p{
-            font-size: 3.35vw;
-            font-weight: 100;
-        }
-    }
-    #logo_image{
-        top: 3.5em;
-    }
-    #mission-mobile{
-      display: block;
-    }
-    #mission-desktop{
-      display: none;
-    }
-    #cta{
-        p{
-            font-size: 3vw;
-            text-indent: 0;
-        }
-        a{
-            border-bottom: none;
-        }
-    }
-    .social{
-      width: 90%;
-    }
-    /*iframe video player style*/
-    .video_frames{
-      display: block;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    iframe{
-      position: relative;
-      margin-left: auto;
-      margin-right:auto;
-    }
-}

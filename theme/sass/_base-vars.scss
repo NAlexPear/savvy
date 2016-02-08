@@ -19,18 +19,17 @@ $bp : 0.25em 1em;
 }
 
 //mobile-desktop display-switch classes
-#mission-mobile{
-  display: none;
-}
-#mission-desktop{
-  display: block;
-}
-
 @media screen and (max-width: 640px) {
   .mobile-only{
     display: block;
   }
   .desktop-only{
+    display: none;
+  }
+  #mission-mobile{
+    display: block;
+  }
+  #mission-desktop{
     display: none;
   }
 }
@@ -39,6 +38,12 @@ $bp : 0.25em 1em;
     display: none;
   }
   .desktop-only{
+    display: block;
+  }
+  #mission-mobile{
+    display: none;
+  }
+  #mission-desktop{
     display: block;
   }
 }
