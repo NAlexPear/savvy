@@ -56,8 +56,12 @@
       </div>
     </nav>
     <hr>
+      <!-- sandbox area for populating views with Backbone -->
+      <div id="output">
+
+      </div>
       <!--initial/default greeting-->
-      <div id="greeting">
+      <div id="greeting" class="hidden">
           <h3>Welcome to the Instructor Overview!</h3>
           <p>There are 4 weeks in this course, with 5 modules per week. Each module is equivalent to 3 hours of class/lecture time.</p>
           <p>To see the content for a specific module, please click on a Week and Module above.</p>
@@ -155,6 +159,10 @@
 
     <!--SCRIPTS BELOW-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
     <script type="text/javascript">
       (function(window, document, $) {
         'use strict';
@@ -185,9 +193,75 @@
                   window.location.hash = id;
               }
           });
-
-
         }(window, document, window.jQuery));
+
+      //backbone work
+      (function(window, document, $, Backbone, Markdown) {
+        'use strict';
+        //set up filename endpoints
+        var files = [];
+        for (var i = 1; i <= 4; i++) {
+          var filename = 'Wk' + i;
+          for (var j = 1; j <= 5; j++) {
+            var filenameFull = filename + 'Mod' + j + '.md';
+            files.push(filenameFull);
+          }
+        }
+        //AJAX getting files from own server, building individual models
+
+        function init(collection){
+          // console.log(collection);
+          files.forEach(function (file) {
+            var id = file.toLowerCase().split('.')[0];
+            var item = $.get('markdown/' + file, function (data) {
+              var html = Markdown(data);
+              var post = new InstructionsModel({ "selector":id, "md":data, "html":html });
+              return post
+            });
+            console.log(item);
+          });
+        };
+
+        //Backbone MVC stuff
+        var InstructionsModel = Backbone.Model.extend({
+          defaults: {
+            selector: null,
+            md: null,
+            html: null
+          },
+          initialize: function () {
+            console.log('Model created for: ' + this.get('selector'));
+          }
+        });
+
+        var InstructionsCollection = Backbone.Collection.extend({
+          model: InstructionsModel,
+          initialize: function () {
+            console.log('Here goes a collection + init()');
+            init(this);
+          }
+        });
+
+        var InstructionsView = Backbone.View.extend({
+          el:'#output',
+          initialize: function () {
+            this.render();
+          },
+          render: function () {
+            var post = '';
+            for (var i = 0; i < this.collection.length; i++) {
+              //do something with the sexy collection
+            }
+            this.$el.html('<h3>Here is some Backbone text!</h3>');
+            return this;
+          }
+        });
+
+        var instructionsCollection = new InstructionsCollection();
+
+        var instructionsView = new InstructionsView({ collection: instructionsCollection });
+
+      }(window, document, window.jQuery, window.Backbone, window.marked));
     </script>
   </body>
 </html>
