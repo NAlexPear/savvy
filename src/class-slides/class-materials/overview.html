@@ -3,27 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Savvy Coders Instructor Overview</title>
+    <link rel="stylesheet" href="overview.css" media="screen" charset="utf-8">
     <style type="text/css">
-        nav{
-            width: 100%;
-        }
-        nav ul{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
         nav ul li{
-            color: grey;
-            cursor: pointer;
+          text-align: center;
+          color: grey;
+          cursor: pointer;
+        }
+        h1{
+          color: #2B2B2B;
+        }
+        h2 {
+          color: #07c4dd;
         }
 
         #greeting{
             text-align: center;
-        }
-        .container{
-            max-width: 960px;
-            margin: 0 auto;
         }
         .hidden{
             display:none;
@@ -31,123 +26,131 @@
     </style>
 </head>
 <body>
-    <h1>Savvy Coders Instructor Overview</h1>
-    <h2>built in partnership with Hack Reactor</h2>
-    <hr>
+  <div class="container">
+    <header>
+      <h1>Savvy Coders Instructor Overview</h1>
+      <h2>built in partnership with Hack Reactor</h2>
+    </header>
     <nav>
-        <ul>
-            <li>Week 1</li>
-            <li>Week 2</li>
-            <li>Week 3</li>
-            <li>Week 4</li>
-        </ul>
-        <hr>
-        <ul>
-            <li>Module 1</li>
-            <li>Module 2</li>
-            <li>Module 3</li>
-            <li>Module 4</li>
-            <li>Module 5</li>
-        </ul>
+      <div class="row">
+        <div class="col-12">
+          <ul>
+              <li class="col-3">Week 1</li>
+              <li class="col-3">Week 2</li>
+              <li class="col-3">Week 3</li>
+              <li class="col-3">Week 4</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <ul>
+            <li class="col-2">Module 1</li>
+            <li class="col-2">Module 2</li>
+            <li class="col-2">Module 3</li>
+            <li class="col-2">Module 4</li>
+            <li class="col-2">Module 5</li>
+            <li class="col-2">CLEAR</li>
+          </ul>
+        </div>
+      </div>
     </nav>
     <hr>
-    <div class="container">
+      <!--initial/default greeting-->
+      <div id="greeting">
+          <h3>Welcome to the Instructor Overview!</h3>
+          <p>There are 4 weeks in this course, with 5 modules per week. Each module is equivalent to 3 hours of class/lecture time.</p>
+          <p>To see the content for a specific module, please click on a Week and Module above.</p>
+      </div>
 
-        <!--initial/default greeting-->
-        <div id="greeting">
-            <h3>Welcome to the Instructor Overview!</h3>
-            <p>There are 4 weeks in this course, with 5 modules per week. Each module is equivalent to 3 hours of class/lecture time.</p>
-            <p>To see the content for a specific module, please click on a Week and Module above.</p>
-        </div>
+      <!--individual module content contained below-->
+      <!--WEEK 1-->
+      <div id="wk1mod1" class="hidden">
+          <br>
+          <script src="https://gist.github.com/NAlexPear/7ff5892dce25b31c1cd5.js"></script>
+      </div>
+      <div id="wk1mod2" class="hidden">
+          <br>
+          <script src="https://gist.github.com/NAlexPear/fe8342e88bfdb8835eab.js"></script>
+      </div>
+      <div id="wk1mod3" class="hidden">
+          <br>
+          <script src="https://gist.github.com/NAlexPear/885cea36a044d4216b7b.js"></script>
+      </div>
+      <div id="wk1mod4" class="hidden">
+          <br>
+          <script src="https://gist.github.com/NAlexPear/68a2d241740838915fc2.js"></script>
+      </div>
+      <div id="wk1mod5" class="hidden">
+          <br>
+          <script src="https://gist.github.com/NAlexPear/73a7d4b289d758ff1831.js"></script>
+      </div>
 
-        <!--individual module content contained below-->
-        <!--WEEK 1-->
-        <div id="wk1mod1" class="hidden">
-            <br>
-            <script src="https://gist.github.com/NAlexPear/7ff5892dce25b31c1cd5.js"></script>
-        </div>
-        <div id="wk1mod2" class="hidden">
-            <br>
-            <script src="https://gist.github.com/NAlexPear/fe8342e88bfdb8835eab.js"></script>
-        </div>
-        <div id="wk1mod3" class="hidden">
-            <br>
-            <script src="https://gist.github.com/NAlexPear/885cea36a044d4216b7b.js"></script>
-        </div>
-        <div id="wk1mod4" class="hidden">
-            <br>
-            <script src="https://gist.github.com/NAlexPear/68a2d241740838915fc2.js"></script>
-        </div>
-        <div id="wk1mod5" class="hidden">
-            <br>
-            <script src="https://gist.github.com/NAlexPear/73a7d4b289d758ff1831.js"></script>
-        </div>
+      <!--WEEK 2-->
+      <div id="wk2mod1" class="hidden">
+          <h3>Here's content for the first module, second week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk2mod2" class="hidden">
+          <h3>Here's content for the second module, second week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk2mod3" class="hidden">
+          <h3>Here's content for the third module, second week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk2mod4" class="hidden">
+          <h3>Here's content for the fourth module, second week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk2mod5" class="hidden">
+          <h3>Here's content for the fifth module, second week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
 
-        <!--WEEK 2-->
-        <div id="wk2mod1" class="hidden">
-            <h3>Here's content for the first module, second week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk2mod2" class="hidden">
-            <h3>Here's content for the second module, second week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk2mod3" class="hidden">
-            <h3>Here's content for the third module, second week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk2mod4" class="hidden">
-            <h3>Here's content for the fourth module, second week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk2mod5" class="hidden">
-            <h3>Here's content for the fifth module, second week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
+      <!--WEEK 3-->
+      <div id="wk3mod1" class="hidden">
+          <h3>Here's content for the first module, third week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk3mod2" class="hidden">
+          <h3>Here's content for the second module, third week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk3mod3" class="hidden">
+          <h3>Here's content for the third module, third week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk3mod4" class="hidden">
+          <h3>Here's content for the fourth module, third week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk3mod5" class="hidden">
+          <h3>Here's content for the fifth module, third week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
 
-        <!--WEEK 3-->
-        <div id="wk3mod1" class="hidden">
-            <h3>Here's content for the first module, third week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk3mod2" class="hidden">
-            <h3>Here's content for the second module, third week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk3mod3" class="hidden">
-            <h3>Here's content for the third module, third week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk3mod4" class="hidden">
-            <h3>Here's content for the fourth module, third week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk3mod5" class="hidden">
-            <h3>Here's content for the fifth module, third week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-
-        <!--WEEK 4-->
-        <div id="wk4mod1" class="hidden">
-            <h3>Here's content for the first module, fourth week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk4mod2" class="hidden">
-            <h3>Here's content for the second module, fourth week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk4mod3" class="hidden">
-            <h3>Here's content for the third module, fourth week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk4mod4" class="hidden">
-            <h3>Here's content for the fourth module, fourth week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
-        <div id="wk4mod5" class="hidden">
-            <h3>Here's content for the fifth module, fourth week!</h3>
-            <p>Look at all the pretty words.</p>
-        </div>
+      <!--WEEK 4-->
+      <div id="wk4mod1" class="hidden">
+          <h3>Here's content for the first module, fourth week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk4mod2" class="hidden">
+          <h3>Here's content for the second module, fourth week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk4mod3" class="hidden">
+          <h3>Here's content for the third module, fourth week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk4mod4" class="hidden">
+          <h3>Here's content for the fourth module, fourth week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
+      <div id="wk4mod5" class="hidden">
+          <h3>Here's content for the fifth module, fourth week!</h3>
+          <p>Look at all the pretty words.</p>
+      </div>
     </div>
 
     <!--SCRIPTS BELOW-->
