@@ -62,4 +62,57 @@ The goal will be to keep your Public and Private copies as close to the Blessed 
 
 Follow these steps to get a copy of the boilerplate code set up on your GitHub profile and your local machine.
 
-1. 
+1. Your instructor will have a forked copy of our boilerplate code on their GitHub profile. You will need to go to your GitHub profile and fork your instructor's copy. You now have your public copy set up!
+2. Next, you'll need to `clone` your public copy onto your local machine. In your public repository, find the button that lets you copy down an https address pointing to your public repo. Then use that address on your local machine. To clone the repo at that address, fire up a terminal, navigate to your `SavvyCoders` directory, and type in:
+
+```shell
+git clone [address you copied from GitHub]
+```
+3. Now you should have a copy of the entire GitHub repository on your local environment. Try to `cd` into that directory, then open it with the command `atom .`
+4. In this repository, there is a README.md file that introduces the class to the outside world. Add your name to the list of contributors, then `add`, `stage`, `commit`, and `push` your changes to your public copy on GitHub. 
+5. Next, it's time to get those changes incorporated into the rest of the group's codebase. To do that, you'll need to submit a **pull request** to your instructor's account. That means going to your GitHub account, clicking on the 'Pull Request' button, and waiting for your instructor to merge your changes.
+6. Once your pull request has been accepted and closed, you'll need to refresh your copies of the codebase with the newly-merged changes on your instructor's account. To do that, you'll need to set up that account as a `remote`. If you type in `git remote`, you should see a single remote, called `origin`, availabe to you. This remote was set up automatically when you ran `git clone`, and points to your public copy on GitHub. Anyone can set up a `remote` to `pull` from any repository, but only *you* have `push` access to the repositories on your GitHub account. The same applies to your instructor's copy: you can set up a remote to `pull` data, but you can't use that remote to `push` to it. To set up that remote, navigate to your instructor's public copy of the codebase on GitHub, copy that repo's https address (just like you did on your own account with `clone`), and type the following into your console:
+
+```shell
+git remote add merged [url for the instructor's repository]
+```
+7. Now, when you type `git remote`, you should see two remotes: `merged` and `origin`. To update your copies from the instructor's repository, follow the following steps:
+    1. `fetch` all of the data from your remotes:
+    ```shell
+    git fetch --all
+    ```
+    2. `reset` your current copy to the `master` branch from the `merged` repository:
+    ```shell
+    git reset --hard merged/master
+    ```
+8. At this point, you should see all of your classmates' names in your README.md file! Now, whenever you would like to make a change to the group's project, you can use your `remote`s to `push` `commit`s, make a pull request through GitHub, and `fetch` data from the `merged` remote to `reset` your local codebase.
+
+
+### Building the Student Showcase
+
+Now that you've messed with the README.md, it's time to add your own face to the Student Showcase! The Student Showcase is built using the same minimal.css library we visited earlier. Each block should represent one of you, and link to your portfolio website. Go through the following steps to add your information to the Showcase:
+
+1. Choose a block! Everyone gets a block, but you need to communicate which is yours. Don't touch blocks that aren't yours! If two people modify the same code, there will be merging conflicts (which will make your instructor sad).
+2. Add your content! Every block should be a click-able link to your portfolio page, and it should include:
+    1. the same picture used on your portfolio page
+    2. the same unordered-list of contact information
+    3. a funny quote
+Make sure that you have all of that content in before you start to style the page!
+3. Now make sure that each block has a unique ID, and add some unique styles to your block in the group's CSS stylesheet. 
+4. Be sure to commit your work periodically, submit new features as pull requests, and `fetch` data from the `merged` repository after every pull request. 
+
+When class is done, your instructor will deploy your site through firebase for your viewing pleasure. Good luck!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
