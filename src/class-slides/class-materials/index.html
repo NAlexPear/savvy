@@ -163,6 +163,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
     <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
+
     <script type="text/javascript">
       (function(window, document, $) {
         'use strict';
@@ -198,6 +200,7 @@
       //backbone work
       (function(window, document, $, Backbone, Markdown) {
         'use strict';
+
         //set up filename endpoints
         var files = [];
         for (var i = 1; i <= 4; i++) {
@@ -213,17 +216,21 @@
           // console.log(collection);
           files.forEach(function (file) {
             var id = file.toLowerCase().split('.')[0];
-            var item = $.get('markdown/' + file, function (data) {
+            $.get('markdown/' + file, function (data) {
               var html = Markdown(data);
-              var post = new InstructionsModel({ "selector":id, "md":data, "html":html });
-              return post
+              var post = new InstructionsModel({
+                id: id,
+                selector: id,
+                md: data,
+                html: html
+              });
             });
-            console.log(item);
           });
         };
 
         //Backbone MVC stuff
-        var InstructionsModel = Backbone.Model.extend({
+        var InstructionsModel = Backbone.Firebase.Model.extend({
+          url: "https://savvy-overview.firebaseio.com",
           defaults: {
             selector: null,
             md: null,
@@ -237,8 +244,11 @@
         var InstructionsCollection = Backbone.Collection.extend({
           model: InstructionsModel,
           initialize: function () {
-            console.log('Here goes a collection + init()');
             init(this);
+            console.log('Firebase collection set up');
+          },
+          clear: function () {
+            this.remove();
           }
         });
 
@@ -248,17 +258,13 @@
             this.render();
           },
           render: function () {
-            var post = '';
-            for (var i = 0; i < this.collection.length; i++) {
-              //do something with the sexy collection
-            }
+            console.log(this.collection);
             this.$el.html('<h3>Here is some Backbone text!</h3>');
             return this;
           }
         });
 
         var instructionsCollection = new InstructionsCollection();
-
         var instructionsView = new InstructionsView({ collection: instructionsCollection });
 
       }(window, document, window.jQuery, window.Backbone, window.marked));
