@@ -16,8 +16,10 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
 
 1. Remember the DOM? Let's see if we have access to it by typing `window.document` into the REPL. What's the output?
 2. We also have access to data outside of the DOM (in the BOM or "Browser Object Model"). This information is held in the `window` object. Try out a few of these:
-    + `window.location`
-    + `window.history`
+  ```javascript
+  window.location
+  window.history
+  ```
 3. While that's pretty neat, we're still just looking around. Let's try interacting with the REPL! Try out the following:
   ```javascript
   2 + 2
@@ -51,12 +53,17 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
     + We can access the value stored to the variable name by typing in that variable's name to the REPL.
     + To actually log the value to the Dev Console (much more useful in real-world applications), we can use the built in function `console.log([variable name])`
     + When we use the variable, we DON'T use quotation marks. Quotes mean Strings, and variables are variables, not strings of text.
-6. So now we have some saved data. Wouldn't it be nice if we could test that data? We can, in fact, using the *Boolean* data type. Booleans only have two values: `true` or `false`. They can be stored as a variable of their own, or can be returned as a result of a test. Try some of the following:
+6. So now we have some saved data. Wouldn't it be nice if we could test that data? We can, in fact, using the *Boolean* data type. Booleans only have two values: `true` or `false`. They can be stored as a variable of their own, or can be returned as a result of a test. Try the following:
   ```javascript
   var isTrue = true; //notice: no quotes around true!
   var isFalse = false;
   2 === 2
   2 === '2'
+  2 > 3
+  2 < 3
+  2 !== 3
+  2 <== 2
+  2 >== 2
   'hello' === 'hello'
   'hello' === 'Hello'
   console.log(isTrue === isFalse);
