@@ -6,7 +6,7 @@ So, we've been at this for a week now, and we've certainly done some cool stuff.
 There are quite a few programming languages in use today, in a variety of contexts. From low-level hardware languages, to languages at the OS level, to server-side frameworks, to client-side scripting languages for the Web. It's this last one that we'll be focusing on for the remainder of the course: JavaScript!
 
 ### Exercise 1
-#### Programming in the Browser
+#### Primitive Data Types
 
 JavaScript was originally built to add dynamic content to websites (like adding the date or the number of visitors to a site's landing page). Since those inauspicious beginnings, JavaScript has now grown into a full-stack language for use in servers, browsers, and even native applications. We can still see those browser-based beginnings by running JavaScript directly in Chrome, through the Developer Tools console.
 
@@ -28,16 +28,19 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
   ```
     Now we're programming! The browser is responding to our demands when we give it an input with a **data type** of *Number*. The Number data type includes integers, floating-point numbers (i.e. decimals), and exponent notation (e.g. 1e4).
 4. Mathematic operations are called using **operators** that we are all familiar with. These operators do different things for different data types, though. Try this:
+
   ```javascript
   '2' + '2'
   ```
-    What's the answer? It's definitely NOT 4 like you or I might expect. And that's because 2 is not the same thing as '2'. 2 is a number, while '2' is a string of text, or the *character* 2. And for text (with a data type of *String*), the + operator is actually for *concatenation*. It turns multiple Strings into one output string. Try the following:
+  What's the answer? It's definitely NOT 4 like you or I might expect. And that's because 2 is not the same thing as '2'. 2 is a number, while '2' is a string of text, or the *character* 2. And for text (with a data type of *String*), the + operator is actually for *concatenation*. It turns multiple Strings into one output string. Try the following:
+
   ```javascript
   'JavaScript is ' + 'FUN' + '!!'
   '1, 2, 3, and 4 are ' + 'numbers' + ' (sort of)'
   ```
-    Note that all strings have to have quotes (either single or double) around them. Words written without quotes are something else entirely...
+  Note that all strings have to have quotes (either single or double) around them. Words written without quotes are something else entirely...
 5. In the 'real world', programming implies that you can create a program to be used later, rather than simply typing in commands. To do that, we need a way to save these bits of data to memory. JavaScript lets us save values to **variables** using the `var` keyword. Try the following:
+
   ```javascript
   var currentYear = 2016;
   var myCountry = 'USA';
@@ -54,6 +57,7 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
     + To actually log the value to the Dev Console (much more useful in real-world applications), we can use the built in function `console.log([variable name])`
     + When we use the variable, we DON'T use quotation marks. Quotes mean Strings, and variables are variables, not strings of text.
 6. So now we have some saved data. Wouldn't it be nice if we could test that data? We can, in fact, using the *Boolean* data type. Booleans only have two values: `true` or `false`. They can be stored as a variable of their own, or can be returned as a result of a test. Try the following:
+
   ```javascript
   var isTrue = true; //notice: no quotes around true!
   var isFalse = false;
@@ -67,4 +71,31 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
   'hello' === 'hello'
   'hello' === 'Hello'
   console.log(isTrue === isFalse);
+  ```
+
+### Exercise 2
+#### functions and control flow
+
+Now we have bits of data stored in memory for us to manipulate, which is nice. But up to now, there's been no way to make our programs adapt to inputs. To do that, we'll need functions and control flow.
+1. The key to control flow are `if`, `else`, and `else if` statements, built on the Boolean data type. These statements allow us to perform a Boolean test, then give different outputs based on the results of that test. Try the following in your console:
+
+  ```javascript
+  if( myCountry === 'USA' ) console.log('Sweet Land of Liberty');
+  ```
+  This is a Boolean test that should output a string to the console when `myCountry` is set to `'USA'`. If there's any other value stored to `myCoutry`, then nothing will be output at all.
+2. Let's try to account for every other condition with an `else` clause, like so:
+
+  ```javascript
+  if( myCountry === 'USA' ) console.log('Sweet Land of Liberty');
+  else console.log('Sounds like you need some DEMOCRACY');
+  ```
+
+  Now something should output each time that block of code is run, since it covers every possible condition!
+3. But this can be a real pain to re-type every time you want to check out your current country. What if we could save this block of code just like we could save chunks of data to variables? Luckily, we can do exactly that by creating a new function! Try this:
+
+  ```javascript
+  var freedomCheck = function(){
+    if( myCountry === 'USA' ) console.log('Sweet Land of Liberty');
+    else console.log('Sounds like you need some DEMOCRACY');
+  };
   ```
