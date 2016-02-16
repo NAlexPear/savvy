@@ -161,45 +161,36 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.3/backbone-min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
-    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-    <script src="https://cdn.firebase.com/libs/backbonefire/0.5.1/backbonefire.min.js"></script>
 
     <script type="text/javascript">
-      (function(window, document, $) {
-        'use strict';
-
-          var week;
-          var module;
-
-          //menu navigation
-          $('nav ul').on('click','li',function(){
-
-              $(this).siblings().css('color','grey');
-              $(this).css('color','black');
-
-              var target = $(this).text();
-              var targetNumber = target.slice(-1);
-
-              if (target.match('Week')){
-                  week = targetNumber;
-              } else {
-                  module = targetNumber;
-              }
-
-              var id = '#wk' + week + 'mod' + module;
-
-              if($(id).hasClass('hidden')){
-                  $('.container>div').addClass('hidden');
-                  $(id).removeClass('hidden');
-                  window.location.hash = id;
-              }
-          });
-        }(window, document, window.jQuery));
 
       //backbone work
-      (function(window, document, $, Backbone, Markdown) {
+      (function(window, document, $, Backbone) {
         'use strict';
+        //click events through the menu
+        var week;
+        var module;
+
+        //menu navigation
+        $('nav ul').on('click','li',function(){
+
+            $(this).siblings().css('color','grey');
+            $(this).css('color','black');
+
+            var target = $(this).text();
+            var targetNumber = target.slice(-1);
+
+            if (target.match('Week')){
+                week = targetNumber;
+            } else {
+                module = targetNumber;
+            }
+
+            var id = 'wk' + week + 'mod' + module;
+
+            instructionsView.render(id);
+            window.location.hash = id;
+        });
 
         //set up filename endpoints
         var files = [];
@@ -210,56 +201,45 @@
             files.push(filenameFull);
           }
         }
-        //AJAX getting files from own server, building individual models
 
-        function init(collection){
-          // console.log(collection);
-          files.forEach(function (file) {
-            var id = file.toLowerCase().split('.')[0];
-            $.get('markdown/' + file, function (data) {
-              var html = Markdown(data);
-              var post = new InstructionsModel({
-                id: id,
-                selector: id,
-                md: data,
-                html: html
-              });
-            });
-          });
-        };
+        //AJAX getting files from savvy API, building individual models
+        // function init(collection){
+        //   files.forEach(function (file) {
+        //     var id = file.toLowerCase().split('.')[0];
+        //     $.get('markdown/' + file, function (data) {
+        //       var html = Markdown(data);
+        //       console.log('data converted to html for' + id);
+        //     });
+        //   });
+        // };
 
         //Backbone MVC stuff
-        var InstructionsModel = Backbone.Firebase.Model.extend({
-          url: "https://savvy-overview.firebaseio.com",
+        var InstructionsModel = Backbone.Model.extend({
           defaults: {
             selector: null,
             md: null,
             html: null
-          },
-          initialize: function () {
-            console.log('Model created for: ' + this.get('selector'));
           }
         });
 
         var InstructionsCollection = Backbone.Collection.extend({
+          url: 'http://162.243.73.102/markdown',
           model: InstructionsModel,
-          initialize: function () {
-            init(this);
-            console.log('Firebase collection set up');
-          },
-          clear: function () {
-            this.remove();
+          parse: function (data) {
+            return data.modules;
           }
         });
 
         var InstructionsView = Backbone.View.extend({
           el:'#output',
           initialize: function () {
-            this.render();
+            this.render('wk1mod1');
           },
-          render: function () {
-            console.log(this.collection);
-            this.$el.html('<h3>Here is some Backbone text!</h3>');
+          render: function (id) {
+            var that = this;
+            this.collection.fetch().then(function () {
+              that.$el.html(that.collection.findWhere({'selector':id}).attributes.html);
+            });
             return this;
           }
         });
@@ -267,7 +247,7 @@
         var instructionsCollection = new InstructionsCollection();
         var instructionsView = new InstructionsView({ collection: instructionsCollection });
 
-      }(window, document, window.jQuery, window.Backbone, window.marked));
+      }(window, document, window.jQuery, window.Backbone));
     </script>
   </body>
 </html>
