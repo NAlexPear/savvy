@@ -99,3 +99,108 @@ Now we have bits of data stored in memory for us to manipulate, which is nice. B
     else console.log('Sounds like you need some DEMOCRACY');
   };
   ```
+  Now we have our test available whenever we'd like to call it again, saved just like any other variable. Now try the following, and see what happens:
+  
+  ```javascript
+  freedomCheck
+  freedomCheck()
+  ```
+  The first just accesses the data stored in the variable, which includes the whole `function()` phrase. But we really want to *invoke* the function instead, which is what happens when we use the parens after the name of the stored function (e.g. `freedomCheck()`). Now we actually run the code inside of the curly braces instead of just displaying it in the REPL. 
+  
+  
+### Exercise 3
+#### built-in functions and your first JavaScript-enabled web page
+
+So the console is fun, but it's still not connected to the HTML that we know and love in a way that end-users could ever see. How can we add JavaScript to one of our web pages?
+
+1. Create an entirely new HTML document somewhere in your `SavvyCoders` directory (perhaps in an `exercises` directory?). Remeber to use `emmet`'s `!` + `TAB` shortcut to whip up some HTML boilerplate. Save the document as `greeter.html`.
+2. Once you've created `greeter.html`, use atom's `open-in-browser` plugin to preview the page.
+3. Your `greeter.html` document should look something like this:
+
+  ```html
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Greeter</title>
+  </head>
+  <body>
+    
+  </body>
+  </html>
+  
+  ```
+  At the bottom of the `<body>` tag, add the following:
+  
+  ```html
+  <script type="text/javascript">
+    console.log('Hello world!');
+  </script>
+  ```
+  
+  When you reload your preview page, you should see 'Hello world!' in your console. You've now added JavaScript to your page!
+4. The function `console.log()` is a built-in function recognized by browsers everywhere. Some functions are so commonly used that they're simply a part of the language spec... otherwise we'd have to replicate those functions in nearly every JavaScript project. Let's make our greeting a bit more obnoxious using the built-in function `alert()`.
+
+  ```html
+  <script type="text/javascript">
+    alert('Hello world!');
+  </script>
+  ```
+  You should notice that, just like `console.log()`, `alert()` takes a String of data as an *argument*, listed between the parens when the function is invoked. We'll learn much more about arguments later, but just remember for the time being that arguments are the bits of data that are passed directly into a function without needing to be saved to a *global* variable accessible by every other function (like `myCountry` was in the previous example). 
+5. What about user input? Luckily, we have another obnoxious built-in function called `prompt()`. This function can also take a String as an argument. Try this:
+
+  ```html
+  <script type="text/javascript">
+    prompt('What is your name?');
+    alert('Hello World!');
+  </script>
+  ```
+  What happened to the user input here? As of right now, nothing! Let's try this instead:
+  
+  ```html
+  <script type="text/javascript">
+    var name = prompt('What is your name?');
+    alert('Hello ' + name);
+  </script>
+  ```
+  Neat, huh? `prompt()` actually returns a string for us to play around with. We just need to use that value instead of letting it float off into space. In this example, we saved the String from our `prompt()` into a variable called `name`. Then, because it's a String, we can concatenate the value of `name` into the String used in `alert()`. 
+6. Let's try using a function of our own on this page. How about our old friend `freedomCheck()`?
+
+  ```html
+  <script type="text/javascript">
+    var name = prompt('What is your name?');
+    alert('Hello ' + name);
+    
+    var myCountry = prompt('what is your favorite country?');
+     
+    var freedomCheck = function(){
+      if( myCountry === 'USA' ) alert('Sweet Land of Liberty');
+      else alert('Sounds like you need some DEMOCRACY');
+    };
+    
+    freedomCheck();
+  </script>
+  ```
+7. Now we've implemented a bit of 'inline' JavaScript on our page! Just like working with CSS, though, it's more typical to see scripts in their own separate document. This is especially important for large codebases with thousands of lines of JavaScript code. Let's try it with our greeter page:
+    1. Just like saving HTML files as `.html` and CSS files as `.css`, JavaScript files are saved as `.js`. Create a file called `greeter.js`.
+    2. Copy the contents of the `<script>` tag (NOT the `<script>` tag itself!) over to `greeter.js`. HINT: the entire document should look like:
+
+    ```javascript
+      var name = prompt('What is your name?');
+      alert('Hello ' + name);
+      
+      var myCountry = prompt('what is your favorite country?');
+       
+      var freedomCheck = function(){
+        if( myCountry === 'USA' ) alert('Sweet Land of Liberty');
+        else alert('Sounds like you need some DEMOCRACY');
+      };
+      
+      freedomCheck();
+    ```
+    3. Modify the rest of your `<script>` tag in `greeter.html` to look like this:
+    ```html
+    <script type="text/javascript" src="greeter.js"></script>
+    ```
+    Now, when you reload the page, you should get the same result as when you in-lined all of your JavaScript.
+  8. Once you page is complete, try adding more prompts, alerts, and console.logs. When you're satisfied with your progress, stage, commit, and push your changes!
