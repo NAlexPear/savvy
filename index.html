@@ -245,12 +245,37 @@ title: "Intro to Web Development"
       <span id="jump6"></span>
       <div id="contact-form">
         <br>
-        <br>
-        <br>
-        <div id="wufoo">
-          <div id="wufoo-z1ktxdgn1mk06ld">
+        <form class="formspree" action="https://formspree.io/alex@savvycoders.com" method="POST">
+          <h2>Contact Savvy Coders</h2>
+          <div>
+            <label> <h3>Your Info:</h3>
+              <input type="text" name="firstname" placeholder="First Name" required>
+              <input type="text" name="lastname" placeholder="Last Name" required>
+              <br>
+              <input type="email" name="email" placeholder="your.email@example.com" required>
+            </label>
           </div>
-        </div>
+          <div>
+            <label class="form-divs">
+              <h3>Your Message:</h3>
+              <label for="subjects"><p>What's this message about?</p></label>
+              <select class="subjects" name="subjects">
+                <option value="I'd like to apply">I'd like to apply</option>
+                <option value="I'd like to teach">I'd like to teach</option>
+                <option value="I'd like to work with Savvy Coders (not as a teacher)">I'd like to work with Savvy Coders (not as a teacher)</option>
+                <option value="Other">Something else</option>
+              </select>
+            </label>
+          </div>
+          <br>
+          <br>
+          <input id="other-modal" type="text" name="other" placeholder="What's your message about?" class="hidden">
+          <br>
+          <label for="message"><p>Write your message below</p></label>
+          <textarea name="message" required placeholder="Message"></textarea>
+          <br>
+          <input type="submit" value="Send Message">
+        </form>
       </div>
       <ul class="icon-bar">
         <li>
