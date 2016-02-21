@@ -465,6 +465,63 @@ iframe {
   width: 90%;
   margin-left: auto;
   margin-right: auto; }
+  #contact-form form {
+    box-sizing: border-box; }
+    #contact-form form div {
+      display: inline-block;
+      width: 49%; }
+      @media screen and (max-width: 640px) {
+        #contact-form form div {
+          display: block;
+          width: 100%; } }
+    #contact-form form input[type=text], #contact-form form input[type=email], #contact-form form input[type=number] {
+      width: 90%;
+      padding: 0.25em;
+      margin-bottom: 0.5em;
+      background-color: transparent;
+      border: 0 solid transparent;
+      border-bottom: 1.2px solid #8e8e8e;
+      color: #07c4dd; }
+      #contact-form form input[type=text]:focus, #contact-form form input[type=email]:focus, #contact-form form input[type=number]:focus {
+        box-shadow: none;
+        outline: none; }
+    #contact-form form select {
+      width: 100%;
+      background-color: #8e8e8e;
+      border: none;
+      padding: 0.5em; }
+      #contact-form form select:focus {
+        outline: none; }
+      #contact-form form select option {
+        padding: 1em; }
+        #contact-form form select option:focus {
+          outline: none; }
+        #contact-form form select option:hover {
+          background-color: #07c4dd; }
+    #contact-form form #other-modal {
+      margin-top: 0.5em; }
+    #contact-form form textarea {
+      font-family: sans-serif;
+      padding: 0.75em;
+      width: 100%;
+      height: 50px;
+      background-color: transparent;
+      color: #07c4dd; }
+      #contact-form form textarea:focus {
+        outline: none; }
+    #contact-form form input[type=submit] {
+      display: block;
+      width: 35vw;
+      max-width: 200px;
+      padding: 1em;
+      margin: 1em auto 2em auto;
+      cursor: pointer;
+      background-color: transparent;
+      border: 2px solid #ffffff;
+      border-radius: 0.75em;
+      color: #ffffff; }
+      #contact-form form input[type=submit]:hover {
+        background-color: #07c4dd; }
   #contact-form a {
     border-bottom: none; }
     #contact-form a:hover {

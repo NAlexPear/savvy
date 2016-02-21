@@ -2,6 +2,7 @@
 ### `div`, CSS selectors, stylesheets, and specificity
 
 Now that we have our styling in order, let's think about how to build larger web pages in an orderly way...
+
 ```html
 <div id="greeting" class="section">
   <h1>Hello!</h1>
@@ -206,7 +207,7 @@ Let's create a stylesheet for our Portfolio Project that applies to all of our p
     <!-- for all other pages -->
     <link type="text/css" rel="stylesheet" href="../css/style.css"/>
     ```
-    *Do you know why we need different `href` values for our landing page and our media, projects, and blog pages?
+    *Do you know why we need different `href` values for our landing page and our media, projects, and blog pages?*
 3. At this point, there shouldn't be any difference in the way your pages look or behave, since there's nothing in `style.css`. For now, you should stage, commit, push, and deploy your page to make sure that everything looks the same in the browser.
 4. Now we need to refactor all of the styles across pages. Copy all of the styles from each page into `style.css` page-by-page, starting with your blog page. Make sure you get each page looking like you'd like it. Remember that all CSS properties from here on out are shared between pages! If you need to make changes to your HTML to better organize your styles, that's OK, too.
 5. Once every page is looking good, stage, commit, push, and deploy your changes. And congrats on your pretty new Portfolio site!

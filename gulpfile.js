@@ -47,6 +47,16 @@
       gulp.watch(['theme/css/*', 'theme/js/*'],['dev-watch']);
     });
 
+    //browserSync for overview.html and class-materials
+    gulp.task('class', function () {
+      sync.init({
+        server:{
+          baseDir:'src/class-slides/class-materials'
+        }
+      });
+      gulp.watch(['src/class-slides/class-materials/**/*'], sync.reload);
+    });
+
   //DEPLOYMENT BUILD TASKS (outside of ./public)
     //css auto-prefixer for compatibility (pre-build)
     gulp.task('autoprefixer', function(){

@@ -384,12 +384,84 @@
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-      a{
-        border-bottom: none;
-        &:hover{
-            border-bottom: none;
+    form {
+      box-sizing: border-box;
+      div{
+        display: inline-block;
+        width: 49%;
+        @media screen and (max-width: 640px) {
+          display: block;
+          width: 100%;
         }
       }
+      input[type=text], input[type=email], input[type=number] {
+        width: 90%;
+        padding: 0.25em;
+        margin-bottom: 0.5em;
+        background-color: transparent;
+        border: 0 solid transparent;
+        border-bottom: 1.2px solid $bgl;
+        color: $accent;
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+      select {
+        width: 100%;
+        background-color: $bgl;
+        border: none;
+        padding: 0.5em;
+        &:focus {
+          outline: none;
+        }
+        option {
+          padding: 1em;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            background-color: $accent;
+          }
+        }
+      }
+      #other-modal {
+        margin-top: 0.5em;
+      }
+      textarea {
+        font-family: sans-serif;
+        padding: 0.75em;
+        width: 100%;
+        height: 50px;
+        background-color: transparent;
+        color: $accent;
+        &:focus {
+          outline: none;
+        }
+      }
+      input[type=submit] {
+        display: block;
+        width: 35vw;
+        max-width: 200px;
+        padding: 1em;
+        margin: 1em auto 2em auto;
+        cursor: pointer;
+        background-color: transparent;
+        border: 2px solid $hl;
+        border-radius: 0.75em;
+        color: $hl;
+
+        &:hover {
+          background-color: $accent;
+        }
+      }
+    }
+    a{
+      border-bottom: none;
+      &:hover{
+          border-bottom: none;
+      }
+    }
   }
 }
 

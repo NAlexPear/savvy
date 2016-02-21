@@ -19,5 +19,15 @@
       Scroll.fadeIn();
     });
 
+  //form validation and response
+  $('form .subjects').on('change', function () {
+    var $val = $(this).val();
+    var $modal = $('#other-modal');
+    if($val === 'Other') {
+      $modal.removeClass('hidden');
+    } else if ($modal.hasClass('hidden') === false) {
+      $modal.addClass('hidden');
+    }
+  });
 
 }(window, document, window.jQuery, Helpers(), Click(), Scroll(), Links() ));
