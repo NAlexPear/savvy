@@ -245,19 +245,21 @@ title: "Intro to Web Development"
       <span id="jump6"></span>
       <div id="contact-form">
         <br>
-        <form class="formspree" action="https://formspree.io/alex@savvycoders.com" method="POST">
+        <form class="formspree" action="https://formspree.io/info@savvycoders.com" method="POST">
           <h2>Contact Savvy Coders</h2>
           <div>
             <label> <h3>Your Info:</h3>
               <input type="text" name="firstname" placeholder="First Name" required>
               <input type="text" name="lastname" placeholder="Last Name" required>
-              <br>
-              <input type="email" name="email" placeholder="your.email@example.com" required>
+              <input type="text" name="location" placeholder="City" required>
+              <input type="number" name="phone" placeholder="Phone Number">
             </label>
           </div>
           <div>
-            <label class="form-divs">
-              <h3>Your Message:</h3>
+            <label>
+              <h3>Your Email:</h3>
+              <input type="email" name="email" placeholder="your.email@example.com" required>
+              <br>
               <label for="subjects"><p>What's this message about?</p></label>
               <select class="subjects" name="subjects">
                 <option value="I'd like to apply">I'd like to apply</option>

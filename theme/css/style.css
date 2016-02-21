@@ -474,7 +474,7 @@ iframe {
         #contact-form form div {
           display: block;
           width: 100%; } }
-    #contact-form form input[type=text], #contact-form form input[type=email] {
+    #contact-form form input[type=text], #contact-form form input[type=email], #contact-form form input[type=number] {
       width: 90%;
       padding: 0.25em;
       margin-bottom: 0.5em;
@@ -482,7 +482,7 @@ iframe {
       border: 0 solid transparent;
       border-bottom: 1.2px solid #8e8e8e;
       color: #07c4dd; }
-      #contact-form form input[type=text]:focus, #contact-form form input[type=email]:focus {
+      #contact-form form input[type=text]:focus, #contact-form form input[type=email]:focus, #contact-form form input[type=number]:focus {
         box-shadow: none;
         outline: none; }
     #contact-form form select {
