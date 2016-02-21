@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "gulp serve",
-    "class": "gulp class"
+    "class": "gulp class",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
