@@ -486,6 +486,7 @@ iframe {
         box-shadow: none;
         outline: none; }
     #contact-form form select {
+      width: 100%;
       background-color: #8e8e8e;
       border: none;
       padding: 0.5em; }
@@ -510,7 +511,7 @@ iframe {
         outline: none; }
     #contact-form form input[type=submit] {
       display: block;
-      width: 25vw;
+      width: 35vw;
       max-width: 200px;
       padding: 1em;
       margin: 1em auto 2em auto;

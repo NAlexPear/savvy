@@ -408,6 +408,7 @@
         }
       }
       select {
+        width: 100%;
         background-color: $bgl;
         border: none;
         padding: 0.5em;
@@ -440,7 +441,7 @@
       }
       input[type=submit] {
         display: block;
-        width: 25vw;
+        width: 35vw;
         max-width: 200px;
         padding: 1em;
         margin: 1em auto 2em auto;
