@@ -138,6 +138,10 @@ hr{
           font-weight: 100;
         }
         font-family:$bfont;
+
+        span[class^="ti-"] {
+          font-size: 4rem;
+        }
     }
     a{
         border-bottom:0.2vw dotted;

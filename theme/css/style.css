@@ -243,6 +243,8 @@ hr {
       #content p, #content li {
         font-size: 3.35vw;
         font-weight: 100; } }
+    #content p span[class^="ti-"], #content li span[class^="ti-"] {
+      font-size: 4rem; }
   #content a {
     border-bottom: 0.2vw dotted; }
     #content a:hover {
