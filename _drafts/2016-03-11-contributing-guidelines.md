@@ -9,3 +9,7 @@ Thanks for contributing! A couple of things to note:
 2. There's a "draft to post" button on the top right... don't click that until it's time to publish! And your post won't show up instantly (yet), since Alex needs to rebuild the blog with every post (which is a good thing). 
 3. You can write markdown outside of prose.io, too. Just copy->paste markdown content here to create a draft.
 4. [Oxford commas are important](http://www.verbicidemagazine.com/wp-content/uploads/2011/09/Oxford-Comma.jpg).
+5. You can preview your formatting with the eyeball in the right-hand sidebar.
+
+Thanks again, and let Alex know if you have any questions!
+
