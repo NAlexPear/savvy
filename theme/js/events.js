@@ -1,4 +1,4 @@
-(function(window, document, $, Helpers, Click, Scroll, Links) {
+(function(window, document, $, _, Helpers, Click, Scroll, Links) {
   'use strict';
   //page load events
   Links;
@@ -9,7 +9,16 @@
   Click.cities(Links, Helpers);
   Click.slides();
   Click.faq();
-  Click.priorityMenu('#about');
+  Click.priorityMenu([
+    {
+      anchorSelector:'#about',
+      dropdownSelector:'#menudrop'
+    },
+    {
+      anchorSelector:'#people',
+      dropdownSelector:'#submenudrop'
+    }
+  ]);
 
   //scroll events
     //check for position on page load, too
@@ -30,4 +39,4 @@
     }
   });
 
-}(window, document, window.jQuery, Helpers(), Click(), Scroll(), Links() ));
+}(window, document, window.jQuery, window.underscore, Helpers(), Click(), Scroll(), Links() ));

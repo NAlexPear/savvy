@@ -2,7 +2,7 @@
 @mixin navigation {
   #menubar{
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     background-color: $accent;
     width: 100vw;
@@ -107,7 +107,7 @@
   #menudrop {
     @extend #menubar;
     background-color: $bgl;
-    z-index: 1;
+    z-index: 2;
 
     ul.navbubbles{
       padding: 0;
@@ -115,6 +115,15 @@
       &>li{
         padding: 0 0.5em;
       }
+    }
+  }
+  #submenudrop {
+    @extend #menudrop;
+    background-color: $bgxl;
+    z-index: 1;
+
+    ul.navbubbles {
+      max-width: 500px;
     }
   }
 }

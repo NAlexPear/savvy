@@ -4,45 +4,102 @@ var Click = function () {
   var obj = {};
 
   //PRIVATE
+
+  var OFFSET = 56;
   //helpers for Priority Plus menu
-  var drop = function ($dropdown) {
-    if ($dropdown.hasClass('hidden')){
-      $dropdown.removeClass('hidden').animate({
-        'top':'3.5em'
-      }, 200);
-    } else {
-      $dropdown.animate({
-        'top':'0'
-      }, 200, function(){
-        $dropdown.addClass('hidden');
-      });
-    }
+  var dropup = function ($dropdown, topValue) {
+    var topValue = parseInt($dropdown.css('top').split('px')[0], 0);
+    var newTopValue = topValue - OFFSET;
+    var newTopString = (newTopValue.toString()) + 'px';
+
+    $dropdown.animate({
+      'top': newTopString
+    }, 200);
   };
 
+  var dropdown = function ($dropdown) {
+    var topValue = parseInt($dropdown.css('top').split('px')[0], 0);
+    var newTopValue = isNaN(topValue) ? OFFSET : topValue + OFFSET;
+    var newTopString = (newTopValue.toString()) + 'px';
 
+    $dropdown.animate({
+      'top': newTopString
+    }, 200);
+  };
+
+  var drop = function ($dropdown) {
+    //establish baseline value for top (the CSS attr)
+    if ($dropdown.hasClass('visible')){
+      dropup($dropdown);
+      $dropdown.removeClass('visible');
+    } else {
+      dropdown($dropdown);
+      $dropdown.addClass('visible');
+    }
+  };
   //PUBLIC
   //Priority Plus menu JavaScript
-  obj.priorityMenu = function (id) {
-    var $target = $(id);
-    var $dropdown = $('#menudrop');
+  obj.priorityMenu = function (accordianArray) {
+    //accordianArray should be an array of Objects. The order should be from top -> bottom, with an anchorSelector and dropdownSelector defined for each item in the array
+    //set up basic click listener that emits an event to be handled by the other menu items
+    accordianArray.forEach(function (menuObject) {
+      var $target = $(menuObject.anchorSelector);
+      var $dropdown = $(menuObject.dropdownSelector);
+
+      $target.on('click', 'a', function ( e ) {
+        //quick default anchor tag prevention
+        if($target.attr('href') === '#'){
+          event.preventDefault();
+        }
+
+        var index = accordianArray.indexOf(menuObject);
+        //emit an event to be handled differently according to index number in accordianArray
+        $target.trigger('menu:click:' + index);
+      });
+    });
 
     //attach event listener to a specific anchor tag with a dropdown
-    $target.on('click', 'a', function(){
-      //quick default anchor tag prevention
-      if($target.attr('href') === '#'){
-        event.preventDefault();
-      }
+    $(accordianArray[0].anchorSelector).on('menu:click:0', function(){
       //toggle dropdown visibility
+      var $dropdown = $(accordianArray[0].dropdownSelector);
       drop($dropdown);
+
+      var otherDropdowns = _.filter(accordianArray, function (menuObject) {
+          return accordianArray.indexOf(menuObject) > 0
+      });
+
+      otherDropdowns.forEach(function (dropdown) {
+        var $dropdown = $(dropdown.dropdownSelector);
+        drop($dropdown);
+      });
     });
-    //same event listener for dropdown menu items
-    $dropdown.on('click', 'a', function(){
-      if($dropdown.attr('href') === '#'){
-        event.preventDefault();
-      }
-      //toggle dropdown visibility
-      drop($dropdown);
-    });
+
+    for(var i = 1; i < accordianArray.length; i++){
+      $(accordianArray[i].anchorSelector).on('menu:click:' + i, function () {
+        console.log('you clicked a sub menu!');
+        console.log(accordianArray[i - 1]);
+        //toggle dropdown visibility
+        var $dropdown = $(accordianArray[i - 1].dropdownSelector);
+
+        if($dropdown.hasClass('visible')){
+          $dropdown.removeClass('visible');
+        }
+        drop($dropdown);
+        var clickCount = $dropdown.data('clickCount');
+        if (clickCount === undefined ) {
+          $dropdown.data('clickCount', 1);
+        } else {
+          $dropdown.data('clickCount', clickCount++);
+       }
+
+       console.log( $dropdown.data('clickCount') );
+       
+       if ($dropdown.data('clickCount') >= i -1) {
+         $dropdown.addClass('visible');
+         drop($dropdown);
+       }
+      });
+    }
   };
   //scroll to IDs on the page
   obj.scroller = function(){

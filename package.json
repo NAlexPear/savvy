@@ -39,5 +39,8 @@
     "imagemin-pngquant": "^4.2.0",
     "jquery": "^2.1.4",
     "picturefill": "^3.0.1"
+  },
+  "dependencies": {
+    "underscore": "^1.8.3"
   }
 }
