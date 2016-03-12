@@ -7,9 +7,10 @@ var Click = function () {
 
   var OFFSET = 56;
   //helpers for Priority Plus menu
-  var dropup = function ($dropdown, topValue) {
+  function dropup ($dropdown, index) {
+    var multiplier = index + 1;
     var topValue = parseInt($dropdown.css('top').split('px')[0], 0);
-    var newTopValue = topValue - OFFSET;
+    var newTopValue = topValue - (OFFSET * multiplier);
     var newTopString = (newTopValue.toString()) + 'px';
 
     $dropdown.animate({
@@ -17,7 +18,7 @@ var Click = function () {
     }, 200);
   };
 
-  var dropdown = function ($dropdown) {
+  function dropdown ($dropdown) {
     var topValue = parseInt($dropdown.css('top').split('px')[0], 0);
     var newTopValue = isNaN(topValue) ? OFFSET : topValue + OFFSET;
     var newTopString = (newTopValue.toString()) + 'px';
@@ -27,80 +28,72 @@ var Click = function () {
     }, 200);
   };
 
-  var drop = function ($dropdown) {
+  function drop ($dropdown, index) {
     //establish baseline value for top (the CSS attr)
     if ($dropdown.hasClass('visible')){
-      dropup($dropdown);
+      dropup($dropdown, index);
       $dropdown.removeClass('visible');
     } else {
       dropdown($dropdown);
       $dropdown.addClass('visible');
     }
   };
+
+  function menuClickEmitter($target, index) {
+    $target.on('click', 'a', function ( e ) {
+      //quick default anchor tag prevention
+      if($target.attr('href') === '#'){
+        event.preventDefault();
+      }
+
+      //emit an event to be handled differently according to index number in accordianArray
+      $target.trigger('menu:click:' + index);
+    });
+  };
+
+  function menuClickListener(accordianArray, $target, index) {
+    $target.on('menu:click:' + index, function () {
+      //toggle assigned dropdown visibility
+      var $dropdown = $(accordianArray[index].dropdownSelector);
+      drop($dropdown, 0);
+
+      //get child dropdown elements
+      var otherDropdowns = _.filter(accordianArray, function (menuObject) {
+        return accordianArray.indexOf(menuObject) > index
+      });
+
+      // console.log(otherDropdowns);
+      // shouldn't affect menus without children
+      otherDropdowns.forEach(function (dropdownObj) {
+        var $dropdown = $(dropdownObj.dropdownSelector);
+
+        //top condition should only apply to grandparent elements
+        if ( $target.hasClass('triggered') && $dropdown.hasClass('visible')) {
+          drop($dropdown, index + 1);
+        } else if ( $target.hasClass('triggered')) {
+          dropup($dropdown, index)
+        } else {
+          dropdown($dropdown);
+        }
+      });
+
+      $target.hasClass('triggered') ? $target.removeClass('triggered') : $target.addClass('triggered');
+    });
+  }
   //PUBLIC
   //Priority Plus menu JavaScript
   obj.priorityMenu = function (accordianArray) {
     //accordianArray should be an array of Objects. The order should be from top -> bottom, with an anchorSelector and dropdownSelector defined for each item in the array
-    //set up basic click listener that emits an event to be handled by the other menu items
-    accordianArray.forEach(function (menuObject) {
+
+    _.each(accordianArray, function (menuObject) {
       var $target = $(menuObject.anchorSelector);
-      var $dropdown = $(menuObject.dropdownSelector);
+      var index = accordianArray.indexOf(menuObject);
 
-      $target.on('click', 'a', function ( e ) {
-        //quick default anchor tag prevention
-        if($target.attr('href') === '#'){
-          event.preventDefault();
-        }
-
-        var index = accordianArray.indexOf(menuObject);
-        //emit an event to be handled differently according to index number in accordianArray
-        $target.trigger('menu:click:' + index);
-      });
+      menuClickEmitter($target, index);
+      menuClickListener(accordianArray, $target, index);
     });
-
-    //attach event listener to a specific anchor tag with a dropdown
-    $(accordianArray[0].anchorSelector).on('menu:click:0', function(){
-      //toggle dropdown visibility
-      var $dropdown = $(accordianArray[0].dropdownSelector);
-      drop($dropdown);
-
-      var otherDropdowns = _.filter(accordianArray, function (menuObject) {
-          return accordianArray.indexOf(menuObject) > 0
-      });
-
-      otherDropdowns.forEach(function (dropdown) {
-        var $dropdown = $(dropdown.dropdownSelector);
-        drop($dropdown);
-      });
-    });
-
-    for(var i = 1; i < accordianArray.length; i++){
-      $(accordianArray[i].anchorSelector).on('menu:click:' + i, function () {
-        console.log('you clicked a sub menu!');
-        console.log(accordianArray[i - 1]);
-        //toggle dropdown visibility
-        var $dropdown = $(accordianArray[i - 1].dropdownSelector);
-
-        if($dropdown.hasClass('visible')){
-          $dropdown.removeClass('visible');
-        }
-        drop($dropdown);
-        var clickCount = $dropdown.data('clickCount');
-        if (clickCount === undefined ) {
-          $dropdown.data('clickCount', 1);
-        } else {
-          $dropdown.data('clickCount', clickCount++);
-       }
-
-       console.log( $dropdown.data('clickCount') );
-       
-       if ($dropdown.data('clickCount') >= i -1) {
-         $dropdown.addClass('visible');
-         drop($dropdown);
-       }
-      });
-    }
   };
+
   //scroll to IDs on the page
   obj.scroller = function(){
     $('a').click(function(){
