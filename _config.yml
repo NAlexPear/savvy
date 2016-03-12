@@ -13,3 +13,22 @@ github_username:  NAlexPear
 # Build settings
 markdown: kramdown
 permalink: /blog/:categories/:year/:month/:day/:title/
+
+# Prose settings
+prose:
+    rooturl: "_drafts"
+    media: "theme/images"
+    metadata:
+    _drafts: 
+    	- name: "layout"
+    	field:
+        	element: "hidden"
+           	value: "post"
+		- name: "title"
+    	field:
+        	element: "text"
+           	value: "title"
+    	- name: "date"
+    	field:
+        	element: "hidden"
+           	value: CURRENT_DATETIME
