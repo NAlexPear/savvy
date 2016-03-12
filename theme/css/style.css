@@ -58,7 +58,7 @@ h3 {
   color: #ffffff; }
   @media (max-width: 640px) {
     h3 {
-      font-size: 2.75vw; } }
+      font-size: 3.75vw; } }
 
 h4 {
   font-size: 2vw;
@@ -67,7 +67,7 @@ h4 {
   color: #ffffff; }
   @media (max-width: 640px) {
     h4 {
-      font-size: 2vw; } }
+      font-size: 3vw; } }
 
 p {
   font-family: "Kreon", serif;
