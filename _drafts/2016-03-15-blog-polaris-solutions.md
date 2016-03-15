@@ -5,13 +5,14 @@ published: false
 # _Hiring IT in STL:_ 
 ## Polaris Solutions Builds Teams
 ![IMG_0567.JPG]({{site.baseurl}}/theme/images/IMG_0567.JPG)
-![Kadel-5.jpg]({{site.baseurl}}/theme/images/Kadel-5.jpg)
+
 
 When I spoke to Chris Kadel, President at Polaris Solutions, he said his office was a ghost town. When I laughed he said, "That's good! Everyone is out working for our clients."
  
 [Polaris Solutions](http://www.polarissolutions.com) is an Application Lifecycle Management (ALM) and custom software development consulting firm that specializes in helping teams deliver high value software through technical leadership, process improvement, and software development expertise. They have locations in Chicago, Denver and St. Louis and currently employ about 30 consultants who work with Polaris Solutions' clients.
  
 Kadel, one of the company's founders, spends a lot of his time hiring these days. "We don't have underutilized people, everyone is working. Some quarters I focus on sales, but since the first of the year, I almost can't find enough people to bring on to the team."
+![Kadel-5.jpg]({{site.baseurl}}/theme/images/Kadel-5.jpg)
  
 "Polaris is a little different. We hire for the career, not by project. We try to hire people that have a good long-term fit with us. We are always looking for good people, because we have to be ready for the demand, but we try to avoid re-actively hiring, or going too fast. If you do that you make a bad decision for the candidate, the clients and the company."
  
