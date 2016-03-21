@@ -1,6 +1,20 @@
 ---
 layout: default
-title: "Blog"
+title: "Savvy Coders Blog"
 ---
 
-<h1>this is the future home of our index view for blog posts</h1>
+<h2>Welcome to the Savvy Coders Blog</h2>
+<h3>Click an article below to read more!</h3>
+
+{% for post in site.posts limit: 10 %}
+  <br>
+    <a href="{{ post.url }}"><p>{{ post.title }}</p></a>
+    <p>{{ post.date | date_to_long_string }}</p>
+    <p>
+      {{ post.excerpt | strip_html }}
+      <br>
+      <a href="{{ post.url }}"> [read more...]</a>
+    </p>
+    <br>
+    <br>
+{% endfor %}

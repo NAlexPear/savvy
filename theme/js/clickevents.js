@@ -62,7 +62,6 @@ var Click = function () {
         return accordianArray.indexOf(menuObject) > index
       });
 
-      // console.log(otherDropdowns);
       // shouldn't affect menus without children
       otherDropdowns.forEach(function (dropdownObj) {
         var $dropdown = $(dropdownObj.dropdownSelector);
