@@ -2,10 +2,13 @@
 <html lang="en">
 {% include head.html %}
 <body>
-  {% include nav.html %}
+  {% include subnav.html %}
   {% include splash.html %}
-
-  {{ content }}
+  <div id="content-wrapper">
+    <div id="content">
+      {{ content }}
+    </div>
+  </div>
 
   {% include footer.html %}
   {% include scripts.html %}

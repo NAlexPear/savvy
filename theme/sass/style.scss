@@ -158,6 +158,19 @@ hr{
           }
         }
     }
+    &.blog-post{
+      padding-top: 7em;
+      img{
+        width: 80vw;
+        margin: 2em auto;
+      }
+
+      h2{
+        &.post-title{
+          text-align: left;
+        }
+      }
+    }
 }
 
 .content-section{

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-{% include head.html %}
+{% include posthead.html %}
 <body>
-  {% include nav.html %}
+  {% include postnav.html %}
 
   <!-- post-specific splash to go here? -->
 
   {% include sidebar.html %}
-
-  {{ content }}
-
+  <div id="content-wrapper">
+    <div id="content" class="blog-post">
+      {{ content }}
+    </div>
+  </div>
   <div id="disqus_thread"></div>
 
   {% include footer.html %}
-  {% include scripts.html %}
+  <script src="{{site.baseurl}}/theme/js/site.js" charset="utf-8"></script>
   {% include disqus.html %}
 </body>
 </html>

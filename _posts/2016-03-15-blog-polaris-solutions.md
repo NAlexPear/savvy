@@ -7,7 +7,8 @@ published: yes
 ---
 
 # _Hiring IT in STL:_
-## Polaris Solutions Builds Teams
+Polaris Solutions Builds Teams
+
 ![Kadel-5.jpg]({{site.baseurl}}/theme/images/Kadel-5.jpg)
 
 When I spoke to Chris Kadel, President at Polaris Solutions, he said his office was a ghost town. When I laughed he said, "That's good! Everyone is out working for our clients."
