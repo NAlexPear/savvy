@@ -6,7 +6,7 @@ date: 2016-03-23
 published: yes
 ---
 ## The Bare Minimum
-### ...tech skills that every entrepreneur needs to succeed
+...tech skills that every entrepreneur needs to succeed
 
 *This article has been reposted from Alex's personal blog at [alexpear.com](https://alexpear.com). It is part 1 of a series of posts about basic tech skills in the workplace.*
 

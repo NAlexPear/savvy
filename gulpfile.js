@@ -100,9 +100,14 @@
             }))
             .pipe(gulp.dest('public/theme/images'));
     });
+    //surge-css porter
+    gulp.task('surge-port', function () {
+      gulp.src(['theme/css/surge.css'])
+        .pipe(gulp.dest('public/theme/css'));
+    });
 
     //CSS and JS minifier, retaining async on javascript files, after all other files have been ported over
-    gulp.task('async',['font-port','other-image-port', 'class-port', 'blog-port', 'autoprefixer'],function(){
+    gulp.task('async',['font-port','other-image-port', 'class-port', 'blog-port', 'surge-port', 'autoprefixer'],function(){
       return gulp.src(['_site/src/**/*.html','_site/index.html','!_site/src/class-slides'])
         .pipe(useref({searchPath:'.'}))
         .pipe(gulpif('*.js', uglify()))

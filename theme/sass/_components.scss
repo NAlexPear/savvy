@@ -562,3 +562,24 @@
     display: none;
   }
 }
+
+//people grid styles
+@mixin people {
+  .surge-grid{
+    &>div{
+      padding: 1em;
+    }
+    .img-container{
+      width: 100%;
+      max-height: 350px;
+      overflow: hidden;
+    }
+    img{
+      display: block;
+      width: 100%;
+    }
+    #james{
+      margin-top: -50px;
+    }
+  }
+}

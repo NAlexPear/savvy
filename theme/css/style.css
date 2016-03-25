@@ -112,8 +112,8 @@ hr {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-line-pack: center;
-        -webkit-align-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
             align-content: center;
     padding: 0; }
     @media screen and (max-width: 640px) {
@@ -222,8 +222,8 @@ hr {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      -webkit-align-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
           align-content: center;
   margin: 0 auto;
   font-size: 4rem;
@@ -270,8 +270,8 @@ hr {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      -webkit-align-content: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
           align-content: center;
   width: 100%; }
   .infobubbles img {
@@ -363,8 +363,8 @@ hr {
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    -ms-flex-line-pack: center;
-        -webkit-align-content: center;
+    -webkit-align-content: center;
+        -ms-flex-line-pack: center;
             align-content: center;
     max-width: 750px;
     margin: 0 auto;
@@ -679,3 +679,15 @@ footer {
 
 .response {
   display: none; }
+
+.surge-grid > div {
+  padding: 1em; }
+.surge-grid .img-container {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden; }
+.surge-grid img {
+  display: block;
+  width: 100%; }
+.surge-grid #james {
+  margin-top: -50px; }
