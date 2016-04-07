@@ -35,7 +35,7 @@ Just like we can invoke a function using parens (e.g. `prompt()`), we can access
 ```javascript
 console.log(myArray[0] + ' and ' + myArray[2]);
 ```
-Arrays are also *zero-index*, which means that the first piece of data in the collection has a position of 0 (instead of 1). We'll see a lot more of this later. For now, it's enough to just recognize an array when you see one!
+Arrays are also *zero-indexed*, which means that the first piece of data in the collection has a position of 0 (instead of 1). We'll see a lot more of this later. For now, it's enough to just recognize an array when you see one!
 
 **Objects** are collections of data just like Arrays, but we can access data by *name* instead of *sequence*. Let's try to re-write part of `myArray` as an Object:
 
