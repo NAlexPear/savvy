@@ -170,4 +170,83 @@ if(rng > 0.66) {
     computerChoice = "S";
 }
 ```
-3. Tell the user what the outcome of the hand was with an `alert()`. HINT:
+3. Tell the user what the outcome of the hand was with an `alert()`. There are _lots_ of ways to compare hands, try out a few! HINT (as an example):
+
+```javascript
+var userWins = "You win!";
+var computerWins = "The computer wins!";
+
+if(computerChoice !== userChoice){
+    if(computerChoice === "R"){
+        if (userChoice === "S") {
+            alert(computerWins);
+        } else {
+            alert(userWins);
+        }
+    } else if (computerChoice === "P") {
+        if( userChoice === "R") {
+            alert(computerWins);
+        } else {
+            alert(userWins);
+        }
+    } else {
+        if( userChoice === "P") {
+            alert(computerWins);
+        } else {
+            alert(userWins);
+        }
+    }
+} else {
+    alert('Tie!');
+}
+```
+4. Use a `while` loop to repeat the process five times. HINT:
+
+```javascript
+var userWins = "You win!";
+var computerWins = "The computer wins!";
+var roundCounter = 0;
+
+var gameRound = function(){
+    var userChoice = prompt("Choose Rock, Paper, or Scissors by typing 'R', 'P', or 'S'");
+    var computerChoice = "R";
+    var rng = Math.random();
+
+    if(rng > 0.66) {
+        computerChoice = "P";
+    } else if (rng > 0.33) {
+        computerChoice = "S";
+    }
+
+    if(computerChoice !== userChoice){
+        if(computerChoice === "R"){
+            if (userChoice === "S") {
+                alert(computerWins);
+            } else {
+                alert(userWins);
+            }
+        } else if (computerChoice === "P") {
+            if( userChoice === "R") {
+                alert(computerWins);
+            } else {
+                alert(userWins);
+            }
+        } else {
+            if( userChoice === "P") {
+                alert(computerWins);
+            } else {
+                alert(userWins);
+            }
+        }
+    } else {
+        alert('Tie!');
+    }
+};
+
+while (roundCounter < 5) {
+    gameround();
+    roundCounter++;
+}
+
+```
+Once you like the way your RPS game is working, `add`, `commit`, `push`, and `deploy` your project. Good work!
