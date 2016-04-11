@@ -109,11 +109,11 @@ Just like we did with the first `greeter.html` exercise, we can also manipulate 
   var output = document.querySelector('#greeting');
   output.textContent = "Thanks for visiting, " + name + ".";
   ```
-8. While `.textContent` works, it would be nice if we could wrap our greeting in a `<p>` element to keep styling consistent. To do that, we'll use a different method attached to DOM nodes called `.html`. Try this:
+8. While `.textContent` works, it would be nice if we could wrap our greeting in a `<p>` element to keep styling consistent. To do that, we'll use a different method attached to DOM nodes called `.innerHTML`. Try this:
 
   ```javascript
   var name = prompt("Hi there! What's your name?");
   var output = document.querySelector('#greeting');
-  output.html = "<p>Thanks for visiting, " + name + ".</p>";
+  output.innerHTML = "<p>Thanks for visiting, " + name + ".</p>";
   ```
 9. Now you can add some specific styles to `#greeting p` to make your greeting section look nice! Once your greeting area looks good, `add`, `commit`, `push`, and `deploy` your changes.

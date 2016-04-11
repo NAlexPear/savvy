@@ -37,7 +37,7 @@ In the last class, we worked on making a greeter for visitors to our website. No
 ```javascript
 var name = prompt("Hi there! What's your name?");
 var output = document.querySelector('#greeting');
-output.html = "<p>Thanks for visiting, " + name + ".</p>";
+output.innerHTML = "<p>Thanks for visiting, " + name + ".</p>";
 ```
 
 3. Now let's make sure that users have actually input a name! We'll do that using a neat trick of JavaScript, where strings evaluate to `true`, but _empty_ strings evaluate to `false`. Try the following in `greeting.js`:
@@ -47,9 +47,9 @@ var name = prompt("Hi there! What's your name?");
 var output = document.querySelector('#greeting');
 
 if(name){
-    output.html = "<p>Thanks for visiting, " + name + ".</p>";
+    output.innerHTML = "<p>Thanks for visiting, " + name + ".</p>";
 } else {
-    output.html = "<p>Please tell us your name!</p>";
+    output.innerHTML = "<p>Please tell us your name!</p>";
 }
 ```
 
@@ -61,9 +61,9 @@ var lastName = prompt("What's your last name?");
 var output = document.querySelector('#greeting');
 
 if(firstName && lastName){
-    output.html = "<p>Thanks for visiting, " + firstName + " " + lastName + ".</p>";
+    output.innerHTML = "<p>Thanks for visiting, " + firstName + " " + lastName + ".</p>";
 } else {
-    output.html = "<p>Please tell us your first and last names!</p>";
+    output.innerHTML = "<p>Please tell us your first and last names!</p>";
 }
 ```
 
@@ -74,7 +74,7 @@ var firstName = prompt("Hi there! What's your first name?") || "Visitor";
 var lastName = prompt("What's your last name?") || "McDefaultson";
 var output = document.querySelector('#greeting');
 
-output.html = "<p>Thanks for visiting, " + firstName + " " + lastName + ".</p>";
+output.innerHTML = "<p>Thanks for visiting, " + firstName + " " + lastName + ".</p>";
 ```
 
 ### Portfolio Project 2
@@ -100,4 +100,4 @@ if(response === "sit"){
 }
 ```
 
-Try to add some options that include responses for multiple options using the `||` and `&&` operators. Good luck! When you like your story, be sure to `add`, `commit`, and `push` your commits to GitHub. 
+Try to add some options that include responses for multiple options using the `||` and `&&` operators. Good luck! When you like your story, be sure to `add`, `commit`, and `push` your commits to GitHub, then `deploy` your changes to your live site.
