@@ -31,7 +31,7 @@ We'll use all three of these methods in the next exercise.
 ---
 
 ### Exercise 1
-#### Messing with the DOM
+#### `text` and `html`
 
 For this next exercise, we've created a document that will act as a bit of a sandbox for you. You can find the link [here](https://savvycoders.com/class-slides/class-materials/week-2/module-4/jquery/jquery-selecting.html). When you've navigated there in your browser, take a look at the source code.
 
@@ -74,9 +74,6 @@ $("h1+p").css("color", "green");
 7. Change the `#secret` to a hidden element with `display: none;`. HINT:
 ```javascript
 $("#secret").css("display", "none");
-
-// bonus solution!
-$("#secret").hide();
 ```
 8. Replace the text content of `#change-me` with "I feel like a new sentence". HINT:
 ```javascript
@@ -86,5 +83,60 @@ $("#change-me").textContent("I feel like a new sentence");
 ```javascript
 $("#change-me").html("<p>I feel like a new sentence</p>");
 ```
+
+---
+
+### Exercise 2
+#### `append`, `prepend`, `hide`, and `show`
+
+Sometimes, we don't want to overwrite all of the text or HTML contents of an element. Instead, we just want to tack some text or HTML to the end or beginning of that element. That's where `.append()` and `.prepend()` come in!
+
+If we start out with the following HTML:
+
+```html
+<p>I'm a sentence</p>
+```
+
+...we can add content to the front and tail of the sentence like so:
+
+```javascript
+$("p").append("!"); //<p>I'm a sentence!</p>
+$("p").prepend("Behold, "); //<p>Behold, I'm a sentence!</p>
+
+//or chained together:
+$("p").prepend("Behold, ").append("!");
+```
+
+This is usually much easier to read and use than String concatenation.
+
+It's also very common to want to show and hide elements on the page. We already tried this with `.css("display", "none")`, and this works just fine. But we use this so often that jQuery has given us a shorthand in `.show()` and `.hide()`.
+
+```javascript
+// long form
+$("div.toggle-stuff").css("display", "none"); // invisible
+$("div.toggle-stuff").css("display", "block"); // visible
+
+// shortcut
+$("div.toggle-stuff").hide(); // invisible
+$("div.toggle-stuff").show(); // visible
+```
+
+Now, using the same sandbox page we used for Exercise 1, try the following:
+
+1. Show and hide the `#secret` element with `.show()` and `.hide()` from the console!
+2. `append` a calling card with your name to the end of the page. HINT:
+
+```javascript
+var callingCard = "<div><b>Alex was here</b></div>";
+$("body").append(callingCard);
+```
+
+3. `prepend` a greeting to the beginning of the page's `body`. HINT:
+
+```javascript
+var greeting = "<h1>Welcome to the jQuery SandBox</h1>";
+$("body").prepend(greeting);
+```
+
 
 ---
