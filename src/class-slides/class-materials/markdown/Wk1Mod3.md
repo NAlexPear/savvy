@@ -24,7 +24,7 @@ The `<span>` element is a generic inline element which defines a section of your
 
 ### Portfolio Project 1
 
-L*et's add another page to our growing Portfolio Project! This page will be for your future personal blog.
+Let's add another page to our growing Portfolio Project! This page will be for your future personal blog.
 
 1. Repeat the same steps we went through to build the `projects` and `media` pages. We'll call the blog page `blog` (makes sense, right?). Once you've finished creating the blog page, your site's directory structure should look this:
 

@@ -140,12 +140,12 @@ $ git push origin master
 
 ---
 
-### Inlline Styles
+### Inline Styles
 
 There are three ways to give HTML content some styles:
 
 + inline styles (the `style` attribute)
-+ style tags (`<style` in document `<head>`)
++ style tags (`<style>` in document `<head>`)
 + stylesheets (external documents linked with `<link>`)
 
 Today, we're going to take a look at inline styles. Inline styles are generally avoided in production websites, but you'll still see them in the wild in old codebases or in some niche applications (like MailChimp templates). To get a feel for inline styles, take a look at the following code:
@@ -159,7 +159,7 @@ Today, we're going to take a look at inline styles. Inline styles are generally 
     <img src="https://i.imgur.com/81qyN1y.jpg" style="height:100px;width:100px">
   </body>
 ```
-Try writing it out in a new HTML document in your `exercises` directory, then previewing the result in your browser. 
+Try writing it out in a new HTML document in your `exercises` directory, then previewing the result in your browser.
 
 So what have we learned?
 1. The value of the HTML attribute named style styles HTML elements
@@ -167,7 +167,7 @@ So what have we learned?
 3. CSS rules are key-value pairs (similar to HTML attributes)
 4. The key represent the property to be changed (like 'color' or 'background-color')
 5. The value represents what it should be changed to ('blue' or 'red')
-6. The key and value are seperated by a colon
+6. The key and value are separated by a colon
 7. Each key-value pair is separated with a semi-colon
 8. Colors can be described by name, as eight digit hex (base 16) values between 0 (black) and F (white), or as Red Green Blue triplets from 0 to 255
 9. We can use the following css colors for our background-color and color attributes:
@@ -177,7 +177,7 @@ So what have we learned?
 
 ### Portfolio Project 1
 
-Let's create a theme for your Portfolio Project's landing page. 
+Let's create a theme for your Portfolio Project's landing page.
 
 1. Use the following attributes somewhere on the page:
   + `background-color`
@@ -328,7 +328,7 @@ Now we have separated **presentation** from **content**. We can easily read the 
 
 ### Portfolio Project 3
 
-Now it's time to add a few more elements to our Portfolio Project pages. 
+Now it's time to add a few more elements to our Portfolio Project pages.
 1. Anchor tags (`<a href=""></a>`) have been used already to link to websites using `http` or `https`. They can also be used to automatically draft an email and open it in a browser window for users to send! Try the following:
     1. On your landing page, add a 'Contact Me' link.
     2. Inside the `href` attribute, use `mailto:` + your email address instead of `http:` + a website URL. Your new element should look something like `<a href="mailto:your.email@example.com?Subject=Contact%20Form">Contact Me</a>`.
@@ -345,4 +345,4 @@ With the time remaining, let's add a Media page to your portfolio project. That 
 3. Style your page with a style tag in the head of the document
 4. Stage, commit, push, and deploy your changes!
 
---- 
+---
