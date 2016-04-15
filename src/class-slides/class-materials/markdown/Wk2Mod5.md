@@ -77,7 +77,7 @@ $("#secret").css("display", "none");
 ```
 8. Replace the text content of `#change-me` with "I feel like a new sentence". HINT:
 ```javascript
-$("#change-me").textContent("I feel like a new sentence");
+$("#change-me").text("I feel like a new sentence");
 ```
 9. Put the new contents of `#change-me` into some paragraph tags. HINT:
 ```javascript
@@ -138,5 +138,82 @@ var greeting = "<h1>Welcome to the jQuery SandBox</h1>";
 $("body").prepend(greeting);
 ```
 
+---
+
+### Exercise 3
+#### Basic Animation
+
+While jQuery simplifies basic DOM operations, it adds also adds some unique animations of its own! Try the following in the same Sandbox we used for Exercises 1 and 2:
+
+```javascript
+$('ol li').fadeIn() // fade in a set of matched elements over time
+$('p .comments').fadeOut() // fade out as set of matched elements over time
+$('div#thing').slideDown() // animate an element sliding down over time
+$('#message').slideUp() // animate an element sliding up over time
+$('.alert').slideToggle() // toggle between an element sliding up or down over time depending on whether it's visible or not
+$('#change-me').animate("font-size", "200%") // animate a CSS property of your choosing!
+```
 
 ---
+
+### Exercise 4
+#### Complex option parameters
+
+We've already seen how to pass in _arguments_ to two functions: `.css()` and `.animate()`. Like most methods in jQuery, these two operations can take a variety of inputs (check the documentation for [`css`](https://api.jquery.com/css/) and [`animate`](https://api.jquery.com/animate/) for a better understanding of all possible inputs.) Both of these methods will behave differently based on if they are passed no arguments, a property name only, a property and a value as strings, or with an Object of properties and values.
+
+You'll recall from earlier in the week that Objects are sets of key/value pairs that can be defined explicitly using curly brackets. e.g.:
+
+```javascript
+var myObject = { propertyTheFirst: "This is a value", propertyTheSecond: "This is a different value" };
+```
+
+So far we've been using methods on pre-built Objects (like the Object returned by `$()`) through dot notation. But we can also create Objects of our own to be passed into functions (inlucding `.css()` and `.animate()`). In this case, we'll use an Object to pass in a series of properties and values to change!
+
+Try the following in the Sandbox:
+
+1. Change three CSS properties on `#change-me` when the page loads. HINT:
+```javascript
+// inlined
+$("#change-me").css({
+    "width": "80%",
+    "margin-left": "auto",
+    "margin-right": "auto"
+});
+
+// separated
+var options = {
+    "width": "80%",
+    "margin-left": "auto",
+    "margin-right": "auto"
+};
+
+$("#change-me").css( options );
+```
+2. Now _animate_ three CSS properties on `#change-me` when the page loads. Not every CSS property is animate-able... try to figure out which can be animated, and which can't! HINT:
+```javascript
+// inlined
+$("#change-me").animate({
+    "font-size": "300%",
+    "margin-left": "200px",
+    "padding": "50px"
+});
+
+// separated
+var options = {
+    "font-size": "300%",
+    "margin-left": "200px",
+    "padding": "50px"
+};
+
+$("#change-me").animate( options );
+```
+---
+
+### Portfolio Project 1
+#### SandBox from Scratch (bonus)
+
+> If you want to make an apple pie from scratch, you must first create the Universe.
+
+For today's final exercise, we're going to bring all of our jQuery work together to create an entirely new set of HTML for display. Starting with the standard `index.html` boilerplate, build each part of today's sandbox on page load in the `body` of a page. We'll link this project to our Portfolio page just like `choose-your-own-adventure`. You can use `.html()` and `.text()` to add text content, and add some style with `.css()`... or even `.animate()`!
+
+Once you like your _new_ Sandbox, `stage`, `commit`, `push`, and `deploy` your project.
