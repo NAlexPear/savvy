@@ -16,11 +16,13 @@ The Dev Console is a JavaScript REPL ("Read Evaluate Print Loop") that is just w
 
 1. Remember the DOM? Let's see if we have access to it by typing `window.document` into the REPL. What's the output?
 2. We also have access to data outside of the DOM (in the BOM or "Browser Object Model"). This information is held in the `window` object. Try out a few of these:
+
   ```javascript
   window.location
   window.history
   ```
 3. While that's pretty neat, we're still just looking around. Let's try interacting with the REPL! Try out the following:
+
   ```javascript
   2 + 2
   2 * 5
