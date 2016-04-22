@@ -95,7 +95,7 @@
         <input type="text" name="firstname" placeholder="type your first name here!" autofocus>
         <br>
         <label for="pswd"><span>PASSWORD: </span></label>
-        <input type="password" name="pswd" placeholder="password"> 
+        <input type="password" name="pswd" placeholder="password">
         <br>
         <label for="userEmail"><span>EMAIL: </span></label>
         <input type="email" name="userEmail" placeholder="hello@site.com">
@@ -133,14 +133,26 @@
         <input id="submit-button" type="submit" value="SUBMIT">
       </div>
     </form>
-    
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <!--QUICK SCRIPT TO KEEP FORM SUBMISSION FROM REFRESHING THE PAGE-->
     <script type="text/javascript">
-      // document.getElementById('submit-button').addEventListener('click', function(event){
-      //   event.preventDefault();
-      //   console.log('Hey, you just clicked the SUBMIT button :D!');
-      // });
+        var count = 2;
+        var newBook;
+
+        $("form").on("submit", function(event) {
+            event.preventDefault();
+
+            var data = $(this).serializeArray();
+            var formObject = {};
+
+            formObject.id = ++count;
+            data.forEach( function(field){
+                formObject[field.name] = field.value;
+            } );
+
+            newBook = formObject;
+        });
     </script>
-    
+
   </body>
 </html>
