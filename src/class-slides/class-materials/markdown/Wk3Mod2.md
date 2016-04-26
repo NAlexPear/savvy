@@ -215,11 +215,33 @@ var sum = add(7, 12)
 1. Write a function called `tripler` that takes a number and returns triple the value. HINT:
 
 ```javascript
-
+var tripler = function( num ){
+  return num * 3;
+}
 ```
-2. Create a function `multiply` that takes two numbers as inputs and returns their product
+2. Create a function `multiply` that takes two numbers as inputs and returns their product. HINT:
+
+```javascript
+var multiply = function( num1, num2 ){
+  return num1 * num2;
+}
+```
 3. Create a function `divide` that takes two numbers as inputs and returns the result of dividing the first by the second
+
+```javascript
+var divide = function( num1, num2 ){
+  return num1 / num2;
+}
+```
+
 4. Create a function `remainder` that takes two numbers as inputs and returns the result of modulo the first by the second
+
+```javascript
+var remainder = function( num1, num2 ){
+  return num1 % num2;
+}
+```
+
 5. Using only the functions you wrote above, and no operators, calculate the value of tripling 5, multiplying that by 12, dividing by 2 and then finding the remainder of dividing that by 3.
 
 ---
