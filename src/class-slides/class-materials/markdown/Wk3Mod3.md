@@ -36,3 +36,33 @@ $('p').click(function(){
   $('p').show().css('color', 'red').text('boom goes the dynamite!')
 });
 ```
+
+---
+
+## Portfolio Project 1
+### Adding Effects
+
+There are _lots_ of events to learn about. Let's try a few by adding them to the JavaScript files for the landing page of our Portfolio Projects.
+
+1. Add some CSS rules for a class called `highlighted`. Maybe make the text bolder, or change color, or change the opacity of the background... it's up to you!
+2. Add the following to your JavaScript file:
+
+```javascript
+$('li').on('mouseover', function(){
+  $('li').addClass('highlighted')
+})
+$('li').on('mouseleave', function(){
+  $('li').removeClass('highlighted')
+})
+```
+
+How does this work?
+3. Let's add a click handler for your face. When users click on your profile page, a previously-hidden blurb should be revealed with a jQuery animation. There are lots of options here, but something like this should work:
+
+```javascript
+$('#profile-pic').on('click', function(){
+  $('#hidden-blurb').slideDown(); // only works if #hidden-blurb has display:none; in its CSS
+});
+```
+
+---
