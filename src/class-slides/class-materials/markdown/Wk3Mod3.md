@@ -64,5 +64,10 @@ $('#profile-pic').on('click', function(){
   $('#hidden-blurb').slideDown(); // only works if #hidden-blurb has display:none; in its CSS
 });
 ```
+4. Add at least one more jQuery animation effect on click!
+
+---
+
+
 
 ---
