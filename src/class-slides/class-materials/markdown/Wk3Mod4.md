@@ -115,14 +115,19 @@ arr[3] = true
 arr[1] = "overwrite 45, just forget about that one, okay?"
 ```
 
-Exercise: Favorite Recipe
+---
 
-Instantiate a new array and save it to a variable recipe
-Use bracket notation to add the steps to create your favorite meal.
-Access the first step of your recipe using bracket notation.
-Create variable called last_step and assign to it a number which represents the index of the last item of your array
-Access the last step of your recipe using the last_step variable
-Submit Your Code
+### Exercise 1: Contact Info Array
+
+Let's organize the contact information from your Portfolio project into a quick array! We'll do all of these things in the console.
+
+1. Instantiate a new array and save it to a variable `contactArray`.
+2. Use bracket notation to add pieces of contact information by bullet point.
+3. Access the first step of your `contactArray` using bracket notation.
+4. Create variable called `lastOne` and assign to it a number which represents the index of the last item of your array.
+5. Access the last step of your recipe using the last_step variable
+
+---
 
 Arrays have associated with them some properties, like `.length`, and methods, like `.push()`, to help us use our collections more effectively.
 
@@ -137,18 +142,19 @@ var lastItem = words.pop()
 arr.unshift("More at the beginning!!")
 var firstItem = words.shift()
 ```
+---
 
-Exercise: Bucket List
+### Exercise 2
+### More contact info!
 
-Instantiate a new array and save it to a variable bucket_list
-Use bracket notation with the assignment operator to add two life goals to your array.
-.push() two goals onto the end of your list.
-.unshift() two goals onto the beginning.
-What is the array's length at this point?
-.pop() off one goal and save it to a variable dying_wish
-.shift() off one goal and save it to a variable do_it_now
-What is the array's length at this point?
+Let's keep editing that contact information array!
 
+1. `.push()` two more bits of information about you to the array.
+2. `.unshift()` an inspirational quote onto the beginning.
+3. `.pop()` off the last bit of contact info and save it to the variable `extraContact`
+4. `.shift()` off your quote and save it to `dailyInspo`
+
+---
 
 Often we want to consider every element in the array in turn.
 
@@ -161,28 +167,18 @@ while (i < words.length) {
 }
 ```
 
-Exercise:
+### Portfolio Project 1
+#### Making Contact
 
-Use a while loop and jQuery to append each item in your recipe and your bucket list onto a web page.
-Refactor your code such that the while loop lives inside a function called append_strings that takes an array as an input (argument)
-Invoke append_strings twice, passing in recipe the first time and bucket_list the second time
-Refactor append_strings such that it takes two arguments: an array of strings, and a string representing the CSS selector of the element into which the strings should be appended. (i.e. bucket_list may be appended into a #bucket_output div)
+Now let's take our `contactArray` out of the console and into our Portfolio Project!
 
-```javascript
-var str = "one two three"
-var arr = str.split(' ')
-var new_str = arr.join(' and a ')
+1. Copy the contents of your `contactArray` list into an array in the javascript file attached to your main index.html page.
+2. Get rid of the individual list elements (and their content!) in the HTML document. You should now only have an empty `<ul>`. Give that `ul` an `id` of `contact-list`.
+3. Use a while loop and jQuery to append each item in your `contactArray` to the `contact-list`. Remember that they need to be list elements!
+4. Refactor your code such that the while loop lives inside a function called `appendStrings` that takes an array as an input (argument).
+5. Refactor append_strings such that it takes two arguments: an array of strings, and a string representing the type of element you would like to append (e.g. `li`, `p`, or something else).
 
-// now our turn...
-var scrambled_poem = "roses red are bacon crispy i bacon love and is blue violets are"
-```
-
-Exercise:
-
-use .split(' ') on scrambled_poem and save the result as an array scrambled_array
-Create a new array unscrambled_array
-While the length of scrambled_array is greater than 0, remove the FIRST and LAST value and store add them to unscrambled_array.
-Turn the values in unscrambled_poem into a string by using the array's native .join(' ') method.
+---
 
 We do this type of iteration so often, that JavaScript provides us a special kind of loop- the for loop.
 
@@ -192,10 +188,15 @@ for (var i = 0; i < words.length; i++) {
 }
 ```
 
-Exercise:
+---
 
-Write a function reverser which will take an array of values as an input and return a new array of the same values in reverse order.
-Inside reverser instantiate a new array reversed_array, use a for loop to populate it, then return it from the function.
+### Portfolio Project 2:
+
+1. Refactor your contact list to use a `for` loop instead of a `while` loop!
+
+---
+
+### `.forEach()`
 
 Often it's cleaner to use Array's native .forEach() method to run a given function once for each item in the array, passing that item in as an argument
 
@@ -206,13 +207,16 @@ var log_me = function(word){
 
 words.forEach(log_me)
 ```
-Exercise: Refactor your append_strings function to use .forEach() instead of a while loop.
 
-Exercise: Write a function biggest_smallest that takes an array of numbers as an input, uses .forEach(), and returns an array containing the smallest number in the zeroth position and the largest number in the first position.
+### Portfolio Project 3
+
+1. Refactor your `appendStrings` function to use `.forEach()` instead of a while loop.
 
 ---
 
-.concat() is short for concatenate. It smooshes two arrays together.
+### More fun Array methods!
+
+`.concat()` is short for _concatenate_. It smooshes two arrays together.
 
 ```javascript
 var friends = ['ada', 'will', 'bianca', 'abe']
@@ -225,7 +229,9 @@ console.log(friends, enemies) // does not change original arrays!
 
 ```
 
-Exericise: Write a function array_combiner that takes two arrays as inputs and returns the two of them smooshed together as an output
+### Exercise:
+
+Write a function array_combiner that takes two arrays as inputs and returns the two of them smooshed together as an output
 
 ```javascript
 var array_combiner = function(array1, array2) {}
@@ -234,7 +240,7 @@ var combined_array = array_combiner([1, 2, 3], [4, 5, 6])
 console.log(combined_array)
 ```
 
-.splice() is another confusing one. It destructively removes a number of elements from an array starting at a particular index.
+`.splice()` is another confusing one. It destructively removes a number of elements from an array starting at a particular index.
 
 ```javascript
 var frenemies = ['ada', 'will', 'bianca', 'abe', 'john', 'alice']
@@ -247,45 +253,9 @@ console.log("We took out ", removed_elements)
 console.log("The remaining array ", frenemies)
 ```
 
-Exercise: Write a function array_plucker that takes an array and an index as inputs and destructively removes the single value at that index. Return that value.
+### More Exercises:
 
-```javascript
-var array_plucker = function(array1, index_to_remove) {
-    var removed_value
-    // code here
-    return removed_value
-}
-
-var days_of_school = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-
-var day_off = array_plucker(days_of_school, 4)
-
-console.log("I'll go to school on: ", days_of_school)
-console.log("but I'm taking vaction on ", day_off)
-```
----
-
-```javascript
-var rand = Math.floor( Math.random() * words.length )
-words[rand]
-```
-
-Exercise: Magic 8-ball
-
-Create a Magic 8-ball that allows a user to type a question into an input field.
-When the user clicks the "ask question" button, register a click handler function that randomly selects a reply from an array of appropriately vague stock phrases.
-Display the answer inside a glowing circle or something crazy like that.
-Allow the user to click an "ask again" button which clears their previous question and output.
-Refactor your code so that the user doesn't receive the same reply twice until all the replies have been used at least once.
-Exercise: Shuffler Create a function shuffler that takes an array as input and returns a new array of the same elements in a random order. Is your shuffle perfectly mathematically random or only pseudo-random? How computationally efficient is it- i.e. how many lines of code need to be run?
-
-More Exercises:
-
-Write a function that takes an array of values and returns an boolean representing if the word "hello" exists in the array.
-Write a function that takes an array of values and a target value and returns how many times that target value exists in the array.
-Write a function that takes an array and returns a new array containing only the values at odd indexes in that array.
-Write a function called sum_array that takes an array of numbers and returns the sum of all of those numbers added together.
-Write a function called array_math that takes an array of numbers and a string with a mathmatical operator and applies that operator to all the numbers together. array_math([4,2,3], "\*") should return 24
-Write a zipper function that combines two arrays in alternating order, zipper([1,2,3],['a','b','c']) should return [1, 'a', 2, 'b', 3, 'c']. Make sure to handle cases where one array is longer than the other.
-Write a function that merges two sorted lists into a new list. merge_sorted([1, 2, 5, 9], [3, 7, 19]) should return [1, 2, 3, 5, 7, 9, 19]
-Write a function that creates an array of the first 100 Fibonacci numbers.
+1. Write a function that takes an array of values and returns an boolean representing if the word "hello" exists in the array. HINT: test each element with a loop!
+2. Write a function that takes an array of values and a target value and returns how many times that target value exists in the array.
+3. Write a function that takes an array and returns a new array containing only the values at odd indexes in that array.
+4. Write a function called sum_array that takes an array of numbers and returns the sum of all of those numbers added together.
