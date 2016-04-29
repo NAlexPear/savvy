@@ -218,3 +218,65 @@ for(var contactType in contactObject){
   elementLister( contactObject[contactType] );
 }
 ```
+
+---
+
+### Complex Objects
+
+Just like arrays, objects can hold values of any data type. That includes arrays, objects, and functions.
+
+```javascript
+var complex_object = {
+  string: "I'm a string!",
+  number: 42,
+  array: ["all sorts of stuff", 10, true, undefined, {me: "an object", more: "find me in here!"}, function(){console.log('beepity-beep')}],
+  simple_object: {name: 'bob', location: 'basement'},
+  fn: function(){
+    console.log("fn has been invoked! Checking both kinds of invocation-time inputs...")
+    console.log("what is my calling context?", this)
+    console.log("what are my arguments?", arguments)
+  }
+}
+
+complex_object.string
+complex_object.array[4]
+complex_object.simple_object.name
+complex_object.fn("stuff", "more stuff", "even more stuff!")
+```
+
+---
+
+### Exercise 4
+#### Dogs
+
+Take a look at this object, and try out the following:
+
+```javascript
+var puppyObject = [{
+    name: 'Henry',
+    age: 0.5,
+    breed: 'Aussie',
+    food: 'kibble',
+    toys: ['tennis ball', 'chew toy'],
+    picture: 'http://rubyriverminiaustralianshepherds.com/wp-content/uploads/aussie-puppy-for-sale-940x412.jpg'
+}, {
+    name: 'Tilly',
+    age: 5,
+    breed: 'Mutt',
+    food: 'kibble',
+    toys: ['bone', 'kong', 'squeaky toy'],
+    picture: 'http://www.dogchannel.com/images/zones/top_promo/excited-mixed-breed.jpg'
+}, {
+    name: 'Apollo',
+    age: 10,
+    breed: 'Labrador',
+    food: 'absolutely anything',
+    toys: ['old sock', 'other old sock', 'more old socks'],
+    picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
+}]
+```
+
+1. Iterate over `puppyObject` and log each dog's name
+2. Iterate over `puppyObject` and add all the toys to a new `allToys` array
+3. Write a function that takes an array of dogs and a toy as an input and returns the name of the dog that owns that toy.
+4. Using jQuery, place the pictures of each dog on a web page with its name underneath.
