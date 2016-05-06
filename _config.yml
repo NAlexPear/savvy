@@ -18,17 +18,17 @@ permalink: /blog/:categories/:year/:month/:day/:title/
 prose:
     rooturl: "_drafts"
     media: "theme/images"
-    metadata:
-    _drafts:
-      - name: "layout"
-        field:
-          element: "hidden"
-          value: "post"
-      - name: "title"
-        field:
-          element: "text"
-          value: "title"
-      - name: "date"
-        field:
-          element: "hidden"
-          value: CURRENT_DATETIME
+    # metadata:
+    # _drafts:
+    #   - name: "layout"
+    #     field:
+    #       element: "hidden"
+    #       value: "post"
+    #   - name: "title"
+    #     field:
+    #       element: "text"
+    #       value: "title"
+    #   - name: "date"
+    #     field:
+    #       element: "hidden"
+    #       value: CURRENT_DATETIME
