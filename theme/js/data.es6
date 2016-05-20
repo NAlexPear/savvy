@@ -1,9 +1,7 @@
-'use strict';
-
 /* eslint-disable no-unused-vars, no-unused-expressions, max-len */
 
 function Links() {
-    var obj = {};
+    let obj = {};
 
     obj.shared = {
         facebook: 'https://www.facebook.com/Savvy-Coders-1616883465226928/',
@@ -12,7 +10,7 @@ function Links() {
     };
 
     obj.stlouis = {
-        meetup: 'http://www.meetup.com/Saint-Louis-Savvy-Coders-Meetup/',
+        meetup : 'http://www.meetup.com/Saint-Louis-Savvy-Coders-Meetup/',
         location: 'TechArtista',
         address: '4818 Washington Blvd, St. Louis, MO 63108',
         locationLink: 'http://www.techartista.org/',
@@ -20,7 +18,7 @@ function Links() {
     };
 
     obj.nashville = {
-        meetup: 'http://www.meetup.com/savvycoders/',
+        meetup : 'http://www.meetup.com/savvycoders/',
         location: 'the Refinery',
         address: '438 Houston St Suite 263, Nashville, TN 37203',
         locationLink: 'http://www.refinerynashville.com/',
