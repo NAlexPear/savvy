@@ -1,6 +1,7 @@
 firebase.*
 .divshot-cache
 divshot.*
+.eslintrc
 
 node_modules
 .sass-cache
