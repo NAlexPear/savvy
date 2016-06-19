@@ -144,8 +144,14 @@ const asyncDeps = [
     'font-port'
 ];
 
+const asyncSrc = [
+    '_site/src/**/*.html',
+    '_site/index.html',
+    '!_site/src/class-slides/**/*'
+];
+
 gulp.task( 'async', asyncDeps, () => {
-    return gulp.src( [ '_site/src/**/*.html', '_site/index.html', '!_site/src/class-slides' ] )
+    return gulp.src( asyncSrc )
         .pipe( useref( { searchPath: '.' } ) )
         .pipe( gulpif( '*.js', uglify() ) )
         .pipe( gulpif( '*.css', minifyCss() ) )
