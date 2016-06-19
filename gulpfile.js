@@ -126,8 +126,6 @@ gulp.task( 'lint', () => {
 
 // ES2015-> supported JS
 gulp.task( 'babel', [ 'lint' ], () => {
-    // asyncDeps.push( 'babel' );
-
     return gulp.src( 'theme/js/**/*.es6' )
             .pipe( babel( { presets: [ 'es2015' ] } ) )
             .pipe( gulp.dest( 'theme/js/' ) );
