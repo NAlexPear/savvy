@@ -1,6 +1,5 @@
 'use strict';
 
-/* eslint-disable no-unused-vars */
 // set up requires for gulp tasks
 const gulp = require( 'gulp' );
 const babel = require( 'gulp-babel' );
@@ -17,49 +16,20 @@ const useref = require( 'gulp-useref' );
 const gulpif = require( 'gulp-if' );
 const sitemap = require( 'gulp-sitemap' );
 const autoprefixer = require( 'gulp-autoprefixer' );
-const sync = require( 'browser-sync' ).create();
 
 const util = require( 'gulp-util' );
 
 
-// DEVELOPMENT ENVIRONMENT TASKS (for ./build)
-// port in relevant content without any async operations
-gulp.task( 'dev-port', () => {
-    gulp.src( [ '_site/index.html', '_site/src/**/*', '!_site/src/blog', './theme' ] )
-        .pipe( gulp.dest( 'build/' ) );
-    gulp.src( '_site/blog/**/*' )
-        .pipe( gulp.dest( 'build/blog/' ) );
-    gulp.src( 'theme/**/*' )
-        .pipe( gulp.dest( 'build/theme/' ) );
-    gulp.src( 'node_modules/jquery/**/*' )
-        .pipe( gulp.dest( 'build/node_modules/jquery' ) );
-    gulp.src( 'node_modules/picturefill/**/*' )
-        .pipe( gulp.dest( 'build/node_modules/picturefill' ) );
-    gulp.src( 'theme/fonts/themify-icons/fonts/**/*' )
-        .pipe( gulp.dest( 'build/theme/fonts/' ) );
+// Development Utilities
+gulp.task( 'serve', () => {
+    util.log( 'Sending ./public directory to localhost directory' );
+
+    return gulp.src( './public/**/*' )
+            .pipe( gulp.dest( '/var/www/html/' ) );
 } );
 
-// set up watcher
-gulp.task( 'dev-watch', [ 'dev-port' ], sync.reload );
-
-// browserSync server
-gulp.task( 'serve', [ 'dev-port' ], () => {
-    sync.init( {
-        server: {
-            baseDir: './build'
-        }
-    } );
-    gulp.watch( [ 'theme/css/*', 'theme/js/*' ], [ 'dev-watch' ] );
-} );
-
-// browserSync for overview.html and class-materials
-gulp.task( 'class', () => {
-    sync.init( {
-        server: {
-            baseDir: 'src/class-slides/class-materials'
-        }
-    } );
-    gulp.watch( [ 'src/class-slides/class-materials/**/*' ], sync.reload );
+gulp.task( 'watch', () => {
+    gulp.watch( './public/**.*', [ 'serve' ] );
 } );
 
 // DEPLOYMENT BUILD TASKS (outside of ./public)
