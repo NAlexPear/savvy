@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh bash
 
 [ ! -d node_modules ] && echo "Installing dependencies: " && npm install
 
@@ -12,7 +12,6 @@ build () {
 
 #Be mindful of SASS and CSS directory structure for this function
 watch () {
-  sass --watch theme/sass/:theme/css &
   jekyll build --watch &
   gulp watch &
 }

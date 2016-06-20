@@ -175,7 +175,10 @@
       color: $hl;
     }
     li{
-      font-size: 6vmin;
+      font-size: 1em;
+      @media screen and (max-width: 640px){
+          font-size: 0.75em;
+      }
       border: 1px solid #656565;
       background-color: $bg;
       border-radius: $br;

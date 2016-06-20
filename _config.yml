@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Learn to Code with HTML, CSS, and JavaScript in Nashville, TN and St. Louis, MO.
 baseurl: ""
 url: "https://savvycoders.com" # the base hostname & protocol for your site
-exclude: ["test","node_modules","theme","public","gulpfile.js","build.sh","package.json","README.md"]
+exclude: ["test","node_modules","theme","build","public","gulpfile.js","build.sh","package.json","README.md"]
 include: [".htaccess"]
 twitter_username: SavvyCoders
 github_username:  NAlexPear

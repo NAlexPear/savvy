@@ -1,22 +1,22 @@
 'use strict';
 
 // set up requires for gulp tasks
-const gulp = require( 'gulp' );
-const babel = require( 'gulp-babel' );
-const eslint = require( 'gulp-eslint' );
-const usemin = require( 'gulp-usemin' );
-const uglify = require( 'gulp-uglify' );
-const minifyHtml = require( 'gulp-minify-html' );
-const minifyCss = require( 'gulp-minify-css' );
-const imagemin = require( 'gulp-imagemin' );
-const pngquant = require( 'imagemin-pngquant' );
-const gzip = require( 'gulp-gzip' );
-const critical = require( 'critical' );
-const useref = require( 'gulp-useref' );
-const gulpif = require( 'gulp-if' );
-const sitemap = require( 'gulp-sitemap' );
 const autoprefixer = require( 'gulp-autoprefixer' );
-
+const babel = require( 'gulp-babel' );
+const critical = require( 'critical' );
+const eslint = require( 'gulp-eslint' );
+const gulp = require( 'gulp' );
+const gulpif = require( 'gulp-if' );
+const gzip = require( 'gulp-gzip' );
+const imagemin = require( 'gulp-imagemin' );
+const minifyCss = require( 'gulp-minify-css' );
+const minifyHtml = require( 'gulp-minify-html' );
+const pngquant = require( 'imagemin-pngquant' );
+const sass = require( 'gulp-sass' );
+const sitemap = require( 'gulp-sitemap' );
+const uglify = require( 'gulp-uglify' );
+const usemin = require( 'gulp-usemin' );
+const useref = require( 'gulp-useref' );
 const util = require( 'gulp-util' );
 
 
@@ -29,11 +29,25 @@ gulp.task( 'serve', () => {
 } );
 
 gulp.task( 'watch', () => {
-    gulp.watch( './public/**.*', [ 'serve' ] );
+    gulp.watch( './theme/sass/*.scss', [ 'sass' ] );
+    gulp.watch( [
+        './theme/**/*',
+        '!./theme/sass/*.scss',
+        '!./theme/css/style.css'
+    ], [ 'default' ] );
+    gulp.watch( './_site/**/*', [ 'default' ] );
+    gulp.watch( './src/**/*', [ 'default' ] );
+    gulp.watch( './public/**/*', [ 'serve' ] );
 } );
 
 // DEPLOYMENT BUILD TASKS (outside of ./public)
 // css auto-prefixer for compatibility (pre-build)
+gulp.task( 'sass', () => {
+    return gulp.src( './theme/sass/**/*.scss' )
+            .pipe( sass().on( 'error', sass.logError ) )
+            .pipe( gulp.dest( './theme/css' ) );
+} );
+
 gulp.task( 'autoprefixer', () => {
     return gulp.src( './theme/css/*.css' )
             .pipe( autoprefixer( {
@@ -44,24 +58,21 @@ gulp.task( 'autoprefixer', () => {
 } );
 
 // DEPLOYMENT BUILD TASKS (in ./public)
-// Porters of content outside of _site directory
-gulp.task( 'font-port', () => {
-    return gulp.src( [ 'theme/fonts/themify-icons/fonts/**/*' ] )
+// Porters of content
+gulp.task( 'port', () => {
+    gulp.src( [ 'theme/fonts/themify-icons/fonts/**/*' ] )
             .pipe( gulp.dest( 'public/theme/fonts' ) );
-} );
-gulp.task( 'other-image-port', () => {
-    return gulp.src( [ 'theme/images/**/*.svg', 'theme/images/**/*.ico' ] )
+
+    gulp.src( [ 'theme/css/surge.css' ] )
+            .pipe( gulp.dest( 'public/theme/css' ) );
+
+    gulp.src( [ 'theme/images/**/*.svg', 'theme/images/**/*.ico' ] )
             .pipe( gulp.dest( 'public/theme/images' ) );
-} );
 
-// Porters of unmodified _site content (class-slides and post directories)
-gulp.task( 'class-port', () => {
-    return gulp.src( '_site/src/class-slides/**/*' )
+    gulp.src( '_site/src/class-slides/**/*' )
             .pipe( gulp.dest( 'public/class-slides' ) );
-} );
 
-gulp.task( 'blog-port', () => {
-    return gulp.src( 'build/blog/**/*' )
+    gulp.src( [ '_site/blog/**/*', '_site/src/blog/index.html' ] )
             .pipe( gulp.dest( 'public/blog' ) );
 } );
 
@@ -74,12 +85,6 @@ gulp.task( 'image-min', () => {
                 use: [ pngquant() ]
             } ) )
             .pipe( gulp.dest( 'public/theme/images' ) );
-} );
-
-// surge-css porter
-gulp.task( 'surge-port', () => {
-    return gulp.src( [ 'theme/css/surge.css' ] )
-            .pipe( gulp.dest( 'public/theme/css' ) );
 } );
 
 // Linting
@@ -105,11 +110,7 @@ gulp.task( 'babel', [ 'lint' ], () => {
 const asyncDeps = [
     'babel',
     'autoprefixer',
-    'surge-port',
-    'blog-port',
-    'class-port',
-    'other-image-port',
-    'font-port'
+    'port'
 ];
 
 const asyncSrc = [

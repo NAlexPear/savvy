@@ -44,30 +44,26 @@
 @media screen and (max-width: 640px) {
   .mobile-only {
     display: block; }
-
   .desktop-only {
     display: none; }
-
   #mission-mobile {
     display: block; }
-
   #mission-desktop {
     display: none; } }
+
 @media screen and (min-width: 641px) {
   .mobile-only {
     display: none; }
-
   .desktop-only {
     display: block; }
-
   #mission-mobile {
     display: none; }
-
   #mission-desktop {
     display: block; } }
+
 body {
   -webkit-font-smoothing: antialised;
-  background-color: #2b2b2b;
+  background-color: #2B2B2B;
   margin: 0; }
 
 h1 {
@@ -85,7 +81,7 @@ h2 {
   font-family: "Kreon", serif;
   font-weight: 700;
   line-height: 50%;
-  color: white;
+  color: #ffffff;
   text-align: center; }
   @media (max-width: 640px) {
     h2 {
@@ -95,7 +91,7 @@ h3 {
   font-size: 2.75vw;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
-  color: white; }
+  color: #ffffff; }
   @media (max-width: 640px) {
     h3 {
       font-size: 3.75vw; } }
@@ -104,7 +100,7 @@ h4 {
   font-size: 2vw;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
-  color: white; }
+  color: #ffffff; }
   @media (max-width: 640px) {
     h4 {
       font-size: 3vw; } }
@@ -112,7 +108,7 @@ h4 {
 p {
   font-family: "Kreon", serif;
   font-size: 2vw;
-  color: white; }
+  color: #ffffff; }
 
 a {
   text-decoration: none;
@@ -167,20 +163,20 @@ hr {
           font-size: 1.25em;
           padding: 0.25em; }
           #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a, #submenudrop ul.navbubbles > li a {
-            color: white;
+            color: #ffffff;
             transition: 0.3s color; }
             #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover, #submenudrop ul.navbubbles > li a:hover {
-              color: #2b2b2b;
+              color: #2B2B2B;
               transition: 0.3s color; } }
       @media screen and (min-width: 641px) {
         #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
           font-size: 1.5em;
           padding: 0.3em; }
           #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a, #submenudrop ul.navbubbles > li a {
-            color: white;
+            color: #ffffff;
             transition: 0.3s color; }
             #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover, #submenudrop ul.navbubbles > li a:hover {
-              color: #2b2b2b;
+              color: #2B2B2B;
               transition: 0.3s color; }
           #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text, #submenudrop ul.navbubbles > li .savvy-logo-text {
             font-family: "Kreon", serif;
@@ -200,7 +196,7 @@ hr {
   margin-right: 0.5em; }
 
 #app {
-  border: 2px solid white;
+  border: 2px solid #ffffff;
   border-radius: 0.5em;
   background-color: transparent;
   padding: 0.25em 1em !important;
@@ -215,9 +211,9 @@ hr {
     background-color: #50daed;
     transition: background-color 100ms ease; }
   #app a {
-    color: white; }
+    color: #ffffff; }
     #app a:hover {
-      color: white !important; }
+      color: #ffffff !important; }
 
 #menudrop, #submenudrop {
   background-color: #8e8e8e;
@@ -256,17 +252,17 @@ hr {
       align-items: baseline;
   text-align: center; }
   .icon-bar li:nth-child(1) a {
-    color: white;
+    color: #ffffff;
     transition: 0.3s color; }
     .icon-bar li:nth-child(1) a:hover {
       color: #07c4dd; }
   .icon-bar li:nth-child(2) a {
-    color: white;
+    color: #ffffff;
     transition: 0.3s color; }
     .icon-bar li:nth-child(2) a:hover {
       color: #07c4dd; }
   .icon-bar li:nth-child(3) a {
-    color: white;
+    color: #ffffff;
     transition: 0.3s color; }
     .icon-bar li:nth-child(3) a:hover {
       color: #07c4dd; }
@@ -306,7 +302,7 @@ hr {
   padding-left: 1.5vw;
   padding-right: 1.5vw; }
   #content p, #content li {
-    color: white;
+    color: #ffffff;
     font-size: 2vw;
     font-weight: 400;
     font-family: "Quicksand", sans-serif; }
@@ -382,15 +378,18 @@ hr {
     margin: 0 auto;
     font-family: "Quicksand", sans-serif;
     font-size: 2em;
-    color: white; }
+    color: #ffffff; }
   #location-picker li {
-    font-size: 6vmin;
+    font-size: 1em;
     border: 1px solid #656565;
-    background-color: #2b2b2b;
+    background-color: #2B2B2B;
     border-radius: 0.5em;
     padding: 0.25em 1em;
     cursor: pointer;
     transition: background-color 100ms ease; }
+    @media screen and (max-width: 640px) {
+      #location-picker li {
+        font-size: 0.75em; } }
     #location-picker li.active {
       border-color: #07c4dd;
       background-color: #07c4dd; }
@@ -429,7 +428,7 @@ hr {
   font-family: "Quicksand", sans-serif;
   font-size: 5vmin;
   padding-left: 0px;
-  color: white; }
+  color: #ffffff; }
 
 /*iframe video player style*/
 .video_frames {
@@ -473,7 +472,7 @@ iframe {
     font-size: 3vw;
     font-family: "Quicksand", sans-serif;
     font-weight: 400;
-    color: white; }
+    color: #ffffff; }
 
 .slide {
   display: none; }
@@ -527,13 +526,13 @@ iframe {
     font-family: "Quicksand", sans-serif;
     font-size: 3vmin;
     padding-left: 0px;
-    color: white; }
+    color: #ffffff; }
 
 #application ul {
   font-family: "Quicksand", sans-serif;
   font-size: 2vw;
   padding-left: 0px;
-  color: white; }
+  color: #ffffff; }
 
 #logo2 {
   font-family: "Kreon", serif;
@@ -603,9 +602,9 @@ iframe {
       margin: 1em auto 2em auto;
       cursor: pointer;
       background-color: transparent;
-      border: 2px solid white;
+      border: 2px solid #ffffff;
       border-radius: 0.75em;
-      color: white; }
+      color: #ffffff; }
       #contact-form form input[type=submit]:hover {
         background-color: #07c4dd; }
   #contact-form a {
@@ -645,7 +644,7 @@ footer {
       color: #8d8d8d;
       transition: 0.3s color; }
       footer ul a:hover {
-        color: white; }
+        color: #ffffff; }
 
 .social {
   width: 60%;
@@ -669,7 +668,7 @@ footer {
   font-family: helvetica, "Sans-Serif";
   font-size: 14px;
   opacity: 0.6;
-  color: white;
+  color: #ffffff;
   /* Chrome, Safari, Opera */
   -moz-column-span: all;
   /* Firefox */
@@ -680,7 +679,7 @@ footer {
   list-style: none; }
   #faq-list h3 {
     font-size: 3vmax;
-    color: white; }
+    color: #ffffff; }
     #faq-list h3:hover {
       color: #07c4dd;
       cursor: pointer; }
@@ -690,12 +689,15 @@ footer {
 
 .surge-grid > div {
   padding: 1em; }
+
 .surge-grid .img-container {
   width: 100%;
   max-height: 350px;
   overflow: hidden; }
+
 .surge-grid img {
   display: block;
   width: 100%; }
+
 .surge-grid #james {
   margin-top: -50px; }
