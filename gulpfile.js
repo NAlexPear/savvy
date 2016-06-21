@@ -36,7 +36,10 @@ gulp.task( 'watch', () => {
         '!./theme/css/style.css'
     ], [ 'default' ] );
     gulp.watch( './_site/**/*', [ 'default' ] );
-    gulp.watch( './src/**/*', [ 'default' ] );
+    gulp.watch( [
+        './src/**/*',
+        '!./src/blog/index.html'
+    ], [ 'default' ] );
     gulp.watch( './public/**/*', [ 'serve' ] );
 } );
 
@@ -108,6 +111,7 @@ gulp.task( 'babel', [ 'lint' ], () => {
 
 // CSS and JS minifier after all other files have been ported over
 const asyncDeps = [
+    'sass',
     'babel',
     'autoprefixer',
     'port'

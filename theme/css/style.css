@@ -136,25 +136,18 @@ hr {
     max-width: 1080px;
     height: 3.5em;
     margin: 0 auto;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
     padding: 0; }
     @media screen and (max-width: 640px) {
       #menubar ul.navbubbles, #menudrop ul.navbubbles, #submenudrop ul.navbubbles {
-        -ms-flex-pack: distribute;
-            justify-content: space-around; } }
+        justify-content: space-around; } }
     @media screen and (min-width: 641px) {
       #menubar ul.navbubbles, #menudrop ul.navbubbles, #submenudrop ul.navbubbles {
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+        justify-content: space-between; } }
     #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
       font-weight: 400; }
@@ -183,8 +176,7 @@ hr {
             font-size: 1.25em; } }
 
 #spacer {
-  -ms-flex-positive: 2;
-      flex-grow: 2; }
+  flex-grow: 2; }
 
 #blog {
   margin-right: 0.5em; }
@@ -220,8 +212,7 @@ hr {
   z-index: 2; }
   #menudrop ul.navbubbles, #submenudrop ul.navbubbles {
     padding: 0;
-    -ms-flex-pack: distribute;
-        justify-content: space-around; }
+    justify-content: space-around; }
     #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
       padding: 0 0.5em; }
 
@@ -234,22 +225,15 @@ hr {
 .icon-bar {
   padding: 0;
   list-style-type: none;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   margin: 0 auto;
   font-size: 4rem;
-  -ms-flex-align: baseline;
-      align-items: baseline;
+  align-items: baseline;
   text-align: center; }
   .icon-bar li:nth-child(1) a {
     color: #ffffff;
@@ -275,18 +259,12 @@ hr {
 .infobubbles {
   padding: 0;
   list-style-type: none;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
   width: 100%; }
   .infobubbles img {
     height: 15vmin;
@@ -362,18 +340,12 @@ hr {
   #location-picker ul {
     padding: 0;
     list-style-type: none;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
     max-width: 750px;
     margin: 0 auto;
     font-family: "Quicksand", sans-serif;
@@ -613,18 +585,19 @@ iframe {
       border-bottom: none; }
 
 #address {
+  -webkit-column-break-before: always;
   /* Chrome, Safari, Opera */
   -moz-column-break-before: always;
   /* Firefox */
   -ms-column-break-before: always;
-  page-break-before: always;
-       break-before: always;
+  break-before: always;
   opacity: 0.8; }
 
 footer {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
+  -webkit-column-count: 3;
   /* Chrome, Safari, Opera */
   -moz-column-count: 3;
   /* Firefox */
@@ -651,6 +624,7 @@ footer {
   min-width: 200px;
   margin-left: auto;
   margin-right: auto;
+  -webkit-column-span: all;
   /* Chrome, Safari, Opera */
   -moz-column-span: all;
   /* Firefox */
@@ -669,6 +643,7 @@ footer {
   font-size: 14px;
   opacity: 0.6;
   color: #ffffff;
+  -webkit-column-span: all;
   /* Chrome, Safari, Opera */
   -moz-column-span: all;
   /* Firefox */
