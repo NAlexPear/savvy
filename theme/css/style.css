@@ -121,6 +121,12 @@ hr {
   width: 80%;
   opacity: 0.3; }
 
+blockquote {
+  border-left: solid 10px #07c4dd;
+  opacity: 0.5;
+  margin-left: 0;
+  padding-left: 1em; }
+
 #menubar, #menudrop, #submenudrop {
   box-sizing: border-box;
   z-index: 3;
@@ -301,9 +307,18 @@ hr {
       border-bottom: none; }
   #content.blog-post {
     padding-top: 7em; }
+    #content.blog-post .subheading {
+      text-align: center;
+      margin-top: 0; }
     #content.blog-post img {
       width: 80vw;
       margin: 2em auto; }
+      #content.blog-post img.floater {
+        width: 30%;
+        float: left;
+        margin: 0 1rem 1rem 0; }
+    #content.blog-post h1 {
+      margin: 0; }
     #content.blog-post h2.post-title {
       text-align: left; }
 
@@ -583,6 +598,10 @@ iframe {
     border-bottom: none; }
     #contact-form a:hover {
       border-bottom: none; }
+
+#disqus_thread {
+  width: 90%;
+  margin: auto; }
 
 #address {
   -webkit-column-break-before: always;

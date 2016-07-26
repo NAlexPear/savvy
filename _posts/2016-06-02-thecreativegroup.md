@@ -11,7 +11,7 @@ published: yes
 
 “A designer that can code? That’s the best candidate on the planet.”
 
-![Elizabeth Ledbetter]({{site.baseurl}}/theme/images/ElizabethLedbetter.JPG)
+<img src="{{site.baseurl}}/theme/images/ElizabethLedbetter.JPG" class="floater">
 
 Elizabeth Ledbetter is Branch Manager at [The Creative Group in St. Louis](https://www.roberthalf.com/creativegroup), a Robert Half Company. The Creative Group specializes in connecting interactive, design, marketing, advertising and public relations talent with the best companies. Ledbetter has been hiring designers for eight years this summer. Robert Half has been doing it since 1948, and in the St. Louis market for 18 years. I asked her to describe how the market needs and technical abilities of designers has changed over the last several years:
 

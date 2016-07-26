@@ -74,6 +74,13 @@ hr{
     opacity: 0.3;
 }
 
+blockquote{
+    border-left: solid 10px $accent;
+    opacity: 0.5;
+    margin-left: 0;
+    padding-left: 1em;
+}
+
 // menubar and navigation styles
 @include navigation;
 
@@ -161,9 +168,23 @@ hr{
     }
     &.blog-post{
       padding-top: 7em;
+
+      .subheading{
+          text-align: center;
+          margin-top: 0;
+      }
       img{
         width: 80vw;
         margin: 2em auto;
+        &.floater{
+            width: 30%;
+            float: left;
+            margin: 0 1rem 1rem 0;
+        }
+      }
+
+      h1{
+          margin: 0;
       }
 
       h2{
@@ -202,6 +223,9 @@ hr{
 
 //wufoo-based contact form
 @include contact;
+
+//disqus comments
+@include disqus;
 
 // footer styles
 @include footer;
