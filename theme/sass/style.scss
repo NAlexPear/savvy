@@ -1,3 +1,4 @@
+@import 'highlighting';
 @import 'fonts';
 @import 'base-vars';
 @import 'mixins';
@@ -78,7 +79,26 @@ blockquote{
     border-left: solid 10px $accent;
     opacity: 0.5;
     margin-left: 0;
-    padding-left: 1em;
+    padding-left: 1rem;
+}
+
+figure{
+    box-shadow: 0 0 0.5rem rgba( 0, 0, 0, 0.3 ) inset;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin: 0;
+    code{
+        color: #888888;
+    }
+    pre{
+        margin: 0;
+    }
+}
+
+code{
+    font-size: 1.2rem;
+    color: #d8e09e;
+
 }
 
 // menubar and navigation styles
@@ -136,6 +156,12 @@ blockquote{
 #content{
     padding-left:1.5vw;
     padding-right:1.5vw;
+
+    ul, ol, dl{
+        li{
+            padding-bottom: 0.5em;
+        }
+    }
 
     p, li{
         color: $hl;
