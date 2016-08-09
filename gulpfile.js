@@ -10,10 +10,8 @@ const glob = require( 'glob' );
 const gulp = require( 'gulp' );
 const gulpif = require( 'gulp-if' );
 const gzip = require( 'gulp-gzip' );
-const imagemin = require( 'gulp-imagemin' );
 const minifyCss = require( 'gulp-minify-css' );
 const minifyHtml = require( 'gulp-minify-html' );
-const pngquant = require( 'imagemin-pngquant' );
 const sass = require( 'gulp-sass' );
 const sitemap = require( 'gulp-sitemap' );
 const uglify = require( 'gulp-uglify' );
@@ -87,17 +85,6 @@ gulp.task( 'port', () => {
 
     gulp.src( [ '_site/blog/**/*', '_site/src/blog/index.html' ] )
             .pipe( gulp.dest( 'public/blog' ) );
-} );
-
-// image minifier (no CSS, HTML, or JS)
-gulp.task( 'image-min', () => {
-    return gulp.src( [ 'theme/images/**/*.jpg', 'theme/images/**/*.png' ] )
-            .pipe( imagemin( {
-                optimizationLevel: 7,
-                progressive: true,
-                use: [ pngquant() ]
-            } ) )
-            .pipe( gulp.dest( 'public/theme/images' ) );
 } );
 
 // Linting
