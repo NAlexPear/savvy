@@ -77,9 +77,6 @@ gulp.task( 'port', () => {
     gulp.src( [ 'theme/css/surge.css' ] )
             .pipe( gulp.dest( 'public/theme/css' ) );
 
-    gulp.src( [ 'theme/images/**/*.svg', 'theme/images/**/*.ico' ] )
-            .pipe( gulp.dest( 'public/theme/images' ) );
-
     gulp.src( '_site/src/class-slides/**/*' )
             .pipe( gulp.dest( 'public/class-slides' ) );
 

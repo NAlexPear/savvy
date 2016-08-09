@@ -9,7 +9,7 @@ published: yes
 # _Hiring IT in STL:_
 Polaris Solutions Builds Teams
 
-![Kadel-5.jpg]({{site.baseurl}}/theme/images/Kadel-5.jpg)
+![Kadel-5.jpg](https://res.cloudinary.com/savvy-coders/image/upload/q_auto/v1470769765/Kadel-5.jpg)
 
 When I spoke to Chris Kadel, President at Polaris Solutions, he said his office was a ghost town. When I laughed he said, "That's good! Everyone is out working for our clients."
 
@@ -17,7 +17,7 @@ When I spoke to Chris Kadel, President at Polaris Solutions, he said his office 
 
 Kadel, one of the company's founders, spends a lot of his time hiring these days. "We don't have underutilized people, everyone is working. Some quarters I focus on sales, but since the first of the year, I almost can't find enough people to bring on to the team."
 
-![IMG_0567.JPG]({{site.baseurl}}/theme/images/IMG_0567.JPG)
+![IMG_0567.JPG](https://res.cloudinary.com/savvy-coders/image/upload/q_auto/v1470769762/IMG_0567.jpg)
 
 "Polaris is a little different. We hire for the career, not by project. We try to hire people that have a good long-term fit with us. We are always looking for good people, because we have to be ready for the demand, but we try to avoid re-actively hiring, or going too fast. If you do that you make a bad decision for the candidate, the clients and the company."
 
