@@ -3,7 +3,6 @@
 // set up requires for gulp tasks
 const autoprefixer = require( 'gulp-autoprefixer' );
 const babel = require( 'gulp-babel' );
-const critical = require( 'critical' );
 const eslint = require( 'gulp-eslint' );
 const gulp = require( 'gulp' );
 const gulpif = require( 'gulp-if' );
@@ -67,6 +66,9 @@ gulp.task( 'port', () => {
             .pipe( gulp.dest( 'public/theme/fonts' ) );
 
     gulp.src( [ 'theme/css/surge.css' ] )
+            .pipe( gulp.dest( 'public/theme/css' ) );
+
+    gulp.src( [ 'node_modules/milligram/dist/milligram.css' ] )
             .pipe( gulp.dest( 'public/theme/css' ) );
 
     gulp.src( [ 'theme/images/**/*.svg', 'theme/images/**/*.ico' ] )
@@ -138,19 +140,8 @@ gulp.task( 'sitemapper', [ 'async' ], () => {
       .pipe( gulp.dest( './public' ) );
 } );
 
-// CSS inliner post-CSS and JS minification, pre-HTML minification and gzipping
-gulp.task( 'css-inline', [ 'sitemapper' ], () => {
-    return critical.generateInline( {
-        base: 'public/',
-        src: 'index.html',
-        dest: 'public/index.html',
-        width: 1300,
-        height: 900
-    } );
-} );
-
 // HTML minifier (run after ports, image-minification, and critical CSS inlining)
-gulp.task( 'cruncher', [ 'css-inline' ], () => {
+gulp.task( 'cruncher', [ 'sitemapper' ], () => {
     gulp.src( 'public/index.html' )
     .pipe( usemin( {
         assetsDir: '.',

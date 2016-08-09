@@ -44,6 +44,7 @@
     "gulp-util": "^3.0.7",
     "imagemin-pngquant": "^4.2.0",
     "jquery": "^2.1.4",
+    "milligram": "^1.1.0",
     "mocha": "^2.5.3",
     "picturefill": "^3.0.1",
     "selenium-webdriver": "^2.53.2",
