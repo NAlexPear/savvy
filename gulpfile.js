@@ -3,14 +3,14 @@
 // set up requires for gulp tasks
 const autoprefixer = require( 'gulp-autoprefixer' );
 const babel = require( 'gulp-babel' );
+const cloudinary = require( './utils/cloudinary' );
 const eslint = require( 'gulp-eslint' );
+const glob = require( 'glob' );
 const gulp = require( 'gulp' );
 const gulpif = require( 'gulp-if' );
 const gzip = require( 'gulp-gzip' );
-const imagemin = require( 'gulp-imagemin' );
 const minifyCss = require( 'gulp-minify-css' );
 const minifyHtml = require( 'gulp-minify-html' );
-const pngquant = require( 'imagemin-pngquant' );
 const sass = require( 'gulp-sass' );
 const sitemap = require( 'gulp-sitemap' );
 const uglify = require( 'gulp-uglify' );
@@ -20,6 +20,14 @@ const util = require( 'gulp-util' );
 
 
 // Development Utilities
+gulp.task( 'image-upload', () => {
+    const images = glob.sync( './theme/images/**/*.*' );
+
+    util.log( 'Uploading images to cloudinary' );
+
+    cloudinary.upload( images );
+} );
+
 gulp.task( 'serve', () => {
     util.log( 'Sending ./public directory to localhost directory' );
 
@@ -71,25 +79,11 @@ gulp.task( 'port', () => {
     gulp.src( [ 'node_modules/milligram/dist/milligram.css' ] )
             .pipe( gulp.dest( 'public/theme/css' ) );
 
-    gulp.src( [ 'theme/images/**/*.svg', 'theme/images/**/*.ico' ] )
-            .pipe( gulp.dest( 'public/theme/images' ) );
-
     gulp.src( '_site/src/class-slides/**/*' )
             .pipe( gulp.dest( 'public/class-slides' ) );
 
     gulp.src( [ '_site/blog/**/*', '_site/src/blog/index.html' ] )
             .pipe( gulp.dest( 'public/blog' ) );
-} );
-
-// image minifier (no CSS, HTML, or JS)
-gulp.task( 'image-min', () => {
-    return gulp.src( [ 'theme/images/**/*.jpg', 'theme/images/**/*.png' ] )
-            .pipe( imagemin( {
-                optimizationLevel: 7,
-                progressive: true,
-                use: [ pngquant() ]
-            } ) )
-            .pipe( gulp.dest( 'public/theme/images' ) );
 } );
 
 // Linting

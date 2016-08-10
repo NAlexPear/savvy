@@ -9,7 +9,7 @@ published: yes
 
 Digital Designers Bring Unique Skills to the Table
 
-![Jeff Kratschmer](/theme/images/IMG_6415.png)
+![Jeff Kratschmer](https://res.cloudinary.com/savvy-coders/image/upload/v1470769918/IMG_6415.png)
 
 Jeff Kratschmer is Director of User Experience Design, Home Delivery, and Member Experience at Express Scripts. He has 20 years of experience in digital design and multimedia product development, including specialties in user experience (UX), prototyping, web strategy and analysis, social media, and mobile web design. Jeff's team is growing, and I asked him about what he looks for when hiring coders and designers:
 
