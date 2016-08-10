@@ -3,13 +3,13 @@
 // set up requires for gulp tasks
 const autoprefixer = require( 'gulp-autoprefixer' );
 const babel = require( 'gulp-babel' );
+const clean = require( 'gulp-clean' );
 const cloudinary = require( './utils/cloudinary' );
 const eslint = require( 'gulp-eslint' );
 const glob = require( 'glob' );
 const gulp = require( 'gulp' );
 const gulpif = require( 'gulp-if' );
 const gzip = require( 'gulp-gzip' );
-const minifyCss = require( 'gulp-minify-css' );
 const minifyHtml = require( 'gulp-minify-html' );
 const sass = require( 'gulp-sass' );
 const sitemap = require( 'gulp-sitemap' );
@@ -20,6 +20,11 @@ const util = require( 'gulp-util' );
 
 
 // Development Utilities
+gulp.task( 'clean', () => {
+    return gulp.src( './public', { 'read': false } )
+            .pipe( clean() );
+} );
+
 gulp.task( 'image-upload', () => {
     const images = glob.sync( './theme/images/**/*.*' );
 
@@ -73,7 +78,7 @@ gulp.task( 'port', () => {
     gulp.src( [ 'theme/fonts/themify-icons/fonts/**/*' ] )
             .pipe( gulp.dest( 'public/theme/fonts' ) );
 
-    gulp.src( [ 'theme/css/surge.css' ] )
+    gulp.src( [ 'theme/css/*.css' ] )
             .pipe( gulp.dest( 'public/theme/css' ) );
 
     gulp.src( [ 'node_modules/milligram/dist/milligram.css' ] )
@@ -123,7 +128,6 @@ gulp.task( 'async', asyncDeps, () => {
     return gulp.src( asyncSrc )
         .pipe( useref( { searchPath: '.' } ) )
         .pipe( gulpif( '*.js', uglify() ) )
-        .pipe( gulpif( '*.css', minifyCss() ) )
         .pipe( gulp.dest( './public' ) );
 } );
 
