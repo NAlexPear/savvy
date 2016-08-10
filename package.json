@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "gulp serve",
-    "build": "gulp"
+    "start": "jekyll && gulp && gulp serve",
+    "build": "jekyll && gulp"
   },
   "repository": {
     "type": "git",
