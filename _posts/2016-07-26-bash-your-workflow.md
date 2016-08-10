@@ -59,11 +59,11 @@ username@computer-name:~$
 
 This is, of course, colorless (boring!), and doesn't tell you much of anything. We can assume that you already know your username, and you're aware of which computer you're using, so that info isn't terribly helpful. It's nice to see the `$`, which tells us that the console is waiting for some sort of input, but that's about it. As it turns out, we can add a _lot_ more information to this prompt! As an example (representative only of _my_ personal preferences, and by no means the Perfect Prompt), here's the current version of my prompt as it appears on-screen:
 
-<figure class="highlight">
+<pre class="highlight">
     <code class="language-bash" data-lang="bash">
         10:22:47 <span class="ok">(master) </span><span class="err k">~/Code/savvy </span><span class="gr k">-></span>
     </code>
-</figure>
+</pre>
 
 _Pretty sweet right?_ OK, probably not something to write home about, but I think this version of my `$PS1` (or `bash` prompt) has a couple of nice features:
 
