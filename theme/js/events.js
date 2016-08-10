@@ -40,4 +40,7 @@
             $modal.addClass('hidden');
         }
     });
+
+    // default focus on Nashville city selection button
+    $('button[name="stl"]').focus();
 })(window, document, window.jQuery, window.underscore, Helpers(), Click(), Scroll(), Links());

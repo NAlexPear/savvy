@@ -120,13 +120,8 @@ function Click() {
     };
     // city selector buttons (takes the Links object as an input)
     obj.cities = function cityLinker(Links, Helpers) {
-        $('#location-picker').on('click', 'li', function locationPicker() {
+        $('#location-picker').on('click', 'button', function locationPicker() {
             var $target = $(this);
-            // sets active/inactive style for buttons on click
-            if ($target.hasClass('active') === false) {
-                $target.siblings('li').removeClass('active');
-                $target.addClass('active');
-            }
 
             // sets city variable by reading the text content of the clicked city button
             var city = $target.text().replace(/[^\w]/gi, '').toLowerCase();

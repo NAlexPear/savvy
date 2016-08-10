@@ -324,47 +324,29 @@ body {
   margin: 0; }
 
 h1 {
-  font-size: 4vw;
   font-family: "Kreon", serif;
   font-weight: 700;
   color: #07c4dd;
   text-align: center; }
-  @media (max-width: 640px) {
-    h1 {
-      font-size: 7vw; } }
 
 h2 {
-  font-size: 3vw;
   font-family: "Kreon", serif;
   font-weight: 700;
-  line-height: 50%;
   color: #ffffff;
   text-align: center; }
-  @media (max-width: 640px) {
-    h2 {
-      font-size: 5vw; } }
 
 h3 {
-  font-size: 2.75vw;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   color: #ffffff; }
-  @media (max-width: 640px) {
-    h3 {
-      font-size: 3.75vw; } }
 
 h4 {
-  font-size: 2vw;
   font-family: "Quicksand", sans-serif;
   font-weight: 300;
   color: #ffffff; }
-  @media (max-width: 640px) {
-    h4 {
-      font-size: 3vw; } }
 
 p {
   font-family: "Kreon", serif;
-  font-size: 2vw;
   color: #ffffff; }
 
 a {
@@ -377,6 +359,20 @@ ul {
 hr {
   width: 80%;
   opacity: 0.3; }
+
+button {
+  background-color: #606c76;
+  border-color: #606c76;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  font-size: 2.1rem;
+  height: auto; }
+  button:hover {
+    background-color: #8e8e8e;
+    border-color: #8e8e8e; }
+  button:focus {
+    background-color: #07c4dd;
+    border-color: #07c4dd; }
 
 blockquote {
   border-left: solid 10px #07c4dd;
@@ -398,6 +394,9 @@ figure {
 code {
   font-size: 1.2rem;
   color: #d8e09e; }
+
+.center {
+  text-align: center; }
 
 #menubar, #menudrop, #submenudrop {
   box-sizing: border-box;
@@ -510,7 +509,6 @@ code {
   align-items: center;
   align-content: center;
   margin: 0 auto;
-  font-size: 4rem;
   align-items: baseline;
   text-align: center; }
   .icon-bar li:nth-child(1) a {
@@ -554,47 +552,46 @@ code {
   margin-left: auto;
   margin-right: auto; }
 
-#content {
-  padding-left: 1.5vw;
-  padding-right: 1.5vw; }
-  #content ul li, #content ol li, #content dl li {
-    padding-bottom: 0.5em; }
-  #content p, #content li {
-    color: #ffffff;
-    font-size: 2vw;
-    font-weight: 400;
-    font-family: "Quicksand", sans-serif; }
-    @media (max-width: 640px) {
-      #content p, #content li {
-        font-size: 3.35vw;
-        font-weight: 100; } }
-    #content p span[class^="ti-"], #content li span[class^="ti-"] {
-      font-size: 4rem; }
-  #content a {
-    border-bottom: 0.2vw dotted; }
-    #content a:hover {
-      border-bottom: 0.2vw solid; }
-  #content ul.icon-bar a {
-    text-decoration: none;
+#content ul li, #content ol li, #content dl li {
+  padding-bottom: 0.5em; }
+
+#content p, #content li {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Quicksand", sans-serif; }
+  @media (max-width: 640px) {
+    #content p, #content li {
+      font-weight: 100; } }
+  #content p span[class^="ti-"], #content li span[class^="ti-"] {
+    font-size: 4rem; }
+
+#content a {
+  border-bottom: 0.2vw dotted; }
+  #content a:hover {
+    border-bottom: 0.2vw solid; }
+
+#content ul.icon-bar a {
+  text-decoration: none;
+  border-bottom: none; }
+  #content ul.icon-bar a:hover {
     border-bottom: none; }
-    #content ul.icon-bar a:hover {
-      border-bottom: none; }
-  #content.blog-post {
-    padding-top: 7em; }
-    #content.blog-post .subheading {
-      text-align: center;
-      margin-top: 0; }
-    #content.blog-post img {
-      width: 80vw;
-      margin: 2em auto; }
-      #content.blog-post img.floater {
-        width: 30%;
-        float: left;
-        margin: 0 1rem 1rem 0; }
-    #content.blog-post h1 {
-      margin: 0; }
-    #content.blog-post h2.post-title {
-      text-align: left; }
+
+#content.blog-post {
+  padding-top: 7em; }
+  #content.blog-post .subheading {
+    text-align: center;
+    margin-top: 0; }
+  #content.blog-post img {
+    width: 80vw;
+    margin: 2em auto; }
+    #content.blog-post img.floater {
+      width: 30%;
+      float: left;
+      margin: 0 1rem 1rem 0; }
+  #content.blog-post h1 {
+    margin: 0; }
+  #content.blog-post h2.post-title {
+    text-align: left; }
 
 .content-section {
   opacity: 0;
@@ -619,7 +616,6 @@ code {
       top: 3.5em; } }
 
 #mission p {
-  font-size: 4vmin;
   font-weight: 100; }
 
 #location-picker {
@@ -640,35 +636,6 @@ code {
     font-family: "Quicksand", sans-serif;
     font-size: 2em;
     color: #ffffff; }
-  #location-picker li {
-    font-size: 1em;
-    border: 1px solid #656565;
-    background-color: #2B2B2B;
-    border-radius: 0.5em;
-    padding: 0.25em 1em;
-    cursor: pointer;
-    transition: background-color 100ms ease; }
-    @media screen and (max-width: 640px) {
-      #location-picker li {
-        font-size: 0.75em; } }
-    #location-picker li.active {
-      border-color: #07c4dd;
-      background-color: #07c4dd; }
-      #location-picker li.active:hover {
-        border-color: #50daed;
-        background-color: #50daed; }
-    #location-picker li:hover {
-      border-color: #07c4dd;
-      background-color: #07c4dd;
-      transition: background-color 100ms ease; }
-    #location-picker li.selected {
-      background-color: #07c4dd;
-      border-color: #07c4dd;
-      transition: background-color 100ms ease; }
-      #location-picker li.selected:hover {
-        background-color: #50daed;
-        border-color: #50daed;
-        transition: background-color 100ms ease; }
 
 #cta {
   width: 80%;

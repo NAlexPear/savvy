@@ -156,7 +156,6 @@
 @mixin cta {
   #mission {
     p{
-      font-size: 4vmin;
       font-weight: 100;
     }
   }
@@ -173,45 +172,6 @@
       font-family: $bfont;
       font-size: 2em;
       color: $hl;
-    }
-    li{
-      font-size: 1em;
-      @media screen and (max-width: 640px){
-          font-size: 0.75em;
-      }
-      border: 1px solid #656565;
-      background-color: $bg;
-      border-radius: $br;
-      padding: $bp;
-      cursor: pointer;
-      transition: background-color 100ms ease;
-
-      &.active{
-        border-color: $accent;
-        background-color: $accent;
-
-        &:hover {
-          border-color: $bhl;
-          background-color: $bhl;
-        }
-      }
-
-      &:hover{
-        border-color: $accent;
-        background-color: $accent;
-        transition: background-color 100ms ease;
-      }
-
-      &.selected{
-        background-color: $accent;
-        border-color: $accent;
-        transition: background-color 100ms ease;
-        &:hover{
-          background-color: $bhl;
-          border-color: $bhl;
-          transition: background-color 100ms ease;
-        }
-      }
     }
   }
   #cta{
