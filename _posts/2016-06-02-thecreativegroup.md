@@ -9,7 +9,7 @@ published: yes
 
 # _Hiring IT in STL:_
 
-“A designer that can code? That’s the best candidate on the planet.”
+> “A designer that can code? That’s the best candidate on the planet.”
 
 <img src="https://res.cloudinary.com/savvy-coders/image/upload/q_auto/v1470769741/ElizabethLedbetter.jpg" class="floater">
 
