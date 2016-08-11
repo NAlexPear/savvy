@@ -411,6 +411,9 @@ code {
 .center {
   text-align: center; }
 
+.circle {
+  border-radius: 50%; }
+
 #menubar, #menudrop, #submenudrop {
   box-sizing: border-box;
   z-index: 3;
@@ -692,25 +695,70 @@ iframe {
   #whatlearn ul {
     padding-left: 0px; }
 
+#syllabus.row {
+  flex-direction: row; }
+
+#syllabus span {
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  display: block;
+  padding: 1.6rem;
+  margin: 0 auto; }
+  #syllabus span p {
+    color: #07c4dd;
+    font-size: 2.6rem;
+    margin: 0;
+    line-height: 1; }
+    #syllabus span p.week {
+      color: #07c4dd;
+      font-size: 9rem;
+      font-weight: 700;
+      margin: 0; }
+  @media (max-width: 780px) {
+    #syllabus span {
+      width: 12rem;
+      height: 12rem; }
+      #syllabus span p.week {
+        font-size: 7rem; } }
+  @media (max-width: 575px) {
+    #syllabus span {
+      width: 10rem;
+      height: 10rem; }
+      #syllabus span p.week {
+        font-size: 5rem; } }
+  @media (max-width: 475px) {
+    #syllabus span {
+      width: 8rem;
+      height: 8rem; }
+      #syllabus span p {
+        font-size: 1.6rem; }
+        #syllabus span p.week {
+          font-size: 4rem; } }
+  @media (max-width: 375px) {
+    #syllabus span {
+      width: 6rem;
+      height: 6rem; }
+      #syllabus span p {
+        font-size: 1.1rem; }
+        #syllabus span p.week {
+          font-size: 3rem; } }
+
 .curricula-slider {
   max-width: 900px;
   width: 80%;
   margin-left: auto;
   margin-right: auto; }
   .curricula-slider ul {
-    font-family: "Quicksand", sans-serif;
-    font-size: 2vw;
-    padding-left: 0px;
-    color: #07c4dd; }
+    padding-left: 0px; }
   .curricula-slider h2 {
     line-height: 110%;
     color: #07c4dd; }
   .curricula-slider h3 {
     text-align: center;
-    font-size: 3vw;
+    font-size: 2.1rem;
     font-family: "Quicksand", sans-serif;
-    font-weight: 400;
-    color: #ffffff; }
+    font-weight: 400; }
 
 .slide {
   display: none; }

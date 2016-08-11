@@ -244,6 +244,79 @@
       padding-left: 0px;
     }
   }
+
+  #syllabus{
+      &.row{
+          flex-direction: row;
+      }
+      span{
+          width: 15rem;
+          height: 15rem;
+          background-color: white;
+          display: block;
+          padding: $default;
+          margin: 0 auto;
+
+
+          p{
+              color: $accent;
+              font-size: $xl;
+              margin: 0;
+              line-height: 1;
+
+              &.week{
+                  color: $accent;
+                  font-size: $icon-xxxl;
+                  font-weight: 700;
+                  margin: 0;
+              }
+          }
+
+          @media( max-width: 780px){
+              width: 12rem;
+              height: 12rem;
+
+              p.week{
+                  font-size: $icon-xxl;
+              }
+          }
+
+          @media( max-width: 575px){
+              width: 10rem;
+              height: 10rem;
+
+              p.week{
+                  font-size: $icon-large;
+              }
+          }
+
+          @media( max-width: 475px){
+              width: 8rem;
+              height: 8rem;
+
+              p{
+                  font-size: $default;
+
+                  &.week{
+                      font-size: $icon-default;
+                  }
+              }
+          }
+
+          @media( max-width: 375px){
+              width: 6rem;
+              height: 6rem;
+
+              p{
+                  font-size: $small;
+
+                  &.week{
+                      font-size: $icon-small;
+                  }
+              }
+          }
+      }
+  }
   //slider styles
   .curricula-slider{
     max-width: 900px;
@@ -251,10 +324,7 @@
     margin-left: auto;
     margin-right: auto;
     ul{
-          font-family: $bfont;
-          font-size: 2vw;
           padding-left: 0px;
-          color: $accent;
       }
     h2{
         line-height: 110%;
@@ -262,10 +332,9 @@
       }
       h3{
         text-align: center;
-        font-size:3vw;
+        font-size:$large;
         font-family:$bfont;
         font-weight:400;
-        color: $hl;
       }
   }
   .slide{

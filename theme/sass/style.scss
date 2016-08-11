@@ -121,7 +121,9 @@ code{
 .center{
     text-align: center;
 }
-
+.circle{
+    border-radius: 50%;
+}
 // menubar and navigation styles
 @include navigation;
 
