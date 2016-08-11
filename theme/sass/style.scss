@@ -7,8 +7,8 @@
 //baseline element styles
 
 body{
-    -webkit-font-smoothing: antialised;
-    background-color: $bg;
+    background: $bg;
+    background-image: linear-gradient( darken( $bg, 4% ), $bg, darken( $bg, 4% ) );
     margin:0;
 }
 
@@ -225,6 +225,7 @@ code{
   width:90%;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 // specific content section styles (in page order)

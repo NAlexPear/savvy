@@ -35,36 +35,27 @@
       &>li{
         font-family: $bfont;
         font-weight: 400;
-        @media screen and (max-width: 640px){
-          $fs: 1.25em;
-          font-size: $fs;
-          padding: $fs/5;
-          a{
-            color: $hl;
-            transition: 0.3s color;
-            &:hover{
-              color: $bg;
-              transition: 0.3s color;
-            }
-          }
+        font-size: $large;
+        padding: $large/5;
+        margin-bottom: 0;
+
+        @media screen and (max-width: 640px) {
+          font-size: $default;
+          padding: $default/5;
         }
-        @media screen and (min-width: 641px){
-          $fs: 1.5em;
-          font-size: $fs;
-          padding: $fs/5;
-          a{
+
+        a{
             color: $hl;
             transition: 0.3s color;
             &:hover{
-              color: $bg;
-              transition: 0.3s color;
+                color: $bg;
+                transition: 0.3s color;
             }
-          }
-          .savvy-logo-text{
+        }
+
+        .savvy-logo-text{
             font-family: $tfont;
-            $fs: 1.25em;
-            font-size: $fs;
-          }
+            font-size: $xl;
         }
       }
     }
@@ -136,6 +127,10 @@
   #backdrop{
     position: relative;
     padding-top: 3.5em;
+
+    .backdrop_image > img{
+        box-shadow: 10px 0 30px darken( $bg, 5% );
+    }
   }
 
   #logo_image{
@@ -207,8 +202,7 @@
     @media (max-width: 640px) {
       width: 300px;
     }
-    margin-left: auto;
-    margin-right: auto;
+    margin: $default auto;
   }
   iframe{
     position: relative;
@@ -409,15 +403,9 @@
       }
       input[type=submit] {
         display: block;
-        width: 35vw;
-        max-width: 200px;
-        padding: 1em;
         margin: 1em auto 2em auto;
-        cursor: pointer;
         background-color: transparent;
         border: 2px solid $hl;
-        border-radius: 0.75em;
-        color: $hl;
 
         &:hover {
           background-color: $accent;

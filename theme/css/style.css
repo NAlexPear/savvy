@@ -319,8 +319,8 @@
     display: block; } }
 
 body {
-  -webkit-font-smoothing: antialised;
-  background-color: #2B2B2B;
+  background: #2B2B2B;
+  background-image: linear-gradient(#212121, #2B2B2B, #212121);
   margin: 0; }
 
 h1 {
@@ -427,30 +427,23 @@ code {
         justify-content: space-between; } }
     #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
       font-family: "Quicksand", sans-serif;
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 2.1rem;
+      padding: 0.42rem;
+      margin-bottom: 0; }
       @media screen and (max-width: 640px) {
         #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
-          font-size: 1.25em;
-          padding: 0.25em; }
-          #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a, #submenudrop ul.navbubbles > li a {
-            color: #ffffff;
-            transition: 0.3s color; }
-            #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover, #submenudrop ul.navbubbles > li a:hover {
-              color: #2B2B2B;
-              transition: 0.3s color; } }
-      @media screen and (min-width: 641px) {
-        #menubar ul.navbubbles > li, #menudrop ul.navbubbles > li, #submenudrop ul.navbubbles > li {
-          font-size: 1.5em;
-          padding: 0.3em; }
-          #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a, #submenudrop ul.navbubbles > li a {
-            color: #ffffff;
-            transition: 0.3s color; }
-            #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover, #submenudrop ul.navbubbles > li a:hover {
-              color: #2B2B2B;
-              transition: 0.3s color; }
-          #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text, #submenudrop ul.navbubbles > li .savvy-logo-text {
-            font-family: "Kreon", serif;
-            font-size: 1.25em; } }
+          font-size: 1.6rem;
+          padding: 0.32rem; } }
+      #menubar ul.navbubbles > li a, #menudrop ul.navbubbles > li a, #submenudrop ul.navbubbles > li a {
+        color: #ffffff;
+        transition: 0.3s color; }
+        #menubar ul.navbubbles > li a:hover, #menudrop ul.navbubbles > li a:hover, #submenudrop ul.navbubbles > li a:hover {
+          color: #2B2B2B;
+          transition: 0.3s color; }
+      #menubar ul.navbubbles > li .savvy-logo-text, #menudrop ul.navbubbles > li .savvy-logo-text, #submenudrop ul.navbubbles > li .savvy-logo-text {
+        font-family: "Kreon", serif;
+        font-size: 2.6rem; }
 
 #spacer {
   flex-grow: 2; }
@@ -597,11 +590,14 @@ code {
   opacity: 0;
   width: 90%;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: center; }
 
 #backdrop {
   position: relative;
   padding-top: 3.5em; }
+  #backdrop .backdrop_image > img {
+    box-shadow: 10px 0 30px #1e1e1e; }
 
 #logo_image {
   width: 40%;
@@ -649,8 +645,7 @@ code {
 .video_frames {
   display: block;
   width: 650px;
-  margin-left: auto;
-  margin-right: auto; }
+  margin: 1.6rem auto; }
   @media (max-width: 640px) {
     .video_frames {
       width: 300px; } }
@@ -811,15 +806,9 @@ iframe {
         outline: none; }
     #contact-form form input[type=submit] {
       display: block;
-      width: 35vw;
-      max-width: 200px;
-      padding: 1em;
       margin: 1em auto 2em auto;
-      cursor: pointer;
       background-color: transparent;
-      border: 2px solid #ffffff;
-      border-radius: 0.75em;
-      color: #ffffff; }
+      border: 2px solid #ffffff; }
       #contact-form form input[type=submit]:hover {
         background-color: #07c4dd; }
   #contact-form a {
