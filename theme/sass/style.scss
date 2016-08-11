@@ -114,8 +114,8 @@ code{
 .icon-bar{
     @include flexlist;
     margin: 0 auto;
-    align-items: baseline;
     text-align: center;
+    
     li {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}){
@@ -138,6 +138,9 @@ code{
             }
         }
     }
+    p{
+        margin: 0;
+    }
 }
 
 .infobubbles{
@@ -158,12 +161,6 @@ code{
 }
 
 #content{
-    ul, ol, dl{
-        li{
-            padding-bottom: 0.5em;
-        }
-    }
-
     p, li{
         color: $hl;
         font-weight:400;

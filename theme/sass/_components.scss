@@ -158,7 +158,7 @@
   #location-picker{
     text-align: center;
     box-sizing: border-box;
-    margin: 50px 0;
+    margin: $xl 0 0;
 
     ul{
         justify-content: space-around;
@@ -170,8 +170,29 @@
   #cta{
     min-width: 250px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin: $xxl auto;
+    padding: $default;
+
+    border-radius: $default;
+    background-color: darken( $bg, 8% );
+
+    position: relative;
+
+    &:after{
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-bottom-color: darken( $bg, 8% );
+        border-width: 30px;
+        margin-left: -30px;
+        transition: 0.3s ease left;
+    }
 
     @media (max-width: 640px) {
       a{
@@ -180,6 +201,7 @@
     }
     &>ul.icon-bar li{
       width: 20%;
+      margin-bottom: 0;
     }
   }
 }
