@@ -86,7 +86,7 @@ figure{
     box-shadow: 0 0 0.5rem rgba( 0, 0, 0, 0.3 ) inset;
     border-radius: 0.5rem;
     padding: 1rem;
-    margin: 0;
+    margin: 2.5rem 0;
     overflow-x: auto;
     code{
         color: #888888;
@@ -96,9 +96,25 @@ figure{
     }
 }
 
+pre{
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    margin: 0;
+
+    > code {
+        padding: 1rem 0;
+    }
+}
+
 code{
+    background: transparent;
+    border-radius: 0;
     font-size: $default;
     color: #d8e09e;
+    padding: 0;
+    margin: 0;
+    white-space: inherit;
 }
 
 // helper classes
@@ -115,7 +131,7 @@ code{
     @include flexlist;
     margin: 0 auto;
     text-align: center;
-    
+
     li {
         @for $i from 1 through 3 {
             &:nth-child(#{$i}){
