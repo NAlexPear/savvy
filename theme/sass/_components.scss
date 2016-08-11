@@ -166,26 +166,19 @@
     margin: 50px 0;
 
     ul{
-      @include flexlist;
-      max-width: 750px;
-      margin: 0 auto;
-      font-family: $bfont;
-      font-size: 2em;
-      color: $hl;
+        justify-content: space-around;
+        list-style: none;
+        max-width: 750px;
+        margin: 0 auto;
     }
   }
   #cta{
-    width: 80%;
     min-width: 250px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 
     @media (max-width: 640px) {
-      p {
-        font-size: 3vw;
-        text-indent: 0;
-      }
       a{
           border-bottom: none;
       }

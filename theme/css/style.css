@@ -332,7 +332,6 @@ h1 {
 h2 {
   font-family: "Kreon", serif;
   font-weight: 700;
-  line-height: 50%;
   color: #ffffff;
   text-align: center; }
 
@@ -548,7 +547,7 @@ code {
     width: 15vmin; }
 
 #content-wrapper {
-  width: 90%;
+  width: 98%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto; }
@@ -564,7 +563,7 @@ code {
     #content p, #content li {
       font-weight: 100; } }
   #content p span[class^="ti-"], #content li span[class^="ti-"] {
-    font-size: 4rem; }
+    font-size: 5rem; }
 
 #content a {
   border-bottom: 0.2vw dotted; }
@@ -624,30 +623,17 @@ code {
   box-sizing: border-box;
   margin: 50px 0; }
   #location-picker ul {
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-around;
-    align-items: center;
-    align-content: center;
+    list-style: none;
     max-width: 750px;
-    margin: 0 auto;
-    font-family: "Quicksand", sans-serif;
-    font-size: 2em;
-    color: #ffffff; }
+    margin: 0 auto; }
 
 #cta {
-  width: 80%;
   min-width: 250px;
   text-align: center;
   margin-left: auto;
   margin-right: auto; }
   @media (max-width: 640px) {
-    #cta p {
-      font-size: 3vw;
-      text-indent: 0; }
     #cta a {
       border-bottom: none; } }
   #cta > ul.icon-bar li {

@@ -23,7 +23,6 @@ h1{
 h2{
     font-family: $tfont;
     font-weight: 700;
-    line-height: 50%;
     color:$hl ;
     text-align: center;
 
@@ -152,7 +151,7 @@ code{
 // main content and content wrapper styles
 
 #content-wrapper{
-    width:90%;
+    width:98%;
     max-width: 1200px;
     margin-left:auto;
     margin-right:auto;
@@ -174,7 +173,7 @@ code{
         font-family:$bfont;
 
         span[class^="ti-"] {
-          font-size: 4rem;
+          font-size: $icon-large;
         }
     }
     a{
