@@ -120,6 +120,7 @@ function Click() {
     obj.cities = function cityLinker( Links, Helpers ) {
         $( '#location-picker' ).on( 'click', 'button', function locationPicker() {
             const $target = $( this );
+            const $pointer = $( '#cta > .pointer-after' );
 
             // sets city variable by reading the text content of the clicked city button
             const city = $target.text().replace( /[^\w]/gi, '' ).toLowerCase();
@@ -129,6 +130,9 @@ function Click() {
 
             // fires linkSwitch() on the object of city links
             Helpers.linkSwitch( CityLinks );
+
+            // adjusts associated .icon-bar arrow pointer
+            $pointer.css( 'left', Helpers.getArrowPosition( $target ) );
         } );
     };
     // Week-By-Week Curriculum revealer

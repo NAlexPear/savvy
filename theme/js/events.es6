@@ -43,4 +43,8 @@
 
     // default focus on Nashville city selection button
     $( 'button[name="stl"]' ).focus();
+    $( '#cta > .pointer-after' ).css(
+        'left',
+        Helpers.getArrowPosition( $( 'button[name="stl"]' ) )
+    );
 }( window, document, window.jQuery, window.underscore, Helpers(), Click(), Scroll(), Links() ) );

@@ -41,5 +41,15 @@ function Helpers() {
         } );
     };
 
+    obj.getArrowPosition = function calculateArrowPosition( $target ) {
+        const windowWidth = $( window ).width();
+        const $pointer = $( '.pointer-after' );
+        const targetLeft = $target.offset().left;
+        const targetCenter = $target.width() / 2;
+        const ctaLeft = $( '#cta' ).offset().left;
+
+        return targetLeft + ctaLeft + targetCenter;
+    };
+
     return obj;
 }
