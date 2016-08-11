@@ -124,6 +124,9 @@ function Click() {
             var $target = $(this);
             var $pointer = $('#cta > .pointer-after');
 
+            // save selected city to global property
+            window.city = $target;
+
             // sets city variable by reading the text content of the clicked city button
             var city = $target.text().replace(/[^\w]/gi, '').toLowerCase();
 

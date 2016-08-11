@@ -46,9 +46,10 @@ function Helpers() {
         const $pointer = $( '.pointer-after' );
         const targetLeft = $target.offset().left;
         const targetCenter = $target.width() / 2;
-        const ctaLeft = $( '#cta' ).offset().left;
+        const containerLeft = $target.parent().parent().parent().offset().left;
+        const arrowBorderOffsetPx = parseFloat( $pointer.css( 'border-left-width' ) ) * 0.5 + 20;
 
-        return targetLeft + ctaLeft + targetCenter;
+        return targetLeft + targetCenter - containerLeft + arrowBorderOffsetPx;
     };
 
     return obj;

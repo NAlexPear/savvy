@@ -41,10 +41,28 @@
         }
     } );
 
-    // default focus on Nashville city selection button
+    // default focus on St. Louis city selection button
     $( 'button[name="stl"]' ).focus();
     $( '#cta > .pointer-after' ).css(
         'left',
         Helpers.getArrowPosition( $( 'button[name="stl"]' ) )
     );
-}( window, document, window.jQuery, window.underscore, Helpers(), Click(), Scroll(), Links() ) );
+
+    window.city = $( 'button[name="stl"]' );
+
+
+    // Adjust arrow position for city selection buttons with window resize
+    $( window ).on( 'resize', function windowResizeHandler() {
+        const debouncedArrowAdjustment = _.debounce(
+            function adjustArrow() {
+                $( '#cta > .pointer-after' ).css(
+                    'left',
+                    Helpers.getArrowPosition( window.city )
+                );
+            },
+            250
+        );
+
+        debouncedArrowAdjustment();
+    } );
+}( window, document, window.jQuery, window._, Helpers(), Click(), Scroll(), Links() ) );
