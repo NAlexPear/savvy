@@ -36,7 +36,7 @@ Enter [SASS](http://sass-lang.com/). SASS is a CSS __pre-processor__: a way of u
 }
 {% endhighlight %}
 
-Pretty standard stuff. This doesn't look to scary at the moment, but it should irk you that there's no native way of generating these CSS rules in an extensible way. As it stands, if you'd like to add more rows, you add more column entries by hand. If you decide that you'd like a base-width of something other than 100%, you'd have to go through each rule again. Compare this to the SASS equivalent:
+Pretty standard stuff. This doesn't look too scary at the moment, but it should irk you that there's no native way of generating these CSS rules in an extensible way. As it stands, if you'd like to add more rows, you add more column entries by hand. If you decide that you'd like a base-width of something other than 100%, you'd have to go through each rule again. Compare this to the SASS equivalent:
 
 {% highlight scss %}
 @for $i from 1 through 10{
@@ -50,10 +50,10 @@ Pretty standard stuff. This doesn't look to scary at the moment, but it should i
 }
 {% endhighlight %}
 
-For anybody on Team JavaScript, this `for`-loop should be cause for a sigh of relief. Not only should this setup look familiar for anyone with the basics of a modern programming language under their belt, but it should eliminate what could be _hundreds_ of lines of CSS (depending on the number of columns needed). If you've never seen SASS before, here's a quick breakdown of what's happening:
+For anybody on Team JavaScript, this `for`-loop should be cause for a sigh of relief. Not only should this setup look familiar for anyone with the basics of a modern programming language under their belt, but it should eliminate what could be _hundreds_ of lines of CSS to maintain by hand (depending on the number of columns needed). The output is exactly the same as the "by-hand" example, but the development life-cycle is considerably more zen. If you've never seen SASS before, here's a quick breakdown of what's happening:
 
 1. in line 1, `@for` starts the loop by creating the placeholder variable `$i` and setting the range of numbers (in this case, 1 through 10).
-2. in line 2, the baseline width value is saved to a variable (which standard CSS doesn't have yet).
+2. in line 2, the baseline width value is saved to a variable (which standard CSS doesn't have yet, but might some day have in the future).
 3. in line 4, the `.row-` classes are set up using string interpolation (much like the the `${i}` string literal syntax from ES6).
 4. in line 5, we use SASS's nesting capabilities to better illustrate the relationship between the `.row-` classes and their `.column` direct children. We could have simply written the loop over `.row-#{$i} > .column{}` without nesting, but this way is more extensible (in case we wanted to apply styles to other row children or to the row element itself).
 
@@ -92,7 +92,7 @@ $base-width: 100%;
 }
 {% endhighlight %}
 
-So things have gotten a little bit more complicated; we've introduced a SASS map (`$breakpoints`), used `@each` to iterate over the map, set separate `@media` queries for each `$prefix`, and set the width according to `$base-width` multiplied by some fraction `#{$j}/#{$i}`. We've also used the `[class=""]` selector to allow us a bit more flexibility in generating class names. This solution is a little loopy, but it works for what we have with SASS. But "it works" is not the greatest standard by which to measure the quality of our code, and this is great example of why. If you run the code above, you'll notice two problems. The first is that the final output islarger than it needs to be because of the media queries. Check out a piece of the output CSS:
+So things have gotten a little bit more complicated; we've introduced a SASS map (`$breakpoints`), used `@each` to iterate over the map, set separate `@media` queries for each `$prefix`, and set the width according to `$base-width` multiplied by some fraction `#{$j}/#{$i}`. We've also used the `[class=""]` selector to allow us a bit more flexibility in generating class names. This solution is a little loopy, but it works for what we have with SASS. But "it works" is not the greatest standard by which to measure the quality of our code, and this is great example of why. If you run the code above, you'll notice two problems. The first is that the final output is larger than it needs to be because of the media queries. Check out a piece of the output CSS:
 
 {% highlight css %}
 .row > [class="xs-column-1/1"] {
@@ -126,7 +126,7 @@ So things have gotten a little bit more complicated; we've introduced a SASS map
 }
 {% endhighlight %}
 
-The first thing that should jump out at you when you see this output (besides thinking about how long it would take to type this up by hand for a standard 12-column grid system) is that this is there is going to be a lot of unnecessary repetition in those `@media` queries. If we wrote our grid system by hand using CSS, we would probably handle all of the styles for a single `@media` query at once, like so:
+The first thing that should jump out at you when you see this output (besides thinking about how long it would take to type this up by hand for a standard 12-column grid system) is that there is going to be a lot of unnecessary repetition in those `@media` queries. If we wrote our grid system by hand using CSS, we would probably handle all of the styles for a single `@media` query at once, like so:
 
 {% highlight css %}
 @media (max-width: 240px){
@@ -144,7 +144,7 @@ The first thing that should jump out at you when you see this output (besides th
 
 
 __Attempt 2__:
-This can shave quite a few kB from our bloated CSS output by grouping each breakpoint together.We could try to get this proper grouping by re-ordering our nested media queries, like so:
+We can shave quite a few kB from our bloated CSS output by grouping each breakpoint together. We could try to get this proper grouping by re-ordering our nested media queries, like so:
 
 {% highlight scss %}
 $breakpoints: ( xs:240px, small:340px, medium:500px, large:720px, xl:960px );
@@ -190,7 +190,7 @@ $base-width: 100%;
 
 Setting the upper limit of our inner loop to `$i` restricts values of `$j` to less than or equal to `$i`, so we don't have any more super-wide selectors any more! Hopefully you're starting to see how easy it is to fall into the SASS-generated CSS bloat trap. With two simple refactors, we've reduced our initial file size by over __60%__. But wait... there's more!
 
-As you can imagine, each `@media` query grouping is about 100 lines of CSS long (10x10 suffix options, pruned by 50% by only accepting suffixes where the numerator is less than or equal to the denominator, with roughly 2 lines of output per ruleset in the standard SASS output configuration). But most of these rules will share the same width values as another value (e.g. 1/2, 2/4, 3/6, 4/8, and 5/10 are all `width: 50%`). So we can combine these into a single statement with a comma-separated list of selectors for another CSS output reduction of about __60%__. Take a look:
+As you can imagine, each `@media` query grouping is about 100 lines of CSS long (10x10 suffix options, pruned by 50% by only accepting suffixes where the numerator is less than or equal to the denominator, with roughly 2 lines of output per ruleset in the standard SASS output configuration). But most of these rules will share the same width values as another value (e.g. 1/2, 2/4, 3/6, 4/8, and 5/10 are all `width: 50%`). So we can combine these into a single statement with a comma-separated list of selectors for another CSS output reduction in filesize of about __60%__. Take a look:
 
 __Attempt 4__:
 
