@@ -8,7 +8,7 @@ published: yes
 
 # _The Dangers of Getting SASSy_ #
 
-<h3>Or, with great power comes great responsibility</h3>
+<h3 class="subheading">Or, with great power comes great responsibility</h3>
 
 ---
 
