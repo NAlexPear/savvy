@@ -4,9 +4,13 @@ title: Tips for Beginners
 author: Adam
 date: 2016-10-01
 published: yes
+excerpt_separator: <!--break-->
 ---
 
-# _Tips for Beginners_
+# _Tips for Beginners_ #
+
+<!--break-->
+---
 
 _This is a guest post written by our intern Adam Holt. Follow along as he learns more about programming for the very first time_
 
