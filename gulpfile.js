@@ -8,12 +8,12 @@ const cloudinary = require( './utils/cloudinary' );
 const eslint = require( 'gulp-eslint' );
 const glob = require( 'glob' );
 const gulp = require( 'gulp' );
-const gulpif = require( 'gulp-if' );
+// const gulpif = require( 'gulp-if' );
 const gzip = require( 'gulp-gzip' );
 const minifyHtml = require( 'gulp-minify-html' );
 const sass = require( 'gulp-sass' );
 const sitemap = require( 'gulp-sitemap' );
-const uglify = require( 'gulp-uglify' );
+// const uglify = require( 'gulp-uglify' );
 const usemin = require( 'gulp-usemin' );
 const useref = require( 'gulp-useref' );
 const util = require( 'gulp-util' );
@@ -127,7 +127,7 @@ const asyncSrc = [
 gulp.task( 'async', asyncDeps, () => {
     return gulp.src( asyncSrc )
         .pipe( useref( { searchPath: '.' } ) )
-        .pipe( gulpif( '*.js', uglify() ) )
+        // .pipe( gulpif( '*.js', uglify() ) )
         .pipe( gulp.dest( './public' ) );
 } );
 
