@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- SEO -->
+    <meta name="description" content="Learn to Code with HTML, CSS, and JavaScript in Nashville, TN">
+    <meta name="keywords" content="Learn to code, HTML, CSS, JavaScript, JQuery, Web Development, Programming, Nashville">
+    <meta name="author" content="Savvy Coders">
+    <meta property="og:image" content="https://res.cloudinary.com/savvy-coders/image/upload/q_auto/v1470769887/savvylogo.png">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="ys-7GxEhydx43F9C1ilhGyAviIwntc8TAab3t-MH7rs" />
+
+    <link rel="shortcut icon" href="https://res.cloudinary.com/savvy-coders/image/upload/v1470769741/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://res.cloudinary.com/savvy-coders/image/upload/v1470769741/favicon.ico" type="image/x-icon">
+    <title>Savvy Coders | The Dangers of Getting Sassy</title>
+
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    	<![endif]-->
+
+    <link rel="canonical" href="https://savvycoders.com">
+    <link rel="shortlink" href="https://savvycoders.com">
+
+    <link rel="stylesheet" href="/theme/css/milligram.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
+
+
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+</head>
+
+<body>
+  <div id="menubar">
+    <ul class="navbubbles">
+        <li id="logo" class="desktop-only">
+          <a href="/" title="Savvy Coders Homepage" alt="Savvy Coders Nashville">
+              <div class="savvy-logo-text"><b>savvy</b>coders</div>
+          </a>
+        </li>
+
+        <li id="spacer" class="desktop-only">
+            <br>
+        </li>
+
+        <li id="about">
+          <a href="/blog" title="Blog" alt="Blog Home">
+              <div>blog</div>
+          </a>
+        </li>
+
+        <li id="contact">
+          <a href="/" title="Home" alt="Return to Home Page">
+              <div>home</div>
+          </a>
+        </li>
+
+        <li id="app">
+          <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank" title="Apply" alt="Savvy Application">
+              <div>apply</div>
+          </a>
+        </li>
+
+    </ul>
+</div>
+
+<div id="menudrop" class="dropdown hidden">
+  <ul class="navbubbles">
+    <li id="mission" class="desktop-only">
+      <a href="/#jump1" title="Mission" alt="About Savvy Coders' Mission">
+          <div>mission</div>
+      </a>
+    </li>
+    <li id="classes">
+      <a href="/#jump2" title="Classes" alt="About Savvy Coders' Classes">
+          <div>classes</div>
+      </a>
+    </li>
+    <li id="students" class="desktop-only">
+      <a href="/#jump3" title="Students" alt="About our Students">
+          <div>students</div>
+      </a>
+    </li>
+    <li id="pricing">
+      <a href="/pricing" title="Savvy Coders Prices" alt="Pricing">
+          <div>pricing</div>
+      </a>
+    </li>
+    <li id="faq">
+      <a href="/faq" title="FAQ" alt="FAQ">
+          <div>FAQ</div>
+      </a>
+    </li>
+    <li id="team">
+      <a href="/jobs" title="Jobs with Savvy Coders" alt="Join the Savvy Coders team">
+          <div>jobs</div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- post-specific splash to go here? -->
+
+  <!-- HERE WILL BE A SIDEBAR FOR EASIER BLOG NAVIGATION -->
+
+  <div id="content-wrapper">
+    <div id="content" class="blog-post">
+      <h1 id="the-dangers-of-getting-sassy"><em>The Dangers of Getting SASSy</em></h1>
+
+<h3 class="subheading">Or, with great power comes great responsibility</h3>
+
+<hr />
+
+<p><em>This post is part of Savvy Tips, a series of technical posts about how to improve your skills as a developer, written by our very own Alex Pearson, Head Instructor of the St. Louis cohort.</em></p>
+
+<hr />
+
+<p>If you’ve been in the Front End Web Development game for long, you’ve probably chosen a favorite language from the Big Three (HTML, CSS, and JavaScript). It’s been my experience that HTML doesn’t usually generate that much excitement among developers, unless they’re the types of folks to really dig berating others about <a href="http://html5doctor.com/lets-talk-about-semantics/">semantic markup</a>. The rest are usually divided into the CSS or the JavaScript camp. The designers, color-theorists, and beautifiers of the user interface are probably fans of delving into CSS, where the function-over-form and user experience types probably tend towards JavaScript. Obviously, both languages have their place, and are an absolute necessity for any Web Developer, but preferences usually surface pretty quickly. Me… I tend towards the JavaScript camp. While I can appreciate a visually beautiful design, I spend most of my time looking at code. And given that, the most beautiful part of any site (to me) is the elegant one-liner that describes a key feature. These are the haikus of the development world: the perfect <code class="highlighter-rouge">.map</code>, the single well-tempered and extensible <code class="highlighter-rouge">Object</code>, or the painless build process.</p>
+
+<p>CSS, by default, has none of these things. Given the global scope and cascading nature of CSS rules, the solution to most CSS problems tends to be more CSS. This means that, for most stylesheets, there’s always lots of repetition, lots of class chaining (digging deeper and deeper into a specificity sinkhole), and very few ways of creating extensible configurations or shorthands for new rules. The user, of course, sees none of this. But such tedium will eventually get under the skin of any aspiring CSS guru.</p>
+
+<p>Enter <a href="http://sass-lang.com/">SASS</a>. SASS is a CSS <strong>pre-processor</strong>: a way of using basic functions, loops, variables, and some special syntax to programatically generate CSS without needing to write out every piece of a repetitive stylesheet. The stylesheets are compiled into valid CSS before being served to the user, so nothing will really change for end users. But the development team will (probably) be much happier. As an example, consider the following CSS for a basic grid system:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.row-1</span> <span class="o">&gt;</span> <span class="nc">.column</span><span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-2</span> <span class="o">&gt;</span> <span class="nc">.column</span><span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.row-3</span> <span class="o">&gt;</span> <span class="nc">.column</span><span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">30%</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Pretty standard stuff. This doesn’t look too scary at the moment, but it should irk you that there’s no native way of generating these CSS rules in an extensible way. As it stands, if you’d like to add more rows, you add more column entries by hand. If you decide that you’d like a base-width of something other than 100%, you’d have to go through each rule again. Compare this to the SASS equivalent:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+    <span class="nv">$base-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+
+    <span class="nc">.row-</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span> <span class="p">{</span>
+        <span class="k">&amp;</span> <span class="o">&gt;</span> <span class="nc">.column</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="nv">$base-width</span> <span class="o">/</span> <span class="nv">$i</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>For anybody on Team JavaScript, this <code class="highlighter-rouge">for</code>-loop should be cause for a sigh of relief. Not only should this setup look familiar for anyone with the basics of a modern programming language under their belt, but it should eliminate what could be <em>hundreds</em> of lines of CSS to maintain by hand (depending on the number of columns needed). The output is exactly the same as the “by-hand” example, but the development life-cycle is considerably more zen. If you’ve never seen SASS before, here’s a quick breakdown of what’s happening:</p>
+
+<ol>
+  <li>in line 1, <code class="highlighter-rouge">@for</code> starts the loop by creating the placeholder variable <code class="highlighter-rouge">$i</code> and setting the range of numbers (in this case, 1 through 10).</li>
+  <li>in line 2, the baseline width value is saved to a variable (which standard CSS doesn’t have yet, but might some day have in the future).</li>
+  <li>in line 4, the <code class="highlighter-rouge">.row-</code> classes are set up using string interpolation (much like the the <code class="highlighter-rouge">${i}</code> string literal syntax from ES6).</li>
+  <li>in line 5, we use SASS’s nesting capabilities to better illustrate the relationship between the <code class="highlighter-rouge">.row-</code> classes and their <code class="highlighter-rouge">.column</code> direct children. We could have simply written the loop over <code class="highlighter-rouge">.row-#{$i} &gt; .column{}</code> without nesting, but this way is more extensible (in case we wanted to apply styles to other row children or to the row element itself).</li>
+</ol>
+
+<p>This is <em>huge</em> for developers, and a big improvement over the standard CSS workflow. It’s hard to imagine professional CSS development happening without SASS these days (even for those firmly planted in Team CSS). But this is a post about the dangers of abusing SASS, right? So what’s so dangerous about CSS with superpowers?</p>
+
+<p>The potential problems stem from the fact that browsers don’t interpret SASS: they interpret CSS. So every SASS operation spits out a CSS document that has the potential to be, in true CSS fashion, <em>devastatingly large</em>. SASS has great power, but also requires great responsibility. Here’s an example from my own troubles with abusing SASS:</p>
+
+<hr />
+
+<p><strong>The End Goal</strong>: A responsive grid system.</p>
+
+<p>While grid systems like the one we saw above are nice, they’re not really suitable for responsive web development. To lock everything in to a set-width-percentage grid isn’t a great option once those screens get really small. Nor is it a great solution for setting up elements of different widths within a single row. The solution: adding breakpoint prefixes and width suffixes to our <code class="highlighter-rouge">.column</code> selectors. So <code class="highlighter-rouge">.column</code> becomes <code class="highlighter-rouge">.small-column-1/2 .medium-column-1/3 .large-column-1/4</code> for a column that responds to small, medium, and large breakpoints by taking up 1/2, 1/3, or 1/4 of available row space (respectively).</p>
+
+<p>We also want to make sure that we don’t restrict users to <code class="highlighter-rouge">1/X</code> divisors. Let’s see if we can create a grid system that lets users choose any fractional width from 1/1 up to 10/10 (so 2/5 and 3/8 and 3/4 are allowed, but 1/12 wouldn’t be). This is a pretty standard API for grid systems, so we’ll want to include it in ours.</p>
+
+<p><strong>Attempt 1</strong>:</p>
+
+<p>As you might imagine, we need to use <a href="https://css-tricks.com/logic-in-media-queries/">CSS media queries</a> to check the width of the viewport and respond accordingly. This is already supported as a part of the CSS spec, but is given superpowers with SASS’s ability to nest styles. So let’s see if we can add to our code above to add media query and prefix support.</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoints</span><span class="p">:</span> <span class="p">(</span> <span class="n">xs</span><span class="o">:</span><span class="m">240px</span><span class="o">,</span> <span class="n">small</span><span class="o">:</span><span class="m">340px</span><span class="o">,</span> <span class="nb">medium</span><span class="o">:</span><span class="m">500px</span><span class="o">,</span> <span class="nb">large</span><span class="o">:</span><span class="m">720px</span><span class="o">,</span> <span class="n">xl</span><span class="o">:</span><span class="m">960px</span> <span class="p">);</span>
+<span class="nv">$base-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+    <span class="k">@each</span> <span class="nv">$prefix</span><span class="o">,</span> <span class="nv">$breakpoint</span> <span class="n">in</span> <span class="nv">$breakpoints</span><span class="p">{</span>
+        <span class="nc">.row</span> <span class="p">{</span>
+            <span class="k">@for</span> <span class="nv">$j</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+                <span class="k">&amp;</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s2">"</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="s2">-column-</span><span class="si">#{</span><span class="nv">$j</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">"</span><span class="o">]</span><span class="p">{</span>
+                    <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span><span class="nv">$breakpoint</span><span class="p">){</span>
+                        <span class="nl">width</span><span class="p">:</span> <span class="nv">$base-width</span> <span class="o">*</span> <span class="p">(</span> <span class="nv">$j</span> <span class="o">/</span> <span class="nv">$i</span> <span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>So things have gotten a little bit more complicated; we’ve introduced a SASS map (<code class="highlighter-rouge">$breakpoints</code>), used <code class="highlighter-rouge">@each</code> to iterate over the map, set separate <code class="highlighter-rouge">@media</code> queries for each <code class="highlighter-rouge">$prefix</code>, and set the width according to <code class="highlighter-rouge">$base-width</code> multiplied by some fraction <code class="highlighter-rouge">#{$j}/#{$i}</code>. We’ve also used the <code class="highlighter-rouge">[class=""]</code> selector to allow us a bit more flexibility in generating class names. This solution is a little loopy, but it works for what we have with SASS. But “it works” is not the greatest standard by which to measure the quality of our code, and this is great example of why. If you run the code above, you’ll notice two problems. The first is that the final output is larger than it needs to be because of the media queries. Check out a piece of the output CSS:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"xs-column-1/1"</span><span class="o">]</span> <span class="p">{</span>
+    <span class="err">@media</span> <span class="err">(</span><span class="nl">max-width</span><span class="p">:</span><span class="m">240px</span><span class="p">)</span><span class="err">{</span>
+        <span class="n">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"small-column-1/1"</span><span class="o">]</span><span class="p">{</span>
+    <span class="err">@media</span> <span class="err">(</span><span class="nl">max-width</span><span class="p">:</span><span class="m">340px</span><span class="p">)</span><span class="err">{</span>
+        <span class="n">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"medium-column-1/1"</span><span class="o">]</span><span class="p">{</span>
+    <span class="err">@media</span> <span class="err">(</span><span class="nl">max-width</span><span class="p">:</span><span class="m">500px</span><span class="p">)</span><span class="err">{</span>
+        <span class="n">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"large-column-1/1"</span><span class="o">]</span><span class="p">{</span>
+    <span class="err">@media</span> <span class="err">(</span><span class="nl">max-width</span><span class="p">:</span><span class="m">720px</span><span class="p">)</span><span class="err">{</span>
+        <span class="n">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+
+<span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"xl-column-1/1"</span><span class="o">]</span><span class="p">{</span>
+    <span class="err">@media</span> <span class="err">(</span><span class="nl">max-width</span><span class="p">:</span><span class="m">960px</span><span class="p">)</span><span class="err">{</span>
+        <span class="n">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span></code></pre></figure>
+
+<p>The first thing that should jump out at you when you see this output (besides thinking about how long it would take to type this up by hand for a standard 12-column grid system) is that there is going to be a lot of unnecessary repetition in those <code class="highlighter-rouge">@media</code> queries. If we wrote our grid system by hand using CSS, we would probably handle all of the styles for a single <code class="highlighter-rouge">@media</code> query at once, like so:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="p">:</span> <span class="m">240px</span><span class="p">){</span>
+    <span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"xs-column-1/1"</span><span class="o">]</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nc">.row</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s1">"xs-column-1/2"</span><span class="o">]</span> <span class="p">{</span>
+        <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">//</span> <span class="nt">etc</span> <span class="nt">etc</span>
+<span class="p">}</span></code></pre></figure>
+
+<p><strong>Attempt 2</strong>:
+We can shave quite a few kB from our bloated CSS output by grouping each breakpoint together. We could try to get this proper grouping by re-ordering our nested media queries, like so:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoints</span><span class="p">:</span> <span class="p">(</span> <span class="n">xs</span><span class="o">:</span><span class="m">240px</span><span class="o">,</span> <span class="n">small</span><span class="o">:</span><span class="m">340px</span><span class="o">,</span> <span class="nb">medium</span><span class="o">:</span><span class="m">500px</span><span class="o">,</span> <span class="nb">large</span><span class="o">:</span><span class="m">720px</span><span class="o">,</span> <span class="n">xl</span><span class="o">:</span><span class="m">960px</span> <span class="p">);</span>
+<span class="nv">$base-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+
+<span class="k">@each</span> <span class="nv">$prefix</span><span class="o">,</span> <span class="nv">$breakpoint</span> <span class="n">in</span> <span class="nv">$breakpoints</span><span class="p">{</span>
+    <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span><span class="nv">$breakpoint</span><span class="p">){</span>
+        <span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+            <span class="nc">.row</span> <span class="p">{</span>
+                <span class="k">@for</span> <span class="nv">$j</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+                    <span class="k">&amp;</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s2">"</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="s2">-column-</span><span class="si">#{</span><span class="nv">$j</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">"</span><span class="o">]</span><span class="p">{</span>
+                        <span class="nl">width</span><span class="p">:</span> <span class="nv">$base-width</span> <span class="o">*</span> <span class="p">(</span> <span class="nv">$j</span> <span class="o">/</span> <span class="nv">$i</span> <span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>So now we have a working grid, and we’ve saved about 10% of the file size by properly grouping our media queries. But you’ll also notice that we’ve created about <em>twice as many column selectors as we need</em>. In order to prune out the “super-wide” selectors (e.g. <code class="highlighter-rouge">-column-4/1</code> with 400% <code class="highlighter-rouge">width</code>), we need to add an <code class="highlighter-rouge">@if</code> condition to our inner loop.</p>
+
+<p><strong>Attempt 3</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoints</span><span class="p">:</span> <span class="p">(</span> <span class="n">xs</span><span class="o">:</span><span class="m">240px</span><span class="o">,</span> <span class="n">small</span><span class="o">:</span><span class="m">340px</span><span class="o">,</span> <span class="nb">medium</span><span class="o">:</span><span class="m">500px</span><span class="o">,</span> <span class="nb">large</span><span class="o">:</span><span class="m">720px</span><span class="o">,</span> <span class="n">xl</span><span class="o">:</span><span class="m">960px</span> <span class="p">);</span>
+<span class="nv">$base-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+
+<span class="k">@each</span> <span class="nv">$prefix</span><span class="o">,</span> <span class="nv">$breakpoint</span> <span class="n">in</span> <span class="nv">$breakpoints</span><span class="p">{</span>
+    <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span><span class="nv">$breakpoint</span><span class="p">){</span>
+        <span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="m">10</span><span class="p">{</span>
+            <span class="nc">.row</span> <span class="p">{</span>
+                <span class="k">@for</span> <span class="nv">$j</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nv">$i</span><span class="p">{</span>
+                    <span class="k">&amp;</span> <span class="o">&gt;</span> <span class="o">[</span><span class="nt">class</span><span class="o">=</span><span class="s2">"</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="s2">-column-</span><span class="si">#{</span><span class="nv">$j</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">"</span><span class="o">]</span><span class="p">{</span>
+                        <span class="nl">width</span><span class="p">:</span> <span class="nv">$base-width</span> <span class="o">*</span> <span class="p">(</span> <span class="nv">$j</span> <span class="o">/</span> <span class="nv">$i</span> <span class="p">);</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Setting the upper limit of our inner loop to <code class="highlighter-rouge">$i</code> restricts values of <code class="highlighter-rouge">$j</code> to less than or equal to <code class="highlighter-rouge">$i</code>, so we don’t have any more super-wide selectors any more! Hopefully you’re starting to see how easy it is to fall into the SASS-generated CSS bloat trap. With two simple refactors, we’ve reduced our initial file size by over <strong>60%</strong>. But wait… there’s more!</p>
+
+<p>As you can imagine, each <code class="highlighter-rouge">@media</code> query grouping is about 100 lines of CSS long (10x10 suffix options, pruned by 50% by only accepting suffixes where the numerator is less than or equal to the denominator, with roughly 2 lines of output per ruleset in the standard SASS output configuration). But most of these rules will share the same width values as another value (e.g. 1/2, 2/4, 3/6, 4/8, and 5/10 are all <code class="highlighter-rouge">width: 50%</code>). So we can combine these into a single statement with a comma-separated list of selectors for another CSS output reduction in filesize of about <strong>60%</strong>. Take a look:</p>
+
+<p><strong>Attempt 4</strong>:</p>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$breakpoints</span><span class="p">:</span> <span class="p">(</span> <span class="n">xs</span><span class="o">:</span><span class="m">240px</span><span class="o">,</span> <span class="n">small</span><span class="o">:</span><span class="m">340px</span><span class="o">,</span> <span class="nb">medium</span><span class="o">:</span><span class="m">500px</span><span class="o">,</span> <span class="nb">large</span><span class="o">:</span><span class="m">720px</span><span class="o">,</span> <span class="n">xl</span><span class="o">:</span><span class="m">960px</span> <span class="p">);</span>
+<span class="nv">$base-width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="nv">$columns</span><span class="p">:</span> <span class="m">10</span><span class="p">;</span>
+
+<span class="nv">$suffix-map</span><span class="p">:</span> <span class="p">();</span>
+
+<span class="k">@for</span> <span class="nv">$i</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nv">$columns</span><span class="p">{</span>
+    <span class="k">@for</span> <span class="nv">$j</span> <span class="ow">from</span> <span class="m">1</span> <span class="ow">through</span> <span class="nv">$i</span><span class="p">{</span>
+        <span class="nv">$width</span><span class="p">:</span> <span class="nv">$j</span> <span class="o">/</span> <span class="nv">$i</span><span class="p">;</span>
+        <span class="nv">$class-list</span><span class="p">:</span> <span class="nf">map-get</span><span class="p">(</span> <span class="nv">$suffix-map</span><span class="o">,</span> <span class="nv">$width</span> <span class="p">);</span>
+        <span class="nv">$class-list</span><span class="p">:</span> <span class="nf">if</span><span class="p">(</span> <span class="nv">$class-list</span> <span class="o">==</span> <span class="n">null</span><span class="o">,</span> <span class="p">()</span><span class="o">,</span> <span class="nv">$class-list</span> <span class="p">);</span>
+        <span class="nv">$class-list</span><span class="p">:</span> <span class="nf">join</span><span class="p">(</span> <span class="nv">$class-list</span><span class="o">,</span> <span class="p">(</span> <span class="s2">"</span><span class="si">#{</span><span class="nv">$j</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="nv">$i</span><span class="si">}</span><span class="s2">"</span> <span class="p">)</span> <span class="p">);</span>
+
+        <span class="nv">$suffix-map</span><span class="p">:</span> <span class="nf">map-merge</span><span class="p">(</span> <span class="nv">$suffix-map</span><span class="o">,</span> <span class="p">(</span> <span class="nv">$width</span><span class="o">:</span> <span class="nv">$class-list</span> <span class="p">)</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@each</span> <span class="nv">$prefix</span><span class="o">,</span> <span class="nv">$breakpoint</span> <span class="n">in</span> <span class="nv">$breakpoints</span><span class="p">{</span>
+    <span class="k">@media</span> <span class="p">(</span><span class="n">max-width</span><span class="o">:</span><span class="nv">$breakpoint</span><span class="p">){</span>
+        <span class="k">@each</span> <span class="nv">$width</span><span class="o">,</span> <span class="nv">$suffix-list</span> <span class="n">in</span> <span class="nv">$suffix-map</span><span class="p">{</span>
+            <span class="nv">$class-list</span><span class="p">:</span> <span class="p">();</span>
+
+            <span class="k">@each</span> <span class="nv">$suffix</span> <span class="n">in</span> <span class="nv">$suffix-list</span><span class="p">{</span>
+                <span class="nv">$class-list</span><span class="p">:</span> <span class="nf">append</span><span class="p">(</span> <span class="nv">$class-list</span><span class="o">,</span> <span class="nf">unquote</span><span class="p">(</span> <span class="s1">'[class="</span><span class="si">#{</span><span class="nv">$prefix</span><span class="si">}</span><span class="s1">-column-</span><span class="si">#{</span><span class="nv">$suffix</span><span class="si">}</span><span class="s1">"]'</span> <span class="p">)</span><span class="o">,</span> <span class="n">comma</span> <span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="nc">.row</span><span class="p">{</span>
+                <span class="k">&amp;</span> <span class="o">&gt;</span> <span class="si">#{</span><span class="nv">$class-list</span><span class="si">}</span><span class="p">{</span>
+                    <span class="nl">width</span><span class="p">:</span> <span class="nv">$base-width</span> <span class="o">*</span> <span class="nv">$width</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>A quick breakdown of what we’ve done here, and why:</p>
+
+<ol>
+  <li>On line 5, we’ve set up an empty list (and future map) called <code class="highlighter-rouge">$suffix-map</code>. This will eventually associate lists of class suffixes (e.g. <code class="highlighter-rouge">1/1</code>, <code class="highlighter-rouge">2/3</code>, etc.) with their width percentages. If we were to use <code class="highlighter-rouge">@debug</code> to log <code class="highlighter-rouge">$suffix-map</code> to the console after line 17, we would see something like this:</li>
+</ol>
+
+<figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nv">$suffix-map</span><span class="p">:</span> <span class="p">(</span>
+    <span class="s2">"100%"</span><span class="o">:</span> <span class="p">(</span> <span class="s2">"1/1"</span><span class="o">,</span> <span class="s2">"2/2"</span><span class="o">,</span> <span class="s2">"3/3"</span><span class="o">,</span> <span class="s2">"4/4"</span><span class="o">,</span> <span class="s2">"5/5"</span><span class="o">,</span> <span class="s2">"6/6"</span><span class="o">,</span> <span class="s2">"..etc"</span> <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"50%"</span><span class="o">:</span> <span class="p">(</span> <span class="s2">"1/2"</span><span class="o">,</span> <span class="s2">"2/4"</span><span class="o">,</span> <span class="s2">"3/6"</span><span class="o">,</span> <span class="s2">"4/8"</span><span class="o">,</span> <span class="s2">"5/10"</span> <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"33%"</span><span class="o">:</span> <span class="p">(</span> <span class="s2">"1/3"</span><span class="o">,</span> <span class="s2">"2/6"</span><span class="o">,</span> <span class="s2">"3/9"</span> <span class="p">)</span><span class="o">,</span>
+    <span class="s2">"25%"</span><span class="o">:</span> <span class="p">(</span> <span class="s2">"1/4"</span><span class="o">,</span> <span class="s2">"2/8"</span> <span class="p">)</span>
+    <span class="o">//</span> <span class="n">etc</span> <span class="n">etc</span>
+<span class="p">)</span></code></pre></figure>
+
+<ol>
+  <li>
+    <p>The above output is generated with our nested <code class="highlighter-rouge">@for</code> loops. We had previously run these loops inside the <code class="highlighter-rouge">@each</code> breakpoint directive, but we’ve now extracted these to their own section to help make the next directive clearer.</p>
+  </li>
+  <li>
+    <p>On line 10, we try to access a list of suffixes in <code class="highlighter-rouge">$suffix-map</code> by a width label. If the <code class="highlighter-rouge">map-get</code> function (which is built into SASS) returns <code class="highlighter-rouge">null</code>, we know that the label doesn’t exist yet. The next two lines decide whether to create a new key or append a suffix to a list of pre-existing suffixes accessible by their shared width. And, finally, the generated list of suffixes is merged into <code class="highlighter-rouge">$suffix-map</code> at the proper percent identifier. This may look like overkill, but imagine doing this by hand for a multi-dimensional 24-column grid system. Or, worse, imagine doing this for a 24-column grid system, then being told that the designers would prefer a 16-column grid system. Best to create a method of generating that proper list automatically, regardless of the number of columns needed!</p>
+  </li>
+  <li>
+    <p>Now we can iterate over our map of suffixes within each breakpoint’s <code class="highlighter-rouge">@media</code> query. Line 23 turns an individual width’s suffix list into full class selectors like we’ve seen before. The standard SASS function <code class="highlighter-rouge">append()</code> uses a <code class="highlighter-rouge">comma</code> argument to create the comma-separated list that we’ll need to use these lists of classes in accordance with the CSS spec.</p>
+  </li>
+  <li>
+    <p>And, finally, we can use the exact same nested child selector syntax that we’ve used before, and our list of comma-separated child classes is automatically expanded into the proper list of full selectors. Try it out with your own project, and compare the final output with our original attempts!</p>
+  </li>
+</ol>
+
+<hr />
+
+<p>While this might look intimidating (and requires a bit more up-front thought than slapping additional CSS rules onto a stylesheet), it’s an important part of using SASS responsibly! If we had stuck with our working-but-bloated example from attempt 1, we would have had <strong>90% more CSS output</strong> for users to download. And in more complex grid systems, that extra CSS can become a huge burden for users, especially on mobile platforms. I may or may not have once added almost a full MB of additional render-blocking data for users to download by getting SASS-y without thinking about the cost of the final CSS output. This is not to say that you shouldn’t use SASS. A project like this one would be almost impossible to maintain by hand with native CSS! But always be aware of size and beauty of the final output, rather than focusing too much on the beauty of SASS itself.</p>
+
+<p>Good luck, and post any questions you have to the comments!</p>
+
+    </div>
+  </div>
+  <div id="disqus_thread"></div>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="/#headjump">Home</a>
+      </li>
+      <li>
+        <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank">Sign Up</a>
+      </li>
+      <li>
+        <a class="eventbrite" href=" https://www.eventbrite.com/e/crash-course-in-coding-for-the-curious-tickets-19586497742">Attend an Intro Session</a>
+      </li>
+      <li>
+        <a class="meetup" href="http://www.meetup.com/savvycoders/">Join our Meetup</a>
+      </li>
+      <li>
+        <a href="/#jump2">How it Works</a>
+      </li>
+      <li>
+        <a href="/#jump3">What you'll learn</a>
+      </li>
+      <li>
+        <a href="/pricing">Pricing</a>
+      </li>
+      <li>
+        <a href="/faq">FAQ</a>
+      </li>
+      <li>
+        <a href="/#jump6">Contact us</a>
+      </li>
+    </ul>
+    <div id="address">
+      <p>All classes are held at</p>
+      <p><a class="locationLink" href="http://www.refinerynashville.com/"><span class="location">the Refinery</span> <span class="city">Nashville</span></a></p>
+      <p class="address"></p>
+    </div>
+    <br>
+    <div class="social">
+      <br>
+      <ul class="icon-bar">
+        <li>
+          <a href="http://twitter.com/savvycoders">
+            <span class="ti-twitter"></span>
+            <p>twitter</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/Savvy-Coders-1616883465226928/">
+            <span class="ti-facebook"></span>
+            <p>facebook</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/10377788?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A10377788%2Cidx%3A2-1-2%2CtarId%3A1453332316324%2Ctas%3Asavvy%20coders">
+            <span class="ti-linkedin"></span>
+            <p>linkedin</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">©2015 Savvy Technologies, LLC.</div>
+</footer>
+
+  <script src="/theme/js/site.js" charset="utf-8"></script>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://savvycoders.com';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "Savvy Coders Blog"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//savvycodersblog.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>

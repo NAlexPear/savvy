@@ -1,0 +1,1064 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Savvy Coders | Week 1 : Module 1</title>
+
+		<meta name="description" content="Savvy Coders' Intro Session Presentation Materials">
+		<meta name="author" content="the Savvy Coder Team">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../../css/reveal.css">
+		<link rel="stylesheet" href="../../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
+
+		<!--Google Fonts-->
+	    <link href='https://fonts.googleapis.com/css?family=Kreon:400,700' rel='stylesheet' type='text/css'>
+	    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+			<!-- INTRO SLIDE -->
+				<section data-background="https://savvycoders.com/theme/images/headerShort.png">
+					<h2 style="position: fixed; top:300px; left: 200px;">Week 1: Module 1</h2>
+				</section>
+			<!-- SLIDE 1 -->
+				<section>
+					<div id="slide-header">
+						<img src="https://savvycoders.com/theme/images/icons/SavvyFavicon.png">
+						<h1>Welcome to class!</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Stand up</h4>
+							<p>...and move around a bit</p>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Make friends</h4>
+							<p>Introduce yourself to someone</p>
+							<p>Ask about class goals, favorite superhero</p>
+							<p>Introduce your new friend to someone else</p>
+							<p>Repeat ad nauseam (or until we say so)</p>
+						</li>
+					</ul>
+				</section>
+			<!-- SLIDE 2 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Method to the madness</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>The Schedule: </h3><h4>60 hours of <strike>work</strike> <b>FUN</b></h4>
+								<p>...plus lots and lots of extra content</p>
+								<br>
+							</li>
+							<li>
+								<h3>Attendance: </h3><h4>Mandatory</h4>
+								<p>"If you miss a day, you miss a lot"</p>
+								<p>emergency: info@savvycoders.com</p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Days/wk: </h3><h4>5</h4>
+								<p>Monday-Friday</p>
+								<br>
+							</li>
+							<li>
+								<h3>Weeks: </h3><h4>4</h4>
+								<p>January 25th - February 19th</p>
+								<br>
+							</li>
+							<li>
+								<h3>Hours/day: </h3><h4>3</h4>
+								<p>6pm-9pm</p>
+								<br>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 3 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Method to the madness 2</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Class Materials: </h3><h4>Online</h4>
+							<p>https://savvycoders.com/class-slides/class-materials/week-1/module-1</p>
+							<p>https://github.com/NAlexPear/savvy</p>
+						</li>
+						<li>
+							<h3>Assignments: </h3><h4>Online and Email</h4>
+							<p>All resources sent out via email</p>
+							<p>All exercises listed in presentations</p>
+							<p>All exercises at the links above</p>
+						</li>
+					</ul>
+				</section>
+			<!-- SLIDE 4 -->
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Method to the madness 3</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Slack: </h3><h4>SavvyCoders (should have an invite)</h4>
+							<p>	general = general questions, pictures of kittens</p>
+							<p>	project-help = technical questions</p>
+						</li>
+						<li>
+							<h3>Personal Help: </h3><h4>Email us!</h4>
+							<p>INSTRUCTORS: alex@savvycoders.com, jamesblogan@gmail.com</p>
+							<p>ADMIN: info@savvycoders.com</p>
+						</li>
+					</ul>
+				</section>
+			<!-- SLIDE 5 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>Started from the bottom...</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li>
+								<h3>How do we interact with a computer?: </h3><br><h4>the Operating System</h4>
+								<p>handles human inputs</p>
+								<p>manages outputs</p>
+								<p>reads/writes resources</p>
+								<p>manages applications</p>
+								<br>
+							</li>
+							<li>
+								<h3>But how do WE interact with a computer?</h3>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h4>CLIs/GUIs</h4></li>
+							<li><img src="../../../images/cli.gif" alt="the Command-line-interface"><br></li>
+						</ul>
+					</section>
+					<section>
+						<quote>
+								"When I was a child, I used a computer by looking at the pictures.
+								When I grew up, I learned to read and write."
+						</quote>
+						<p>-William Shotts, Jr.</p>
+						<br>
+						<p><i>"Learning the Shell"</i></p>
+						<p><i>Linux Command.org</i></p>
+					</section>
+				</section>
+			<!-- SLIDE 6 -->
+				<section>
+					<section>
+						<div id="slide-header">
+							<img src="../../../../theme/images/icons/SavvyFavicon.png">
+							<h1>File Structures</h1>
+							<span></span>
+						</div>
+						<ul class="list-content">
+							<li><img src="../../../images/fs.png" alt="file structure"/></li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>The File System: </h3><h4>navigation 101</h4>
+								<p>human-facing analogy</p>
+								<p>"roots" and "branches" in "trees"</p>
+								<p>"files" and "folders"</p>
+								<p>"parents" and "children" and "siblings"</p>
+								<br>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<img src="../../../images/finder.png" alt="Mac Finder"/>
+							</li>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 7 -->
+				<section>
+					<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>...and now we here (@ the CLI)</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li><h3>Linux: </h3><h4>sh, bash, terminal</h4>
+							<p>most distros have a terminal emulator</p>
+							<p>sh = "shell" program</p>
+							<p>bash = Bourne Again SHell</p>
+							<pre><code data-trim class="powershell">
+[me@linuxbox me]$ ls
+Desktop     Xrootenv.0    linuxcmd
+GNUstep     bin           nedit.rpm
+GUILG00.GZ  hitni123.jpg  nsmail
+							</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Mac: </h3><h4> Mac Terminal</h4>
+							<p>Mac = UNIX-based (like LINUX, sort of)</p>
+							<p>Applications > Utilities > Terminal</p>
+						</li>
+						<li>
+							<img src="../../../images/macterminal.png" alt="Mac terminal" />
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li><h3>Windows: </h3><h4>umm....</h4>
+							<p>Command Prompt (default)</p>
+							<p>PowerShell (adds lots of linux-like shell functions)</p>
+							<p>Cygwin (Linux-like environment for Windows)</p>
+							<p>cmder (command prompt + some bash cmds)</p>
+							<p>git bash (a CLI included in 'git for Windows')</p>
+							<br>
+						</li>
+						<li>
+							<li><h3>Recommended: </h3><h4>PowerShell + git bash</h4><br>
+								<a href="https://technet.microsoft.com/en-us/library/hh847837.aspx">Click here to see if you need to download PowerShell</a>
+							</li>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 8 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 1: Finding the CLI</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Find or install a CLI</h4>
+						</li>
+						<br>
+						<li>
+							<h3>Step 2: </h3><h4>Install git</h4>
+							<p><a href="https://git-scm.com/downloads">https://git-scm.com/</a></p>
+							<p>(includes git bash for Windows)</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 2: CLIs and you</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Navigate to your desktop FOLDER</h4>
+							<p>(use your GUI for the last time)</p>
+						</li>
+						<li><h3>Step 2: </h3><h4>Repeat with your CLI</h4>
+							<p>
+								<ol>
+									<li>print your starting location: pwd</li>
+									<li>list the file structure: ls</li>
+									<li>change directories: cd</li>
+									<li>move up a directory: cd ..</li>
+									<li>move to a specific directory: cd [directory path]</li>
+								</ol>
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 4: </h3><h4>Create a new folder</h4>
+							<pre><code class="shell">
+$ mkdir SavvyCoders
+							</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 3: Atom</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Install Atom</h4>
+							<p>https://atom.io</p>
+							<p>fire it up by typing 'atom' into your CLI</p>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Install packages</h4>
+							<p>open-in-browser</p>
+							<p>emmet</p>
+							<p>script</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 4: Haiku</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Navigate to SavvyCoders directory</h4>
+						</li>
+						<br>
+						<li>
+							<h3>Step 2: </h3><h4>Open SavvyCoders in Atom</h4>
+							<pre><code class="shell">
+$ atom .
+							</code></pre>
+						</li>
+					</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Create haiku.txt</h4>
+							<pre><code class="shell">
+$ touch haiku.txt
+							</code></pre>
+						</li>
+						<br>
+						<li>
+							<h3>Step 4: </h3><h4>Write a short haiku!</h4>
+							<p>Use Atom, and don't forget the 5-7-5 syllable pattern.</p>
+						</li>
+					</ul>
+					</section>
+					<section>
+							<quote>
+								Haikus are easy,<br>
+								But endings are difficult.<br>
+								Refrigerator.
+							</quote>
+				</section>
+			</section>
+			<!-- SLIDE 9 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Mark Up with Markdown</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Better Formatting: </h3><h4>Markdown</h4>
+							<p>Rich Text doesn't work for programmers</p>
+							<p>We might use markdown instead!</p>
+						</li>
+						<pre><code class="markdown">
+# This is a header
+## This is an even smaller header
+### Even smaller...
+###### Quite small
+
+Here is some normal text. A paragraph, even!
+						</code></pre>
+					</ul>
+				</section>
+				<section>
+					<pre><code class="markdown">
+*This text is in italics.*
+
+**This text is in bold.**
+
+***This text is in both.***
+
+~~This text is rendered with strikethrough.~~
+
+Sometimes you want to embed some \*stylized text\*
+right into **your paragraph.** Pretty cool, right!
+
+* Item
+* Item
+* Another item
+
+or
+
++ Item
++ Item
++ One more item
+
+or
+
+- Item
+- Item
+- One last item
+
+
+1. Item one
+2. Item two
+3. Item three
+
+w/ sub-lists
+
+1. Item one
+2. Item two
+3. Item three
+    1. Sub-item
+    2. Sub-item
+4. Item four
+
+					</code></pre>
+				</section>
+				<section>
+					<pre><code class="markdown">
+
+---
+
+[I'm a link to a web page!](http://www.google.com)
+
+![alt text](https://i.imgur.com/81qyN1y.jpg)
+
+![local photo](assets/profile.png)
+					</code></pre>
+				</section>
+			</section>
+			<!-- SLIDE 10 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 5: Marky Markdown</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>haiku.md</h4>
+							<p>Create a new file called 'haiku.md'</p>
+							<pre><code class="shell">
+$ touch haiku.md
+							</code></pre>
+						</li>
+						<br>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 2: </h3>
+							<h4>Mark Up haiku.md</h4>
+							<br><br>
+						<ol>
+							<li>Create a title for your haiku and format it as a header with '#'</li>
+							<li>Italicize the first two lines with * *</li>
+							<li>Italicize and bold the last line with *** ***</li>
+							<li>Create a horizontal rule after the poem using ---</li>
+							<li>Create a list of authors as an unordered list using +</li>
+							<li>Find a relevant photo online and insert it using the syntax:</li>
+							<pre><code class="markdown">
+![alt text](https://url.of.my.photo.com/we-rule)
+							</code></pre>
+						</ol>
+					</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 11 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>GitHub</h1>
+						<span></span>
+					</div>
+					<img src="http://lumiinsight.com/wp-content/uploads/2015/11/GitHub.jpg" alt="GitHub">
+					<aside class="notes">
+						GitHub profiles are like a combination of LinkedIn and Facebook for developers, as well as a place to back up and store code. We'll learn more about how git and GitHub work later, but for now, it's important to create an account.
+					</aside>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 6: GitHub and You</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1:</h3>
+							<h4> create an account!</h4>
+							<br>
+							<p>post a link to your account on Slack</p>
+							<p>follow your classmates and instructors</p>
+						</li>
+						<br>
+						<li>
+							<h3>Step 2: </h3>
+							<h4>make a gist</h4>
+							<br>
+							<p>Create a new <a href="http://gist.github.com">gist</a> of your haiku.md document.</p>
+							<p>Share the gist on Slack, too</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 12 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Portfolio Project: Introduction</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>What:</h3><h4> a public portfolio</h4>
+						</li>
+						<br>
+						<li>
+							<h3>Who:</h3><h4> you</h4>
+						</li>
+						<br>
+						<li>
+							<h3>When:</h3><h4> for the next month</h4>
+							<p>...starting right now</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Why:</h3><h4> all the cool kids have one</h4>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1:</h3><h4> Create the project directory</h4>
+							<br>
+							<p>Create a directory named after you inside the SavvyCoders folder, then navigate into the new folder:</p>
+							<pre><code class="shell">
+$ mkdir FirstnameLastname
+$ cd FirstnameLastname
+							</code></pre>
+						</li>
+						<br>
+						<li>
+							<h3>Step 2: </h3>
+							<h4>Create greeting.md</h4>
+							<pre><code class="shell">
+$ touch greeting.md
+							</code></pre>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3:</h3><h4> Open FirstnameLastname in Atom</h4>
+							<br>
+							<pre><code class="shell">
+$ atom .
+							</code></pre>
+						</li>
+						<br>
+						<li>
+							<h3>Step 4: </h3>
+							<h4>Greet your visitors!</h4>
+							<p>Introduce yourself to your site's visitors. Include the following:</p>
+							<ol>
+								<li>a picture of yourself</li>
+								<li>a heading</li>
+								<li>a greeting paragraph</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<p>Also include...</p>
+						<ol>
+							<li>a quick list of facts about you</li>
+							<li>a list of links to your social media profiles, including:
+								<ul>
+									<li>GitHub</li>
+									<li>LinkedIn</li>
+									<li>Facebook</li>
+									<li>Twitter</li>
+								</ul>
+							</li>
+						</ol>
+						<p>Then share your new greeting as a gist and post it to Slack!</p>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 16 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>HTML and the DOM</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>HTML: </h3><h4>"Hyper-Text Markup Language"</h4>
+						</li>
+						<li>
+							<p>Hyper-Text = links, Markup = attributes/style</p>
+							<br>
+						</li>
+						<li>
+							<h3>DOM: </h3><h4>"Document-Object Model"</h4>
+						</li>
+						<li>
+							<p>Document structure</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div class="dom">
+						<div id="document-wrapper">
+							<h4>document</h4>
+							<div id="html-wrapper">
+								<h4>html</h4>
+								<div id="head-wrapper">
+									<h4>head</h4>
+									<p>METADATA</p>
+								</div>
+								<div id="body-wrapper">
+									<h4>body</h4>
+									<div class="div-wrapper">
+										<h4>div</h4>
+										<p>VISIBLE</p>
+									</div>
+									<div class="div-wrapper">
+										<h4>div</h4>
+										<p>STUFF</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="dom-html">
+					<pre><code data-trim class="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Title of My Page&lt;/title&gt;
+&lt;link rel="stylesheet"&gt;
+&lt;script&gt;&lt;/script&gt;
+ &lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;
+	&lt;h1&gt;Here's some big text&lt;/h1&gt;
+&lt;/div&gt;
+&lt;div&gt;
+	&lt;p&gt;Here's some content text&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</code></pre>
+					</div>
+					<aside class="notes">
+	+ The `!DOCTYPE` declaration defines the document type to be HTML
+	+ The text between `<html>` and `</html>` describes an HTML document
+	+ The text between `<head>` and `</head>` provides information about the document
+	+ The text between `<title>` and `</title>` provides a title for the document
+	+ The text between `<body>` and `</body>` describes the visible page content
+	+ The text between `<h1>` and `</h1>` describes a heading
+	+ The text between `<p>` and `</p>` describes a paragraph
+					</aside>
+				</section>
+				<section>
+					<h3>Once again: </h3><h4>the Document Object Model</h4>
+					<br>
+					<img src="../../../images/dom.png" alt="Document Object Model" />
+				</section>
+			</section>
+			<!-- SLIDE 17 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 7: HTML Undercover</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>Open ./html/example1.html</h4><br>
+							<br>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Open Chrome's Dev Console</h4>
+							<p>CTRL + SHIFT + I (or) CMD + OPTION + I</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Answer these questions</h4>
+							<p>What's the default <code>font-size</code> for <code>h1</code>?</p>
+							<p>What's the default <code>font-weight</code> for <code>h1</code>?</p>
+							<p>How are lines 12-24 rendered?</p>
+							<p>What <code>body</code> parts are missing?</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 19 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Portfolio Project 2: Landing Page</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>To-Do:</h3><h4> Turn greeting.md into a website!</h4>
+						</li>
+						<br>
+						<li>
+							<h3>Step 1: </h3>
+							<h4>Create the HTML file</h4>
+							<p>From inside the FirstnameLastname directory:</p>
+							<pre><code class="shell">
+$ touch index.html
+							</code></pre>
+						</li>
+					</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Step 2: </h3>
+								<h4>Prepare the document structure</h4>
+								<p>Before moving anything from greeting.md, your index.html needs the following: </p>
+								<pre><code class="html">
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+  &lt;head&gt;
+	 &lt;title&gt;Firstname Lastname | Web Developer&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+								</code></pre>
+							</li>
+							<br>
+							<p>HINT: use emmet's HTML boilerplate by typing ! and hitting TAB</p>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3>
+							<h4>Add content from greeting.md</h4>
+						</li>
+						<br>
+						<li>headings = &lt;h1&gt;</li>
+						<li>paragraphs = &lt;p&gt;</li>
+						<li>unordered lists = &lt;ul&gt;</li>
+						<li>list elements = &lt;li&gt;</li>
+						<li>horizontal rules = &lt;hr&gt;</li>
+						<li>line breaks = &lt;br&gt;</li>
+					</ul>
+			</section>
+			<section>
+				<ul class="list-content">
+					<li>
+						<h3>Step 4: </h3>
+						<h4>Preview index.html</h4>
+						<p>right-click index.html > 'Open in Browser'</p>
+					</li>
+				</ul>
+		</section>
+			</section>
+			<!-- SLIDE 20 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Exercise 8: More HTML tags!</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>Step 1: </h3><h4>html/example2.html</h4>
+							<br>
+							<br>
+						</li>
+						<li>
+							<h3>Step 2: </h3><h4>Open Chrome's Dev Console</h4>
+							<p>CTRL + SHIFT + I (or) CMD + OPTION + I</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul class="list-content">
+						<li>
+							<h3>Step 3: </h3><h4>Answer these questions</h4>
+							<p>What's the default <code>font-size</code> for <code>h2</code>?</p>
+							<p>What's the default <code>font-size</code> for <code>h6</code>?</p>
+							<p>What's the default <code>font-style</code> for <code>em</code>?</p>
+							<p>What's the default <code>text-decoration</code> for <code>a</code>?</p>
+							<p>What's the default <code>list-style-type</code> for <code>li</code>?</p>
+							<br>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!-- SLIDE 21 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Anchors and Attributes</h1>
+						<span></span>
+					</div>
+					<img src="http://reactorprep.herokuapp.com/assets/images/links.png">
+					<div>
+						<p>
+							Here's some <a href="http://www.critterbabies.com/wp-content/gallery/kittens/cats-animals-kittens-background-us.jpg" alt="look at the kitten!">content</a> for you.
+						</p>
+					</div>
+				</section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Images</h1>
+						<span></span>
+					</div>
+					<pre><code class="html">
+&lt;img src="https://i.imgur.com/81qyN1y.jpg" alt="This text will show up, only if the image doesn't (also good for screen readers)"&gt;
+					</code></pre>
+					<img src="https://i.imgur.com/81qyN1y.jpg" alt="This text will show up, only if the image doesn't (also good for screen readers)">
+				</section>
+			</section>
+			<!-- SLIDE 22 -->
+			<section>
+				<section>
+					<div id="slide-header">
+						<img src="../../../../theme/images/icons/SavvyFavicon.png">
+						<h1>Portfolio Project 3: Links</h1>
+						<span></span>
+					</div>
+					<ul class="list-content">
+						<li>
+							<h3>To-Do:</h3><h4> Add a projects page</h4>
+						</li>
+						<br>
+						<li>
+							<h3>Step 1: </h3>
+							<h4>Create directory structure</h4>
+							<p>From the root of FirstnameLastname:</p>
+							<pre><code class="shell">
+$ mkdir projects
+$ cd projects
+$ touch index.html
+							</code></pre>
+						</li>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Step 2:</h3>
+								<h4>Add content to projects/index.html</h4>
+							</li>
+							<br>
+							<ol>
+								<li>Set up the page with HTML boilerplate</li>
+								<p>(see the emmet ! shortcut)</p>
+								<li>title should be 'Firstname Lastname | Projects'</li>
+								<li>Add an ordered list of these (future) projects:
+									<ul>
+										<li>Class Showcase</li>
+										<li>Choose Your Own Adventure</li>
+										<li>Web Store Hack-A-Thon</li>
+									</ul>
+								</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Step 3:</h3>
+								<h4>Add content to the landing page</h4>
+								<p>After navigating back to the home page (index.html), add the following content:</p>
+							</li>
+							<br>
+							<ol>
+								<li>The profile image from greeting.md</li>
+								<li>The social media links from greeting.md</li>
+								<li>A 'navigation list' at the top of your landing page, with links to 'HOME' and 'Projects'
+									<p>(HINT: use relative file paths as the 'href')</p>
+								</li>
+								<li>Add a comment for future developers</li>
+							</ol>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Step 4:</h3>
+								<h4>Test your content!</h4>
+								<p>...using open-in-browser</p>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<!-- new slide -->
+				<section>
+					<section>
+						<ul class="list-content">
+							<li>
+								<h3>Deploy your site:</h3><h4> Firebase</h4>
+								<p>for easy CLI deployment of web applications</p>
+								<br>
+							</li>
+							<ol>
+								<li>Install <a href="https://nodejs.org/en/">node.js</a></li>
+								<li>Sign up for Firebase (<a href="https://www.firebase.com/">firebase.com</a>)</li>
+								<li>Use npm to install firebase globally</li>
+							</ol>
+						</ul>
+						<pre><code class="shell">
+/c/SavvyCoders/FirstnameLastname
+
+$ npm install -g firebase-tools
+						</code></pre>
+					</section>
+					<section>
+						<ul class="list-content">
+							<ol>
+								<li>Authenticate your firebase CLI/initialize your project</li>
+							</ol>
+							<pre><code class="shell">
+$ firebase login
+$ firebase init
+							</code></pre>
+							<li>Check out /html/firebase.json</li>
+							<pre><code class="json">
+{
+  "firebase": "firstname-lastname-portfolio",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
+							</code></pre>
+						</ul>
+					</section>
+					<section>
+						<ul class="list-content">
+							<li><h3>Deploy your new site:</h3><h4> CLI only</h4></li>
+							<pre><code class="shell">
+$ firebase deploy
+$ firebase open
+							</code></pre>
+						</ul>
+					</section>
+				</section>
+			<!-- SLIDE 23 -->
+			<section>
+				<div id="slide-header">
+					<img src="../../../../theme/images/icons/SavvyFavicon.png">
+					<h1>Assignments and Resources</h1>
+					<span></span>
+				</div>
+				<ul class="list-content">
+					<li>
+						<h3>Assignments: </h3><h4>finish today's exercises!</h4>
+						<p>And make sure you've posted to Slack</p>
+					</li>
+					<li>
+						<h3>Resources: </h3><h4>for extra fun</h4>
+						<p><a href="http://simplecpu.com">Simple CPU tutorial</a></p>
+						<p><a href="https://www.codecademy.com/courses/learn-the-command-line">Codecademy: Learning the Command Line</a></p>
+						<p><a href="http://linuxcommand.org/lc3_learning_the_shell.php">Learning the Shell: linuxcommand.org</a></p>
+						<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
+						<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">HTML Cheatsheet</a></p>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: '../../../lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../../plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../../plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../../plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../../plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

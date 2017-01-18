@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wk3Mod1 Scratch Doc</title>
+</head>
+<body>
+  <p id="option-one">Here's option 1.</p>
+  <p id="option-two">Here's option 2.</p>
+  <p id="option-three">Here's option 3.</p>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script>
+    var get_sentence = function(){
+      var choice = Math.random()*100;
+      if(choice<33){
+        var output = document.getElementById('option-one');
+        return output;
+      }
+      else if (choice>32 && choice<66) {
+          var output = document.getElementById('option-two');
+          return output;
+      }
+      else{
+          var output = document.getElementById('option-three');
+          return output;
+      }
+    }
+
+    var new_sentence = get_sentence();
+
+
+  </script>
+</body>
+</html>

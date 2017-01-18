@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+    <!-- SEO -->
+    <meta name="description" content="Learn to Code with HTML, CSS, and JavaScript in Nashville, TN">
+    <meta name="keywords" content="Learn to code, HTML, CSS, JavaScript, JQuery, Web Development, Programming, Nashville">
+    <meta name="author" content="Savvy Coders">
+    <meta property="og:image" content="https://res.cloudinary.com/savvy-coders/image/upload/q_auto/v1470769887/savvylogo.png">
+
+    <!-- Google Verification -->
+    <meta name="google-site-verification" content="ys-7GxEhydx43F9C1ilhGyAviIwntc8TAab3t-MH7rs" />
+
+    <link rel="shortcut icon" href="https://res.cloudinary.com/savvy-coders/image/upload/v1470769741/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://res.cloudinary.com/savvy-coders/image/upload/v1470769741/favicon.ico" type="image/x-icon">
+    <title>Savvy Coders | Bash Your Workflow</title>
+
+    <!-- IE Fix for HTML5 Tags -->
+    <!--[if lt IE 9]>
+    		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    	<![endif]-->
+
+    <link rel="canonical" href="https://savvycoders.com">
+    <link rel="shortlink" href="https://savvycoders.com">
+
+    <link rel="stylesheet" href="/theme/css/milligram.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
+
+
+    <script>
+      // Picture element HTML5 shiv
+      document.createElement( "picture" );
+    </script>
+</head>
+
+<body>
+  <div id="menubar">
+    <ul class="navbubbles">
+        <li id="logo" class="desktop-only">
+          <a href="/" title="Savvy Coders Homepage" alt="Savvy Coders Nashville">
+              <div class="savvy-logo-text"><b>savvy</b>coders</div>
+          </a>
+        </li>
+
+        <li id="spacer" class="desktop-only">
+            <br>
+        </li>
+
+        <li id="about">
+          <a href="/blog" title="Blog" alt="Blog Home">
+              <div>blog</div>
+          </a>
+        </li>
+
+        <li id="contact">
+          <a href="/" title="Home" alt="Return to Home Page">
+              <div>home</div>
+          </a>
+        </li>
+
+        <li id="app">
+          <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank" title="Apply" alt="Savvy Application">
+              <div>apply</div>
+          </a>
+        </li>
+
+    </ul>
+</div>
+
+<div id="menudrop" class="dropdown hidden">
+  <ul class="navbubbles">
+    <li id="mission" class="desktop-only">
+      <a href="/#jump1" title="Mission" alt="About Savvy Coders' Mission">
+          <div>mission</div>
+      </a>
+    </li>
+    <li id="classes">
+      <a href="/#jump2" title="Classes" alt="About Savvy Coders' Classes">
+          <div>classes</div>
+      </a>
+    </li>
+    <li id="students" class="desktop-only">
+      <a href="/#jump3" title="Students" alt="About our Students">
+          <div>students</div>
+      </a>
+    </li>
+    <li id="pricing">
+      <a href="/pricing" title="Savvy Coders Prices" alt="Pricing">
+          <div>pricing</div>
+      </a>
+    </li>
+    <li id="faq">
+      <a href="/faq" title="FAQ" alt="FAQ">
+          <div>FAQ</div>
+      </a>
+    </li>
+    <li id="team">
+      <a href="/jobs" title="Jobs with Savvy Coders" alt="Join the Savvy Coders team">
+          <div>jobs</div>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  <!-- post-specific splash to go here? -->
+
+  <!-- HERE WILL BE A SIDEBAR FOR EASIER BLOG NAVIGATION -->
+
+  <div id="content-wrapper">
+    <div id="content" class="blog-post">
+      <h1 id="bash-your-workflow"><em>Bash your Workflow:</em></h1>
+
+<h3 class="subheading">Getting your Environment Right</h3>
+
+<hr />
+
+<p><em>This post is part of Savvy Tips, a series of technical posts about how to improve your skills as a developer, written by our very own Alex Pearson, Head Instructor of the St. Louis cohort.</em></p>
+
+<hr />
+
+<blockquote>
+  <p>When you are a child you use a computer by looking at the pictures. When you grow up, you learn to read and write</p>
+</blockquote>
+
+<p>As snarky as it sounds, I <em>love</em> the above quote (from William Shotts of <a href="http://linuxcommand.org/learning_the_shell.php">linuxcommand.org</a>). The change from interacting with your computer through click-able pictures and icons to using the text-based command line is a big one, but an important paradigm shift for anyone looking to use their computer as a tool. These “power users” using the command line aren’t <em>just</em> developers and programmers, but the category of people that has put in the time to make the transition to the terminal certainly includes aspiring Web Developers.</p>
+
+<p>If you’re wondering where to start in your programming career, learning some basic commands for your operating system’s command-line interface (or CLI) is a great place to start. If you’re going to interact with computers through HTML, CSS, and JavaScript, you should certainly know how to navigate to files, copy data between locations, keep track of save states with a version control system like <code class="highlighter-rouge">git</code>, and use basic command-line programs. There’s a reason we cover these things in the very first day of class at Savvy Coders!</p>
+
+<hr />
+
+<p>If you’ve already gotten through some of those basics, though, it might be time to start streamlining other parts of your workflow. Contrary to popular belief, programming is supposed to make your life <em>easier</em>, even if it’s intimidating at first. This extends to the command line, which supports a robust scripting language of its own. The real maestros of the development world can do some <a href="https://www.jitbit.com/alexblog/249-now-thats-what-i-call-a-hacker/">incredible things with these scripts</a> (slight language warning on that link, but it’s a funny story that’s worth a read anyway). While these legends are a bit apocryphal, they speak to the power of the terminal and its associated scripting languages.</p>
+
+<p>But where to get started? Maybe you’re not yet ready for one-button deploys of your million-dollar app or heavy-duty database management without a GUI, and that’s OK. The first step towards script-guru status is probably to start with the basics: the way your terminal looks, feels, and behaves, plus a few simple automations. Your <em>environment</em>, if you will.</p>
+
+<hr />
+
+<p><strong><em>Important Disclaimer</em></strong>: while the principles described in this post are applicable to a variety of different command-line environments, this post is specifically about using <code class="highlighter-rouge">bash</code> (Bourne Again SHell), a particular kind of CLI. There are many different terminal emulators and applications out there on a variety of operating systems, from the Command Prompt and PowerShell on Windows, to <code class="highlighter-rouge">sh</code> and <code class="highlighter-rouge">fsh</code> and <code class="highlighter-rouge">zsh</code> on *nix systems (including Mac), to Mac’s default terminal emulator (which is a <code class="highlighter-rouge">bash</code> prompt in login-mode). All of these tips should work with the default terminals for Mac or Linux variants, and will work with bash emulators of many kinds on Windows (see <a href="https://openhatch.org/missions/windows-setup/install-git-bash">git-bash</a> and, soon <a href="https://blogs.msdn.microsoft.com/powershell/2016/04/01/bash-for-windows-why-its-awesome-and-what-it-means-for-powershell/">Bash on Ubuntu on Windows</a> in Windows 10). For Windows users, don’t forget that there are also lots <a href="https://www.virtualbox.org/wiki/Downloads">virtualization solutions</a> for more, shall we say, <em>powerful</em> development with Linux (/end fanboy-ism).</p>
+
+<hr />
+
+<p>The rest of this post will be focusing on using a <code class="highlighter-rouge">.bashrc</code> file in your home directory to customize your <code class="highlighter-rouge">bash</code> terminal. This file is automatically loaded by your <code class="highlighter-rouge">bash</code>-flavored CLI (<a href="http://apple.stackexchange.com/questions/119711/why-doesnt-mac-os-x-source-bashrc">most of the time</a>), and provides a lot of opportunity for customization of your command-line experience. You can tell a lot about a developer from their <code class="highlighter-rouge">.bashrc</code>… their organizational skills (or mild OCD), their creative impulses, their day job, or even their favorite colors. You can see mine <a href="https://gist.github.com/NAlexPear/0d191b59b9828b72e28ec6508cec5f88">here</a>. Feel free to copy it (or send me ideas on how to improve it!). It is, of course, a work in progress, like every <code class="highlighter-rouge">.bashrc</code> should be. Much of this prompt was derived from <a href="http://tldp.org/LDP/abs/html/sample-bashrc.html">this bash file</a> from tldp.org, for those looking for a <em>much</em> more advanced <code class="highlighter-rouge">.bashrc</code> file to play around with.</p>
+
+<p>We’ll go over a three things in this post. These <code class="highlighter-rouge">.bashrc</code> tips should apply to just about everyone that’s made it this far:</p>
+
+<ol>
+  <li>Customizing your prompt.</li>
+  <li>Using <code class="highlighter-rouge">alias</code> to create custom shortcuts.</li>
+  <li>Using <code class="highlighter-rouge">bash</code> scripts to run a simple operation (in this case, syncing my <code class="highlighter-rouge">.bashrc</code> file to GitHub)</li>
+</ol>
+
+<p>Let’s get right to it!</p>
+
+<hr />
+
+<p><strong><em>Preliminary Work</em></strong>: if you have a terminal of some kind, you <em>probably</em> have a <code class="highlighter-rouge">.bashrc</code> file in the root of your <code class="highlighter-rouge">$HOME</code> directory. Try a quick <code class="highlighter-rouge">ls -a ~</code> command (which lists all of the files in your default home directory), and check for a <code class="highlighter-rouge">.bashrc</code> file. If one already exists, you’re in luck! Open up that file with your favorite text editor, and let’s get started.</p>
+
+<hr />
+
+<p><strong><em>The Prompt</em></strong>: The default prompt for your terminal is probably some variation of the following:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">username@computer-name:~<span class="err">$</span></code></pre></figure>
+
+<p>This is, of course, colorless (boring!), and doesn’t tell you much of anything. We can assume that you already know your username, and you’re aware of which computer you’re using, so that info isn’t terribly helpful. It’s nice to see the <code class="highlighter-rouge">$</code>, which tells us that the console is waiting for some sort of input, but that’s about it. As it turns out, we can add a <em>lot</em> more information to this prompt! As an example (representative only of <em>my</em> personal preferences, and by no means the Perfect Prompt), here’s the current version of my prompt as it appears on-screen:</p>
+
+<figure class="highlight">
+    <code class="language-bash" data-lang="bash">
+        10:22:47 <span class="ok">(master) </span><span class="err k">~/Code/savvy </span><span class="gr k">-&gt;</span>
+    </code>
+</figure>
+
+<p><em>Pretty sweet right?</em> OK, probably not something to write home about, but I think this version of my <code class="highlighter-rouge">$PS1</code> (or <code class="highlighter-rouge">bash</code> prompt) has a couple of nice features:</p>
+
+<ol>
+  <li>Colors! And font-weights! These sound silly, but color is just another dimension of readability that can help you digest information. It’s the same reason we have syntax highlighters for code. In this case, the colors get brighter and bolder as the importance of the colored thing increases.</li>
+  <li>A time stamp! Sometimes I like to be able to quickly see when I ran a command (“Has this command been running for 12 minutes already? Maybe something’s wrong”). But while the timestamp is nice, it’s not, as they say “mission-critical”. Hence the muted color scheme and inconspicuous position on the left-hand side.</li>
+  <li><code class="highlighter-rouge">git</code> integration! Yep, that’s my current <code class="highlighter-rouge">git</code> branch (and yes, I’m making edits directly to the <code class="highlighter-rouge">master</code> branch because I like excitement and danger in my life) with an added color dimension: the branch name turns red when there are uncommitted changes, and green once everything in the current working directory has been committed.</li>
+  <li>A real working directory! As you can tell by the obnoxious coloration, I think this is the most important part of the prompt. As Buckaroo Banzai said: “No matter where you go, there you are”. So, it’s nice to know where that <em>is</em>.</li>
+  <li>A little arrow, which I happen to like better than the traditional dollar sign, but which isn’t terribly exciting. For those interested, I like <code class="highlighter-rouge">-&gt;</code> more than <code class="highlighter-rouge">$</code> because a lot of <code class="highlighter-rouge">bash</code> involves variables, and <code class="highlighter-rouge">bash</code> variables usually include a dollar sign (see the aforementioned <code class="highlighter-rouge">$PS1</code> or the soon-to-be mentioned <code class="highlighter-rouge">$HOME</code>).</li>
+</ol>
+
+<p>If you want to use this <em>exact</em> prompt, you’ll need to copy over the relevant color variables from lines 63-103 of my <code class="highlighter-rouge">.bashrc</code>, followed by this thing:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="nv">$IBlack$Time12h$Color_Off</span><span class="s1">'$(git branch &amp;&gt;/dev/null;\
+if [ $? -eq 0 ]; then \
+  echo "$(echo `git status` | grep "nothing to commit" &gt; /dev/null 2&gt;&amp;1; \
+  if [ "$?" -eq "0" ]; then \
+    echo "'</span><span class="nv">$Green</span><span class="s1">'"$(__git_ps1 " (%s)"); \
+  else \
+    echo "'</span><span class="nv">$IRed</span><span class="s1">'"$(__git_ps1 " (%s)"); \
+  fi) '</span><span class="nv">$BIYellow$PathShort$BIRed</span><span class="s1">' -&gt;'</span><span class="nv">$Color_Off</span><span class="s1">' "; \
+else \
+  echo " '</span><span class="nv">$Yellow$PathShort$BIRed</span><span class="s1">' -&gt;'</span><span class="nv">$Color_Off</span><span class="s1">' "; \
+fi)'</span></code></pre></figure>
+<hr />
+
+<p>This looks complicated (and it is), but we can walk through what’s going on here at a really high level:</p>
+
+<ol>
+  <li>We’re <code class="highlighter-rouge">export</code>ing a new value for the default <code class="highlighter-rouge">$PS1</code> with <code class="highlighter-rouge">export PS1=</code>.</li>
+  <li>We’re using some of those saved <a href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape codes</a> to set the color of a 12-hour timestamp with <code class="highlighter-rouge">$IBlack$Time12h$Color_Off</code>.</li>
+  <li>A quick re-routing of the output from the <code class="highlighter-rouge">git branch</code> command (which should be a list of available branches) to the <a href="https://en.wikipedia.org/wiki/Null_device">null device</a> (which is a way of saying “don’t show this output on the screen, but keep it in memory for processing later”) with <code class="highlighter-rouge">$( git branch &amp;&gt;/dev/null;</code></li>
+  <li>Process the output from <code class="highlighter-rouge">git branch</code> and check to make sure that it’s a “success” (code <code class="highlighter-rouge">0</code>). If the current directory isn’t a git repository, then <code class="highlighter-rouge">git branch</code> will throw an error (which will <em>not</em> equal 0). <code class="highlighter-rouge">$?</code> refers to the last command and <code class="highlighter-rouge">-eq</code> checks for equality. If this check fails, the <code class="highlighter-rouge">else</code> condition simply <code class="highlighter-rouge">echo</code>s (or outputs) the colorized path (with <code class="highlighter-rouge">$Yellow$PathShort</code>) followed by the red arrow (<code class="highlighter-rouge">$BIRed -&gt;$Color_Off</code>);</li>
+  <li>If the <code class="highlighter-rouge">if [ $? -eq 0 ]</code> check <em>passes</em>, then a similar check is performed using the <code class="highlighter-rouge">git status</code> command. If everything is up to date, we expect output that includes the words “nothing to commit”. So a search is performed on the output of <code class="highlighter-rouge">git status</code> using <code class="highlighter-rouge">grep</code>, the output is sent into the ether of <code class="highlighter-rouge">/dev/null</code>, and the success/failure of the <code class="highlighter-rouge">grep</code> search is checked. If there’s something to commit, a red <code class="highlighter-rouge">git</code> prompt is shown with <code class="highlighter-rouge">echo "$IRed$(__git_ps1 (%s))";</code>. The same is done in green if everything is up to date.</li>
+</ol>
+
+<p>The specific syntax is, of course, a bit tricky, but also beyond the scope of this article. For now, copy and paste this prompt from the previously-linked gist, and see if you can change the variables/colors to your liking! If you’d like to customize your $PS1 further, there are also great starting points to be found in the many <a href="http://bashrcgenerator.com/">bash generators</a> available online, as well as additional resources available for understanding the available <a href="https://linuxconfig.org/bash-prompt-basics">special characters</a>.</p>
+
+<hr />
+
+<p><strong><em>Aliases</em></strong>: There are some commands that you’re repeating <em>all the time</em> during the development process. Commands like <code class="highlighter-rouge">git status</code>, <code class="highlighter-rouge">git add .</code>, <code class="highlighter-rouge">git commit -m "some message"</code> (you’re using these all the time, right? <strong>Right?!</strong>). They can be pretty tiresome to type all the time, so we can cut them down to size with the <code class="highlighter-rouge">alias</code> keyword. Here are a few of mine:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">alias </span><span class="nv">gs</span><span class="o">=</span><span class="s2">"git status"</span>
+<span class="nb">alias </span><span class="nv">gb</span><span class="o">=</span><span class="s2">"git branch"</span>
+<span class="nb">alias </span><span class="nv">ga</span><span class="o">=</span><span class="s2">"git add -A"</span>
+<span class="nb">alias </span><span class="nv">ll</span><span class="o">=</span><span class="s1">'ls -alF'</span>
+<span class="nb">alias </span><span class="nv">la</span><span class="o">=</span><span class="s1">'ls -A'</span>
+<span class="nb">alias </span><span class="nv">l</span><span class="o">=</span><span class="s1">'ls -CF'</span>
+<span class="nb">alias </span>apache-res<span class="o">=</span><span class="s2">"sudo service apache2 restart"</span></code></pre></figure>
+
+<p>Try out a few, and see how much easier your life gets (almost immediately). Especially great are those strings of commands that can be a pain to type out, but are often repeated (see <code class="highlighter-rouge">sudo service apache2 restart</code> for working with Apache configurations or ). Those characters make a difference!</p>
+
+<p>But what about commands that take some sort of input? Just like with JavaScript, we can make a function that acts as an alias for larger commands! Here are a few from my <code class="highlighter-rouge">.bashrc</code>:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">commit<span class="o">()</span> <span class="o">{</span>
+  git commit -m <span class="s2">"</span><span class="nv">$1</span><span class="s2">"</span>;
+<span class="o">}</span>
+cherry-pit<span class="o">()</span> <span class="o">{</span>
+  git rebase -p --onto <span class="nv">$1</span>^ <span class="nv">$1</span>;
+<span class="o">}</span></code></pre></figure>
+
+<p>The first function saves a few characters, which is nice, and you can add in that commit message as an input through the <code class="highlighter-rouge">$1</code> variable. So <code class="highlighter-rouge">git commit -m "some message"</code> becomes <code class="highlighter-rouge">commit "some message"</code>. Neat! <code class="highlighter-rouge">cherry-pit()</code> is where things start to get interesting. This is my favorite little workaround for those times when you would like to selectively toss out a commit from a few minutes, hours, or days ago. It’s an entirely new <code class="highlighter-rouge">git</code> function that takes a commit SHA and rebases it in such a way that it gets wiped out from the final commit history. Pretty cool! But these are just cracking the surface of what you can do with your own functions, reducing an entire string of commands into a single word input.</p>
+
+<hr />
+
+<p><strong><em>Task Automation</em></strong>: Hopefully you’re starting to see the power behind these bash functions, and how these tiny little quality of life improvements can help you really up your development game! To give you a hint at that future power, I’ll dissect one of the bash scripts I use all over the place in some form or another to push files to a “shared” location. This can be pushing files to GitHub, syncing development files between machines, or even deploying a website to a server (just like the server that’s serving up this blog post). Let’s take a look:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">sbash<span class="o">()</span> <span class="o">{</span>
+    <span class="nv">BashPath</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Code/gists/env/"</span>
+    cat <span class="nv">$HOME</span>/.bashrc &gt; <span class="nv">$BashPath</span>.bashrc <span class="o">&amp;&amp;</span> git -C <span class="nv">$BashPath</span> add .bashrc <span class="o">&amp;&amp;</span> git -C <span class="nv">$BashPath</span> commit -m <span class="s2">"Update .bashrc"</span> <span class="o">&amp;&amp;</span> git -C <span class="nv">$BashPath</span> push origin master
+<span class="o">}</span></code></pre></figure>
+
+<p>This one command will automatically save, stage, commit, and push a copy of my <code class="highlighter-rouge">.bashrc</code> file to my GitHub account from any working directory. Not bad for a single <code class="highlighter-rouge">sbash</code>! Let’s break down what this does piece by piece:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">BashPath</span><span class="o">=</span><span class="s2">"</span><span class="nv">$HOME</span><span class="s2">/Code/gists/env/"</span></code></pre></figure>
+
+<p>Here, a local variable is saved that equals the path to the folder that contains a copy of the <code class="highlighter-rouge">.bashrc</code> file to push up as a gist later. Here I’m using the environment variable <code class="highlighter-rouge">$HOME</code>, but could also have written this path as <code class="highlighter-rouge">~/Code/gists/env</code>. In this case, using <code class="highlighter-rouge">$HOME</code> lets me temporarily change the target of all of these operations.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">cat <span class="nv">$HOME</span>/.bashrc &gt; <span class="nv">$BashPath</span>.bashrc</code></pre></figure>
+
+<p>This overwrites the contents of the <code class="highlighter-rouge">.bashrc</code> file stored in the directory found at <code class="highlighter-rouge">$BashPath</code> with the contents of my main <code class="highlighter-rouge">.bashrc</code> file. This statement is then followed by (and connected by <code class="highlighter-rouge">&amp;&amp;</code> to ensure completion of each task synchronously) this statement:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git -C <span class="nv">$BashPath</span> add .bashrc</code></pre></figure>
+
+<p>The <code class="highlighter-rouge">-C</code> flag lets us specify a directory other than our working directory through which to perform the <code class="highlighter-rouge">add</code> command. In this case, we’re restricting our <code class="highlighter-rouge">add</code> command to the <code class="highlighter-rouge">.bashrc</code> file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git -C <span class="nv">$BashPath</span> commit -m <span class="s2">"Update .bashrc"</span></code></pre></figure>
+
+<p>This uses the same <code class="highlighter-rouge">-C</code> flag to commit the changes with a commit message of “Update .bashrc”. If I wanted to change this to accept an input for different commit messages, I would just change the current message to <code class="highlighter-rouge">"$1"</code> and execute <code class="highlighter-rouge">sbash</code> with a commit message as the very next argument.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git -C <span class="nv">$BashPath</span> push origin master</code></pre></figure>
+
+<p>And, finally we push to the <code class="highlighter-rouge">master</code> branch. Once again, we could specify a different remote and branch with <code class="highlighter-rouge">$2</code> and <code class="highlighter-rouge">$3</code> if we were so inclined (but, for a single file like this, I am <em>not</em> so inclined).</p>
+
+<p>All of that gets abstracted away behind a single <code class="highlighter-rouge">sbash</code>, too. What a great win for future-you’s productivity!</p>
+
+<p>What do you wish you could abstract away to make your life as a developer easier? What are those processes that you perform every day that ought to be done automatically? Maybe the solution can be found in your <code class="highlighter-rouge">.bashrc</code>… give it a whirl, and post any questions, comments, or solutions to the comment section.</p>
+
+<p>Good luck, and have fun <code class="highlighter-rouge">bash</code>-ing your environment!</p>
+
+    </div>
+  </div>
+  <div id="disqus_thread"></div>
+
+  <footer>
+    <ul>
+      <li>
+        <a href="/#headjump">Home</a>
+      </li>
+      <li>
+        <a class="typeform-share link" href="https://savvyalex.typeform.com/to/MxOKCI" data-mode="1" target="_blank">Sign Up</a>
+      </li>
+      <li>
+        <a class="eventbrite" href=" https://www.eventbrite.com/e/crash-course-in-coding-for-the-curious-tickets-19586497742">Attend an Intro Session</a>
+      </li>
+      <li>
+        <a class="meetup" href="http://www.meetup.com/savvycoders/">Join our Meetup</a>
+      </li>
+      <li>
+        <a href="/#jump2">How it Works</a>
+      </li>
+      <li>
+        <a href="/#jump3">What you'll learn</a>
+      </li>
+      <li>
+        <a href="/pricing">Pricing</a>
+      </li>
+      <li>
+        <a href="/faq">FAQ</a>
+      </li>
+      <li>
+        <a href="/#jump6">Contact us</a>
+      </li>
+    </ul>
+    <div id="address">
+      <p>All classes are held at</p>
+      <p><a class="locationLink" href="http://www.refinerynashville.com/"><span class="location">the Refinery</span> <span class="city">Nashville</span></a></p>
+      <p class="address"></p>
+    </div>
+    <br>
+    <div class="social">
+      <br>
+      <ul class="icon-bar">
+        <li>
+          <a href="http://twitter.com/savvycoders">
+            <span class="ti-twitter"></span>
+            <p>twitter</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/Savvy-Coders-1616883465226928/">
+            <span class="ti-facebook"></span>
+            <p>facebook</p>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/10377788?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A10377788%2Cidx%3A2-1-2%2CtarId%3A1453332316324%2Ctas%3Asavvy%20coders">
+            <span class="ti-linkedin"></span>
+            <p>linkedin</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="copyright">©2015 Savvy Technologies, LLC.</div>
+</footer>
+
+  <script src="/theme/js/site.js" charset="utf-8"></script>
+  <script>
+  var disqus_config = function () {
+      this.page.url = 'https://savvycoders.com';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "Savvy Coders Blog"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+  };
+
+  (function() { // DON'T EDIT BELOW THIS LINE
+  var d = document, s = d.createElement('script');
+
+  s.src = '//savvycodersblog.disqus.com/embed.js';
+
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+</body>
+</html>

@@ -2,6 +2,7 @@ firebase.*
 .divshot-cache
 divshot.*
 .eslintrc
+npm-debug.log
 
 node_modules
 .sass-cache
@@ -11,8 +12,5 @@ node_modules
 .ssh/
 
 _site/
-
-build/
-public/
 
 utils/configs/
