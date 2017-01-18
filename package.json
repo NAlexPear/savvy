@@ -41,7 +41,6 @@
     "gulp-usemin": "^0.3.16",
     "gulp-useref": "^3.0.3",
     "gulp-util": "^3.0.7",
-    "imagemin-pngquant": "^4.2.0",
     "jquery": "^2.1.4",
     "milligram": "^1.1.0",
     "mocha": "^2.5.3",
