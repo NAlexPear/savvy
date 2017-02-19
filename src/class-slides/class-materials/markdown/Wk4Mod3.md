@@ -57,10 +57,11 @@ So how is this useful?
 
 ```javascript
 person.work = function(){
-  console.log("Welcome to McDonald's, I'm " + this.name + ". May I take your order?")
-  console.log("Enjoy this beautiful day in " + this.location)
-  console.log("Would you like to hear a story about " + this.cat.name + " and his " + this.cat.hobbies[1])
+    console.log("Welcome to McDonald's, I'm " + this.name + ". May I take your order?")
+    console.log("Enjoy this beautiful day in " + this.location)
+    console.log("Would you like to hear a story about " + this.cat.name + " and his " + this.cat.hobbies[1])
 }
+
 person.work()
 ```
 
@@ -73,13 +74,13 @@ We can also change our object properties by referencing them with `this`:
 
 ```javascript
 var car = {
-  type: "Honda Civic",
-  position: 1,
-  move: function(){
-    var prev = this.position;
-    this.position = this.position + 1;
-    console.log(this.type + " is moving from " + prev + " to " + this.position);
-  }
+    type: "Honda Civic",
+    position: 1,
+    move: function(){
+        var prev = this.position;
+        this.position = this.position + 1;
+        console.log(this.type + " is moving from " + prev + " to " + this.position);
+    }
 }
 ```
 
