@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "jekyll build && gulp && gulp serve",
-    "build": "jekyll build && gulp"
+    "build": "jekyll build && gulp",
+    "serve": "http-server ./public"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "gulp-usemin": "^0.3.16",
     "gulp-useref": "^3.0.3",
     "gulp-util": "^3.0.7",
+    "http-server": "^0.10.0",
     "jquery": "^2.1.4",
     "milligram": "^1.1.0",
     "mocha": "^2.5.3",
