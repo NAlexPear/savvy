@@ -42,7 +42,6 @@
     "gulp-sitemap": "^2.2.0",
     "gulp-usemin": "^0.3.16",
     "gulp-useref": "^3.0.3",
-    "gulp-util": "^3.0.7",
     "http-server": "^0.10.0",
     "jquery": "^2.1.4",
     "milligram": "^1.1.0",

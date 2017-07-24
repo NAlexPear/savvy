@@ -4,9 +4,9 @@
 const autoprefixer = require( 'gulp-autoprefixer' );
 const babel = require( 'gulp-babel' );
 const clean = require( 'gulp-clean' );
-const cloudinary = require( './utils/cloudinary' );
+// const cloudinary = require( './utils/cloudinary' );
 const eslint = require( 'gulp-eslint' );
-const glob = require( 'glob' );
+// const glob = require( 'glob' );
 const gulp = require( 'gulp' );
 const gzip = require( 'gulp-gzip' );
 const minifyHtml = require( 'gulp-minify-html' );
@@ -14,7 +14,6 @@ const sass = require( 'gulp-sass' );
 const sitemap = require( 'gulp-sitemap' );
 const usemin = require( 'gulp-usemin' );
 const useref = require( 'gulp-useref' );
-const util = require( 'gulp-util' );
 
 
 // Development Utilities
@@ -23,20 +22,14 @@ gulp.task( 'clean', () => {
             .pipe( clean() );
 } );
 
-gulp.task( 'image-upload', () => {
-    const images = glob.sync( './theme/images/**/*.*' );
-
-    util.log( 'Uploading images to cloudinary' );
-
-    cloudinary.upload( images );
-} );
-
-gulp.task( 'serve', () => {
-    util.log( 'Sending ./public directory to localhost directory' );
-
-    return gulp.src( './public/**/*' )
-            .pipe( gulp.dest( '/var/www/html/' ) );
-} );
+// @TODO: reconfigure cloudinary
+// gulp.task( 'image-upload', () => {
+//     const images = glob.sync( './theme/images/**/*.*' );
+//
+//     util.log( 'Uploading images to cloudinary' );
+//
+//     cloudinary.upload( images );
+// } );
 
 gulp.task( 'watch', () => {
     gulp.watch( './theme/sass/*.scss', [ 'sass' ] );
