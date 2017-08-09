@@ -63,7 +63,7 @@ The text editor that we'll be using for this course is called [Atom](https://ato
 
 #### EXERCISE 3
 1. Install Atom from the link above
-2. You can open Atom by typing `atom` in your CLI.
+2. You can open Atom by typing `atom` in your CLI. *Note: Windows users will likely need to restart for this functionality.*
 3. Open up the Settings in Atom (File > Settings or `ctrl + comma`)
 4. Go to 'Install' and install the following packages:
   1. [open-in-browser](https://atom.io/packages/open-in-browser)
@@ -334,7 +334,7 @@ That's why we need a **package manager** to help us install helpful tools from t
 Node.js allows JavaScript to be run outside of the browser. That means that we can use JavaScript to run programs on your local machine, on servers, and in development stacks of all types. One of those programs is **npm**, which helps us install packages and manage 'dependencies' (external code upon which our project depends).
 
 #### EXERCISE 9
-1. Install the latest 'stable' version of Node.js from their website.
+1. Install the latest 'stable' version of Node.js from their website. *Note: Windows users will need to restart after installation.*
 2. To make sure that you've installed node correctly, type `node -v` into your CLI.
 3. If you get an output that looks like `v4.0.0`, you're on the right track
 4. npm comes packaged with Node.js, so you should also be able to type `npm -v` to get a version number for your npm installation.
