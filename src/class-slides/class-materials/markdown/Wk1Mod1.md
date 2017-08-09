@@ -63,7 +63,7 @@ The text editor that we'll be using for this course is called [Atom](https://ato
 
 #### EXERCISE 3
 1. Install Atom from the link above
-2. You can open Atom by typing `atom` in your CLI.
+2. You can open Atom by typing `atom` in your CLI. *Note: Windows users will likely need to restart for this functionality.*
 3. Open up the Settings in Atom (File > Settings or `ctrl + comma`)
 4. Go to 'Install' and install the following packages:
   1. [open-in-browser](https://atom.io/packages/open-in-browser)
